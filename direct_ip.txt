@@ -1,7 +1,7 @@
 # ProxyRules — Direct IP
 # 中国大陆公网IP段
-# 更新时间: 2026-07-05 14:27:53 (北京时间)
-# 总条数: 22756
+# 更新时间: 2026-07-05 14:45:54 (北京时间)
+# 总条数: 22761
 # 上游来源: Loyalsoldier/clash-rules, Loyalsoldier/v2ray-rules-dat, xkww3n/Rules, ACL4SSR/ACL4SSR, Cats-Team/AdRules, zqzess/rule_for_quantumultX, blackmatrix7/ios_rule_script, felixonmars/dnsmasq-china-list, gaoyifan/china-operator-ip, MetaCubeX/meta-rules-dat
 # 仓库: https://github.com/ProxyRules/ProxyRules
 1.0.1.0/24
@@ -14031,6 +14031,7 @@
 222.126.146.0/23
 222.126.148.0/23
 222.126.152.0/21
+222.126.160.0/20
 222.126.160.0/21
 222.126.164.0/24
 222.126.168.0/22
@@ -14041,12 +14042,16 @@
 222.126.174.40/29
 222.126.174.76/30
 222.126.174.88/29
+222.126.176.0/21
 222.126.176.0/29
 222.126.178.0/23
 222.126.180.0/22
 222.126.184.0/21
+222.126.184.0/22
 222.126.186.0/23
 222.126.188.0/23
+222.126.190.0/23
+222.126.192.0/18
 222.126.192.0/21
 222.126.192.0/22
 222.126.196.0/23
