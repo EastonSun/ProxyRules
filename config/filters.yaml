@@ -152,38 +152,6 @@ categories:
   reject:
     description: 广告、追踪、统计、挖矿域名黑名单
     # --- 排除模式 (容易误杀的正常域名) ---
-    exclude_patterns:
-      # CDN/基础服务 — 拦截会破坏正常上网
-      - "*.aliyuncs.com"
-      - "*.aliyun.com"
-      - "*.qcloud.com"
-      - "*.myqcloud.com"
-      - "*.tencent-cloud.com"
-      - "*.baidu.com"
-      - "*.bdstatic.com"
-      - "*.cloudflare.com"
-      - "*.cloudflare.net"
-      - "*.jsdelivr.net"
-      - "*.unpkg.com"
-      - "*.cdnjs.com"
-      - "*.gravatar.com"
-      - "*.fonts.googleapis.com"
-      - "*.fonts.gstatic.com"
-      # Apple 推送/服务
-      - "*.apple.com"
-      - "*.icloud.com"
-      - "*.mzstatic.com"
-      - "*.apple-dns.net"
-      # 微软服务
-      - "*.microsoft.com"
-      - "*.msftncsi.com"
-      - "*.windowsupdate.com"
-      - "*.office.com"
-      - "*.office.net"
-      # 常用软件
-      - "*.weixin.qq.com"
-      - "*.qpic.cn"
-      - "*.qlogo.cn"
     # --- 保留前缀 ---
     extract_prefixes:
       - "DOMAIN-SUFFIX,"
