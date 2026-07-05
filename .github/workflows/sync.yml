@@ -72,6 +72,20 @@ jobs:
           path: output/
           retention-days: 1
 
+      - name: 生成统计文件
+        run: |
+          echo "{" > output/stats.json
+          echo "  \"timestamp\": \"$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')\"," >> output/stats.json
+          for f in output/*.txt; do
+            name=$(basename $f .txt)
+            count=$(grep -vc '^#' $f)
+            echo "  \"${name}\": ${count}," >> output/stats.json
+          done
+          # remove trailing comma from last entry
+          sed -i '$ s/,$//' output/stats.json
+          echo "}" >> output/stats.json
+          cat output/stats.json
+
       - name: 打印统计
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -188,6 +202,11 @@ jobs:
           echo "📁 下载的产物:"
           find dist -type f | sort
 
+          # 保存旧的 stats.json 供 delta 计算
+          if [ -f stats.json ]; then
+            cp stats.json old_stats.json
+          fi
+
           # 清空根目录
           git rm -rf --ignore-unmatch .
 
@@ -195,8 +214,40 @@ jobs:
           cp -r dist/* .
           rm -rf dist
 
-          # 删除 .txt 中间文件，release 只发布 .mrs + .module
+          # 删除 .txt 中间文件，release 只发布 .mrs + .module + stats.json
           rm -f ./*.txt
+
+          # 计算 delta (对比上一次 stats.json)
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📊 规则变化统计"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          if [ -f stats.json ]; then
+            if [ -f old_stats.json ]; then
+              python3 -c "
+import json
+new = json.load(open('stats.json'))
+old = json.load(open('old_stats.json'))
+for k in ['direct_domain', 'reject']:
+    nc = new.get(k, 0)
+    oc = old.get(k, 0)
+    delta = nc - oc
+    sign = '+' if delta >= 0 else ''
+    print(f'  {k}: {nc} 条 (update {sign}{delta})')
+"
+            else
+              python3 -c "
+import json
+new = json.load(open('stats.json'))
+for k in ['direct_domain', 'reject']:
+    print(f'  {k}: {new.get(k,0)} 条')
+"
+            fi
+          else
+            echo "  (无 stats.json)"
+          fi
+          # 保留 stats.json 供下次对比
+          rm -f old_stats.json
 
           echo ""
           echo "📦 待发布文件:"

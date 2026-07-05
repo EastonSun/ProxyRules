@@ -8,15 +8,19 @@
 
 ## 功能概览
 
-| 产物 | 格式 | 条数 | 说明 |
-|------|------|------|------|
-| `direct_domain.mrs` | MRS 二进制 | 116,593 | 中国大陆域名 |
-| `direct_ip.mrs` | MRS 二进制 | 22,761 | 中国大陆公网 IP 段 |
-| `private_ip.mrs` | MRS 二进制 | 19 | 局域网/私有/保留 IP 段 |
-| `private_domain.mrs` | MRS 二进制 | 133 | 局域网专用域名 |
-| `reject.mrs` | MRS 二进制 | 476,505 | 广告/追踪/统计域名拦截 |
-| `Shadowrocket/direct.module` | Surge 模块 | — | Shadowrocket 直连模块 |
-| `Shadowrocket/reject.module` | Surge 模块 | — | Shadowrocket 拦截模块 |
+| 产物 | 格式 | 说明 |
+|------|------|------|
+| `direct_domain.mrs` | MRS 二进制 | 中国大陆域名 |
+| `direct_ip.mrs` | MRS 二进制 | 中国大陆公网 IP 段 |
+| `private_ip.mrs` | MRS 二进制 | 局域网/私有/保留 IP 段 |
+| `private_domain.mrs` | MRS 二进制 | 局域网专用域名 |
+| `reject.mrs` | MRS 二进制 | 广告/追踪/统计域名拦截 |
+| `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
+| `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
+
+最后更新时间：2026-07-05
+DIRECT 规则数：116,593
+REJECT 规则数：476,505
 
 ## 订阅地址
 
