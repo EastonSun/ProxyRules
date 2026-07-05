@@ -117,8 +117,6 @@ categories:
       - "127.0.0.0/8"
       # 本网络
       - "0.0.0.0/8"
-      # Docker
-      - "172.17.0.0/16"
     extract_prefixes:
       - "IP-CIDR,"
       - "IP-CIDR6,"
