@@ -126,7 +126,7 @@ def generate_module(mod_def: dict, timestamp: str) -> Path:
     lines.append(f"#!name = {module_name}")
     lines.append(f"#!desc = {module_desc}")
     lines.append(f"#!author = ProxyRules")
-    lines.append(f"#!homepage = https://github.com/ProxyRules/ProxyRules")
+    lines.append(f"#!homepage = https://github.com/EastonSun/ProxyRules")
     lines.append(f"#!update = {timestamp}")
     lines.append(f"#!rule_count = {len(rules)}")
     lines.append("")

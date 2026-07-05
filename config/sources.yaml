@@ -262,5 +262,5 @@ global:
   fetch_timeout: 30
   max_retries: 3
   retry_delay: 2
-  user_agent: "ProxyRules-Fetcher/1.0 (+https://github.com/ProxyRules/ProxyRules)"
+  user_agent: "ProxyRules-Fetcher/1.0 (+https://github.com/EastonSun/ProxyRules)"
   output_dir: output
