@@ -16,33 +16,31 @@
 
 ## 订阅地址
 
-> 替换 `{owner}` 为你的 GitHub 用户名，或直接访问 raw.githubusercontent.com
-
 ### 文本规则（适用于 Mihomo、Clash Meta）
 
 ```
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/direct_domain.txt
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/direct_ip.txt
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/private_ip.txt
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/private_domain.txt
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/reject.txt
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_domain.txt
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_ip.txt
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.txt
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.txt
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.txt
 ```
 
 ### MRS 二进制规则（Mihomo 高效格式）
 
 ```
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/direct_domain.mrs
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/direct_ip.mrs
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/private_ip.mrs
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/private_domain.mrs
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/reject.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_ip.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs
 ```
 
 ### Shadowrocket 模块
 
 ```
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/Shadowrocket/direct.sgmodule
-https://raw.githubusercontent.com/{owner}/ProxyRules/release/Shadowrocket/reject.sgmodule
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/direct.sgmodule
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject.sgmodule
 ```
 
 ## 上游数据源
