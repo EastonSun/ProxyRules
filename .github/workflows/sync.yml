@@ -4,7 +4,7 @@
 # 触发条件:
 #   1. 定时: 北京时间每天早上 8:00 (UTC 0:00)
 #   2. 手动: workflow_dispatch (GitHub UI 按钮触发)
-#   3. 推送: 推送到 main/master 分支时 (用于调试)
+#   3. 推送: 推送到 main/master 分支时 (仅 config/scripts/workflow 变更)
 # ============================================================
 
 name: Sync & Release Rules
@@ -40,7 +40,7 @@ concurrency:
 jobs:
 
   # ==========================================================
-  # Job 1: 抓取 + 清洗规则
+  # Job 1: 抓取 + 清洗规则 (唯一的生产者)
   # ==========================================================
   fetch-and-filter:
     name: Fetch & Filter
@@ -61,15 +61,11 @@ jobs:
       - name: 安装 Python 依赖
         run: pip install -r scripts/requirements.txt
 
-      - name: 运行抓取与清洗脚本
+      - name: 运行抓取与清洗
         timeout-minutes: 10
-        run: |
-          python scripts/fetch_and_filter.py
-          echo "{\"direct_domain\":$(wc -l < output/direct_domain.txt),\
-           \"direct_ip\":$(wc -l < output/direct_ip.txt),\
-           \"reject\":$(wc -l < output/reject.txt)}" > output/summary.json
+        run: python scripts/fetch_and_filter.py
 
-      - name: 上传 output 产物
+      - name: 上传 output/ (供后续 job 使用)
         uses: actions/upload-artifact@v4
         with:
           name: output-txt
@@ -88,12 +84,12 @@ jobs:
 
 
   # ==========================================================
-  # Job 2: Mihomo 编译
+  # Job 2: 编译所有产物 (MRS + Shadowrocket)
   # ==========================================================
-  compile-mihomo:
-    name: Compile (Mihomo)
+  build-all:
+    name: Build All (MRS + Shadowrocket)
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     needs: fetch-and-filter
 
     steps:
@@ -107,57 +103,63 @@ jobs:
           path: output/
 
       - name: 安装 Python 依赖
-        run: pip install requests
+        run: pip install requests PyYAML
 
-      - name: 运行 Mihomo 编译脚本
-        run: python scripts/compile_mihomo.py
+      # --- Mihomo 编译 ---
+      - name: 下载 Mihomo 核心
+        run: |
+          MIHOMO_VER="v1.19.3"
+          MIHOMO_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MIHOMO_VER}/mihomo-linux-amd64-${MIHOMO_VER}.gz"
+          curl -sL "$MIHOMO_URL" -o mihomo.gz
+          gunzip mihomo.gz
+          chmod +x mihomo
+          ./mihomo convert-ruleset 2>&1 | head -1 || true
+          echo "✅ Mihomo ready"
 
+      - name: 编译 MRS 二进制
+        run: |
+          mkdir -p build
+          ./mihomo convert-ruleset domain  text output/direct_domain.txt  build/direct_domain.mrs
+          ./mihomo convert-ruleset ipcidr  text output/direct_ip.txt      build/direct_ip.mrs
+          ./mihomo convert-ruleset ipcidr  text output/private_ip.txt     build/private_ip.mrs
+          ./mihomo convert-ruleset domain  text output/private_domain.txt build/private_domain.mrs
+          ./mihomo convert-ruleset domain  text output/reject.txt         build/reject.mrs
+          echo ""
+          echo "📦 MRS 产物:"
+          ls -lh build/*.mrs
+
+      # --- Shadowrocket 模块 ---
+      - name: 生成 Shadowrocket .sgmodule
+        run: |
+          python scripts/generate_sr.py
+          echo "📦 SGModule 产物:"
+          ls -lh build/Shadowrocket/
+
+      # --- 把 .txt 也复制到 build/，方便发布时一起拿 ---
+      - name: 整理 build/ 目录
+        run: |
+          cp output/*.txt build/
+          echo ""
+          echo "📦 build/ 完整产物:"
+          find build -type f | sort
+
+      # --- 上传整个 build/ 给 publish job ---
       - name: 上传 build 产物
         uses: actions/upload-artifact@v4
         with:
-          name: build-mrs
-          path: build/*.mrs
+          name: build-all
+          path: build/
           retention-days: 1
 
 
   # ==========================================================
-  # Job 3: Shadowrocket .sgmodule 生成
-  # ==========================================================
-  generate-sr:
-    name: Generate Shadowrocket
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    needs: fetch-and-filter
-
-    steps:
-      - name: Checkout 仓库
-        uses: actions/checkout@v4
-
-      - name: 下载 output 产物
-        uses: actions/download-artifact@v4
-        with:
-          name: output-txt
-          path: output/
-
-      - name: 运行 SR 生成脚本
-        run: python scripts/generate_sr.py
-
-      - name: 上传 SR 产物
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-sr
-          path: build/Shadowrocket/
-          retention-days: 1
-
-
-  # ==========================================================
-  # Job 4: 发布到 Release
+  # Job 3: 发布到 Release
   # ==========================================================
   publish:
     name: Publish to Release
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    needs: [compile-mihomo, generate-sr]
+    needs: build-all
     if: |
       (github.event_name == 'schedule') ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.publish == 'true')
@@ -168,47 +170,27 @@ jobs:
         with:
           ref: release
 
-      - name: 下载所有编译产物
+      - name: 下载 build 产物
         uses: actions/download-artifact@v4
         with:
-          pattern: build-*
-          path: build-merged
-          merge-multiple: true
+          name: build-all
+          path: dist
 
-      - name: 也下载文本规则
-        uses: actions/download-artifact@v4
-        with:
-          name: output-txt
-          path: build-merged
-
-      - name: 整理发布文件
+      - name: 发布到 release 分支
         run: |
-          echo "📁 所有产物:"
-          find build-merged -type f | sort
+          echo "📁 下载的产物:"
+          find dist -type f | sort
 
-          rm -rf release
-          mkdir -p release/Shadowrocket
+          # 清空根目录
+          git rm -rf --ignore-unmatch .
 
-          # .txt 文本规则
-          cp build-merged/*.txt release/ 2>/dev/null || true
-          # .mrs 二进制规则
-          cp build-merged/*.mrs release/ 2>/dev/null || true
-          # Shadowrocket 模块
-          cp build-merged/Shadowrocket/*.sgmodule release/Shadowrocket/ 2>/dev/null || true
+          # 复制所有产物到根目录 (保留子目录结构)
+          cp -r dist/* .
+          rm -rf dist
 
           echo ""
-          echo "📦 待发布:"
-          find release -type f | sort
-
-      - name: 提交并推送到 Release 分支
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git rm -rf --ignore-unmatch .
-          cp -r release/* .
-          cp -r release/.[!.]* . 2>/dev/null || true
-          rm -rf release build-merged
+          echo "📦 待发布文件:"
+          find . -type f -not -path './.git/*' | sort
 
           git add -A
 
