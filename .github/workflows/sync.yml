@@ -1,0 +1,247 @@
+# ============================================================
+# ProxyRules — 每日自动同步与发布
+# ============================================================
+# 触发条件:
+#   1. 定时: 北京时间每天早上 8:00 (UTC 0:00)
+#   2. 手动: workflow_dispatch (GitHub UI 按钮触发)
+#   3. 推送: 推送到 main/master 分支时 (用于调试)
+# ============================================================
+
+name: Sync & Release Rules
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "是否发布到 release 分支"
+        type: boolean
+        default: true
+
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - ".github/workflows/sync.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: sync-release
+  cancel-in-progress: true
+
+jobs:
+
+  # ==========================================================
+  # Job 1: 抓取 + 清洗规则
+  # ==========================================================
+  fetch-and-filter:
+    name: Fetch & Filter
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout 仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: "scripts/requirements.txt"
+
+      - name: 安装 Python 依赖
+        run: pip install -r scripts/requirements.txt
+
+      - name: 运行抓取与清洗脚本
+        timeout-minutes: 10
+        run: |
+          python scripts/fetch_and_filter.py
+          echo "{\"direct_domain\":$(wc -l < output/direct_domain.txt),\
+           \"direct_ip\":$(wc -l < output/direct_ip.txt),\
+           \"reject\":$(wc -l < output/reject.txt)}" > output/summary.json
+
+      - name: 上传 output 产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-txt
+          path: output/
+          retention-days: 1
+
+      - name: 打印统计
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📊 规则抓取统计"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          for f in output/*.txt; do
+            echo "  $(basename $f): $(grep -vc '^#' $f) 条"
+          done
+          ls -lh output/*.txt
+
+
+  # ==========================================================
+  # Job 2: Mihomo 编译
+  # ==========================================================
+  compile-mihomo:
+    name: Compile (Mihomo)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: fetch-and-filter
+
+    steps:
+      - name: Checkout 仓库
+        uses: actions/checkout@v4
+
+      - name: 下载 output 产物
+        uses: actions/download-artifact@v4
+        with:
+          name: output-txt
+          path: output/
+
+      - name: 安装 Python 依赖
+        run: pip install requests
+
+      - name: 运行 Mihomo 编译脚本
+        run: python scripts/compile_mihomo.py
+
+      - name: 上传 build 产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-mrs
+          path: build/*.mrs
+          retention-days: 1
+
+
+  # ==========================================================
+  # Job 3: Shadowrocket .sgmodule 生成
+  # ==========================================================
+  generate-sr:
+    name: Generate Shadowrocket
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: fetch-and-filter
+
+    steps:
+      - name: Checkout 仓库
+        uses: actions/checkout@v4
+
+      - name: 下载 output 产物
+        uses: actions/download-artifact@v4
+        with:
+          name: output-txt
+          path: output/
+
+      - name: 运行 SR 生成脚本
+        run: python scripts/generate_sr.py
+
+      - name: 上传 SR 产物
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-sr
+          path: build/Shadowrocket/
+          retention-days: 1
+
+
+  # ==========================================================
+  # Job 4: 发布到 Release
+  # ==========================================================
+  publish:
+    name: Publish to Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    needs: [compile-mihomo, generate-sr]
+    if: |
+      (github.event_name == 'schedule') ||
+      (github.event_name == 'workflow_dispatch' && github.event.inputs.publish == 'true')
+
+    steps:
+      - name: Checkout 仓库 (release 分支)
+        uses: actions/checkout@v4
+        with:
+          ref: release
+
+      - name: 下载所有编译产物
+        uses: actions/download-artifact@v4
+        with:
+          pattern: build-*
+          path: build-merged
+          merge-multiple: true
+
+      - name: 也下载文本规则
+        uses: actions/download-artifact@v4
+        with:
+          name: output-txt
+          path: build-merged
+
+      - name: 整理发布文件
+        run: |
+          echo "📁 所有产物:"
+          find build-merged -type f | sort
+
+          rm -rf release
+          mkdir -p release/Shadowrocket
+
+          # .txt 文本规则
+          cp build-merged/*.txt release/ 2>/dev/null || true
+          # .mrs 二进制规则
+          cp build-merged/*.mrs release/ 2>/dev/null || true
+          # Shadowrocket 模块
+          cp build-merged/Shadowrocket/*.sgmodule release/Shadowrocket/ 2>/dev/null || true
+
+          echo ""
+          echo "📦 待发布:"
+          find release -type f | sort
+
+      - name: 提交并推送到 Release 分支
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git rm -rf --ignore-unmatch .
+          cp -r release/* .
+          cp -r release/.[!.]* . 2>/dev/null || true
+          rm -rf release build-merged
+
+          git add -A
+
+          TIMESTAMP=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+
+          if git diff --staged --quiet; then
+            echo "✅ 无变更，跳过提交"
+          else
+            git commit -m "🔄 Sync: $TIMESTAMP (北京时间)"
+            git push origin release --force
+            echo "✅ 已推送到 release 分支"
+          fi
+
+      - name: 发布摘要
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📦 发布完成"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "文本规则:"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_domain.txt"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_ip.txt"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_ip.txt"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_domain.txt"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject.txt"
+          echo ""
+          echo "MRS 二进制:"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_domain.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_ip.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_ip.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_domain.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject.mrs"
+          echo ""
+          echo "Shadowrocket:"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/direct.sgmodule"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/reject.sgmodule"

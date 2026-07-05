@@ -1,0 +1,266 @@
+# ============================================================
+# ProxyRules — 上游规则数据源配置 (验证通过版)
+# ============================================================
+# 格式说明:
+#   domain-list      — 行首带 DOMAIN-SUFFIX, / DOMAIN, / IP-CIDR, 等前缀
+#   clash-rule-set   — Clash YAML payload: 列表格式
+#   bare-domain      — 纯域名，一行一个，无前缀
+#   ip-cidr          — IP-CIDR 或 IP-CIDR,1.0.1.0/24 格式
+#   surge-list       — Surge 风格 (+.domain / DOMAIN-SUFFIX,xxx,POLICY)
+#   adguard-list     — ||domain^ 或 0.0.0.0 domain 格式
+#   hosts-list       — hosts 文件格式
+#   dnsmasq-conf     — server=/domain/114.114.114.114 格式
+# ============================================================
+
+sources:
+
+  # ──────────────────────────────────────────────────────────
+  # 1. Loyalsoldier/clash-rules — 每日 06:30 自动构建
+  #    格式: YAML payload: 列表 (clash-rule-set)
+  # ──────────────────────────────────────────────────────────
+  - name: Loyalsoldier/clash-rules
+    description: Clash 规则集 — 直连/代理/拦截/GFW/IP/局域网
+    enabled: true
+    base_url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release
+    files:
+      - path: direct.txt
+        format: clash-rule-set
+        category: direct_domain
+      - path: cncidr.txt
+        format: ip-cidr
+        category: direct_ip
+      - path: reject.txt
+        format: clash-rule-set
+        category: reject
+      - path: lancidr.txt
+        format: ip-cidr
+        category: private_ip
+      # applications.txt 是 PROCESS-NAME 规则，不适合域名/IP 规则集，跳过
+
+  # ──────────────────────────────────────────────────────────
+  # 2. Loyalsoldier/v2ray-rules-dat — 每日构建
+  #    格式: 纯域名/IP，一行一个 (bare-domain)
+  # ──────────────────────────────────────────────────────────
+  - name: Loyalsoldier/v2ray-rules-dat
+    description: v2ray 路由规则 — 增强版直连/代理列表
+    enabled: true
+    base_url: https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release
+    files:
+      - path: direct-list.txt
+        format: bare-domain
+        category: direct_domain
+      - path: reject-list.txt
+        format: bare-domain
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 3. xkww3n/Rules — Surge 风格 (+.domain)
+  # ──────────────────────────────────────────────────────────
+  - name: xkww3n/Rules
+    description: Surge/Clash 文本规则集 — 中日广告 + 国内域名
+    enabled: true
+    base_url: https://rules.xkww3n.cyou
+    files:
+      - path: text-plus/domestic.txt
+        format: surge-list
+        category: direct_domain
+      - path: text-plus/reject.txt
+        format: surge-list
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 4. ACL4SSR/ACL4SSR — 经典分流规则
+  #    格式: 行首带 DOMAIN-SUFFIX, / DOMAIN-KEYWORD, 等
+  # ──────────────────────────────────────────────────────────
+  - name: ACL4SSR/ACL4SSR
+    description: 经典 ACL4SSR 规则集
+    enabled: true
+    base_url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master
+    files:
+      - path: Clash/ChinaDomain.list
+        format: domain-list
+        category: direct_domain
+      - path: Clash/BanAD.list
+        format: domain-list
+        category: reject
+      - path: Clash/BanProgramAD.list
+        format: domain-list
+        category: reject
+      - path: Clash/BanEasyListChina.list
+        format: domain-list
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 5. Cats-Team/AdRules — 中国区域广告规则合集
+  # ──────────────────────────────────────────────────────────
+  - name: Cats-Team/AdRules
+    description: 中国区域广告屏蔽规则合集
+    enabled: true
+    base_url: https://raw.githubusercontent.com/Cats-Team/AdRules/main
+    files:
+      - path: mod/rules/adblock-rules.txt
+        format: adguard-list
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 6. zqzess/rule_for_quantumultX
+  #    格式: YAML payload: (clash-rule-set), 但更新停滞 (2024-01)
+  # ──────────────────────────────────────────────────────────
+  - name: zqzess/rule_for_quantumultX
+    description: QuantumultX/Clash 广告过滤规则
+    enabled: true
+    base_url: https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master
+    files:
+      - path: Clash/filter/AdBlock.list
+        format: clash-rule-set
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 7. blackmatrix7/ios_rule_script — 最全面的规则库
+  #    格式: DOMAIN,/DOMAIN-SUFFIX,/IP-CIDR, 前缀
+  # ──────────────────────────────────────────────────────────
+  - name: blackmatrix7/ios_rule_script
+    description: 按服务细分的海量规则库
+    enabled: true
+    base_url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
+    files:
+      - path: rule/Clash/Advertising/Advertising.list
+        format: domain-list
+        category: reject
+      - path: rule/Clash/Privacy/Privacy.list
+        format: domain-list
+        category: reject
+      - path: rule/Clash/China/China.list
+        format: domain-list
+        category: direct_domain
+      - path: rule/Clash/ChinaIPs/ChinaIPs.list
+        format: ip-cidr
+        category: direct_ip
+
+  # ──────────────────────────────────────────────────────────
+  # 8. DustinWin/ruleset_geodata — 仓库已重构
+  #    数据现分散在 domain-list-custom + geoip 子项目中
+  #    暂时禁用，待后续调研正确路径后重新启用
+  # ──────────────────────────────────────────────────────────
+  # - name: DustinWin/ruleset_geodata
+  #   description: geosite/geoip 增强版规则集
+  #   enabled: false
+  #   ...
+
+  # ──────────────────────────────────────────────────────────
+  # 9. QuixoticHeart/rule-set — 仓库已重构为脚本生成模式
+  #    不再直接提供预编译文本文件
+  #    暂时禁用
+  # ──────────────────────────────────────────────────────────
+  # - name: QuixoticHeart/rule-set
+  #   description: 多平台规则集
+  #   enabled: false
+  #   ...
+
+  # ──────────────────────────────────────────────────────────
+  # 10. felixonmars/dnsmasq-china-list — "万源之源"
+  #     中国域名白名单，dnsmasq 格式
+  # ──────────────────────────────────────────────────────────
+  - name: felixonmars/dnsmasq-china-list
+    description: 中国域名白名单（dnsmasq 格式）
+    enabled: true
+    base_url: https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master
+    files:
+      - path: accelerated-domains.china.conf
+        format: dnsmasq-conf
+        category: direct_domain
+
+  # ──────────────────────────────────────────────────────────
+  # 11. gaoyifan/china-operator-ip
+  #     中国运营商 IP 段，分支: ip-lists
+  # ──────────────────────────────────────────────────────────
+  - name: gaoyifan/china-operator-ip
+    description: 中国运营商 IP 段（按 ISP 拆分）
+    enabled: true
+    base_url: https://raw.githubusercontent.com/gaoyifan/china-operator-ip/ip-lists
+    files:
+      - path: china.txt
+        format: ip-cidr
+        category: direct_ip
+
+  # ──────────────────────────────────────────────────────────
+  # 12. MetaCubeX/meta-rules-dat — Mihomo 官方生态
+  #     格式: .list 文件 (纯文本, 一行一个域名, bare-domain)
+  #     仓库将规则按服务拆分，我们抓取多个 @cn / -cn 后缀的文件
+  # ──────────────────────────────────────────────────────────
+  - name: MetaCubeX/meta-rules-dat
+    description: Mihomo 官方生态规则
+    enabled: true
+    base_url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta
+    files:
+      # 直连域名 — @cn 标记的服务
+      - path: geo/geosite/apple-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/apple@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/google-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/microsoft@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/alibabacloud@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-cdn-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-cdn-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/amazon@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/aws-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/azure@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/adobe@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-entertainment-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ecommerce@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-finance@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-dev-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-companies@cn.list
+        format: bare-domain
+        category: direct_domain
+      # 中国大陆 IP
+      - path: geo/geoip/cn.list
+        format: ip-cidr
+        category: direct_ip
+      # 广告/追踪 (category-ads 包含海量广告域名)
+      - path: geo/geosite/category-ads.list
+        format: bare-domain
+        category: reject
+      - path: geo/geosite/category-ads-all.list
+        format: bare-domain
+        category: reject
+
+
+# ============================================================
+# 全局配置
+# ============================================================
+global:
+  fetch_timeout: 30
+  max_retries: 3
+  retry_delay: 2
+  user_agent: "ProxyRules-Fetcher/1.0 (+https://github.com/ProxyRules/ProxyRules)"
+  output_dir: output

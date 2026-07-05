@@ -1,0 +1,335 @@
+# ============================================================
+# ProxyRules — 过滤与分类规则配置
+# ============================================================
+# 定义：
+#   1. 每个输出分类的过滤/提取策略
+#   2. 全局排除域名（强制删除，即使上游标记为直连）
+#   3. 内置规则（不依赖上游，直接注入的规则）
+#   4. 格式解析器配置
+# ============================================================
+
+categories:
+
+  # ==========================================================
+  # direct_domain — 大陆域名 + 大厂CDN（白名单直连）
+  # ==========================================================
+  direct_domain:
+    description: 中国大陆直连域名与大厂CDN
+    # --- X 不配置 include_keywords：这些上游源本身就是大陆域名白名单，无需二次过滤 ---
+    #     include_keywords 仅用于从 proxy-list 等代理名单中抽取 cdn/apple-cn 等少数例外
+    #     它不应作用在 direct-list/China.list/domestic.txt 等直连名单上
+    include_keywords: []
+    # --- 排除模式 (域名匹配以下任一模式的直接丢弃) ---
+    exclude_patterns:
+      # Google/YouTube 等明确需要代理的服务
+      - "*.google.com"
+      - "*.googlevideo.com"
+      - "*.googleapis.com"
+      - "*.googleapis.cn"
+      - "*.youtube.com"
+      - "*.ytimg.com"
+      - "*.ggpht.com"
+      - "*.gstatic.com"
+      - "*.googleusercontent.com"
+      - "*.google-analytics.com"
+      - "*.googletagmanager.com"
+      - "*.facebook.com"
+      - "*.fbcdn.net"
+      - "*.twitter.com"
+      - "*.twimg.com"
+      - "*.x.com"
+      - "*.instagram.com"
+      - "*.reddit.com"
+      - "*.redd.it"
+      - "*.t.me"
+      - "*.telegram.org"
+      - "*.discord.com"
+      - "*.discord.gg"
+      - "*.whatsapp.com"
+      - "*.whatsapp.net"
+      - "*.signal.org"
+      - "*.openai.com"
+      - "*.claude.ai"
+      - "*.anthropic.com"
+    # --- 仅提取 (提取上游文件中带以下前缀的行) ---
+    #     正则将从匹配的行中抽取纯域名
+    extract_prefixes:
+      - "DOMAIN-SUFFIX,"
+      - "DOMAIN,"
+      - "DOMAIN-KEYWORD,"
+      - "host-suffix,"
+      - "host-keyword,"
+      - "host-wildcard,"
+      - "."
+      - "+."
+
+  # ==========================================================
+  # direct_ip — 中国大陆公网 IP 段
+  # ==========================================================
+  direct_ip:
+    description: 中国大陆公网 IPv4/IPv6 CIDR
+    # --- 排除模式 (非大陆 IP 或不应出现在直连列表中的 IP) ---
+    exclude_keywords:
+      - "Telegram"
+      - "Facebook"
+      - "Twitter"
+      - "Google"
+      - "Cloudflare"      # Cloudflare 非大陆节点
+      - "AWS"
+      - "Azure"
+      - "Linode"
+      - "DigitalOcean"
+      - "Vultr"
+    # --- 保留前缀 ---
+    extract_prefixes:
+      - "IP-CIDR,"
+      - "IP-CIDR6,"
+      - "IP-ASN,"
+    # --- 必须排除的保留地址段 (这些归 private_ip) ---
+    exclude_private_ranges: true
+
+  # ==========================================================
+  # private_ip — 局域网/私有 IP 段
+  # ==========================================================
+  private_ip:
+    description: 私有/局域网/保留 IP 段（防止代理接管内网流量）
+    # --- 内置规则 (无论上游是否提供，这些永远注入) ---
+    builtin:
+      # RFC 1918 — 私有地址
+      - "10.0.0.0/8"
+      - "172.16.0.0/12"
+      - "192.168.0.0/16"
+      # RFC 6598 — CGNAT (运营商级 NAT)
+      - "100.64.0.0/10"
+      # RFC 3927 — 链路本地地址
+      - "169.254.0.0/16"
+      # RFC 5737 — 文档/测试用地址
+      - "192.0.2.0/24"
+      - "198.51.100.0/24"
+      - "203.0.113.0/24"
+      # RFC 2544 — 基准测试
+      - "198.18.0.0/15"
+      # 多播地址
+      - "224.0.0.0/4"
+      # 未来使用 (E类地址)
+      - "240.0.0.0/4"
+      # 本地回环
+      - "127.0.0.0/8"
+      # 本网络
+      - "0.0.0.0/8"
+      # Docker
+      - "172.17.0.0/16"
+    extract_prefixes:
+      - "IP-CIDR,"
+      - "IP-CIDR6,"
+
+  # ==========================================================
+  # private_domain — 局域网专用域名
+  # ==========================================================
+  private_domain:
+    description: 局域网/组播域名（防止解析泄露到公网 DNS）
+    # --- 内置规则 (这些域名在公网 DNS 中无意义，直连即可) ---
+    builtin:
+      - "*.local"
+      - "*.lan"
+      - "*.home.arpa"
+      - "*.internal"
+      - "*.intranet"
+      - "*.corp"
+      - "*.home"
+      - "*.localhost"
+      - "localhost"
+      - "lan"
+      - "local"
+      # mDNS 多播 DNS
+      - "*.localdomain"
+    extract_prefixes:
+      - "DOMAIN-SUFFIX,"
+      - "DOMAIN,"
+      - "host-suffix,"
+
+  # ==========================================================
+  # reject — 广告/追踪/统计域名拦截
+  # ==========================================================
+  reject:
+    description: 广告、追踪、统计、挖矿域名黑名单
+    # --- 排除模式 (容易误杀的正常域名) ---
+    exclude_patterns:
+      # CDN/基础服务 — 拦截会破坏正常上网
+      - "*.aliyuncs.com"
+      - "*.aliyun.com"
+      - "*.qcloud.com"
+      - "*.myqcloud.com"
+      - "*.tencent-cloud.com"
+      - "*.baidu.com"
+      - "*.bdstatic.com"
+      - "*.cloudflare.com"
+      - "*.cloudflare.net"
+      - "*.jsdelivr.net"
+      - "*.unpkg.com"
+      - "*.cdnjs.com"
+      - "*.gravatar.com"
+      - "*.fonts.googleapis.com"
+      - "*.fonts.gstatic.com"
+      # Apple 推送/服务
+      - "*.apple.com"
+      - "*.icloud.com"
+      - "*.mzstatic.com"
+      - "*.apple-dns.net"
+      # 微软服务
+      - "*.microsoft.com"
+      - "*.msftncsi.com"
+      - "*.windowsupdate.com"
+      - "*.office.com"
+      - "*.office.net"
+      # 常用软件
+      - "*.weixin.qq.com"
+      - "*.qpic.cn"
+      - "*.qlogo.cn"
+    # --- 保留前缀 ---
+    extract_prefixes:
+      - "DOMAIN-SUFFIX,"
+      - "DOMAIN,"
+      - "DOMAIN-KEYWORD,"
+      - "host-suffix,"
+      - "host-keyword,"
+      - "."
+      - "+."
+    # AdGuard 格式
+    adguard_strippers:
+      - "||"
+      - "^"
+      - "$important"
+      - "$badfilter"
+      - "$all"
+      - "$document"
+      - "$popup"
+
+
+# ============================================================
+# 全局排除规则
+# ============================================================
+# 这些域名在任何情况下都不会出现在输出中
+# 即使上游将其归类为 direct_domain，也会被强制删除
+# ============================================================
+global_exclude:
+  # --- 解释与策略 ---
+  # 以下域名虽然在 .cn TLD 下，但实际解析到国外服务器
+  # 或服务本身被墙，直连会导致连接失败
+  domains:
+    - "googleapis.cn"
+    - "services.googleapis.cn"
+    - "xn--ngstr-lra8j.com"
+
+  # --- 强制排除的顶级域名 (所有 .xxx 后缀的域名都排除) ---
+  #     这些 TLD 下的域名不可能在中国大陆直连
+  exclude_tlds:
+    - ".gov"
+    - ".mil"
+    - ".army"
+    - ".navy"
+
+
+# ============================================================
+# 格式解析器配置
+# ============================================================
+# 定义每种 format 如何解析出纯域名或 IP-CIDR
+# regex 中的 named group "rule" 即为提取目标
+# ============================================================
+format_parsers:
+
+  domain-list:
+    description: 一行一个域名，可带前缀
+    # 提取逻辑: 按 extract_prefixes 匹配，去掉前缀/后缀空格
+    # 暂不需要额外正则，由 category.extract_prefixes 处理
+    comment_chars: ["#", "//", "!", ";"]
+    strip_prefixes: true
+
+  ip-cidr:
+    description: IP-CIDR 格式
+    comment_chars: ["#", "//", "!", ";"]
+    # 匹配: IP-CIDR,1.0.1.0/24 或裸 1.0.1.0/24
+    regex: '(?:IP-CIDR6?,)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{1,2})?)'
+
+  clash-rule-set:
+    description: Clash YAML rule-provider 格式
+    # 从 payload: 列表中提取
+    #   payload:
+    #     - 'DOMAIN-SUFFIX,example.com'
+    #     - 'example.com'
+    comment_chars: ["#"]
+
+  surge-list:
+    description: Surge 规则格式 (DOMAIN-SUFFIX,xxx,POLICY)
+    comment_chars: ["#", "//", "!", ";"]
+    # 第1列: 规则类型; 第2列: 域名/IP; 第3列: 策略
+    csv_delimiter: ","
+
+  adguard-list:
+    description: AdGuard Home 格式 (||domain^)
+    comment_chars: ["#", "!"]
+    # 匹配: ||example.com^ 或 0.0.0.0 example.com
+    regex: '(?:\|\|)?([a-zA-Z0-9][-a-zA-Z0-9]*\.)+[a-zA-Z]{2,}'
+    strip_modifiers: true
+
+  hosts-list:
+    description: hosts 文件格式 (0.0.0.0 domain 或 127.0.0.1 domain)
+    comment_chars: ["#"]
+    # 逐行分割，提取第2列（域名），跳过注释和空行
+
+  dnsmasq-conf:
+    description: dnsmasq 配置格式 (server=/domain/114.114.114.114)
+    comment_chars: ["#"]
+    # 匹配: server=/example.com/114.114.114.114
+    regex: 'server=\/([a-zA-Z0-9][-a-zA-Z0-9]*\.)+[a-zA-Z]{2,}\/'
+
+
+# ============================================================
+# 后处理配置
+# ============================================================
+post_processing:
+  # 去重 (必须开启)
+  dedup: true
+  # 排序 (必须开启，保证每次输出一致)
+  sort: true
+  # 统一转为小写
+  lowercase: true
+  # 去除行首行尾空白
+  strip: true
+  # 空行处理
+  remove_empty_lines: true
+  # 注释头模板 (写入每个输出文件顶部)
+  headers:
+    direct_domain: |
+      # ProxyRules — Direct Domain
+      # 中国大陆域名与大厂CDN白名单
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 上游来源: {sources}
+      # 仓库: https://github.com/ProxyRules/ProxyRules
+    direct_ip: |
+      # ProxyRules — Direct IP
+      # 中国大陆公网IP段
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 上游来源: {sources}
+      # 仓库: https://github.com/ProxyRules/ProxyRules
+    private_ip: |
+      # ProxyRules — Private IP
+      # 局域网/私有/保留IP段 (RFC 1918 / CGNAT / 链路本地 / 多播)
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 仓库: https://github.com/ProxyRules/ProxyRules
+    private_domain: |
+      # ProxyRules — Private Domain
+      # 局域网专用域名 (.local / .lan / .internal 等)
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 仓库: https://github.com/ProxyRules/ProxyRules
+    reject: |
+      # ProxyRules — Reject
+      # 广告/追踪/统计域名拦截黑名单
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 上游来源: {sources}
+      # 仓库: https://github.com/ProxyRules/ProxyRules
