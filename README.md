@@ -1,30 +1,22 @@
 # ProxyRules
 
-自动化代理路由规则订阅仓库，每日同步上游规则源，清洗去重后发布为 Mihomo/Shadowrocket 可用的直连域名、IP 段、广告拦截规则集。
+自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 11 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
+
+规则采用 Mihomo 官方 `+.domain` 通配符语法，等价于 `DOMAIN-SUFFIX`。
 
 ## 功能概览
 
 | 产物 | 格式 | 说明 |
 |------|------|------|
-| `direct_domain.txt` / `.mrs` | 文本 / MRS 二进制 | 中国大陆域名 + 大厂 CDN 白名单 |
-| `direct_ip.txt` / `.mrs` | 文本 / MRS 二进制 | 中国大陆公网 IP 段 |
-| `private_ip.txt` / `.mrs` | 文本 / MRS 二进制 | 局域网/私有/保留 IP 段 |
-| `private_domain.txt` / `.mrs` | 文本 / MRS 二进制 | 局域网专用域名 |
-| `reject.txt` / `.mrs` | 文本 / MRS 二进制 | 广告/追踪/统计域名拦截 |
+| `direct_domain.mrs` | MRS 二进制 | 中国大陆域名 + 大厂 CDN 白名单 |
+| `direct_ip.mrs` | MRS 二进制 | 中国大陆公网 IP 段 |
+| `private_ip.mrs` | MRS 二进制 | 局域网/私有/保留 IP 段 |
+| `private_domain.mrs` | MRS 二进制 | 局域网专用域名 |
+| `reject.mrs` | MRS 二进制 | 广告/追踪/统计域名拦截 |
 | `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
 | `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
 ## 订阅地址
-
-### 文本规则（适用于 Mihomo、Clash Meta）
-
-```
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_domain.txt
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_ip.txt
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.txt
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.txt
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.txt
-```
 
 ### MRS 二进制规则（Mihomo 高效格式）
 
@@ -45,10 +37,11 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reje
 
 ## 上游数据源
 
-本仓库整合了以下社区的规则数据（排名不分先后）：
+本仓库以 MetaCubeX/meta-rules-dat 为核心基础，结合以下社区规则数据（排名不分先后）：
 
 | 上游源 | 用途 |
 |--------|------|
+| [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) | **核心基础** — Mihomo 官方生态规则 |
 | [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) | 直连域名、大陆 IP、广告拦截、私有 IP |
 | [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat) | 增强版直连域名、广告拦截 |
 | [xkww3n/Rules](https://github.com/xkww3n/Rules) | 中日广告过滤、国内域名 |
@@ -58,26 +51,17 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reje
 | [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | 全面按服务细分的规则库 |
 | [felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list) | 中国域名白名单 |
 | [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip) | 中国运营商 IP 段 |
-| [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) | Mihomo 官方生态规则 |
+| [REIJI007/AdBlock_Rule_For_Clash](https://github.com/REIJI007/AdBlock_Rule_For_Clash) | 广告域名拦截规则集 |
 
 ## 自动化流水线
 
 ```mermaid
 graph TD
-    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 10 个上游源]
+    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 11 个上游源<br/>via +. 通配符格式]
     B --> C{分类去重}
-    C --> D[direct_domain.txt]
-    C --> E[direct_ip.txt]
-    C --> F[private_ip.txt]
-    C --> G[private_domain.txt]
-    C --> H[reject.txt]
-    D --> I[compile_mihomo.py<br/>→ .mrs 二进制]
-    E --> I
-    F --> I
-    G --> I
-    H --> I
+    C --> D[+/domain 中间文本]
+    D --> I[mihomo convert-ruleset<br/>→ .mrs 二进制]
     D --> J[generate_sr.py<br/>→ .module]
-    H --> J
     I --> K[发布到 release 分支]
     J --> K
 ```
@@ -103,7 +87,7 @@ source .venv/bin/activate
 # 2. 安装依赖
 pip install -r scripts/requirements.txt
 
-# 3. 抓取并清洗规则
+# 3. 抓取并清洗规则（生成中间文本，使用 +. 通配符格式）
 python scripts/fetch_and_filter.py
 
 # 4. 编译 Mihomo MRS 二进制（需要本地安装 mihomo）
