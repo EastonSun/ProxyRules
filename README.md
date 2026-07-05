@@ -41,11 +41,11 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reje
 
 ```yaml
 rules:
+  - RULE-SET,adblock,reject
   - RULE-SET,geosite-private,direct
   - RULE-SET,geoip-private,direct,no-resolve
   - RULE-SET,geosite-cn,direct
   - RULE-SET,geoip-cn,direct,no-resolve
-  - RULE-SET,adblock,reject
   - MATCH,PROXY
 
 rule-providers:
