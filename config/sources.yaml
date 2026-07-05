@@ -193,20 +193,125 @@ sources:
     enabled: true
     base_url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta
     files:
-      # 直连域名 — @cn 标记的服务
+      # 全量 @cn / -cn 域名 + cn.list 汇总 (共 209 个文件)
+      - path: geo/geosite/cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/acer@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/adidas@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/adobe@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/aerogard@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/airwick@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/akamai@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/alibaba@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/alibabacloud@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/alphabet@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/amazon@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/amd@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/amp@cn.list
+        format: bare-domain
+        category: direct_domain
       - path: geo/geosite/apple-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/apple-dev@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/apple-pki@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/apple@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/google-cn.list
+      - path: geo/geosite/asus@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/microsoft@cn.list
+      - path: geo/geosite/att@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/alibabacloud@cn.list
+      - path: geo/geosite/aws-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/aws-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/aws@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/azure@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/beats@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/bestbuy@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/bing@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/bluearchive@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/bmw@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/booking@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/bridgestone@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/broadcom@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/calgoncarbon@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/canon@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ai-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-antivirus@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-automobile-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-bank-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-blog-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-cas@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-cdn-!cn@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/category-cdn-cn.list
@@ -215,31 +320,505 @@ sources:
       - path: geo/geosite/category-cdn-cn@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/amazon@cn.list
+      - path: geo/geosite/category-collaborate-cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/aws-cn.list
+      - path: geo/geosite/category-companies@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/azure@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/adobe@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/category-entertainment-cn@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/category-ecommerce@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/category-finance@cn.list
+      - path: geo/geosite/category-cryptocurrency@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/category-dev-cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/category-companies@cn.list
+      - path: geo/geosite/category-dev-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-dev@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-documents-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ecommerce@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-education-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-electronic-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-enhance-gaming@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-enterprise-query-platform-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-entertainment-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-entertainment-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-entertainment-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-entertainment@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-finance@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-food-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-food-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-food-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-game-accelerator-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-game-platforms-download@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-games-!cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-games-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-games-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-games-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-games@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-hospital-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-httpdns-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-httpdns-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ip-geo-detect@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-logistics-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-logistics-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-media-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-media-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-media@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-mooc-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-netdisk-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-network-security-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ntp-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ntp-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ntp@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-number-verification-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-outsource-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-remote-control@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-ru@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-scholar-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-securities-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-social-media-!cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-social-media-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-social-media-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-speedtest@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-tech-media@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/category-wiki-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/cisco@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/clearasil@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/cloudflare-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/cloudflare-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/cloudflare@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/connectivity-check@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/dell@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/dettol@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/digicert@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/duolingo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/durex@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/ebay@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/entrust@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/epicgames@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/eset@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/familymart@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/farfetch@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/fflogs@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/finish@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/firebase@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/geolocation-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/geolocation-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/gigabyte@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/globalsign@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/gmo-internet@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/gog@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/google-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/google-play@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/google-trust-services@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/google@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/gucci@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/hketgroup@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/hm@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/hp@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/hsbc-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/icloud@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/ifast@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/ikea@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/intel@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/itunes@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/jetbrains@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/kaspersky@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/kindle@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/linkedin@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/louisvuitton@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/lysol@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mapbox@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mastercard@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mcdonalds@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/meadjohnson@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/microsoft-dev@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/microsoft@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mihoyo-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mihoyo-cn@ads.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mihoyo-cn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mihoyo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/miniso@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/mortein@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/movefree@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/msn@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/muji@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/nike@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/nintendo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/nurofen@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/nvidia@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/okaapps@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/okx@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/openjsfoundation@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/oreilly@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/panasonic@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/paypal@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/pearson@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/primevideo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/qnap@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/qualcomm@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/razer@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/rb@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/reabble@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/riot@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/samsung@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/sectigo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/shopee@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/sky@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/sslcom@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/st@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/starbucks@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/steam@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/strepsils@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/swift@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/synology@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/teamviewer@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/tesla@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/test-ipv6@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/thelinuxfoundation@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/thetype@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/tld-cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/tvb@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/ubiquiti@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/ubisoft@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/vanish@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/veet@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/verizon@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/visa@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/vmware@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/volvo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/walmart@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/webex@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/westerndigital@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/woolite@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/xbox@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/yahoo@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/yostar@cn.list
+        format: bare-domain
+        category: direct_domain
+      - path: geo/geosite/youtube@cn.list
         format: bare-domain
         category: direct_domain
       # 中国大陆 IP
