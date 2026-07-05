@@ -306,30 +306,30 @@ post_processing:
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 上游来源: {sources}
-      # 仓库: https://github.com/ProxyRules/ProxyRules
+      # 仓库: https://github.com/EastonSun/ProxyRules
     direct_ip: |
       # ProxyRules — Direct IP
       # 中国大陆公网IP段
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 上游来源: {sources}
-      # 仓库: https://github.com/ProxyRules/ProxyRules
+      # 仓库: https://github.com/EastonSun/ProxyRules
     private_ip: |
       # ProxyRules — Private IP
       # 局域网/私有/保留IP段 (RFC 1918 / CGNAT / 链路本地 / 多播)
       # 更新时间: {timestamp}
       # 总条数: {count}
-      # 仓库: https://github.com/ProxyRules/ProxyRules
+      # 仓库: https://github.com/EastonSun/ProxyRules
     private_domain: |
       # ProxyRules — Private Domain
       # 局域网专用域名 (.local / .lan / .internal 等)
       # 更新时间: {timestamp}
       # 总条数: {count}
-      # 仓库: https://github.com/ProxyRules/ProxyRules
+      # 仓库: https://github.com/EastonSun/ProxyRules
     reject: |
       # ProxyRules — Reject
       # 广告/追踪/统计域名拦截黑名单
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 上游来源: {sources}
-      # 仓库: https://github.com/ProxyRules/ProxyRules
+      # 仓库: https://github.com/EastonSun/ProxyRules
