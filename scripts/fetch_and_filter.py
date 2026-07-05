@@ -173,12 +173,11 @@ class FormatParser:
         解析纯域名格式 — 一行一个域名
         支持以下变体 (MetaCubeX .list 等):
           +.example.com    — Surge 风格域名后缀
+          +.cn             — TLD 级别通配符
           example.com      — 纯域名
         """
         import re as _re
         result = set()
-        # 合法的域名: 可选 +. 前缀，然后是域名
-        domain_re = _re.compile(r'^(\+\.)?[a-zA-Z0-9][a-zA-Z0-9._*-]*[a-zA-Z0-9]$')
         for line in text.splitlines():
             stripped = line.strip()
             if not stripped:
@@ -191,11 +190,18 @@ class FormatParser:
             # 排除 IP-CIDR 格式
             if stripped.startswith("IP-CIDR"):
                 continue
-            # 去掉 +. 前缀 (Surge 风格)
-            if stripped.startswith("+."):
-                stripped = stripped[2:]
-            # 验证是否为有效域名格式
-            if domain_re.match(stripped) and "." in stripped:
+            # 保留 +. 前缀，由 clean_domain_set 统一处理
+            # 域名格式验证: 可选 +. 前缀，然后至少一个标签
+            domain_re = _re.compile(r'^(\+\.)?[a-zA-Z0-9][a-zA-Z0-9._*-]*[a-zA-Z0-9]$')
+            has_plus = stripped.startswith("+.")
+            body = stripped[2:] if has_plus else stripped
+            # 纯域名至少需要一个点号；+. 通配符可以是单标签
+            if has_plus:
+                if not body:
+                    continue
+            elif "." not in body:
+                continue
+            if domain_re.match(stripped):
                 result.add(stripped.lower())
         return result
 
