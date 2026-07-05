@@ -1,7 +1,7 @@
 # ProxyRules — Private Domain
 # 局域网专用域名 (.local / .lan / .internal 等)
-# 更新时间: 2026-07-05 14:59:55 (北京时间)
-# 总条数: 12
+# 更新时间: 2026-07-05 15:18:20 (北京时间)
+# 总条数: 9
 # 仓库: https://github.com/ProxyRules/ProxyRules
 *.corp
 *.home
@@ -12,6 +12,3 @@
 *.local
 *.localdomain
 *.localhost
-lan
-local
-localhost

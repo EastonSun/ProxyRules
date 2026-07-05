@@ -1,11 +1,9 @@
 # ProxyRules — Direct Domain
 # 中国大陆域名与大厂CDN白名单
-# 更新时间: 2026-07-05 14:59:55 (北京时间)
-# 总条数: 113831
+# 更新时间: 2026-07-05 15:18:20 (北京时间)
+# 总条数: 113684
 # 上游来源: Loyalsoldier/clash-rules, Loyalsoldier/v2ray-rules-dat, xkww3n/Rules, ACL4SSR/ACL4SSR, Cats-Team/AdRules, zqzess/rule_for_quantumultX, blackmatrix7/ios_rule_script, felixonmars/dnsmasq-china-list, gaoyifan/china-operator-ip, MetaCubeX/meta-rules-dat
 # 仓库: https://github.com/ProxyRules/ProxyRules
-0.xn--czrs0t
-0.xn--unup4y
 0.zone
 00.net
 000.link
@@ -58,10 +56,6 @@
 000dn.com
 000pc.net
 001.com
-001.xn--czrs0t
-001.xn--fjq720a
-001.xn--unup4y
-001.xn--vhquv
 001060.com
 00117163.xyz
 001d628661009.beer
@@ -143,12 +137,7 @@
 00wv.com
 00xu.com
 01-cf.com
-01.xn--czrs0t
-01.xn--fjq720a
-01.xn--unup4y
-01.xn--vhquv
 010.cc
-010.xn--5tzm5g
 010123456.com
 010155.net
 0101cdn.com
@@ -235,7 +224,6 @@
 01zk.com
 020.com
 020.net
-020.xn--5tzm5g
 0200.xin
 02000.xin
 02017.com
@@ -255,7 +243,6 @@
 021-116114.com
 021.com
 021.net
-021.xn--5tzm5g
 0214.com
 02156506666.net
 02163.com
@@ -326,7 +313,6 @@
 024jsq.com
 024zxw.com
 025.com
-025.xn--5tzm5g
 025002.com
 02516.com
 025ct.com
@@ -931,7 +917,6 @@
 0843d5944883e752.com
 085.com
 0857job.com
-0858.xn--3ds443g
 0859qp.com
 0859sy.com
 0860.xin
@@ -1221,17 +1206,11 @@
 1-yuan.net
 1.biz
 1.cc
-1.xn--vhquv
-10.xn--vhquv
 100-tong.com
 100.com
 100.me
 100.travel
-100.xn--5tzm5g
-100.xn--czrs0t
-100.xn--vhquv
 10000.com
-10000.xn--vhquv
 100000w.com
 10000gd.tech
 10000idc.net
@@ -1279,7 +1258,6 @@
 10086.com
 10086.games
 10086.world
-10086.xn--czrs0t
 1008656.com
 1008691.com
 100allin.com
@@ -1436,7 +1414,6 @@
 10tianqi.com
 10urzr3jk.icu
 10yan.com
-11.xn--vhquv
 110.com
 11000011.com
 1108cd985e95ad39.com
@@ -1445,8 +1422,6 @@
 110route.com
 110tm.com
 111.com
-111.xn--vhquv
-1111.xn--vhquv
 111111111.com
 111237.com
 1113.cc
@@ -1597,7 +1572,6 @@
 11wow.com
 11xotn7p.com
 11yinyuan.com
-12.xn--vhquv
 120.net
 120918.com
 120ask.com
@@ -1621,7 +1595,6 @@
 120ym.com
 121121.net
 1212.com
-1212.xn--czrs0t
 12120.net
 12123.com
 121314.com
@@ -1641,17 +1614,14 @@
 122w.net
 123-789.com
 123.cc
-123.xn--vhquv
 12301.cc
 1230539.com
 12306.com
-12306.xn--vhquv
 12306bypass.com
 12308.com
 1230t.com
 123123.net
 12315.com
-12315.xn--5tzm5g
 12316cn.com
 12317.com
 12317wan.com
@@ -1690,8 +1660,6 @@
 1234yes.com
 12354.com
 12355.net
-12356.xn--czrs0t
-12356.xn--vhquv
 123624.com
 123635.com
 123641.com
@@ -1960,9 +1928,7 @@
 156186.com
 156pay.com
 157110.com
-1573.xn--vhquv
 157300.net
-158.xn--vhquv
 158566.com
 1588.tv
 158c.com
@@ -2005,7 +1971,6 @@
 163.gg
 163.lu
 163.net
-163.xn--3bst00m
 163110.com
 1633.com
 1633.store
@@ -2073,16 +2038,12 @@
 166dns.com
 16757.com
 16768.com
-168.xn--vhquv
 16816.com
 168267xz.com
 168338.com
 16838.com
 1686888.com
 1688.com
-1688.xn--5tzm5g
-1688.xn--unup4y
-1688.xn--vhquv
 16885.com
 16886000.com
 16888.com
@@ -2442,7 +2403,6 @@
 17zyxy.com
 17zyxy.net
 18.cm
-18.xn--czrs0t
 18023.com
 18095.com
 180disk.com
@@ -2602,7 +2562,6 @@
 19888.tv
 198game.com
 198game.net
-199.xn--vhquv
 1990i.com
 199238.vip
 199508.com
@@ -2840,8 +2799,6 @@
 2-class.com
 2-mm.net
 2.biz
-2.xn--unup4y
-2.xn--vhquv
 20001104.com
 2000200.com
 200022.xyz
@@ -3064,7 +3021,6 @@
 2217.com
 221700.com
 222.com
-222.xn--vhquv
 22221111.com
 222bz.com
 222i.net
@@ -3404,7 +3360,6 @@
 29227e5771014.beer
 2925.com
 292775.com
-2929.xn--czrs0t
 29293.com
 29592.net
 296u.com
@@ -3565,9 +3520,6 @@
 3-3.me
 3-hospital-cqmu.com
 3.biz
-3.xn--czrs0t
-3.xn--unup4y
-3.xn--vhquv
 30.net
 3000.com
 300033.info
@@ -3614,8 +3566,6 @@
 30th-feb.com
 30vps.com
 30w.co
-31.xn--czrs0t
-31.xn--vhquv
 310game.com
 310s-2520.com
 310tv.com
@@ -3748,7 +3698,6 @@
 32wan.com
 32xp.com
 33.com
-33.xn--vhquv
 3304399.com
 3304399.net
 330d5ba0e1024.beer
@@ -3767,7 +3716,6 @@
 332831.com
 333-555.com
 333.com
-333.xn--czrs0t
 3331.com
 33315.com
 333232.xyz
@@ -3947,8 +3895,6 @@
 360-jr.com
 360.com
 360.net
-360.xn--czrs0t
-360.xn--vhquv
 3600.com
 3600.net
 3600d.com
@@ -3965,7 +3911,6 @@
 360anyu.com
 360boclub.com
 360bsafe.com
-360buy
 360buy.com
 360buyimg.com
 360buyinternational.com
@@ -4250,7 +4195,6 @@
 369785.com
 3699.cc
 3699.co
-3699.xn--unup4y
 3699wan.com
 369cha.com
 369hui.com
@@ -4692,8 +4636,6 @@
 4-xiang.com
 4.biz
 4.plus
-4.xn--czrs0t
-4.xn--vhquv
 400-lighting.com
 400.com
 40000-30000.com
@@ -5145,9 +5087,6 @@
 4zt.com
 5-link.com
 5.biz
-5.xn--czrs0t
-5.xn--fjq720a
-5.xn--unup4y
 50-jia.com
 500.com
 5000.com
@@ -5881,7 +5820,6 @@
 52.vip
 520.com
 520.net
-520.xn--5tzm5g
 520101.com
 520520520520520.com
 520730.com
@@ -6313,8 +6251,6 @@
 554030cc.com
 554488.com
 554baad62c869a7b.com
-555.xn--czrs0t
-555.xn--vhquv
 55555.ink
 55555.io
 55555432.com
@@ -6513,8 +6449,6 @@
 57yy.site
 57zhe.com
 58.com
-58.xn--czrs0t
-58.xn--vhquv
 5800.com
 580114.com
 580168.com
@@ -6946,9 +6880,6 @@
 6-china.com
 6-u.com
 6.biz
-6.xn--czrs0t
-6.xn--fjq720a
-6.xn--unup4y
 600064.com
 6000feet.com
 600146.net
@@ -7013,7 +6944,6 @@
 6122cec31dfe86dd.com
 612345.com
 612459.com
-613.xn--5tzm5g
 614e697c5fb7c42a.com
 6153.cc
 61611.net
@@ -7024,8 +6954,6 @@
 6169966.com
 616a191f21009.beer
 616pic.com
-618.xn--czrs0t
-618.xn--vhquv
 6186.com
 6187wo.com
 6188.net
@@ -7164,7 +7092,6 @@
 65ec0ea7f04562ad.com
 65liuxue.com
 65mhxy.com
-66.xn--vhquv
 6600.org
 66016.com
 660378.com
@@ -7196,9 +7123,6 @@
 66580.com
 665888j.com
 665888s.com
-666.xn--czrs0t
-666.xn--unup4y
-666.xn--vhquv
 6660333.com
 666127.xyz
 666291.xyz
@@ -7329,7 +7253,6 @@
 677.com
 677.vip
 6771112.com
-678.xn--vhquv
 678119.com
 6786666.com
 6787.com
@@ -11677,7 +11600,6 @@ aliapp-inc.com
 aliapp.com
 aliapp.org
 aliappcdn.com
-alibaba
 alibaba-inc.com
 alibaba.com
 alibaba.net
@@ -11718,7 +11640,6 @@ alicache.com
 alicall.com
 alicaptcha.com
 alicdm.com
-alicdn
 alicdn.com
 alicloud.com
 alicloudapi.com
@@ -11764,7 +11685,6 @@ alikunlun.com
 alikunlun.net
 aliloan.com
 aliluya.com
-alimama
 alimama.com
 alimebot.com
 alimei.com
@@ -11775,7 +11695,6 @@ aliog.com
 alionexpo.com
 alipan.com
 alipansou.com
-alipay
 alipay-corp.com
 alipay-eco.com
 alipay-inc.com
@@ -11833,7 +11752,6 @@ alixox.com
 aliyiyao.com
 aliyizhan.com
 aliyue.net
-aliyun
 aliyun-esa.net
 aliyun-inc.com
 aliyun-iot-share.com
@@ -12466,7 +12384,6 @@ anqingonline.com
 anqingzhiyun.com
 anqn.com
 anqu.com
-anquan
 anquan.info
 anquan.org
 anquanbao.com
@@ -13066,7 +12983,6 @@ appyao.com
 appying.com
 appykt.com
 appyouni.com
-appzapp
 appzhonghua.com
 aprche.net
 apriltq.com
@@ -14379,7 +14295,6 @@ baidevalve.com
 baideye.com
 baidiapp.com
 baidinet.com
-baidu
 baidu-bank.com
 baidu-cdn.com
 baidu-cdn.net
@@ -14411,7 +14326,6 @@ baiduhui.com
 baidulook.com
 baiduor.com
 baidupan.com
-baidupcs
 baidupcs.com
 baidupcs.net
 baidusmartapps.com
@@ -15744,7 +15658,6 @@ benztto.com
 beony.com
 beook.com
 bepal.pro
-beplay
 bepurestandards.com
 bequ6.com
 bequ6.org
@@ -16309,7 +16222,6 @@ bilfinance.com
 biliapi.com
 biliapi.net
 bilibil.com
-bilibili
 bilibili.cc
 bilibili.co
 bilibili.com
@@ -19695,7 +19607,6 @@ ccgjbus.com
 ccgogogo.com
 ccgoyi.com
 ccgs120.net
-ccgslb
 ccgslb.com
 ccgslb.net
 ccgxk.com
@@ -21954,7 +21865,6 @@ chinac.com
 chinac3.com
 chinacable.com
 chinacace.org
-chinacache
 chinacache.com
 chinacache.net
 chinacacm.org
@@ -23408,7 +23318,6 @@ citegalleries.com
 citexpo.org
 citgc.com
 citiais.com
-citic
 citic-wealth.com
 citic.com
 citicbank.com
@@ -24170,7 +24079,6 @@ cmzd.com
 cmzi.com
 cmzj.net
 cmzyk.com
-cn
 cn-5.com
 cn-ab.com
 cn-aci.com
@@ -31487,7 +31395,6 @@ dunsuan.com
 dunwang.com
 dunzhiwang.com
 duoao.com
-duobao
 duocaish.com
 duocaitou.com
 duocengban.org
@@ -50823,7 +50730,6 @@ icaredbd.com
 icasiso.com
 icastlewar.com
 icax.org
-icbc
 icbc-at.com
 icbc-axa.com
 icbc-cz.com
@@ -53984,7 +53890,6 @@ jdmwk.com
 jdmy.com
 jdnews.net
 jdon.com
-jdpay
 jdpay.com
 jdpaydns.com
 jdplay.com
@@ -66803,7 +66708,6 @@ microfountain.com
 micronetpay.com
 microrui.net
 microsate.com
-microsoft
 microsoft-smb.cn
 microsoftazurestatus.cn
 microsoftmetrics.cn
@@ -67820,7 +67724,6 @@ mokahr.com
 mokamrp.com
 mokatyper.com
 mokayuedu.com
-moke
 moke.com
 mokeyjay.com
 moko.cc
@@ -68192,7 +68095,6 @@ mrxwlb.com
 mryunwei.com
 mryys.com
 mrzhenggang.com
-ms
 ms08067.com
 ms211.com
 ms315.com
@@ -72057,7 +71959,6 @@ officeaid.com
 officeaid02.com
 officebai.com
 officebay.net
-officecdn
 officecdn.microsoft.com
 officectrl.com
 officemkt.download.prss.microsoft.com
@@ -75875,7 +75776,6 @@ qhgufen.com
 qhgwh.com
 qhholding.com
 qhhxnw.com
-qhimg
 qhimg.com
 qhimgs.com
 qhimgs0.com
@@ -78569,7 +78469,6 @@ redirector.gcpcdn.gvt1.com
 redirector.gvt1.com
 redirector.offline-maps.gvt1.com
 redirector.snap.gvt1.com
-redirector.xn--ngstr-lra8j.com
 redisfans.com
 redmagic.com
 redmart.com
@@ -83444,7 +83343,6 @@ shouhuigroup.com
 shouhuisoft.com
 shouhuojiyun.com
 shouhuola.com
-shouji
 shouji.com
 shouji.racing
 shouji10086.com
@@ -84357,7 +84255,6 @@ simuwang.com
 simwe.com
 simxhs.com
 sin0sites.com
-sina
 sina-cf.com
 sina.cn
 sina.com
@@ -85560,7 +85457,6 @@ sohochina.com
 sohodd.com
 sohonow.com
 sohotask.com
-sohu
 sohu-inc.com
 sohu.com
 sohu.net
@@ -89124,7 +89020,6 @@ taoa.com
 taoad.com
 taoart.com
 taoban.com
-taobao
 taobao-img.com
 taobao.com
 taobao.global
@@ -91334,7 +91229,6 @@ tm401k.com
 tm51.com
 tm5ad.com
 tmaill.com
-tmall
 tmall.com
 tmall.hk
 tmall.ru
@@ -93702,7 +93596,6 @@ unicloud.com
 unicloudgov.com
 unicloudsrv.com
 unicmicro.com
-unicom
 unicom-cz.com
 unicomgd.com
 unicomjnwy.com
@@ -95223,7 +95116,6 @@ vpea.ca
 vpgame.com
 vpgamecdn.com
 vpiaotong.com
-vpimg
 vpimg1.com
 vpimg2.com
 vpimg3.com
@@ -95694,7 +95586,6 @@ wanfucc.com
 wanfudaluye.com
 wanfukang.cc
 wanfuqianqiu.com
-wang
 wang-li.com
 wang-nan.com
 wang-russell.cc
@@ -96477,7 +96368,6 @@ weibanan.com
 weibang.vip
 weibangong.com
 weibanzhushou.com
-weibo
 weibo.cn
 weibo.com
 weibo.tv
@@ -100465,7 +100355,6 @@ xiamenhuandongmarathon.com
 xiamenjiyang.com
 xiamentianqi114.com
 xiamenwater.com
-xiami
 xiami.com
 xiami.fm
 xiami.net
@@ -100903,7 +100792,6 @@ xiaomazhixing.com
 xiaomei.cc
 xiaomeiti.com
 xiaomeng1235.com
-xiaomi
 xiaomi.com
 xiaomi.hk
 xiaomi.net
@@ -101267,7 +101155,6 @@ xihaxueche.com
 xihazsww.com
 xihegp.com
 xiherencai.com
-xihuan
 xihuan.me
 xihusgh.com
 xiimoon.com
@@ -102516,7 +102403,6 @@ xn--1d3a16a.com
 xn--1lq90iba455sxghy10a.xn--3ds443g
 xn--1lq90iizjqm7afdaz44c.xn--3ds443g
 xn--1lqq7i4w0acli.com
-xn--1qqw23a
 xn--2cyr99a.com
 xn--2quu5hi8e69p.com
 xn--2ssx2cb4cywb60vkockt5d081a5lm.xn--3ds443g
@@ -102526,10 +102412,8 @@ xn--3bs35yfl6bn8a.ink
 xn--3bs70igqdr64f.com
 xn--3bs781ecijtrt.com
 xn--3bsp13hurlcwb.com
-xn--3bst00m
 xn--3bsx54la62v.com
 xn--3bsz0pskmp89skv3a0zd724b1py.net
-xn--3ds443g
 xn--48s50dpwnbh95ah07i.com
 xn--49s82db1ewy7adrq1ik.xn--3ds443g
 xn--4gq0d69oba129b9wd94ey8bs83ji3c3q7hoka.org
@@ -102541,21 +102425,16 @@ xn--4xup5j.com
 xn--54q249denfzw9a.net
 xn--54q40czz0g7xp.com
 xn--54qu66awkkshgsf475q.com
-xn--55qw42g
 xn--55qw7biqf7g3d004h8yuw1ctrt04sep1cjfb.com
 xn--55qx2ag79c1iq.com
-xn--55qx5d
 xn--55qzsxj5y4ozkz93dswptmau4jc88dg75ctid8raf29c.com
 xn--5kv317c.com
 xn--5ssy8eju9d.xn--czr694b
-xn--5tzm5g
 xn--6fr61zj8c92fg34d.com
-xn--6frz82g
 xn--6kr66fp2ep1ac5edz2hy7s2wq.com
 xn--6krw3qs7jl59b.com
 xn--6oq83hzb922dnorwsomx9dzkb.com
 xn--6oru97cy2o.xn--czr694b
-xn--6qq986b3xl
 xn--6qqp94buie2ss.com
 xn--6rtq6phwfhva.com
 xn--6rtr6sp1eo1i.xn--3ds443g
@@ -102569,16 +102448,13 @@ xn--88-9s0f59z.com
 xn--8ou124e6ek.net
 xn--8owq8u.com
 xn--8stx8olrwkucjq3b.com
-xn--8y0a063a
 xn--91-y60d638c.xyz
 xn--95572-w91h07x.xn--3ds443g
-xn--9et52u
 xn--9iq388crdwc.xn--czr694b
 xn--9iqr63a1idgz6e.xn--3ds443g
 xn--9iqs25bkvi.xn--czr694b
 xn--9kr72kqwe.com
 xn--9krr90n.xn--55qx5d
-xn--9krt00a
 xn--9myo55bi8l.com
 xn--9pr56vfna007k.com
 xn--9pry86bq5ex68c.org
@@ -102600,10 +102476,7 @@ xn--cjztj18l.com
 xn--cnqr5ysyl.xn--czr694b
 xn--cpqr0dg9g4t0fodaq5c.com
 xn--cssw8z54rj2ds2q.com
-xn--czr694b
-xn--czrs0t
 xn--czrs0t4phtr3a.cn
-xn--czru2d
 xn--czru2dx3eszw3lat53b.com
 xn--dev407h.com
 xn--djr58xb1mzxk3mtrhfc8g.com
@@ -102624,15 +102497,12 @@ xn--fhq79jyym9nh74hfm8a.com
 xn--fhqpn19bl91acha222foe2d.xn--3ds443g
 xn--fiq03fftg7m2c.com
 xn--fiq06jqoz14s.com
-xn--fiq228c5hs
 xn--fiq53l6wcx3kp9bc7joo6apn8a.xn--fiqs8s
 xn--fiq60luzcp97a7oxivr99k.org
-xn--fiq64b
 xn--fiq6q20pz51d.com
 xn--fiq73f39fwr0b4wk.net
 xn--fiq7v55hnsepqz.net
 xn--fiq8ituh5mn9d1qbc28lu5dusc.xn--vuq861b
-xn--fiqs8s
 xn--fiqs8s5zfwtksc224s.xn--3ds443g
 xn--fiqs8sn5jp2ezwqiv6b.xn--czr694b
 xn--fiqs8sq2ipif.xn--vhquv
@@ -102643,10 +102513,7 @@ xn--fiqw6ovnbbz6a4rqiws.xn--kput3i
 xn--fiqw8jl3h7xc25m753d.link
 xn--fiqwly1fizbw4irky1yrlg.xn--3ds443g
 xn--fiqx7ci2whnj.com
-xn--fiqz9s
 xn--fjq5py34j65v.com
-xn--fjq720a
-xn--g2xx48c
 xn--glr604k.com
 xn--gmq238c5fy.com
 xn--gmq64zxnt8llcrb.xn--6qq986b3xl
@@ -102656,13 +102523,10 @@ xn--h5qy75o.vip
 xn--h6qyr29eh1buxk3e37mxzkp28b2b8c.xn--3ds443g
 xn--husx9zj2eepau0se83d.com
 xn--hutn94av9amzg.net
-xn--hxt814e
 xn--i6q33br88fkud.com
 xn--igry70bi8kqt9a.org
 xn--igt225itqf.com
 xn--iiqs04a411ac1w.xn--czr694b
-xn--imr513n
-xn--io0a7i
 xn--it-if7c19g5s4bps5c.com
 xn--jh1a128b.com
 xn--jor0b302fdhgwnccw8g.com
@@ -102671,7 +102535,6 @@ xn--jxuv1s.net
 xn--kcr304agl5b.xn--czr694b
 xn--kivq8be3whsi.com
 xn--kprv4ewxfr9cpxcc7joo6apn8a.xn--fiqs8s
-xn--kput3i
 xn--l9qya49g86gm9ghpbzy1dwl0fppo.com
 xn--lt0at3k.com
 xn--mct72chgrm.net
@@ -102687,11 +102550,9 @@ xn--nmqp78hmufjwu.com
 xn--ntso8dsz1borbzvfm5h.com
 xn--ntsp37j.net
 xn--nyqx2gbsm8u0b.com
-xn--nyqy26a
 xn--obym4a85u8ob.xn--ses554g
 xn--ohq11k7pl25iyo8a.cn
 xn--omrvgz6er31au6f.com
-xn--otu796d
 xn--p5t28ylet56a.com
 xn--pss89e6xl72g.com
 xn--ptua509t.com
@@ -102701,7 +102562,6 @@ xn--r70as2s.xn--fiqs8s
 xn--r8s65df7admf92a.com
 xn--rhqr3ykwbm05aegjqxb.com
 xn--rhqt5j7qj6mj.com
-xn--rhqv96g
 xn--rht439a44bdyk.com
 xn--riqi041otpd.com
 xn--rnq977a.xn--czr694b
@@ -102715,7 +102575,6 @@ xn--ruqz9zcojm5sf19a.com
 xn--s1ru0x93t.xn--3ds443g
 xn--s4t325g.com
 xn--sdc-l44eu9i.xn--czr694b
-xn--ses554g
 xn--sgt856gbjl.cc
 xn--sosw2ge0bs10aoq0a.com
 xn--sss604efuw.com
@@ -102727,7 +102586,6 @@ xn--tlq092au7hsi3a.com
 xn--tlqz3aj77agil76ww4ni2k.com
 xn--tqq89g2tjj5x8xs.com
 xn--uis47lp2cp2g.xn--3bst00m
-xn--unup4y
 xn--vcso1ukuz.net
 xn--vcsu51b3zccpm.com
 xn--vcsu9p66gy1l9vpnnbk52f.com
@@ -102741,11 +102599,9 @@ xn--vhqd346fv3m7ggdt2byua.xn--3ds443g
 xn--vhqqbz2p62hm92e04p.com
 xn--vhqr42drhf5k7b.com
 xn--vhqu1kbz3bnbi.com
-xn--vhquv
 xn--viq463a.com
 xn--vnuqa4644aq5c0si.xn--3ds443g
 xn--vq3a5gj6c9i.com
-xn--vuq861b
 xn--vusu0mbusw10a.xn--czr694b
 xn--w9q313dfn4a.com
 xn--w9q675dm1p7em.net
@@ -102757,7 +102613,6 @@ xn--wbsz85a2a.com
 xn--wxtr44c.live
 xn--xcrv5deweeznlnez29a.xn--3ds443g
 xn--xcry9n251cvcar5xj6r.com
-xn--xhq521b
 xn--xhq60k09cr85at2f494d.com
 xn--xhq60kzbz07dem6azlu.com
 xn--xhq8sm16c5ls.com
@@ -102777,7 +102632,6 @@ xn--ykr169cm1pskt.com
 xn--z3vq3r3u4a.xn--czr694b
 xn--z4q559dueav8q.com
 xn--z63a11k.com
-xn--zfr164b
 xn--zwtr2f7xebqvx24ax9a.xn--3ds443g
 xn0.cc
 xn121.com
@@ -107948,7 +107802,6 @@ yumingguwen.com
 yumingyouhui.com
 yummy.tech
 yumstone.com
-yun
 yun-ac.com
 yun-dns.com
 yun-gu.com
