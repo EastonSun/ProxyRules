@@ -503,9 +503,10 @@ def filter_domain_set(
         result = {d for d in result if not match_pattern(d, exclude_pats)}
 
     # --- 3. 全局排除 ---
-    # 具体域名
+    # 具体域名（含子域名后缀匹配：排除 example.com 同时排除 sub.example.com）
     for excl_domain in global_exclude.get("domains", []):
-        result.discard(excl_domain.lower())
+        excl_lower = excl_domain.lower()
+        result = {d for d in result if d != excl_lower and not d.endswith("." + excl_lower)}
     # 顶级域名
     for tld in global_exclude.get("exclude_tlds", []):
         tld_lower = tld.lower()
