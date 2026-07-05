@@ -825,6 +825,13 @@ sources:
       - path: geo/geoip/cn.list
         format: ip-cidr
         category: direct_ip
+      # 私有/局域网 IP + 域名
+      - path: geo/geoip/private.list
+        format: ip-cidr
+        category: private_ip
+      - path: geo/geosite/private.list
+        format: bare-domain
+        category: private_domain
       # 广告/追踪 (category-ads 包含海量广告域名)
       - path: geo/geosite/category-ads.list
         format: bare-domain
