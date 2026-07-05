@@ -1,8 +1,8 @@
 # ProxyRules — Private Domain
 # 局域网专用域名 (.local / .lan / .internal 等)
-# 更新时间: 2026-07-05 15:18:20 (北京时间)
+# 更新时间: 2026-07-05 15:26:17 (北京时间)
 # 总条数: 9
-# 仓库: https://github.com/ProxyRules/ProxyRules
+# 仓库: https://github.com/EastonSun/ProxyRules
 *.corp
 *.home
 *.home.arpa
