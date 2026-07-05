@@ -1,6 +1,6 @@
 # ProxyRules — Direct Domain
 # 中国大陆域名与大厂CDN白名单
-# 更新时间: 2026-07-05 16:06:13 (北京时间)
+# 更新时间: 2026-07-05 16:12:07 (北京时间)
 # 总条数: 113684
 # 上游来源: Loyalsoldier/clash-rules, Loyalsoldier/v2ray-rules-dat, xkww3n/Rules, ACL4SSR/ACL4SSR, Cats-Team/AdRules, zqzess/rule_for_quantumultX, blackmatrix7/ios_rule_script, felixonmars/dnsmasq-china-list, gaoyifan/china-operator-ip, MetaCubeX/meta-rules-dat
 # 仓库: https://github.com/EastonSun/ProxyRules
