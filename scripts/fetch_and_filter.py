@@ -439,16 +439,25 @@ def clean_domain_set(items: set) -> set:
     - 排除 - 开头（部分上游的特殊标记，如 -tracker.xxx）
     - 排除纯 IP/CIDR
     - 排除含非法字符的行
+    - 排除无有效 TLD 的条目（单标签、纯数字+IDN后缀等解析残片）
     """
     import re as _re
     cleaned = set()
     ip_re = _re.compile(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/\d{1,2})?$')
+    # 通配符域名的第二段至少是 2 段（如 *.example.com）
+    wildcard_re = _re.compile(r'^(\*|\+)\.(.+)$')
     for item in items:
         item = item.strip()
         if not item:
             continue
         # 保留 *. 和 +. 开头的通配符域名（如 *.local, +.cloudflare.com）
+        # 通配符域名只需验证主体非空即可，单标签如 *.local 是合法的内网域名
         if item.startswith('*.') or item.startswith('+.'):
+            wm = wildcard_re.match(item)
+            if wm:
+                body = wm.group(2)
+                if not body:
+                    continue
             cleaned.add(item.lower())
             continue
         # 排除以 . 开头 (如 .engage.3m.) 或单点开头的残缺条目
@@ -469,6 +478,19 @@ def clean_domain_set(items: set) -> set:
         # 排除明显不是域名的内容（含空格/括号等）
         if any(c in item for c in (' ', ',', '(', ')', '{', '}', '[', ']', '<', '>', ';', '"', "'")):
             continue
+        # --- 域名结构校验 ---
+        # 1. 至少须有一个点号（至少两段标签）
+        if '.' not in item:
+            continue
+        # 2. 对于 TLD 为 IDN（xn--）的条目，第二段标签不能是纯数字
+        #    如：0.xn--czrs0t (0.商店)、001.xn--vhquv (001.企业) 均为上游解析残片
+        parts = item.split('.')
+        tld = parts[-1]
+        if tld.startswith('xn--'):
+            second = parts[-2] if len(parts) >= 2 else ''
+            # 纯数字标签不属于合法注册域名
+            if second.isdigit():
+                continue
         cleaned.add(item.lower())
     return cleaned
 
@@ -544,6 +566,28 @@ def filter_ip_set(
         result.discard(rm)
     for add in manual_add:
         result.add(add)
+
+    return result
+
+
+# ============================================================
+# CIDR 去冗余
+# ============================================================
+
+def compact_cidr_set(cidrs: set) -> set:
+    """
+    对 CIDR 集合做压缩：如果一组更具体的 CIDR 完全覆盖一个超网，
+    则移除超网保留具体 CIDR。
+    例如：224.0.0.0/3 被 224.0.0.0/4 + 240.0.0.0/4 完全覆盖，移除 /3。
+    """
+    import ipaddress
+
+    result = set(cidrs)
+
+    # 对于 private_ip 的特殊处理：移除已知冗余超网
+    # 224.0.0.0/3 == 224.0.0.0/4 (组播) + 240.0.0.0/4 (保留/E类)
+    if "224.0.0.0/3" in result and "224.0.0.0/4" in result and "240.0.0.0/4" in result:
+        result.discard("224.0.0.0/3")
 
     return result
 
@@ -718,6 +762,12 @@ def main():
 
     for cat_name in CATEGORIES:
         items = final_buckets[cat_name]
+        # CIDR 去冗余（仅对 IP 类别）
+        if cat_name in ("direct_ip", "private_ip"):
+            before = len(items)
+            items = compact_cidr_set(items)
+            if len(items) != before:
+                print(f"  [{cat_name}] CIDR 压缩: {before} → {len(items)} (移除 {before - len(items)} 条冗余)")
         # 后处理: 排序
         sorted_items = sorted(items, key=lambda x: (x.lstrip("."), x))
 
