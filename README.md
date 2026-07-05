@@ -4,17 +4,19 @@
 
 规则采用 Mihomo 官方 `+.domain` 通配符语法，等价于 `DOMAIN-SUFFIX`。
 
+> **注意：本项目规则仅适用于白名单模式。**
+
 ## 功能概览
 
-| 产物 | 格式 | 说明 |
-|------|------|------|
-| `direct_domain.mrs` | MRS 二进制 | 中国大陆域名及 MetaCubeX/meta-rules-dat 中的 `@cn` 和 `-cn` 域名 |
-| `direct_ip.mrs` | MRS 二进制 | 中国大陆公网 IP 段 |
-| `private_ip.mrs` | MRS 二进制 | 局域网/私有/保留 IP 段 |
-| `private_domain.mrs` | MRS 二进制 | 局域网专用域名 |
-| `reject.mrs` | MRS 二进制 | 广告/追踪/统计域名拦截 |
-| `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
-| `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
+| 产物 | 格式 | 条数 | 说明 |
+|------|------|------|------|
+| `direct_domain.mrs` | MRS 二进制 | 116,593 | 中国大陆域名 |
+| `direct_ip.mrs` | MRS 二进制 | 22,761 | 中国大陆公网 IP 段 |
+| `private_ip.mrs` | MRS 二进制 | 19 | 局域网/私有/保留 IP 段 |
+| `private_domain.mrs` | MRS 二进制 | 133 | 局域网专用域名 |
+| `reject.mrs` | MRS 二进制 | 476,505 | 广告/追踪/统计域名拦截 |
+| `Shadowrocket/direct.module` | Surge 模块 | — | Shadowrocket 直连模块 |
+| `Shadowrocket/reject.module` | Surge 模块 | — | Shadowrocket 拦截模块 |
 
 ## 订阅地址
 
@@ -33,6 +35,64 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs
 ```
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/direct.module
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject.module
+```
+
+## 使用方法
+
+```yaml
+rules:
+  - RULE-SET,geosite-private,direct
+  - RULE-SET,geoip-private,direct,no-resolve
+  - RULE-SET,geosite-cn,direct
+  - RULE-SET,geoip-cn,direct,no-resolve
+  - RULE-SET,adblock,reject
+  - MATCH,PROXY
+
+rule-providers:
+  geosite-private:
+    type: http
+    path: geosite-private.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: domain
+    format: mrs
+
+  geoip-private:
+    type: http
+    path: geoip-private.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: ipcidr
+    format: mrs
+
+  geosite-cn:
+    type: http
+    path: geosite-cn.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_domain.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: domain
+    format: mrs
+
+  geoip-cn:
+    type: http
+    path: geoip-cn.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_ip.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: ipcidr
+    format: mrs
+
+  adblock:
+    type: http
+    path: adblock.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: domain
+    format: mrs
 ```
 
 ## 上游数据源
