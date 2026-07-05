@@ -135,7 +135,7 @@ jobs:
           ls -lh build/*.mrs
 
       # --- Shadowrocket 模块 ---
-      - name: 生成 Shadowrocket .sgmodule
+      - name: 生成 Shadowrocket .module
         run: |
           python scripts/generate_sr.py
           echo "📦 SGModule 产物:"
@@ -195,7 +195,7 @@ jobs:
           cp -r dist/* .
           rm -rf dist
 
-          # 删除 .txt 中间文件，release 只发布 .mrs + .sgmodule
+          # 删除 .txt 中间文件，release 只发布 .mrs + .module
           rm -f ./*.txt
 
           echo ""
@@ -237,5 +237,5 @@ jobs:
           echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject.mrs"
           echo ""
           echo "Shadowrocket:"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/direct.sgmodule"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/reject.sgmodule"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/direct.module"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/reject.module"

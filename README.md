@@ -11,8 +11,8 @@
 | `private_ip.txt` / `.mrs` | 文本 / MRS 二进制 | 局域网/私有/保留 IP 段 |
 | `private_domain.txt` / `.mrs` | 文本 / MRS 二进制 | 局域网专用域名 |
 | `reject.txt` / `.mrs` | 文本 / MRS 二进制 | 广告/追踪/统计域名拦截 |
-| `Shadowrocket/direct.sgmodule` | Surge 模块 | Shadowrocket 直连模块 |
-| `Shadowrocket/reject.sgmodule` | Surge 模块 | Shadowrocket 拦截模块 |
+| `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
+| `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
 ## 订阅地址
 
@@ -39,8 +39,8 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs
 ### Shadowrocket 模块
 
 ```
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/direct.sgmodule
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject.sgmodule
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/direct.module
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject.module
 ```
 
 ## 上游数据源
@@ -76,7 +76,7 @@ graph TD
     F --> I
     G --> I
     H --> I
-    D --> J[generate_sr.py<br/>→ .sgmodule]
+    D --> J[generate_sr.py<br/>→ .module]
     H --> J
     I --> K[发布到 release 分支]
     J --> K

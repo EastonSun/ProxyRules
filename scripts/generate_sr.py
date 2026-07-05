@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-ProxyRules — Shadowrocket .sgmodule 模块生成脚本
+ProxyRules — Shadowrocket .module 模块生成脚本
 =====================================================
 从 output/*.txt 文本规则生成 Shadowrocket 订阅模块文件
 
 生成产物:
-  build/Shadowrocket/direct.sgmodule   — 直连域名 + IP
-  build/Shadowrocket/reject.sgmodule   — 广告/追踪拦截
-  build/Shadowrocket/private.sgmodule  — 私有 IP + 局域网域名
+  build/Shadowrocket/direct.module   — 直连域名 + IP
+  build/Shadowrocket/reject.module   — 广告/追踪拦截
+  build/Shadowrocket/private.module  — 私有 IP + 局域网域名
 
-.sgmodule 格式:
+.module 格式:
   #!name = ModuleName
   #!desc = Description
   #!author = ProxyRules
@@ -36,7 +36,7 @@ BUILD_DIR  = BASE_DIR / "build" / "Shadowrocket"
 MODULE_DEFS = [
     {
         "name": "ProxyRules - Direct",
-        "filename": "direct.sgmodule",
+        "filename": "direct.module",
         "desc": "中国大陆域名、CDN与IP直连规则",
         "policy": "DIRECT",
         "inputs": [
@@ -46,7 +46,7 @@ MODULE_DEFS = [
     },
     {
         "name": "ProxyRules - Reject",
-        "filename": "reject.sgmodule",
+        "filename": "reject.module",
         "desc": "广告、追踪、统计域名拦截规则",
         "policy": "REJECT",
         "inputs": [
@@ -103,7 +103,7 @@ def classify_and_format(entry: str, rule_type: str, policy: str) -> str:
 
 
 def generate_module(mod_def: dict, timestamp: str) -> Path:
-    """生成单个 .sgmodule 文件，返回写入的文件路径"""
+    """生成单个 .module 文件，返回写入的文件路径"""
     module_name = mod_def["name"]
     module_desc = mod_def["desc"]
     policy = mod_def["policy"]
