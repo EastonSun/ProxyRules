@@ -199,7 +199,9 @@ jobs:
           if git diff --staged --quiet; then
             echo "✅ 无变更，跳过提交"
           else
-            git commit -m "🔄 Sync: $TIMESTAMP (北京时间)"
+            git -c user.name="github-actions[bot]" \
+                -c user.email="github-actions[bot]@users.noreply.github.com" \
+                commit -m "🔄 Sync: $TIMESTAMP (北京时间)"
             git push origin release --force
             echo "✅ 已推送到 release 分支"
           fi
