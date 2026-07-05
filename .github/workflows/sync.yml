@@ -124,6 +124,12 @@ jobs:
           ./mihomo convert-ruleset ipcidr  text output/private_ip.txt     build/private_ip.mrs
           ./mihomo convert-ruleset domain  text output/private_domain.txt build/private_domain.mrs
           ./mihomo convert-ruleset domain  text output/reject.txt         build/reject.mrs
+          # 为每个 .mrs 文件追加时间戳注释 (Zstandard 尾部兼容)
+          # 确保 MRS blob 每次更新，与 TXT 保持时间戳一致
+          SYNC_TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S (北京时间)')
+          for mrs in build/*.mrs; do
+            printf '\n# synced: %s\n' "$SYNC_TS" >> "$mrs"
+          done
           echo ""
           echo "📦 MRS 产物:"
           ls -lh build/*.mrs
