@@ -8,7 +8,7 @@
 
 | 产物 | 格式 | 说明 |
 |------|------|------|
-| `direct_domain.mrs` | MRS 二进制 | 中国大陆域名 + 大厂 CDN 白名单 |
+| `direct_domain.mrs` | MRS 二进制 | 中国大陆域名及 MetaCubeX/meta-rules-dat 中的 `@cn` 和 `-cn` 域名 |
 | `direct_ip.mrs` | MRS 二进制 | 中国大陆公网 IP 段 |
 | `private_ip.mrs` | MRS 二进制 | 局域网/私有/保留 IP 段 |
 | `private_domain.mrs` | MRS 二进制 | 局域网专用域名 |
