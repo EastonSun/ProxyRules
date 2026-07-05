@@ -195,6 +195,9 @@ jobs:
           cp -r dist/* .
           rm -rf dist
 
+          # 删除 .txt 中间文件，release 只发布 .mrs + .sgmodule
+          rm -f ./*.txt
+
           echo ""
           echo "📦 待发布文件:"
           find . -type f -not -path './.git/*' | sort

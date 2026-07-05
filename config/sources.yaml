@@ -254,6 +254,19 @@ sources:
         format: bare-domain
         category: reject
 
+  # ──────────────────────────────────────────────────────────
+  # 13. REIJI007/AdBlock_Rule_For_Clash — 海量广告拦截域名
+  #     格式: Clash 经典 rule-provider YAML (clash-rule-set)
+  # ──────────────────────────────────────────────────────────
+  - name: REIJI007/AdBlock_Rule_For_Clash
+    description: Clash 广告域名拦截规则集
+    enabled: true
+    base_url: https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main
+    files:
+      - path: adblock_reject.txt
+        format: clash-rule-set
+        category: reject
+
 
 # ============================================================
 # 全局配置

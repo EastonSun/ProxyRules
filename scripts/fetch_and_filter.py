@@ -434,64 +434,68 @@ def match_any_pattern(domain: str, patterns: list) -> bool:
 def clean_domain_set(items: set) -> set:
     """
     清理域名集合中的无效条目：
-    - 保留 *.domain、+.domain 通配符（domain 部分有无点号都保留）
     - 排除 */ 开头（上游标记为"仅路径"的条目）
     - 排除 - 开头（部分上游的特殊标记，如 -tracker.xxx）
     - 排除纯 IP/CIDR
     - 排除含非法字符的行
     - 排除无有效 TLD 的条目（单标签、纯数字+IDN后缀等解析残片）
+    - 输出统一使用 Mihomo +. 通配符格式
     """
     import re as _re
     cleaned = set()
     ip_re = _re.compile(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:/\d{1,2})?$')
-    # 通配符域名的第二段至少是 2 段（如 *.example.com）
-    wildcard_re = _re.compile(r'^(\*|\+)\.(.+)$')
+    # 提取通配符域名的 body 部分
+    wildcard_body_re = _re.compile(r'^(?:\*|\+)\.(.+)$')
     for item in items:
         item = item.strip()
         if not item:
             continue
-        # 保留 *. 和 +. 开头的通配符域名（如 *.local, +.cloudflare.com）
-        # 通配符域名只需验证主体非空即可，单标签如 *.local 是合法的内网域名
+        # 去掉 *. 或 +. 前缀，统一转为裸域名后再加 +. 前缀
+        body = item
+        is_wildcard = False
         if item.startswith('*.') or item.startswith('+.'):
-            wm = wildcard_re.match(item)
+            wm = wildcard_body_re.match(item)
             if wm:
-                body = wm.group(2)
+                body = wm.group(1)
                 if not body:
                     continue
-            cleaned.add(item.lower())
-            continue
+                is_wildcard = True
+            else:
+                body = item
         # 排除以 . 开头 (如 .engage.3m.) 或单点开头的残缺条目
-        if item.startswith('.'):
+        if body.startswith('.'):
             continue
         # 排除以 . 结尾的残缺条目 (如 analytics-cdn.)
-        if item.endswith('.'):
+        if body.endswith('.'):
             continue
         # 排除 */ — 标记为仅路径匹配
-        if item.startswith('*/'):
+        if body.startswith('*/'):
             continue
         # 排除 - 开头（如 -tracker.xxx）
-        if item.startswith('-'):
+        if body.startswith('-'):
             continue
         # 排除纯 IP/CIDR
-        if ip_re.match(item):
+        if ip_re.match(body):
             continue
         # 排除明显不是域名的内容（含空格/括号等）
-        if any(c in item for c in (' ', ',', '(', ')', '{', '}', '[', ']', '<', '>', ';', '"', "'")):
+        if any(c in body for c in (' ', ',', '(', ')', '{', '}', '[', ']', '<', '>', ';', '"', "'")):
             continue
         # --- 域名结构校验 ---
-        # 1. 至少须有一个点号（至少两段标签）
-        if '.' not in item:
+        # 1. 非通配符条目须至少有一个点号（至少两段标签）
+        #    通配符条目（如 *.local → +.local）允许单标签 body
+        if not is_wildcard and '.' not in body:
             continue
         # 2. 对于 TLD 为 IDN（xn--）的条目，第二段标签不能是纯数字
         #    如：0.xn--czrs0t (0.商店)、001.xn--vhquv (001.企业) 均为上游解析残片
-        parts = item.split('.')
+        parts = body.split('.')
         tld = parts[-1]
         if tld.startswith('xn--'):
             second = parts[-2] if len(parts) >= 2 else ''
             # 纯数字标签不属于合法注册域名
             if second.isdigit():
                 continue
-        cleaned.add(item.lower())
+        # 统一输出 +. 前缀格式 (Mihomo DOMAIN-SUFFIX 等价)
+        cleaned.add('+.' + body.lower())
     return cleaned
 
 
