@@ -225,23 +225,23 @@ jobs:
           if [ -f stats.json ]; then
             if [ -f old_stats.json ]; then
               python3 -c "
-import json
-new = json.load(open('stats.json'))
-old = json.load(open('old_stats.json'))
-for k in ['direct_domain', 'reject']:
-    nc = new.get(k, 0)
-    oc = old.get(k, 0)
-    delta = nc - oc
-    sign = '+' if delta >= 0 else ''
-    print(f'  {k}: {nc} 条 (update {sign}{delta})')
-"
+          import json
+          new = json.load(open('stats.json'))
+          old = json.load(open('old_stats.json'))
+          for k in ['direct_domain', 'reject']:
+              nc = new.get(k, 0)
+              oc = old.get(k, 0)
+              delta = nc - oc
+              sign = '+' if delta >= 0 else ''
+              print(f'  {k}: {nc} 条 (update {sign}{delta})')
+          "
             else
               python3 -c "
-import json
-new = json.load(open('stats.json'))
-for k in ['direct_domain', 'reject']:
-    print(f'  {k}: {new.get(k,0)} 条')
-"
+          import json
+          new = json.load(open('stats.json'))
+          for k in ['direct_domain', 'reject']:
+              print(f'  {k}: {new.get(k,0)} 条')
+          "
             fi
           else
             echo "  (无 stats.json)"
