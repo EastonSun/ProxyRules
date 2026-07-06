@@ -155,10 +155,11 @@ jobs:
           echo "📦 SGModule 产物:"
           ls -lh build/Shadowrocket/
 
-      # --- 把 .txt 也复制到 build/，方便发布时一起拿 ---
+      # --- 把 .txt 和 stats.json 也复制到 build/，方便发布时一起拿 ---
       - name: 整理 build/ 目录
         run: |
           cp output/*.txt build/
+          cp output/stats.json build/
           echo ""
           echo "📦 build/ 完整产物:"
           find build -type f | sort
@@ -265,6 +266,52 @@ jobs:
                 commit -m "🔄 Sync: $TIMESTAMP (北京时间)"
             git push origin release --force
             echo "✅ 已推送到 release 分支"
+          fi
+
+      - name: 更新 main 分支 README 统计
+        run: |
+          # stats.json 已在当前工作目录中 (publish 步骤复制进去了)
+          if [ ! -f stats.json ]; then
+            echo "⚠️ stats.json 未找到，跳过 README 更新"
+            exit 0
+          fi
+
+          NEW_TS=$(python3 -c "import json; print(json.load(open('stats.json'))['timestamp'])")
+          NEW_DIRECT=$(python3 -c "import json; print(json.load(open('stats.json')).get('direct_domain',0))")
+          NEW_REJECT=$(python3 -c "import json; print(json.load(open('stats.json')).get('reject',0))")
+
+          # 获取 main 分支上的 README
+          git fetch origin main
+          git checkout origin/main -- README.md
+
+          # 读取 README 中的旧数据算 delta
+          OLD_DIRECT=$(grep -oP 'DIRECT 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+          OLD_REJECT=$(grep -oP 'REJECT 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+          DIRECT_DELTA=$((NEW_DIRECT - OLD_DIRECT))
+          REJECT_DELTA=$((NEW_REJECT - OLD_REJECT))
+          DIRECT_SIGN=$( [ $DIRECT_DELTA -ge 0 ] && echo '+' || echo '' )
+          REJECT_SIGN=$( [ $REJECT_DELTA -ge 0 ] && echo '+' || echo '' )
+
+          # 更新 README 中的三行统计
+          sed -i "s/最后更新时间：.*/最后更新时间：${NEW_TS}/" README.md
+          sed -i "s/DIRECT 规则数：[0-9,]*，update [+-][0-9,]*/DIRECT 规则数：$(printf "%'d" $NEW_DIRECT)，update ${DIRECT_SIGN}${DIRECT_DELTA}/" README.md
+          sed -i "s/REJECT 规则数：[0-9,]*，update [+-][0-9,]*/REJECT 规则数：$(printf "%'d" $NEW_REJECT)，update ${REJECT_SIGN}${REJECT_DELTA}/" README.md
+
+          echo "README 统计已更新:"
+          grep -E '(最后更新|DIRECT 规则数|REJECT 规则数)' README.md
+
+      - name: 推送 README 更新到 main
+        run: |
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "✅ README 无变更，跳过推送"
+          else
+            TIMESTAMP=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
+            git -c user.name="github-actions[bot]" \
+                -c user.email="github-actions[bot]@users.noreply.github.com" \
+                commit -m "📊 更新统计: $TIMESTAMP (北京时间)"
+            git push origin main
+            echo "✅ README 已推送到 main 分支"
           fi
 
       - name: 发布摘要
