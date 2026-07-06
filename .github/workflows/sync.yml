@@ -65,13 +65,6 @@ jobs:
         timeout-minutes: 10
         run: python scripts/fetch_and_filter.py
 
-      - name: 上传 output/ (供后续 job 使用)
-        uses: actions/upload-artifact@v4
-        with:
-          name: output-txt
-          path: output/
-          retention-days: 1
-
       - name: 生成统计文件
         run: |
           echo "{" > output/stats.json
@@ -85,6 +78,13 @@ jobs:
           sed -i '$ s/,$//' output/stats.json
           echo "}" >> output/stats.json
           cat output/stats.json
+
+      - name: 上传 output/ (供后续 job 使用)
+        uses: actions/upload-artifact@v4
+        with:
+          name: output-txt
+          path: output/
+          retention-days: 1
 
       - name: 打印统计
         run: |
