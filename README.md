@@ -100,7 +100,7 @@ rule-providers:
     format: mrs
 ```
 ### Shadowrocket<br/>
-[使用方法](https://github.com/GMOogway/shadowrocket-rules#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95){:target="_blank"}
+[使用方法](https://github.com/GMOogway/shadowrocket-rules#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95)
 
 ## 上游数据源
 
