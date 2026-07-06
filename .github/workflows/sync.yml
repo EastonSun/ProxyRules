@@ -307,10 +307,15 @@ jobs:
             echo "✅ README 无变更，跳过推送"
           else
             TIMESTAMP=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S')
-            git -c user.name="github-actions[bot]" \
-                -c user.email="github-actions[bot]@users.noreply.github.com" \
-                commit -m "📊 更新统计: $TIMESTAMP (北京时间)"
-            git push origin main
+            # 基于 origin/main 的 tree，只替换 README，避免污染 main 分支
+            MAINTREE=$(git rev-parse origin/main^{tree})
+            READMEBLOB=$(git hash-object -w README.md)
+            NEWTREE=$( ( echo "100644 blob ${READMEBLOB}"$'\t'"README.md"; git ls-tree "$MAINTREE" | grep -v 'README.md' ) | git mktree)
+            PARENT=$(git rev-parse origin/main)
+            COMMIT=$(git -c user.name="github-actions[bot]" \
+                         -c user.email="github-actions[bot]@users.noreply.github.com" \
+                         commit-tree "$NEWTREE" -p "$PARENT" -m "📊 更新统计: $TIMESTAMP (北京时间)")
+            git push origin "$COMMIT":refs/heads/main
             echo "✅ README 已推送到 main 分支"
           fi
 
