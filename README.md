@@ -18,9 +18,9 @@
 | `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
 | `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
-- 最后更新时间：2026-07-07 09:45:47
+- 最后更新时间：2026-07-07 10:34:33
 - DIRECT 规则数：116686，update +0
-- REJECT 规则数：476716，update -188
+- REJECT 规则数：476716，update +0
 
 ## 订阅地址
 
