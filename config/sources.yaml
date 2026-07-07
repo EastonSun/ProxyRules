@@ -10,6 +10,7 @@
 #   adguard-list     — ||domain^ 或 0.0.0.0 domain 格式
 #   hosts-list       — hosts 文件格式
 #   dnsmasq-conf     — server=/domain/114.114.114.114 格式
+  #   v2fly-dsl        — v2fly/domain-list-community 自定义 DSL (include/domain/full)
 # ============================================================
 
 sources:
@@ -852,6 +853,46 @@ sources:
       - path: adblock_reject.txt
         format: clash-rule-set
         category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 14. v2fly/domain-list-community — V2Fly 社区域名列表
+  #     格式: 自定义 DSL (include/domain/full: 指令)
+  #     cn 是入口文件，递归解析 30+ 个 category-*-cn 和独立服务文件
+  # ──────────────────────────────────────────────────────────
+  - name: v2fly/domain-list-community
+    description: V2Fly 社区域名列表 — 中国域名白名单原始数据
+    enabled: true
+    base_url: https://raw.githubusercontent.com/v2fly/domain-list-community/master/data
+    files:
+      - path: cn
+        format: v2fly-dsl
+        category: direct_domain
+
+  # ──────────────────────────────────────────────────────────
+  # 15. privacy-protection-tools/anti-AD — 广告过滤列表
+  #     格式: Clash YAML payload: (clash-rule-set)，~98000 条
+  # ──────────────────────────────────────────────────────────
+  - name: privacy-protection-tools/anti-AD
+    description: 中文区广告过滤列表 — ~98000 条广告/追踪域名
+    enabled: true
+    base_url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master
+    files:
+      - path: anti-ad-clash.yaml
+        format: clash-rule-set
+        category: reject
+
+  # ──────────────────────────────────────────────────────────
+  # 16. 17mon/china_ip_list — 中国 IP 段 (ipip.net 数据)
+  #     格式: 一行一个 CIDR (ip-cidr)，约 7000+ 条
+  # ──────────────────────────────────────────────────────────
+  - name: 17mon/china_ip_list
+    description: 中国 IP 地址段 (ipip.net 数据)
+    enabled: true
+    base_url: https://raw.githubusercontent.com/17mon/china_ip_list/master
+    files:
+      - path: china_ip_list.txt
+        format: ip-cidr
+        category: direct_ip
 
 
 # ============================================================

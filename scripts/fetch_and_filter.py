@@ -2,8 +2,8 @@
 """
 ProxyRules — 上游规则抓取与清洗脚本
 =======================================
-1. 从 12 个上游源抓取原始规则文件
-2. 按 8 种格式解析出纯域名 / IP-CIDR
+1. 从 15 个上游源抓取原始规则文件
+2. 按 9 种格式解析出纯域名 / IP-CIDR
 3. 按 5 个分类分桶 + 关键词过滤
 4. 应用手动干预文件 (add_*/remove_*)
 5. 全局排除 + 去重 + 排序 + 写入 output/
@@ -393,6 +393,126 @@ class FormatParser:
                     result.add(domain)
         return result
 
+    @classmethod
+    def parse_v2fly_dsl(cls, base_url: str, session, timeout: int,
+                         max_depth: int = 5, _seen: set = None,
+                         _attr_filter: str = None) -> set:
+        """
+        解析 v2fly/domain-list-community 自定义 DSL 格式。
+
+        DSL 语法:
+          include:filename         — 递归 include，不过滤属性
+          include:filename @cn     — 仅包含含 @cn 属性的条目
+          include:filename @-!cn   — 排除含 @!cn 属性的条目
+          domain                   — 裸域名
+          domain @cn               — 域名为中国可访问 (保留)
+          domain @!cn              — 域名为中国不可访问 (丢弃)
+          domain @ads              — 广告域名 (丢弃，不过 v2fly @ads 不应在直连中出现)
+          full:domain              — 完整匹配域名
+          keyword:term             — 关键字匹配 (跳过)
+          regexp:pattern           — 正则匹配 (跳过)
+          # ...                    — 注释
+
+        递归深度最大 5 层，用 _seen 集合防止循环 include。
+        """
+        if max_depth <= 0:
+            return set()
+
+        # 循环检测
+        if _seen is None:
+            _seen = set()
+        url_key = base_url  # raw URL 作为唯一 key (不能跨文件 include)
+        if url_key in _seen:
+            return set()
+        _seen.add(url_key)
+
+        text = fetch_url(session, base_url, timeout)
+        if text is None:
+            print(f"    [WARN] v2fly-dsl 递归抓取失败: {base_url}")
+            return set()
+
+        return cls._parse_v2fly_dsl_text(
+            text, base_url, session, timeout, max_depth, _seen.copy(), _attr_filter
+        )
+
+    @classmethod
+    def _parse_v2fly_dsl_text(cls, text: str, base_url: str, session, timeout: int,
+                               max_depth: int, _seen: set, _attr_filter: str = None) -> set:
+        """解析 v2fly DSL 文本内容 (内部方法)"""
+        import re as _re
+
+        result = set()
+        # 提取 base_url 的目录前缀，用于 include 解析相对路径
+        base_dir = base_url.rsplit("/", 1)[0] + "/"
+
+        for line in text.splitlines():
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+
+            # --- include 指令 ---
+            if stripped.startswith("include:"):
+                rest = stripped[len("include:"):].strip()
+                # 去掉 inline 注释 (如 '# not serving for cn')
+                if "#" in rest:
+                    rest = rest.split("#")[0].strip()
+                include_filter = None  # None=不过滤, "cn"=仅@cn, "-!cn"=排除@!cn
+                for attr_suffix in [" @cn", " @-!cn"]:
+                    if rest.endswith(attr_suffix):
+                        include_filter = attr_suffix.strip()
+                        rest = rest[:-len(attr_suffix)].strip()
+                        break
+                # 过滤: @cn=仅含@cn, @-!cn=排除@!cn
+                include_url = base_dir + rest
+                # 递归抓取
+                sub = cls.parse_v2fly_dsl(
+                    include_url, session, timeout,
+                    max_depth - 1, _seen.copy(), include_filter
+                )
+                result |= sub
+                continue
+
+            # --- 提取属性标记 (跟在域名后的 @xxx) ---
+            parts = stripped.split()
+            domain = parts[0]
+            attrs = set()
+            for p in parts[1:]:
+                if p.startswith("@"):
+                    attrs.add(p[1:])  # e.g. "cn", "!cn", "ads"
+
+            # --- 应用属性过滤 (include 级别的过滤) ---
+            if _attr_filter is not None:
+                if _attr_filter.startswith("-"):
+                    # @-!cn: 排除含 @!cn 的条目
+                    exclude_tag = _attr_filter[1:]  # "!cn"
+                    if exclude_tag in attrs:
+                        continue
+                else:
+                    # @cn: 仅保留含 @cn 的条目
+                    if _attr_filter not in attrs:
+                        continue
+
+            # --- 处理 domain ---
+            # 跳过 keyword: / regexp: 匹配 (无法转为纯域名)
+            if domain.startswith("keyword:") or domain.startswith("regexp:"):
+                continue
+
+            # full:xxx → xxx
+            if domain.startswith("full:"):
+                domain = domain[len("full:"):]
+
+            # 验证域名格式 (只保留有效域名)
+            if not domain or "." not in domain:
+                # 单标签可能是 TLD (如 apple, google, alibaba)，保留
+                # 但排除明显非域名的内容
+                if not domain or any(c in domain for c in (' ', ',', '/', '\\')):
+                    continue
+
+            # 统一小写
+            result.add(domain.lower())
+
+        return result
+
 
 # ============================================================
 # 分类逻辑
@@ -711,9 +831,8 @@ def main():
                 result = parser.parse_hosts_list(text)
             elif fmt == "dnsmasq-conf":
                 result = parser.parse_dnsmasq_conf(text)
-            else:
-                print(f"    [WARN] 未知格式: {fmt}, 跳过")
-                continue
+            elif fmt == "v2fly-dsl":
+                result = parser.parse_v2fly_dsl(url, session, fetch_timeout)
 
             raw_buckets[cat] |= result
             success_count += 1
