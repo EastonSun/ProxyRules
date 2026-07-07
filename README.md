@@ -1,6 +1,6 @@
 # ProxyRules
 
-自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 11 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
+自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 14 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
 
 规则采用 Mihomo 官方 `+.domain` 通配符语法，等价于 `DOMAIN-SUFFIX`。
 
@@ -119,12 +119,15 @@ rule-providers:
 | [felixonmars/dnsmasq-china-list](https://github.com/felixonmars/dnsmasq-china-list) | 中国域名白名单 |
 | [gaoyifan/china-operator-ip](https://github.com/gaoyifan/china-operator-ip) | 中国运营商 IP 段 |
 | [REIJI007/AdBlock_Rule_For_Clash](https://github.com/REIJI007/AdBlock_Rule_For_Clash) | 广告域名拦截规则集 |
+| [v2fly/domain-list-community](https://github.com/v2fly/domain-list-community) | V2Fly 社区域名列表 — 中国域名白名单原始数据 |
+| [privacy-protection-tools/anti-AD](https://github.com/privacy-protection-tools/anti-AD) | 中文区广告过滤列表 (~98,000+ 条) |
+| [17mon/china_ip_list](https://github.com/17mon/china_ip_list) | 中国 IP 地址段 (ipip.net 数据) |
 
 ## 自动化流水线
 
 ```mermaid
 graph TD
-    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 11 个上游源<br/>via +. 通配符格式]
+    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 14 个上游源<br/>via +. 通配符格式]
     B --> C{分类去重}
     C --> D[+/domain 中间文本]
     D --> I[mihomo convert-ruleset<br/>→ .mrs 二进制]
