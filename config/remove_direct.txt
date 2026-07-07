@@ -9,7 +9,4 @@
 #   - 某个 CDN 域名在国内访问不稳定
 # ============================================================
 
-googleapis.cn
-services.googleapis.cn
-xn--ngstr-lra8j.com
 hotmail.com

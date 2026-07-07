@@ -25,7 +25,6 @@ categories:
       - "*.google.com"
       - "*.googlevideo.com"
       - "*.googleapis.com"
-      - "*.googleapis.cn"
       - "*.youtube.com"
       - "*.ytimg.com"
       - "*.ggpht.com"
@@ -182,10 +181,7 @@ global_exclude:
   # --- 解释与策略 ---
   # 以下域名虽然在 .cn TLD 下，但实际解析到国外服务器
   # 或服务本身被墙，直连会导致连接失败
-  domains:
-    - "googleapis.cn"
-    - "services.googleapis.cn"
-    - "xn--ngstr-lra8j.com"
+  domains: []
 
   # --- 强制排除的顶级域名 (所有 .xxx 后缀的域名都排除) ---
   #     这些 TLD 下的域名不可能在中国大陆直连
