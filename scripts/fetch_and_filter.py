@@ -38,10 +38,12 @@ SOURCES_FILE    = CONFIG_DIR / "sources.yaml"
 FILTERS_FILE    = CONFIG_DIR / "filters.yaml"
 ADD_DIRECT      = CONFIG_DIR / "add_direct.txt"
 REMOVE_DIRECT   = CONFIG_DIR / "remove_direct.txt"
-ADD_REJECT      = CONFIG_DIR / "add_reject.txt"
-REMOVE_REJECT   = CONFIG_DIR / "remove_reject.txt"
+ADD_REJECT_DOMAIN = CONFIG_DIR / "add_reject_domain.txt"
+REMOVE_REJECT_DOMAIN = CONFIG_DIR / "remove_reject_domain.txt"
+ADD_REJECT_IP     = CONFIG_DIR / "add_reject_ip.txt"
+REMOVE_REJECT_IP  = CONFIG_DIR / "remove_reject_ip.txt"
 
-CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject"]
+CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject_domain", "reject_ip"]
 
 # 北京时区
 TZ_BEIJING = timezone(timedelta(hours=8))
@@ -760,9 +762,13 @@ def main():
             "add": [],
             "remove": [],
         },
-        "reject": {
-            "add": load_txt_lines(ADD_REJECT),
-            "remove": load_txt_lines(REMOVE_REJECT),
+        "reject_domain": {
+            "add": load_txt_lines(ADD_REJECT_DOMAIN),
+            "remove": load_txt_lines(REMOVE_REJECT_DOMAIN),
+        },
+        "reject_ip": {
+            "add": load_txt_lines(ADD_REJECT_IP),
+            "remove": load_txt_lines(REMOVE_REJECT_IP),
         },
     }
     print(f"  配置加载完成: {len(sources_cfg.get('sources', []))} 个上游源")
@@ -837,6 +843,15 @@ def main():
             raw_buckets[cat] |= result
             success_count += 1
             print(f"    → 解析到 {len(result)} 条")
+
+            # 双重提取：reject_domain 源可能同时包含 IP-CIDR 规则
+            # (如 zqzess AdBlock.list 有 429 条 IP-CIDR, BlockHttpDNS.yaml 有 43 条)
+            # 对每个 reject_domain 源额外跑 parse_ip_cidr() 提取 IP-CIDR 到 reject_ip
+            if cat == "reject_domain":
+                ip_result = parser.parse_ip_cidr(text)
+                if ip_result:
+                    raw_buckets["reject_ip"] |= ip_result
+                    print(f"    → 额外提取 IP-CIDR {len(ip_result)} 条 → reject_ip")
         except Exception as e:
             print(f"    [ERROR] 解析失败: {e}")
             fail_count += 1
@@ -862,7 +877,7 @@ def main():
         cat_cfg = cat_configs.get(cat_name, {})
         ma = manual.get(cat_name, {"add": [], "remove": []})
 
-        if cat_name in ("direct_ip", "private_ip"):
+        if cat_name in ("direct_ip", "private_ip", "reject_ip"):
             # IP 类型分类
             exclude_private = cat_cfg.get("exclude_private_ranges", False)
             filtered = filter_ip_set(raw_set, exclude_private, ma["add"], ma["remove"])
@@ -892,7 +907,7 @@ def main():
     for cat_name in CATEGORIES:
         items = final_buckets[cat_name]
         # CIDR 去冗余（仅对 IP 类别）
-        if cat_name in ("direct_ip", "private_ip"):
+        if cat_name in ("direct_ip", "private_ip", "reject_ip"):
             before = len(items)
             items = compact_cidr_set(items)
             if len(items) != before:

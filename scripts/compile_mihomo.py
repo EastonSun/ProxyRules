@@ -11,7 +11,8 @@ ProxyRules — Mihomo 规则编译脚本
   direct_ip.txt      → direct_ip.mrs      (ipcidr)
   private_ip.txt     → private_ip.mrs     (ipcidr)
   private_domain.txt → private_domain.mrs (domain)
-  reject.txt         → reject.mrs         (domain)
+  reject_domain.txt  → reject_domain.mrs (domain)
+  reject_ip.txt      → reject_ip.mrs     (ipcidr)
 
 Mihomo 命令:
   mihomo convert-ruleset domain  text input.txt output.mrs
@@ -55,7 +56,8 @@ COMPILE_TASKS = [
     ("direct_ip.txt",      "ipcidr", "direct_ip"),
     ("private_ip.txt",     "ipcidr", "private_ip"),
     ("private_domain.txt", "domain", "private_domain"),
-    ("reject.txt",         "domain", "reject"),
+    ("reject_domain.txt",  "domain", "reject_domain"),
+    ("reject_ip.txt",      "ipcidr", "reject_ip"),
 ]
 
 

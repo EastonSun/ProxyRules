@@ -47,10 +47,11 @@ MODULE_DEFS = [
     {
         "name": "ProxyRules - Reject",
         "filename": "reject.module",
-        "desc": "广告、追踪、统计域名拦截规则",
+        "desc": "广告、追踪、统计域名与IP拦截规则",
         "policy": "REJECT",
         "inputs": [
-            {"file": "reject.txt", "type": "domain"},
+            {"file": "reject_domain.txt", "type": "domain"},
+            {"file": "reject_ip.txt",     "type": "ip"},
         ],
     },
 ]
@@ -153,7 +154,7 @@ def main():
 
     # 检查输入
     missing = [f.name for f in [OUTPUT_DIR / "direct_domain.txt",
-                                 OUTPUT_DIR / "reject.txt"]
+                                 OUTPUT_DIR / "reject_domain.txt"]
                if not f.exists()]
     if missing:
         print(f"[ERROR] 缺少输入文件: {missing}")

@@ -32,7 +32,7 @@ sources:
         category: direct_ip
       - path: reject.txt
         format: clash-rule-set
-        category: reject
+        category: reject_domain
       - path: lancidr.txt
         format: ip-cidr
         category: private_ip
@@ -52,7 +52,7 @@ sources:
         category: direct_domain
       - path: reject-list.txt
         format: bare-domain
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 3. xkww3n/Rules — Surge 风格 (+.domain)
@@ -67,7 +67,7 @@ sources:
         category: direct_domain
       - path: text-plus/reject.txt
         format: surge-list
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 4. ACL4SSR/ACL4SSR — 经典分流规则
@@ -83,13 +83,13 @@ sources:
         category: direct_domain
       - path: Clash/BanAD.list
         format: domain-list
-        category: reject
+        category: reject_domain
       - path: Clash/BanProgramAD.list
         format: domain-list
-        category: reject
+        category: reject_domain
       - path: Clash/BanEasyListChina.list
         format: domain-list
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 5. Cats-Team/AdRules — 中国区域广告规则合集
@@ -101,7 +101,7 @@ sources:
     files:
       - path: mod/rules/adblock-rules.txt
         format: adguard-list
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 6. zqzess/rule_for_quantumultX
@@ -114,7 +114,7 @@ sources:
     files:
       - path: Clash/filter/AdBlock.list
         format: clash-rule-set
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 7. blackmatrix7/ios_rule_script — 最全面的规则库
@@ -127,10 +127,13 @@ sources:
     files:
       - path: rule/Clash/Advertising/Advertising.list
         format: domain-list
-        category: reject
+        category: reject_domain
       - path: rule/Clash/Privacy/Privacy.list
         format: domain-list
-        category: reject
+        category: reject_domain
+      - path: rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml
+        format: domain-list
+        category: reject_domain
       - path: rule/Clash/China/China.list
         format: domain-list
         category: direct_domain
@@ -836,10 +839,10 @@ sources:
       # 广告/追踪 (category-ads 包含海量广告域名)
       - path: geo/geosite/category-ads.list
         format: bare-domain
-        category: reject
+        category: reject_domain
       - path: geo/geosite/category-ads-all.list
         format: bare-domain
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 13. REIJI007/AdBlock_Rule_For_Clash — 海量广告拦截域名
@@ -852,7 +855,7 @@ sources:
     files:
       - path: adblock_reject.txt
         format: clash-rule-set
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 14. v2fly/domain-list-community — V2Fly 社区域名列表
@@ -879,7 +882,7 @@ sources:
     files:
       - path: anti-ad-clash.yaml
         format: clash-rule-set
-        category: reject
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 16. 17mon/china_ip_list — 中国 IP 段 (ipip.net 数据)

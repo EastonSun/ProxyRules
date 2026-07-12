@@ -1,6 +1,6 @@
 # ProxyRules
 
-自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 14 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
+自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 15 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
 
 规则采用 Mihomo 官方 `+.domain` 通配符语法，等价于 `DOMAIN-SUFFIX`。
 
@@ -14,13 +14,15 @@
 | `direct_ip.mrs` | MRS 二进制 | 中国大陆公网 IP 段 |
 | `private_ip.mrs` | MRS 二进制 | 局域网/私有/保留 IP 段 |
 | `private_domain.mrs` | MRS 二进制 | 局域网专用域名 |
-| `reject.mrs` | MRS 二进制 | 广告/追踪/统计域名拦截 |
+| `reject_domain.mrs` | MRS 二进制 | 广告/追踪/统计域名/HttpDNS 拦截 |
+| `reject_ip.mrs` | MRS 二进制 | 广告/追踪/HttpDNS 拦截 IP-CIDR |
 | `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
 | `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
 - 最后更新时间：2026-07-12 10:10:30
 - DIRECT 规则数：117160，update +0
-- REJECT 规则数：479012，update +0
+- REJECT_DOMAIN 规则数：479012，update +0
+- REJECT_IP 规则数：0，update +0
 
 ## 订阅地址
 
@@ -31,7 +33,8 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_domain.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/direct_ip.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_ip.mrs
 ```
 
 ### Shadowrocket 模块
@@ -47,6 +50,7 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reje
 ```yaml
 rules:
   - RULE-SET,adblock,reject
+  - RULE-SET,adblock-ip,reject
   - RULE-SET,geosite-private,direct
   - RULE-SET,geoip-private,direct,no-resolve
   - RULE-SET,geosite-cn,direct
@@ -93,10 +97,19 @@ rule-providers:
   adblock:
     type: http
     path: adblock.mrs
-    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject.mrs"
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_domain.mrs"
     interval: 86400
     proxy: PROXY
     behavior: domain
+    format: mrs
+
+  adblock-ip:
+    type: http
+    path: adblock-ip.mrs
+    url: "https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_ip.mrs"
+    interval: 86400
+    proxy: PROXY
+    behavior: ipcidr
     format: mrs
 ```
 ### Shadowrocket<br/>
@@ -127,7 +140,7 @@ rule-providers:
 
 ```mermaid
 graph TD
-    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 14 个上游源<br/>via +. 通配符格式]
+    A[北京时间 08:00<br/>GitHub Actions 触发] --> B[fetch_and_filter.py<br/>抓取 15 个上游源<br/>via +. 通配符格式]
     B --> C{分类去重}
     C --> D[+/domain 中间文本]
     D --> I[mihomo convert-ruleset<br/>→ .mrs 二进制]
@@ -138,14 +151,16 @@ graph TD
 
 ## 手动自定义规则
 
-仓库提供四个手动干预文件，你可以直接修改后提交，下次构建时自动生效：
+仓库提供六个手动干预文件，你可以直接修改后提交，下次构建时自动生效：
 
 | 文件 | 作用 |
 |------|------|
 | `config/add_direct.txt` | 追加直连域名（一行一个） |
 | `config/remove_direct.txt` | 从直连名单中删除（一行一个） |
-| `config/add_reject.txt` | 追加拦截域名 |
-| `config/remove_reject.txt` | 从拦截名单中删除 |
+| `config/add_reject_domain.txt` | 追加拦截域名 |
+| `config/remove_reject_domain.txt` | 从拦截域名名单中删除 |
+| `config/add_reject_ip.txt` | 追加拦截 IP-CIDR |
+| `config/remove_reject_ip.txt` | 从拦截 IP-CIDR 名单中删除 |
 
 ## 本地运行
 

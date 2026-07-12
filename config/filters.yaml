@@ -146,9 +146,9 @@ categories:
       - "host-suffix,"
 
   # ==========================================================
-  # reject — 广告/追踪/统计域名拦截
+  # reject_domain — 广告/追踪/统计域名/HttpDNS 拦截
   # ==========================================================
-  reject:
+  reject_domain:
     description: 广告、追踪、统计、挖矿域名黑名单
     # --- 排除模式 (容易误杀的正常域名) ---
     # --- 保留前缀 ---
@@ -169,6 +169,16 @@ categories:
       - "$all"
       - "$document"
       - "$popup"
+
+  # ==========================================================
+  # reject_ip — 广告/追踪/HttpDNS 拦截 IP-CIDR 黑名单
+  # ==========================================================
+  reject_ip:
+    description: 广告/追踪/HttpDNS 拦截 IP-CIDR 黑名单
+    extract_prefixes:
+      - "IP-CIDR,"
+      - "IP-CIDR6,"
+    exclude_private_ranges: true
 
 
 # ============================================================
@@ -288,9 +298,16 @@ post_processing:
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 仓库: https://github.com/EastonSun/ProxyRules
-    reject: |
-      # ProxyRules — Reject
-      # 广告/追踪/统计域名拦截黑名单
+    reject_domain: |
+      # ProxyRules — Reject Domain
+      # 广告/追踪/统计域名/HttpDNS 拦截黑名单
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 上游来源: {sources}
+      # 仓库: https://github.com/EastonSun/ProxyRules
+    reject_ip: |
+      # ProxyRules — Reject IP
+      # 广告/追踪/HttpDNS 拦截 IP-CIDR 黑名单
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 上游来源: {sources}
