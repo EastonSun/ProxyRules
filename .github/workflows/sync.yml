@@ -62,7 +62,7 @@ jobs:
         run: pip install -r scripts/requirements.txt
 
       - name: 运行抓取与清洗
-        timeout-minutes: 10
+        timeout-minutes: 12
         run: python scripts/fetch_and_filter.py
 
       - name: 生成统计文件
