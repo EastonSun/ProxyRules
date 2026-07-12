@@ -2,8 +2,6 @@
 
 自动化代理路由规则订阅仓库，以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 为基础，整合 15 个上游规则源，清洗去重后发布为 Mihomo MRS 二进制规则集和 Shadowrocket 模块。
 
-规则采用 Mihomo 官方 `+.domain` 通配符语法，等价于 `DOMAIN-SUFFIX`。
-
 > **注意：本项目规则仅适用于白名单模式。**
 
 ## 功能概览
@@ -20,7 +18,8 @@
 | `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
 - 最后更新时间：2026-07-13 00:17:52
-- DIRECT 规则数：117160，update +0
+- DIRECT_DOMAIN 规则数：117160，update +0
+- DIRECT_IP 规则数：23477，update +0
 - REJECT_DOMAIN 规则数：479148，update +136
 - REJECT_IP 规则数：508，update +508
 

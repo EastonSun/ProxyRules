@@ -278,7 +278,8 @@ jobs:
           fi
 
           NEW_TS=$(python3 -c "import json; print(json.load(open('stats.json'))['timestamp'])")
-          NEW_DIRECT=$(python3 -c "import json; print(json.load(open('stats.json')).get('direct_domain',0))")
+          NEW_DIRECT_DOMAIN=$(python3 -c "import json; print(json.load(open('stats.json')).get('direct_domain',0))")
+          NEW_DIRECT_IP=$(python3 -c "import json; print(json.load(open('stats.json')).get('direct_ip',0))")
           NEW_REJECT_DOMAIN=$(python3 -c "import json; print(json.load(open('stats.json')).get('reject_domain',0))")
           NEW_REJECT_IP=$(python3 -c "import json; print(json.load(open('stats.json')).get('reject_ip',0))")
 
@@ -287,24 +288,28 @@ jobs:
           git checkout origin/main -- README.md
 
           # 读取 README 中的旧数据算 delta
-          OLD_DIRECT=$(grep -oP 'DIRECT 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+          OLD_DIRECT_DOMAIN=$(grep -oP 'DIRECT_DOMAIN 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+          OLD_DIRECT_IP=$(grep -oP 'DIRECT_IP 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
           OLD_REJECT_DOMAIN=$(grep -oP 'REJECT_DOMAIN 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
           OLD_REJECT_IP=$(grep -oP 'REJECT_IP 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
-          DIRECT_DELTA=$((NEW_DIRECT - OLD_DIRECT))
+          DDD_DELTA=$((NEW_DIRECT_DOMAIN - OLD_DIRECT_DOMAIN))
+          DDI_DELTA=$((NEW_DIRECT_IP - OLD_DIRECT_IP))
           RJD_DELTA=$((NEW_REJECT_DOMAIN - OLD_REJECT_DOMAIN))
           RJI_DELTA=$((NEW_REJECT_IP - OLD_REJECT_IP))
-          DIRECT_SIGN=$( [ $DIRECT_DELTA -ge 0 ] && echo '+' || echo '' )
+          DDD_SIGN=$( [ $DDD_DELTA -ge 0 ] && echo '+' || echo '' )
+          DDI_SIGN=$( [ $DDI_DELTA -ge 0 ] && echo '+' || echo '' )
           RJD_SIGN=$( [ $RJD_DELTA -ge 0 ] && echo '+' || echo '' )
           RJI_SIGN=$( [ $RJI_DELTA -ge 0 ] && echo '+' || echo '' )
 
           # 更新 README 中的统计行
           sed -i "s/最后更新时间：.*/最后更新时间：${NEW_TS}/" README.md
-          sed -i "s/DIRECT 规则数：[0-9,]*，update [+-][0-9,]*/DIRECT 规则数：$(printf "%'d" $NEW_DIRECT)，update ${DIRECT_SIGN}${DIRECT_DELTA}/" README.md
+          sed -i "s/DIRECT_DOMAIN 规则数：[0-9,]*，update [+-][0-9,]*/DIRECT_DOMAIN 规则数：$(printf "%'d" $NEW_DIRECT_DOMAIN)，update ${DDD_SIGN}${DDD_DELTA}/" README.md
+          sed -i "s/DIRECT_IP 规则数：[0-9,]*，update [+-][0-9,]*/DIRECT_IP 规则数：$(printf "%'d" $NEW_DIRECT_IP)，update ${DDI_SIGN}${DDI_DELTA}/" README.md
           sed -i "s/REJECT_DOMAIN 规则数：[0-9,]*，update [+-][0-9,]*/REJECT_DOMAIN 规则数：$(printf "%'d" $NEW_REJECT_DOMAIN)，update ${RJD_SIGN}${RJD_DELTA}/" README.md
           sed -i "s/REJECT_IP 规则数：[0-9,]*，update [+-][0-9,]*/REJECT_IP 规则数：$(printf "%'d" $NEW_REJECT_IP)，update ${RJI_SIGN}${RJI_DELTA}/" README.md
 
           echo "README 统计已更新:"
-          grep -E '(最后更新|DIRECT 规则数|REJECT_DOMAIN 规则数|REJECT_IP 规则数)' README.md
+          grep -E '(最后更新|DIRECT_DOMAIN|DIRECT_IP|REJECT_DOMAIN|REJECT_IP)' README.md
 
       - name: 推送 README 更新到 main
         run: |
