@@ -36,8 +36,10 @@ CACHE_DIR   = BASE_DIR / ".cache"
 
 SOURCES_FILE    = CONFIG_DIR / "sources.yaml"
 FILTERS_FILE    = CONFIG_DIR / "filters.yaml"
-ADD_DIRECT      = CONFIG_DIR / "add_direct.txt"
-REMOVE_DIRECT   = CONFIG_DIR / "remove_direct.txt"
+ADD_DIRECT_DOMAIN = CONFIG_DIR / "add_direct_domain.txt"
+REMOVE_DIRECT_DOMAIN = CONFIG_DIR / "remove_direct_domain.txt"
+ADD_DIRECT_IP     = CONFIG_DIR / "add_direct_ip.txt"
+REMOVE_DIRECT_IP  = CONFIG_DIR / "remove_direct_ip.txt"
 ADD_REJECT_DOMAIN = CONFIG_DIR / "add_reject_domain.txt"
 REMOVE_REJECT_DOMAIN = CONFIG_DIR / "remove_reject_domain.txt"
 ADD_REJECT_IP     = CONFIG_DIR / "add_reject_ip.txt"
@@ -747,12 +749,12 @@ def main():
     # 加载手动干预文件
     manual = {
         "direct_domain": {
-            "add": load_txt_lines(ADD_DIRECT),
-            "remove": load_txt_lines(REMOVE_DIRECT),
+            "add": load_txt_lines(ADD_DIRECT_DOMAIN),
+            "remove": load_txt_lines(REMOVE_DIRECT_DOMAIN),
         },
         "direct_ip": {
-            "add": [],
-            "remove": [],
+            "add": load_txt_lines(ADD_DIRECT_IP),
+            "remove": load_txt_lines(REMOVE_DIRECT_IP),
         },
         "private_ip": {
             "add": [],

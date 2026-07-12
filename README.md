@@ -150,12 +150,14 @@ graph TD
 
 ## 手动自定义规则
 
-仓库提供六个手动干预文件，你可以直接修改后提交，下次构建时自动生效：
+仓库提供八个手动干预文件，你可以直接修改后提交，下次构建时自动生效：
 
 | 文件 | 作用 |
 |------|------|
-| `config/add_direct.txt` | 追加直连域名（一行一个） |
-| `config/remove_direct.txt` | 从直连名单中删除（一行一个） |
+| `config/add_direct_domain.txt` | 追加直连域名（一行一个） |
+| `config/remove_direct_domain.txt` | 从直连域名名单中删除（一行一个） |
+| `config/add_direct_ip.txt` | 追加直连 IP-CIDR（一行一个） |
+| `config/remove_direct_ip.txt` | 从直连 IP-CIDR 名单中删除（一行一个） |
 | `config/add_reject_domain.txt` | 追加拦截域名 |
 | `config/remove_reject_domain.txt` | 从拦截域名名单中删除 |
 | `config/add_reject_ip.txt` | 追加拦截 IP-CIDR |
