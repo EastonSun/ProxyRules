@@ -17,10 +17,10 @@
 | `Shadowrocket/direct.module` | Surge 模块 | Shadowrocket 直连模块 |
 | `Shadowrocket/reject.module` | Surge 模块 | Shadowrocket 拦截模块 |
 
-- 最后更新时间：2026-07-13 00:35:49
-- DIRECT_DOMAIN 规则数：117160，update +0
+- 最后更新时间：2026-07-13 08:36:01
+- DIRECT_DOMAIN 规则数：117156，update -4
 - DIRECT_IP 规则数：23477，update +0
-- REJECT_DOMAIN 规则数：479148，update +0
+- REJECT_DOMAIN 规则数：479258，update +110
 - REJECT_IP 规则数：508，update +0
 
 ## 订阅地址
