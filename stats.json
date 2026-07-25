@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-07-25 10:07:57",
+  "timestamp": "2026-07-25 21:37:55",
   "direct_domain": 117030,
-  "direct_ip": 23595,
+  "direct_ip": 23615,
   "private_domain": 133,
   "private_ip": 19,
-  "reject_domain": 481795,
+  "reject_domain": 482017,
   "reject_ip": 511
 }
