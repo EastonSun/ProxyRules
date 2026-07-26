@@ -26,12 +26,12 @@
 | `Shadowrocket/reject.module` | 拦截分流 | Shadowrocket 广告/追踪拦截模块 | Surge 模块 |
 | `Shadowrocket/proxy.module` | 代理分流 | Shadowrocket 代理域名与国外服务模块 | Surge 模块 |
 
-- 最后更新时间：2026-07-26 10:12:51 (北京时间)
-- DIRECT_DOMAIN 规则数：117,030，update +0
-- DIRECT_IP 规则数：23,567，update -48
-- REJECT_DOMAIN 规则数：481,894，update -123
+- 最后更新时间：2026-07-26 12:42:33
+- DIRECT_DOMAIN 规则数：117030，update +0
+- DIRECT_IP 规则数：23567，update +0
+- REJECT_DOMAIN 规则数：481830，update -64
 - REJECT_IP 规则数：511，update +0
-- NO_CN_DOMAIN 规则数：28,867，update +0
+- NO_CN_DOMAIN 规则数：28867，update +0
 
 ---
 
