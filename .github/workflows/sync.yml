@@ -2,16 +2,16 @@
 # ProxyRules — 每日自动同步与发布
 # ============================================================
 # 触发条件:
-#   1. 定时: 北京时间每天早上 8:00 (UTC 00:00)
-#   2. 手动: workflow_dispatch (GitHub UI 按钮触发)
-#   3. 推送: 推送到 main/master 分支时 (仅 config/scripts/workflow 变更)
+#   1. 外部触发: repository_dispatch (外部 cron-job.org 精准秒级触发)
+#   2. 手动触发: workflow_dispatch (GitHub UI 按钮触发)
+#   3. 推送触发: 推送到 main/master 分支时 (仅 config/scripts/workflow 变更)
 # ============================================================
 
 name: Sync & Release Rules
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  repository_dispatch:
+    types: [cron_sync]
 
   workflow_dispatch:
     inputs:
@@ -98,10 +98,10 @@ jobs:
 
 
   # ==========================================================
-  # Job 2: 编译所有产物 (MRS + Shadowrocket)
+  # Job 2: 编译所有产物 (Mihomo MRS + Sing-box SRS + Shadowrocket Module)
   # ==========================================================
   build-all:
-    name: Build All (MRS + Shadowrocket)
+    name: Build All (Mihomo + Sing-box + Shadowrocket)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     needs: fetch-and-filter
@@ -120,34 +120,25 @@ jobs:
         run: pip install requests PyYAML
 
       # --- Mihomo 编译 ---
-      - name: 下载 Mihomo 核心
+      - name: 编译 Mihomo MRS
         run: |
-          MIHOMO_VER="v1.19.3"
-          MIHOMO_URL="https://github.com/MetaCubeX/mihomo/releases/download/${MIHOMO_VER}/mihomo-linux-amd64-${MIHOMO_VER}.gz"
-          curl -sL "$MIHOMO_URL" -o mihomo.gz
-          gunzip mihomo.gz
-          chmod +x mihomo
-          ./mihomo convert-ruleset 2>&1 | head -1 || true
-          echo "✅ Mihomo ready"
-
-      - name: 编译 MRS 二进制
-        run: |
-          mkdir -p build
-          ./mihomo convert-ruleset domain  text output/direct_domain.txt  build/direct_domain.mrs
-          ./mihomo convert-ruleset ipcidr  text output/direct_ip.txt      build/direct_ip.mrs
-          ./mihomo convert-ruleset ipcidr  text output/private_ip.txt     build/private_ip.mrs
-          ./mihomo convert-ruleset domain  text output/private_domain.txt build/private_domain.mrs
-          ./mihomo convert-ruleset domain  text output/reject_domain.txt  build/reject_domain.mrs
-          ./mihomo convert-ruleset ipcidr  text output/reject_ip.txt      build/reject_ip.mrs
+          python scripts/compile_mihomo.py
           # 为每个 .mrs 文件追加时间戳注释 (Zstandard 尾部兼容)
-          # 确保 MRS blob 每次更新，与 TXT 保持时间戳一致
           SYNC_TS=$(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M:%S (北京时间)')
-          for mrs in build/*.mrs; do
+          for mrs in build/mihomo/*.mrs; do
             printf '\n# synced: %s\n' "$SYNC_TS" >> "$mrs"
           done
           echo ""
           echo "📦 MRS 产物:"
-          ls -lh build/*.mrs
+          ls -lh build/mihomo/*.mrs
+
+      # --- Sing-box 编译 ---
+      - name: 编译 Sing-box SRS
+        run: |
+          python scripts/compile_singbox.py
+          echo ""
+          echo "📦 SRS 产物:"
+          ls -lh build/sing-box/*.srs
 
       # --- Shadowrocket 模块 ---
       - name: 生成 Shadowrocket .module
@@ -156,13 +147,12 @@ jobs:
           echo "📦 SGModule 产物:"
           ls -lh build/Shadowrocket/
 
-      # --- 把 .txt 和 stats.json 也复制到 build/，方便发布时一起拿 ---
-      - name: 整理 build/ 目录
+      # --- 整理 build 目录 ---
+      - name: 整理 build 目录
         run: |
-          cp output/*.txt build/
           cp output/stats.json build/
           echo ""
-          echo "📦 build/ 完整产物:"
+          echo "📦 build/ 完整且可发布的产物结构:"
           find build -type f | sort
 
       # --- 上传整个 build/ 给 publish job ---
@@ -175,7 +165,7 @@ jobs:
 
 
   # ==========================================================
-  # Job 3: 发布到 Release
+  # Job 3: 发布到 Release 分支
   # ==========================================================
   publish:
     name: Publish to Release
@@ -183,7 +173,7 @@ jobs:
     timeout-minutes: 5
     needs: build-all
     if: |
-      (github.event_name == 'schedule') ||
+      (github.event_name == 'repository_dispatch') ||
       (github.event_name == 'push') ||
       (github.event_name == 'workflow_dispatch' && github.event.inputs.publish == 'true')
 
@@ -201,7 +191,7 @@ jobs:
 
       - name: 发布到 release 分支
         run: |
-          echo "📁 下载的产物:"
+          echo "📁 下载的产物结构:"
           find dist -type f | sort
 
           # 保存旧的 stats.json 供 delta 计算
@@ -212,12 +202,9 @@ jobs:
           # 清空根目录
           git rm -rf --ignore-unmatch .
 
-          # 复制所有产物到根目录 (保留子目录结构)
+          # 复制所有产物到根目录 (保留子目录结构: mihomo/, sing-box/, Shadowrocket/)
           cp -r dist/* .
           rm -rf dist
-
-          # 删除 .txt 中间文件，release 只发布 .mrs + .module + stats.json
-          rm -f ./*.txt
 
           # 计算 delta (对比上一次 stats.json)
           echo ""
@@ -230,7 +217,7 @@ jobs:
           import json
           new = json.load(open('stats.json'))
           old = json.load(open('old_stats.json'))
-          for k in ['direct_domain', 'reject_domain', 'reject_ip']:
+          for k in ['direct_domain', 'direct_ip', 'reject_domain', 'reject_ip', 'no_cn_domain']:
               nc = new.get(k, 0)
               oc = old.get(k, 0)
               delta = nc - oc
@@ -241,7 +228,7 @@ jobs:
               python3 -c "
           import json
           new = json.load(open('stats.json'))
-          for k in ['direct_domain', 'reject_domain', 'reject_ip']:
+          for k in ['direct_domain', 'direct_ip', 'reject_domain', 'reject_ip', 'no_cn_domain']:
               print(f'  {k}: {new.get(k,0)} 条')
           "
             fi
@@ -282,6 +269,7 @@ jobs:
           NEW_DIRECT_IP=$(python3 -c "import json; print(json.load(open('stats.json')).get('direct_ip',0))")
           NEW_REJECT_DOMAIN=$(python3 -c "import json; print(json.load(open('stats.json')).get('reject_domain',0))")
           NEW_REJECT_IP=$(python3 -c "import json; print(json.load(open('stats.json')).get('reject_ip',0))")
+          NEW_NO_CN_DOMAIN=$(python3 -c "import json; print(json.load(open('stats.json')).get('no_cn_domain',0))")
 
           # 获取 main 分支上的 README
           git fetch origin main
@@ -292,14 +280,19 @@ jobs:
           OLD_DIRECT_IP=$(grep -oP 'DIRECT_IP 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
           OLD_REJECT_DOMAIN=$(grep -oP 'REJECT_DOMAIN 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
           OLD_REJECT_IP=$(grep -oP 'REJECT_IP 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+          OLD_NO_CN_DOMAIN=$(grep -oP 'NO_CN_DOMAIN 规则数：\s*\K[\d,]+' README.md | sed 's/,//g' || echo 0)
+
           DDD_DELTA=$((NEW_DIRECT_DOMAIN - OLD_DIRECT_DOMAIN))
           DDI_DELTA=$((NEW_DIRECT_IP - OLD_DIRECT_IP))
           RJD_DELTA=$((NEW_REJECT_DOMAIN - OLD_REJECT_DOMAIN))
           RJI_DELTA=$((NEW_REJECT_IP - OLD_REJECT_IP))
+          NCD_DELTA=$((NEW_NO_CN_DOMAIN - OLD_NO_CN_DOMAIN))
+
           DDD_SIGN=$( [ $DDD_DELTA -ge 0 ] && echo '+' || echo '' )
           DDI_SIGN=$( [ $DDI_DELTA -ge 0 ] && echo '+' || echo '' )
           RJD_SIGN=$( [ $RJD_DELTA -ge 0 ] && echo '+' || echo '' )
           RJI_SIGN=$( [ $RJI_DELTA -ge 0 ] && echo '+' || echo '' )
+          NCD_SIGN=$( [ $NCD_DELTA -ge 0 ] && echo '+' || echo '' )
 
           # 更新 README 中的统计行
           sed -i "s/最后更新时间：.*/最后更新时间：${NEW_TS}/" README.md
@@ -307,9 +300,10 @@ jobs:
           sed -i "s/DIRECT_IP 规则数：[0-9,]*，update [+-][0-9,]*/DIRECT_IP 规则数：$(printf "%'d" $NEW_DIRECT_IP)，update ${DDI_SIGN}${DDI_DELTA}/" README.md
           sed -i "s/REJECT_DOMAIN 规则数：[0-9,]*，update [+-][0-9,]*/REJECT_DOMAIN 规则数：$(printf "%'d" $NEW_REJECT_DOMAIN)，update ${RJD_SIGN}${RJD_DELTA}/" README.md
           sed -i "s/REJECT_IP 规则数：[0-9,]*，update [+-][0-9,]*/REJECT_IP 规则数：$(printf "%'d" $NEW_REJECT_IP)，update ${RJI_SIGN}${RJI_DELTA}/" README.md
+          sed -i "s/NO_CN_DOMAIN 规则数：[0-9,]*，update [+-][0-9,]*/NO_CN_DOMAIN 规则数：$(printf "%'d" $NEW_NO_CN_DOMAIN)，update ${NCD_SIGN}${NCD_DELTA}/" README.md
 
           echo "README 统计已更新:"
-          grep -E '(最后更新|DIRECT_DOMAIN|DIRECT_IP|REJECT_DOMAIN|REJECT_IP)' README.md
+          grep -E '(最后更新|DIRECT_DOMAIN|DIRECT_IP|REJECT_DOMAIN|REJECT_IP|NO_CN_DOMAIN)' README.md
 
       - name: 推送 README 更新到 main
         run: |
@@ -336,22 +330,25 @@ jobs:
           echo "📦 发布完成"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo ""
-          echo "文本规则:"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_domain.txt"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_ip.txt"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_ip.txt"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_domain.txt"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject_domain.txt"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject_ip.txt"
+          echo "Mihomo MRS 二进制订阅:"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/direct_domain.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/direct_ip.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/private_domain.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/private_ip.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/reject_domain.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/reject_ip.mrs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/mihomo/no_cn_domain.mrs"
           echo ""
-          echo "MRS 二进制:"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_domain.mrs"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/direct_ip.mrs"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_ip.mrs"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/private_domain.mrs"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject_domain.mrs"
-          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/reject_ip.mrs"
+          echo "Sing-box SRS 二进制订阅:"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/direct_domain.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/direct_ip.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/private_domain.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/private_ip.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/reject_domain.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/reject_ip.srs"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/sing-box/no_cn_domain.srs"
           echo ""
-          echo "Shadowrocket:"
+          echo "Shadowrocket SGModule 订阅:"
           echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/direct.module"
           echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/reject.module"
+          echo "  https://raw.githubusercontent.com/${{ github.repository }}/release/Shadowrocket/proxy.module"

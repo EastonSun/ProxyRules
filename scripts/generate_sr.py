@@ -54,6 +54,15 @@ MODULE_DEFS = [
             {"file": "reject_ip.txt",     "type": "ip"},
         ],
     },
+    {
+        "name": "ProxyRules - Proxy",
+        "filename": "proxy.module",
+        "desc": "非中国大陆/需要代理访问的域名与服务规则",
+        "policy": "PROXY",
+        "inputs": [
+            {"file": "no_cn_domain.txt", "type": "domain"},
+        ],
+    },
 ]
 
 

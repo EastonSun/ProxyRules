@@ -36,6 +36,12 @@ sources:
       - path: lancidr.txt
         format: ip-cidr
         category: private_ip
+      - path: gfw.txt
+        format: clash-rule-set
+        category: no_cn_domain
+      - path: proxy.txt
+        format: clash-rule-set
+        category: no_cn_domain
       # applications.txt 是 PROCESS-NAME 规则，不适合域名/IP 规则集，跳过
 
   # ──────────────────────────────────────────────────────────
@@ -53,6 +59,9 @@ sources:
       - path: reject-list.txt
         format: bare-domain
         category: reject_domain
+      - path: proxy-list.txt
+        format: bare-domain
+        category: no_cn_domain
 
   # ──────────────────────────────────────────────────────────
   # 3. xkww3n/Rules — Surge 风格 (+.domain)
@@ -140,6 +149,9 @@ sources:
       - path: rule/Clash/ChinaIPs/ChinaIPs.list
         format: ip-cidr
         category: direct_ip
+      - path: rule/Clash/Proxy/Proxy.list
+        format: domain-list
+        category: no_cn_domain
 
   # ──────────────────────────────────────────────────────────
   # 8. DustinWin/ruleset_geodata — 仓库已重构
@@ -825,6 +837,9 @@ sources:
       - path: geo/geosite/youtube@cn.list
         format: bare-domain
         category: direct_domain
+      - path: geo/geosite/gfw.list
+        format: bare-domain
+        category: no_cn_domain
       # 中国大陆 IP
       - path: geo/geoip/cn.list
         format: ip-cidr

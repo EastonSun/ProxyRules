@@ -1,0 +1,6 @@
+# ProxyRules — 手动追加代理域名名单 (no_cn_domain)
+# 在此写入需要强制通过代理访问的域名 (一行一个，支持以 # 或 // 开头的注释)
+# 
+# 例如:
+# +.openai.com
+# +.claude.ai

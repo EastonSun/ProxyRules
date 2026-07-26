@@ -34,7 +34,7 @@ TZ_BEIJING = timezone(timedelta(hours=8))
 
 BASE_DIR   = Path(__file__).resolve().parent.parent
 OUTPUT_DIR = BASE_DIR / "output"
-BUILD_DIR  = BASE_DIR / "build"
+BUILD_DIR  = BASE_DIR / "build" / "mihomo"
 CACHE_DIR  = BASE_DIR / ".cache"
 
 # Mihomo release URL (latest stable)
@@ -58,6 +58,7 @@ COMPILE_TASKS = [
     ("private_domain.txt", "domain", "private_domain"),
     ("reject_domain.txt",  "domain", "reject_domain"),
     ("reject_ip.txt",      "ipcidr", "reject_ip"),
+    ("no_cn_domain.txt",   "domain", "no_cn_domain"),
 ]
 
 

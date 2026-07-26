@@ -44,8 +44,10 @@ ADD_REJECT_DOMAIN = CONFIG_DIR / "add_reject_domain.txt"
 REMOVE_REJECT_DOMAIN = CONFIG_DIR / "remove_reject_domain.txt"
 ADD_REJECT_IP     = CONFIG_DIR / "add_reject_ip.txt"
 REMOVE_REJECT_IP  = CONFIG_DIR / "remove_reject_ip.txt"
+ADD_NO_CN_DOMAIN  = CONFIG_DIR / "add_no_cn_domain.txt"
+REMOVE_NO_CN_DOMAIN = CONFIG_DIR / "remove_no_cn_domain.txt"
 
-CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject_domain", "reject_ip"]
+CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject_domain", "reject_ip", "no_cn_domain"]
 
 # 北京时区
 TZ_BEIJING = timezone(timedelta(hours=8))
@@ -771,6 +773,10 @@ def main():
         "reject_ip": {
             "add": load_txt_lines(ADD_REJECT_IP),
             "remove": load_txt_lines(REMOVE_REJECT_IP),
+        },
+        "no_cn_domain": {
+            "add": load_txt_lines(ADD_NO_CN_DOMAIN),
+            "remove": load_txt_lines(REMOVE_NO_CN_DOMAIN),
         },
     }
     print(f"  配置加载完成: {len(sources_cfg.get('sources', []))} 个上游源")
