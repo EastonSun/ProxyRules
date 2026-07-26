@@ -43,11 +43,11 @@
 ```text
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/direct_domain.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/direct_ip.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_domain.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/private_ip.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_domain.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/reject_ip.mrs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/no_cn_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/private_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/private_ip.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/reject_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/reject_ip.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/no_cn_domain.mrs
 ```
 
 ### 2. Sing-box SRS 二进制规则集（高效专有格式）
@@ -58,7 +58,7 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/private_
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/private_ip.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/reject_domain.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/reject_ip.srs
-https://raw.githubusercontent.com/EastonSun/ProxyRules/release/no_cn_domain.srs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/no_cn_domain.srs
 ```
 
 ### 3. Shadowrocket 订阅模块
