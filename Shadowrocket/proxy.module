@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-07-27 10:30:09 (北京时间)
-#!rule_count = 28867
+#!update = 2026-07-28 08:03:09 (北京时间)
+#!rule_count = 28869
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -10792,6 +10792,7 @@ DOMAIN-SUFFIX,githubhackathon.com,PROXY
 DOMAIN-SUFFIX,githubnext.com,PROXY
 DOMAIN-SUFFIX,githubpreview.dev,PROXY
 DOMAIN-SUFFIX,githubstatus.com,PROXY
+DOMAIN-SUFFIX,githubsupport.com,PROXY
 DOMAIN-SUFFIX,githubuniverse.com,PROXY
 DOMAIN-SUFFIX,githubusercontent.com,PROXY
 DOMAIN-SUFFIX,gitlab-static.net,PROXY
@@ -24829,6 +24830,7 @@ DOMAIN-SUFFIX,truyenkk1.com,PROXY
 DOMAIN-SUFFIX,truyentranh86.com,PROXY
 DOMAIN-SUFFIX,truyenwk.com,PROXY
 DOMAIN-SUFFIX,try.rw,PROXY
+DOMAIN-SUFFIX,tryai.dev,PROXY
 DOMAIN-SUFFIX,tryalias.com,PROXY
 DOMAIN-SUFFIX,tryboobs.com,PROXY
 DOMAIN-SUFFIX,trycloudflare.com,PROXY
