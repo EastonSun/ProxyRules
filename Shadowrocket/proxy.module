@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-07-28 08:03:09 (北京时间)
-#!rule_count = 28869
+#!update = 2026-07-29 08:03:30 (北京时间)
+#!rule_count = 28874
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -4162,6 +4162,7 @@ DOMAIN-SUFFIX,bluemix.com,PROXY
 DOMAIN-SUFFIX,bluemix.net,PROXY
 DOMAIN-SUFFIX,bluestacks.com,PROXY
 DOMAIN-SUFFIX,bluffyporn.com,PROXY
+DOMAIN-SUFFIX,blurams.app,PROXY
 DOMAIN-SUFFIX,blurams.com,PROXY
 DOMAIN-SUFFIX,blylq.buzz,PROXY
 DOMAIN-SUFFIX,blz-contentstack.com,PROXY
@@ -5501,6 +5502,7 @@ DOMAIN-SUFFIX,cellulo.info,PROXY
 DOMAIN-SUFFIX,cencoastbmw.com,PROXY
 DOMAIN-SUFFIX,cenews.eu,PROXY
 DOMAIN-SUFFIX,cenkei.com,PROXY
+DOMAIN-SUFFIX,ceno.app,PROXY
 DOMAIN-SUFFIX,censorship.ai,PROXY
 DOMAIN-SUFFIX,censorship.no,PROXY
 DOMAIN-SUFFIX,centauro.com.br,PROXY
@@ -14032,6 +14034,7 @@ DOMAIN-SUFFIX,iutunes.com,PROXY
 DOMAIN-SUFFIX,ivacy.com,PROXY
 DOMAIN-SUFFIX,iverycd.com,PROXY
 DOMAIN-SUFFIX,ivi.ru,PROXY
+DOMAIN-SUFFIX,ivicdn.tv,PROXY
 DOMAIN-SUFFIX,ivintageporn.com,PROXY
 DOMAIN-SUFFIX,ivonblog.com,PROXY
 DOMAIN-SUFFIX,ivpn.net,PROXY
@@ -14827,6 +14830,7 @@ DOMAIN-SUFFIX,kindleproject.com,PROXY
 DOMAIN-SUFFIX,kindleren.com,PROXY
 DOMAIN-SUFFIX,kindnudist.com,PROXY
 DOMAIN-SUFFIX,kindteenporn.com,PROXY
+DOMAIN-SUFFIX,kinescopecdn.net,PROXY
 DOMAIN-SUFFIX,kingcomix.com,PROXY
 DOMAIN-SUFFIX,kingdomsalvation.org,PROXY
 DOMAIN-SUFFIX,kingextre.me,PROXY
@@ -21772,6 +21776,7 @@ DOMAIN-SUFFIX,sber.pro,PROXY
 DOMAIN-SUFFIX,sber.ru,PROXY
 DOMAIN-SUFFIX,sberauto.com,PROXY
 DOMAIN-SUFFIX,sberbank-insurance.ru,PROXY
+DOMAIN-SUFFIX,sberbank-tele.com,PROXY
 DOMAIN-SUFFIX,sberbank.com,PROXY
 DOMAIN-SUFFIX,sberbank.ru,PROXY
 DOMAIN-SUFFIX,sberbankaktivno.ru,PROXY
