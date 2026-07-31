@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-07-30 08:02:57 (北京时间)
-#!rule_count = 28874
+#!update = 2026-07-31 08:03:19 (北京时间)
+#!rule_count = 28896
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1982,6 +1982,7 @@ DOMAIN-SUFFIX,api.termius.com,PROXY
 DOMAIN-SUFFIX,api.waqi.info,PROXY
 DOMAIN-SUFFIX,api5.futunn.com,PROXY
 DOMAIN-SUFFIX,apiary.io,PROXY
+DOMAIN-SUFFIX,apiauto.ru,PROXY
 DOMAIN-SUFFIX,apibay.org,PROXY
 DOMAIN-SUFFIX,apigee.com,PROXY
 DOMAIN-SUFFIX,apina.biz,PROXY
@@ -2668,6 +2669,7 @@ DOMAIN-SUFFIX,auth0.com,PROXY
 DOMAIN-SUFFIX,authorxml.com,PROXY
 DOMAIN-SUFFIX,authpass.app,PROXY
 DOMAIN-SUFFIX,authy.com,PROXY
+DOMAIN-SUFFIX,auto.ru,PROXY
 DOMAIN-SUFFIX,autocad-schulungen.com,PROXY
 DOMAIN-SUFFIX,autocad.com,PROXY
 DOMAIN-SUFFIX,autocad360.com,PROXY
@@ -2806,6 +2808,7 @@ DOMAIN-SUFFIX,autokreditbank.ru,PROXY
 DOMAIN-SUFFIX,automaton-media.com,PROXY
 DOMAIN-SUFFIX,automobile.fr,PROXY
 DOMAIN-SUFFIX,automotive-cadcam.com,PROXY
+DOMAIN-SUFFIX,autoru.me,PROXY
 DOMAIN-SUFFIX,autosketch.com,PROXY
 DOMAIN-SUFFIX,autumn-jade.com,PROXY
 DOMAIN-SUFFIX,auxdubai.com,PROXY
@@ -2915,6 +2918,7 @@ DOMAIN-SUFFIX,avstar5.com,PROXY
 DOMAIN-SUFFIX,avstar6.com,PROXY
 DOMAIN-SUFFIX,avstar8.com,PROXY
 DOMAIN-SUFFIX,avstar9.com,PROXY
+DOMAIN-SUFFIX,avto.ru,PROXY
 DOMAIN-SUFFIX,avwong.com,PROXY
 DOMAIN-SUFFIX,avwto.com,PROXY
 DOMAIN-SUFFIX,avxde.org,PROXY
@@ -5675,6 +5679,8 @@ DOMAIN-SUFFIX,cherrypanpan.com,PROXY
 DOMAIN-SUFFIX,cherrypimps.com,PROXY
 DOMAIN-SUFFIX,cherrypornhd.com,PROXY
 DOMAIN-SUFFIX,cherrysave.com,PROXY
+DOMAIN-SUFFIX,chess.com,PROXY
+DOMAIN-SUFFIX,chesscomfiles.com,PROXY
 DOMAIN-SUFFIX,chhongbi.org,PROXY
 DOMAIN-SUFFIX,chianxv.buzz,PROXY
 DOMAIN-SUFFIX,chibabank.co.jp,PROXY
@@ -5834,6 +5840,9 @@ DOMAIN-SUFFIX,chwr7s8u.com,PROXY
 DOMAIN-SUFFIX,chyoa.com,PROXY
 DOMAIN-SUFFIX,ci-en.jp,PROXY
 DOMAIN-SUFFIX,ci-en.net,PROXY
+DOMAIN-SUFFIX,cian.ru,PROXY
+DOMAIN-SUFFIX,cian.site,PROXY
+DOMAIN-SUFFIX,ciangroup.ru,PROXY
 DOMAIN-SUFFIX,ciattackers.com,PROXY
 DOMAIN-SUFFIX,cici.com,PROXY
 DOMAIN-SUFFIX,ciciai.com,PROXY
@@ -6075,6 +6084,7 @@ DOMAIN-SUFFIX,clubtubes.com,PROXY
 DOMAIN-SUFFIX,clusterconnection.com,PROXY
 DOMAIN-SUFFIX,clyp.it,PROXY
 DOMAIN-SUFFIX,clzz2.xyz,PROXY
+DOMAIN-SUFFIX,cm.expert,PROXY
 DOMAIN-SUFFIX,cmail19.com,PROXY
 DOMAIN-SUFFIX,cmcn.org,PROXY
 DOMAIN-SUFFIX,cmegroup.com,PROXY
@@ -7469,6 +7479,7 @@ DOMAIN-SUFFIX,dmcdn.net,PROXY
 DOMAIN-SUFFIX,dmed.technology,PROXY
 DOMAIN-SUFFIX,dmgmediaprivacy.co.uk,PROXY
 DOMAIN-SUFFIX,dmhy.org,PROXY
+DOMAIN-SUFFIX,dmir.ru,PROXY
 DOMAIN-SUFFIX,dmit.io,PROXY
 DOMAIN-SUFFIX,dmit.sh,PROXY
 DOMAIN-SUFFIX,dml-lang.org,PROXY
@@ -7717,6 +7728,7 @@ DOMAIN-SUFFIX,drmario-world.com,PROXY
 DOMAIN-SUFFIX,drmingxia.org,PROXY
 DOMAIN-SUFFIX,drnastran.com,PROXY
 DOMAIN-SUFFIX,drobbox.pro,PROXY
+DOMAIN-SUFFIX,drom.ru,PROXY
 DOMAIN-SUFFIX,dronedj.com,PROXY
 DOMAIN-SUFFIX,dropbooks.tv,PROXY
 DOMAIN-SUFFIX,dropbox-dns.com,PROXY
@@ -18670,6 +18682,7 @@ DOMAIN-SUFFIX,nytstyle.com,PROXY
 DOMAIN-SUFFIX,nzchinese.com,PROXY
 DOMAIN-SUFFIX,nzchinese.net.nz,PROXY
 DOMAIN-SUFFIX,o-courier.ru,PROXY
+DOMAIN-SUFFIX,o-uchi.ru,PROXY
 DOMAIN-SUFFIX,o2action.co.kr,PROXY
 DOMAIN-SUFFIX,o3.ru,PROXY
 DOMAIN-SUFFIX,o365weve-dev.com,PROXY
@@ -20400,6 +20413,7 @@ DOMAIN-SUFFIX,potato.im,PROXY
 DOMAIN-SUFFIX,potatso.com,PROXY
 DOMAIN-SUFFIX,potenza.jp,PROXY
 DOMAIN-SUFFIX,potvpn.com,PROXY
+DOMAIN-SUFFIX,poudobnee.com,PROXY
 DOMAIN-SUFFIX,pourquoi.tw,PROXY
 DOMAIN-SUFFIX,povpornonly.com,PROXY
 DOMAIN-SUFFIX,povr.com,PROXY
@@ -21042,6 +21056,7 @@ DOMAIN-SUFFIX,rcinet.ca,PROXY
 DOMAIN-SUFFIX,rcl07.xyz,PROXY
 DOMAIN-SUFFIX,rclon.com,PROXY
 DOMAIN-SUFFIX,rd.com,PROXY
+DOMAIN-SUFFIX,rdrom.ru,PROXY
 DOMAIN-SUFFIX,rds-yes.buzz,PROXY
 DOMAIN-SUFFIX,rdtcdn.com,PROXY
 DOMAIN-SUFFIX,re25.vip,PROXY
@@ -21118,6 +21133,7 @@ DOMAIN-SUFFIX,realteengirls.com,PROXY
 DOMAIN-SUFFIX,realtor.com,PROXY
 DOMAIN-SUFFIX,realtype.co.jp,PROXY
 DOMAIN-SUFFIX,realtype.jp,PROXY
+DOMAIN-SUFFIX,realtyverif.ru,PROXY
 DOMAIN-SUFFIX,realvision.com,PROXY
 DOMAIN-SUFFIX,realviz.com,PROXY
 DOMAIN-SUFFIX,realzoomovies.com,PROXY
@@ -25223,6 +25239,7 @@ DOMAIN-SUFFIX,ucanews.com,PROXY
 DOMAIN-SUFFIX,ucdc1998.org,PROXY
 DOMAIN-SUFFIX,uchi.ru,PROXY
 DOMAIN-SUFFIX,uchicago.edu,PROXY
+DOMAIN-SUFFIX,uchilk.ru,PROXY
 DOMAIN-SUFFIX,ucla.edu,PROXY
 DOMAIN-SUFFIX,ucoz.ae,PROXY
 DOMAIN-SUFFIX,ucoz.club,PROXY
@@ -25516,6 +25533,7 @@ DOMAIN-SUFFIX,v-av.com,PROXY
 DOMAIN-SUFFIX,v-has.com,PROXY
 DOMAIN-SUFFIX,v.gd,PROXY
 DOMAIN-SUFFIX,v.ps,PROXY
+DOMAIN-SUFFIX,v.recipes,PROXY
 DOMAIN-SUFFIX,v.roucdn,PROXY
 DOMAIN-SUFFIX,v2.help,PROXY
 DOMAIN-SUFFIX,v2.hysteria.network,PROXY
@@ -27551,6 +27569,7 @@ DOMAIN-SUFFIX,xn----8sbaroledu6bi7j.com,PROXY
 DOMAIN-SUFFIX,xn----8sbeoy5bze.com,PROXY
 DOMAIN-SUFFIX,xn----8sbkfzespdwig.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn----8sbwjbxyd.xn--p1ai,PROXY
+DOMAIN-SUFFIX,xn----otbzjdu.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--096-4g6em5t.com,PROXY
 DOMAIN-SUFFIX,xn--11xs86f.icu,PROXY
 DOMAIN-SUFFIX,xn--1jqvh729avzfcy2d8ummib.com,PROXY
@@ -27571,6 +27590,8 @@ DOMAIN-SUFFIX,xn--74q434dwff.com,PROXY
 DOMAIN-SUFFIX,xn--74q434dwff.net,PROXY
 DOMAIN-SUFFIX,xn--7hv594h.com,PROXY
 DOMAIN-SUFFIX,xn--80a9a4b.xn--p1ai,PROXY
+DOMAIN-SUFFIX,xn--80aaafbpzn5blfby1p.xn--p1ai,PROXY
+DOMAIN-SUFFIX,xn--80aaeib8abrryx4k.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--80aafgovrgbc7am.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--80acbjgmges7ca.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--80acbjgsdq2cl.xn--p1ai,PROXY
@@ -28286,6 +28307,7 @@ DOMAIN-SUFFIX,ymail.com,PROXY
 DOMAIN-SUFFIX,ymhsf.top,PROXY
 DOMAIN-SUFFIX,ymhsf1.top,PROXY
 DOMAIN-SUFFIX,ync.ne.jp,PROXY
+DOMAIN-SUFFIX,yndx.net,PROXY
 DOMAIN-SUFFIX,ynoproject.net,PROXY
 DOMAIN-SUFFIX,yo-star.com,PROXY
 DOMAIN-SUFFIX,yo1health.com,PROXY
