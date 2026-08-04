@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-03 08:03:13 (北京时间)
-#!rule_count = 28907
+#!update = 2026-08-04 08:04:54 (北京时间)
+#!rule_count = 28905
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -20938,7 +20938,6 @@ DOMAIN-SUFFIX,radioaustralia.net.au,PROXY
 DOMAIN-SUFFIX,radiofarda.com,PROXY
 DOMAIN-SUFFIX,radioglobo.com.br,PROXY
 DOMAIN-SUFFIX,radiohilight.net,PROXY
-DOMAIN-SUFFIX,radiojar.com,PROXY
 DOMAIN-SUFFIX,radioline.co,PROXY
 DOMAIN-SUFFIX,radiomango.fm,PROXY
 DOMAIN-SUFFIX,radiomarsho.com,PROXY
@@ -27294,7 +27293,6 @@ DOMAIN-SUFFIX,www.ajsands.com,PROXY
 DOMAIN-SUFFIX,www.antd.org,PROXY
 DOMAIN-SUFFIX,www.aolnews.com,PROXY
 DOMAIN-SUFFIX,www.bing.com,PROXY
-DOMAIN-SUFFIX,www.clashverge.dev,PROXY
 DOMAIN-SUFFIX,www.cmoinc.org,PROXY
 DOMAIN-SUFFIX,www.destinationurl.com,PROXY
 DOMAIN-SUFFIX,www.dmm.com,PROXY
