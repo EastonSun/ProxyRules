@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-07 08:02:37 (北京时间)
-#!rule_count = 28958
+#!update = 2026-08-08 08:02:20 (北京时间)
+#!rule_count = 28956
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -2666,7 +2666,6 @@ DOMAIN-SUFFIX,audiobeatsau.com,PROXY
 DOMAIN-SUFFIX,audiobeatsbydre.com,PROXY
 DOMAIN-SUFFIX,audiomonsterbeatsonline.com,PROXY
 DOMAIN-SUFFIX,audionow.com,PROXY
-DOMAIN-SUFFIX,auntology.fandom.com,PROXY
 DOMAIN-SUFFIX,auntymaza.com,PROXY
 DOMAIN-SUFFIX,auricularemonsterbeats.com,PROXY
 DOMAIN-SUFFIX,auricularesbeatsbaratosshop.com,PROXY
@@ -12308,7 +12307,6 @@ DOMAIN-SUFFIX,honestpornreviews.com,PROXY
 DOMAIN-SUFFIX,honeynet.org,PROXY
 DOMAIN-SUFFIX,hongjie10.xyz,PROXY
 DOMAIN-SUFFIX,hongjie11.xyz,PROXY
-DOMAIN-SUFFIX,hongkong.fandom.com,PROXY
 DOMAIN-SUFFIX,hongkongdisneyland.com,PROXY
 DOMAIN-SUFFIX,hongkongdoll.tv,PROXY
 DOMAIN-SUFFIX,hongkongdollvideo.org,PROXY
