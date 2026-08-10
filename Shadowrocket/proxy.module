@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-09 08:03:10 (北京时间)
-#!rule_count = 28956
+#!update = 2026-08-10 08:03:02 (北京时间)
+#!rule_count = 28960
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1157,6 +1157,7 @@ DOMAIN-SUFFIX,ai7995.site,PROXY
 DOMAIN-SUFFIX,ai91porn.cc,PROXY
 DOMAIN-SUFFIX,aiaa.org,PROXY
 DOMAIN-SUFFIX,aiasahi.jp,PROXY
+DOMAIN-SUFFIX,aihub.top,PROXY
 DOMAIN-SUFFIX,aimei133.com,PROXY
 DOMAIN-SUFFIX,aimsciences.org,PROXY
 DOMAIN-SUFFIX,aiosearch.com,PROXY
@@ -3171,6 +3172,7 @@ DOMAIN-SUFFIX,bartvpn.com,PROXY
 DOMAIN-SUFFIX,base.org,PROXY
 DOMAIN-SUFFIX,baselinestudy.com,PROXY
 DOMAIN-SUFFIX,baselinestudy.org,PROXY
+DOMAIN-SUFFIX,basemaps.arcgis.com,PROXY
 DOMAIN-SUFFIX,basilisk-browser.org,PROXY
 DOMAIN-SUFFIX,bastillepost.com,PROXY
 DOMAIN-SUFFIX,bastropfirestone.com,PROXY
@@ -8675,6 +8677,7 @@ DOMAIN-SUFFIX,esetsoftware.com,PROXY
 DOMAIN-SUFFIX,esforce.com,PROXY
 DOMAIN-SUFFIX,esforce.ru,PROXY
 DOMAIN-SUFFIX,esg.t91y.com,PROXY
+DOMAIN-SUFFIX,esim.redteago.com,PROXY
 DOMAIN-SUFFIX,eskimotube.com,PROXY
 DOMAIN-SUFFIX,eslite.com,PROXY
 DOMAIN-SUFFIX,esm.run,PROXY
@@ -8799,6 +8802,7 @@ DOMAIN-SUFFIX,expatshield.com,PROXY
 DOMAIN-SUFFIX,expecthim.com,PROXY
 DOMAIN-SUFFIX,expekt.com,PROXY
 DOMAIN-SUFFIX,experience-vmware.com,PROXY
+DOMAIN-SUFFIX,experience.arcgis.com,PROXY
 DOMAIN-SUFFIX,experiencebillmelater.com,PROXY
 DOMAIN-SUFFIX,expertmaker.com,PROXY
 DOMAIN-SUFFIX,experts-univers.com,PROXY
