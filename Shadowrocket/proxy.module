@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-10 08:03:02 (北京时间)
-#!rule_count = 28960
+#!update = 2026-08-11 08:02:20 (北京时间)
+#!rule_count = 28961
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -7456,6 +7456,7 @@ DOMAIN-SUFFIX,disquscdn.com,PROXY
 DOMAIN-SUFFIX,disqusservice.com,PROXY
 DOMAIN-SUFFIX,dit-inc.us,PROXY
 DOMAIN-SUFFIX,divas.com.uy,PROXY
+DOMAIN-SUFFIX,divdyn.com,PROXY
 DOMAIN-SUFFIX,diwodiwo.xyz,PROXY
 DOMAIN-SUFFIX,diyarbakirescort.com,PROXY
 DOMAIN-SUFFIX,diyin.org,PROXY
