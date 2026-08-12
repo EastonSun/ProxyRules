@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-11 08:02:20 (北京时间)
-#!rule_count = 28961
+#!update = 2026-08-12 08:03:25 (北京时间)
+#!rule_count = 28990
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -830,6 +830,9 @@ DOMAIN-SUFFIX,activelearnprimary.co.uk,PROXY
 DOMAIN-SUFFIX,activelearnprimary.com.au,PROXY
 DOMAIN-SUFFIX,activematter.game,PROXY
 DOMAIN-SUFFIX,activeteachonline.com,PROXY
+DOMAIN-SUFFIX,activision.com,PROXY
+DOMAIN-SUFFIX,activisionblizzard.com,PROXY
+DOMAIN-SUFFIX,activisionblizzardmedia.com,PROXY
 DOMAIN-SUFFIX,activpn.com,PROXY
 DOMAIN-SUFFIX,actualidad-rt.com,PROXY
 DOMAIN-SUFFIX,aculo.us,PROXY
@@ -3599,6 +3602,7 @@ DOMAIN-SUFFIX,bellotube.com,PROXY
 DOMAIN-SUFFIX,bellsouth.net,PROXY
 DOMAIN-SUFFIX,bemywife.cc,PROXY
 DOMAIN-SUFFIX,benaughty.fun,PROXY
+DOMAIN-SUFFIX,benefitsforeveryworld.com,PROXY
 DOMAIN-SUFFIX,bengalisexvideos.com,PROXY
 DOMAIN-SUFFIX,benliton.com,PROXY
 DOMAIN-SUFFIX,bentobox.tv,PROXY
@@ -5145,6 +5149,11 @@ DOMAIN-SUFFIX,callabitch.org,PROXY
 DOMAIN-SUFFIX,callbackkiller.com,PROXY
 DOMAIN-SUFFIX,callersbane.com,PROXY
 DOMAIN-SUFFIX,callhulu.com,PROXY
+DOMAIN-SUFFIX,callofduty.com,PROXY
+DOMAIN-SUFFIX,callofdutyendowment.com,PROXY
+DOMAIN-SUFFIX,callofdutyendowment.org,PROXY
+DOMAIN-SUFFIX,callofdutyleague.com,PROXY
+DOMAIN-SUFFIX,callofdutymobile.com,PROXY
 DOMAIN-SUFFIX,cam-duct.com,PROXY
 DOMAIN-SUFFIX,cam4.com,PROXY
 DOMAIN-SUFFIX,cam4.jp,PROXY
@@ -5200,6 +5209,7 @@ DOMAIN-SUFFIX,camwhoria.com,PROXY
 DOMAIN-SUFFIX,canada-beatsbydre.com,PROXY
 DOMAIN-SUFFIX,canadameet.com,PROXY
 DOMAIN-SUFFIX,candidforum-videos.com,PROXY
+DOMAIN-SUFFIX,candycrush.com,PROXY
 DOMAIN-SUFFIX,candycumcity.com,PROXY
 DOMAIN-SUFFIX,candypleasure.com,PROXY
 DOMAIN-SUFFIX,canny.io,PROXY
@@ -6420,6 +6430,7 @@ DOMAIN-SUFFIX,crabporn.com,PROXY
 DOMAIN-SUFFIX,crackle.com,PROXY
 DOMAIN-SUFFIX,craigslist.org,PROXY
 DOMAIN-SUFFIX,crankplayer.com,PROXY
+DOMAIN-SUFFIX,crashbandicoot.com,PROXY
 DOMAIN-SUFFIX,crashlytics.com,PROXY
 DOMAIN-SUFFIX,crates.io,PROXY
 DOMAIN-SUFFIX,crazy-amateurs.com,PROXY
@@ -7059,6 +7070,7 @@ DOMAIN-SUFFIX,demo.unlock-music.dev,PROXY
 DOMAIN-SUFFIX,democracy.earth,PROXY
 DOMAIN-SUFFIX,democrats.org,PROXY
 DOMAIN-SUFFIX,demonoid.is,PROXY
+DOMAIN-SUFFIX,demonware.net,PROXY
 DOMAIN-SUFFIX,demoprint.com,PROXY
 DOMAIN-SUFFIX,demosisto.hk,PROXY
 DOMAIN-SUFFIX,denfaminicogamer.jp,PROXY
@@ -7188,7 +7200,9 @@ DOMAIN-SUFFIX,dharamsalanet.com,PROXY
 DOMAIN-SUFFIX,dharmakara.net,PROXY
 DOMAIN-SUFFIX,dhcp.biz,PROXY
 DOMAIN-SUFFIX,dhlestudio.com.co,PROXY
+DOMAIN-SUFFIX,diablo.com,PROXY
 DOMAIN-SUFFIX,diablo3.com,PROXY
+DOMAIN-SUFFIX,diablo4.com,PROXY
 DOMAIN-SUFFIX,diabloimmortal.com,PROXY
 DOMAIN-SUFFIX,diabrowser.com,PROXY
 DOMAIN-SUFFIX,diabrowser.engineering,PROXY
@@ -8753,6 +8767,7 @@ DOMAIN-SUFFIX,europeansustainabledesign.com,PROXY
 DOMAIN-SUFFIX,europeansustainabledesign.net,PROXY
 DOMAIN-SUFFIX,europeansustainabledesigncouncil.com,PROXY
 DOMAIN-SUFFIX,europeansustainabledesigncouncil.net,PROXY
+DOMAIN-SUFFIX,europeanwarzoneseries.com,PROXY
 DOMAIN-SUFFIX,europepmc.org,PROXY
 DOMAIN-SUFFIX,europornstar.com,PROXY
 DOMAIN-SUFFIX,eurosexscene.com,PROXY
@@ -12107,6 +12122,7 @@ DOMAIN-SUFFIX,hifuli.com,PROXY
 DOMAIN-SUFFIX,higfw.com,PROXY
 DOMAIN-SUFFIX,highbolt.net,PROXY
 DOMAIN-SUFFIX,highdefinitionbeatsbydre.com,PROXY
+DOMAIN-SUFFIX,highmoonstudios.com,PROXY
 DOMAIN-SUFFIX,highpeakspureearth.com,PROXY
 DOMAIN-SUFFIX,highporn.net,PROXY
 DOMAIN-SUFFIX,highrockmedia.com,PROXY
@@ -13397,6 +13413,7 @@ DOMAIN-SUFFIX,inews-api.tvb.com,PROXY
 DOMAIN-SUFFIX,inf.news,PROXY
 DOMAIN-SUFFIX,infinitetoons.com,PROXY
 DOMAIN-SUFFIX,infinitetube.com,PROXY
+DOMAIN-SUFFIX,infinityward.com,PROXY
 DOMAIN-SUFFIX,influencersgonewild.com,PROXY
 DOMAIN-SUFFIX,info-graf.fr,PROXY
 DOMAIN-SUFFIX,infocert.digital,PROXY
@@ -14880,6 +14897,7 @@ DOMAIN-SUFFIX,kindleren.com,PROXY
 DOMAIN-SUFFIX,kindnudist.com,PROXY
 DOMAIN-SUFFIX,kindteenporn.com,PROXY
 DOMAIN-SUFFIX,kinescopecdn.net,PROXY
+DOMAIN-SUFFIX,king.com,PROXY
 DOMAIN-SUFFIX,kingcomix.com,PROXY
 DOMAIN-SUFFIX,kingdomsalvation.org,PROXY
 DOMAIN-SUFFIX,kingextre.me,PROXY
@@ -21057,6 +21075,7 @@ DOMAIN-SUFFIX,rat.xxx,PROXY
 DOMAIN-SUFFIX,ratedgross.com,PROXY
 DOMAIN-SUFFIX,rateyourmusic.com,PROXY
 DOMAIN-SUFFIX,rationalwiki.org,PROXY
+DOMAIN-SUFFIX,ravensoftware.com,PROXY
 DOMAIN-SUFFIX,ravm.tv,PROXY
 DOMAIN-SUFFIX,raw.githack.com,PROXY
 DOMAIN-SUFFIX,rawgit.com,PROXY
@@ -22036,6 +22055,7 @@ DOMAIN-SUFFIX,seiron-sankei.com,PROXY
 DOMAIN-SUFFIX,sejie.com,PROXY
 DOMAIN-SUFFIX,sejie80.com,PROXY
 DOMAIN-SUFFIX,sekai.colorfulpalette.org,PROXY
+DOMAIN-SUFFIX,sekirothegame.com,PROXY
 DOMAIN-SUFFIX,seksmet.nl,PROXY
 DOMAIN-SUFFIX,sekswebsite.nl,PROXY
 DOMAIN-SUFFIX,sekur1213.guru,PROXY
@@ -22545,6 +22565,7 @@ DOMAIN-SUFFIX,sidelinessportseatery.com,PROXY
 DOMAIN-SUFFIX,sider.ai,PROXY
 DOMAIN-SUFFIX,siege-amazon.com,PROXY
 DOMAIN-SUFFIX,sierrafriendsoftibet.org,PROXY
+DOMAIN-SUFFIX,sierragames.com,PROXY
 DOMAIN-SUFFIX,sifangclub.com,PROXY
 DOMAIN-SUFFIX,sigcomm.org,PROXY
 DOMAIN-SUFFIX,sigmoidoscopeexam.com,PROXY
@@ -22694,6 +22715,7 @@ DOMAIN-SUFFIX,skyassets.com,PROXY
 DOMAIN-SUFFIX,skybet.com,PROXY
 DOMAIN-SUFFIX,skyking.com.tw,PROXY
 DOMAIN-SUFFIX,skykiwi.com,PROXY
+DOMAIN-SUFFIX,skylanders.com,PROXY
 DOMAIN-SUFFIX,skymansion.net,PROXY
 DOMAIN-SUFFIX,skymatter.com,PROXY
 DOMAIN-SUFFIX,skynet.be,PROXY
@@ -22739,6 +22761,7 @@ DOMAIN-SUFFIX,sldolls.com,PROXY
 DOMAIN-SUFFIX,sleazydream.com,PROXY
 DOMAIN-SUFFIX,sleazyfork.org,PROXY
 DOMAIN-SUFFIX,sleazyneasy.com,PROXY
+DOMAIN-SUFFIX,sledgehammergames.com,PROXY
 DOMAIN-SUFFIX,slheng.com,PROXY
 DOMAIN-SUFFIX,slickvpn.com,PROXY
 DOMAIN-SUFFIX,slides.com,PROXY
@@ -22907,6 +22930,7 @@ DOMAIN-SUFFIX,solid.ru,PROXY
 DOMAIN-SUFFIX,solidaritetibet.org,PROXY
 DOMAIN-SUFFIX,solidfiles.com,PROXY
 DOMAIN-SUFFIX,solidifi.app,PROXY
+DOMAIN-SUFFIX,solidstate.com,PROXY
 DOMAIN-SUFFIX,solostudioksale.com,PROXY
 DOMAIN-SUFFIX,solscan.io,PROXY
 DOMAIN-SUFFIX,solutionstation.com,PROXY
@@ -23184,6 +23208,7 @@ DOMAIN-SUFFIX,sputnikimages.com,PROXY
 DOMAIN-SUFFIX,sputnikmediabank.com,PROXY
 DOMAIN-SUFFIX,sputniknews.com,PROXY
 DOMAIN-SUFFIX,spyjinx.com,PROXY
+DOMAIN-SUFFIX,spyrothedragon.com,PROXY
 DOMAIN-SUFFIX,sqlite.org,PROXY
 DOMAIN-SUFFIX,sqlserveronlinux.com,PROXY
 DOMAIN-SUFFIX,sqool.net,PROXY
@@ -24674,6 +24699,8 @@ DOMAIN-SUFFIX,tonec.com,PROXY
 DOMAIN-SUFFIX,tongil.or.kr,PROXY
 DOMAIN-SUFFIX,tonicmovies.com,PROXY
 DOMAIN-SUFFIX,tono-oka.jp,PROXY
+DOMAIN-SUFFIX,tonyhawk.com,PROXY
+DOMAIN-SUFFIX,tonyhawkthegame.com,PROXY
 DOMAIN-SUFFIX,tonyyan.net,PROXY
 DOMAIN-SUFFIX,toodoc.com,PROXY
 DOMAIN-SUFFIX,toolforge.org,PROXY
@@ -24847,6 +24874,7 @@ DOMAIN-SUFFIX,trellocdn.com,PROXY
 DOMAIN-SUFFIX,trendmicro.com,PROXY
 DOMAIN-SUFFIX,trendsmap.com,PROXY
 DOMAIN-SUFFIX,trendyporn.com,PROXY
+DOMAIN-SUFFIX,treyarch.com,PROXY
 DOMAIN-SUFFIX,trezor.io,PROXY
 DOMAIN-SUFFIX,trialofccp.org,PROXY
 DOMAIN-SUFFIX,triballo.net,PROXY
@@ -27270,6 +27298,7 @@ DOMAIN-SUFFIX,worldpornvideos.com,PROXY
 DOMAIN-SUFFIX,worldscientific.com,PROXY
 DOMAIN-SUFFIX,worldsecureemail.com,PROXY
 DOMAIN-SUFFIX,worldsecuresystems.com,PROXY
+DOMAIN-SUFFIX,worldseriesofwarzone.com,PROXY
 DOMAIN-SUFFIX,worldsex.com,PROXY
 DOMAIN-SUFFIX,worldsfastestgamer.net,PROXY
 DOMAIN-SUFFIX,worldvpn.net,PROXY
