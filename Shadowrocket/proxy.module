@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-12 08:03:25 (北京时间)
-#!rule_count = 28990
+#!update = 2026-08-13 08:03:20 (北京时间)
+#!rule_count = 29001
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -4928,6 +4928,7 @@ DOMAIN-SUFFIX,buhidoh.net,PROXY
 DOMAIN-SUFFIX,buicha.social,PROXY
 DOMAIN-SUFFIX,building3dcontent.com,PROXY
 DOMAIN-SUFFIX,builtfromebay.com,PROXY
+DOMAIN-SUFFIX,builtwithnix.org,PROXY
 DOMAIN-SUFFIX,bukkake-jav.com,PROXY
 DOMAIN-SUFFIX,bullguard.com,PROXY
 DOMAIN-SUFFIX,bullog.org,PROXY
@@ -17631,6 +17632,7 @@ DOMAIN-SUFFIX,mynetav.net,PROXY
 DOMAIN-SUFFIX,mynetav.org,PROXY
 DOMAIN-SUFFIX,mynetname.net,PROXY
 DOMAIN-SUFFIX,mynike.com,PROXY
+DOMAIN-SUFFIX,mynixos.com,PROXY
 DOMAIN-SUFFIX,mynumber.org,PROXY
 DOMAIN-SUFFIX,myoctocat.com,PROXY
 DOMAIN-SUFFIX,myparagliding.com,PROXY
@@ -18386,7 +18388,15 @@ DOMAIN-SUFFIX,niusnews.com,PROXY
 DOMAIN-SUFFIX,nivod.tv,PROXY
 DOMAIN-SUFFIX,nivodi.tv,PROXY
 DOMAIN-SUFFIX,nivodz.com,PROXY
+DOMAIN-SUFFIX,nix-community.org,PROXY
+DOMAIN-SUFFIX,nix.dev,PROXY
+DOMAIN-SUFFIX,nix.store,PROXY
+DOMAIN-SUFFIX,nixcon.org,PROXY
+DOMAIN-SUFFIX,nixcon2017.org,PROXY
+DOMAIN-SUFFIX,nixlang.com,PROXY
 DOMAIN-SUFFIX,nixos.org,PROXY
+DOMAIN-SUFFIX,nixos.wiki,PROXY
+DOMAIN-SUFFIX,nixpkgs.org,PROXY
 DOMAIN-SUFFIX,niziero.info,PROXY
 DOMAIN-SUFFIX,njactb.org,PROXY
 DOMAIN-SUFFIX,njav.tv,PROXY
@@ -28281,6 +28291,7 @@ DOMAIN-SUFFIX,yandex.ee,PROXY
 DOMAIN-SUFFIX,yandex.eu,PROXY
 DOMAIN-SUFFIX,yandex.fi,PROXY
 DOMAIN-SUFFIX,yandex.fr,PROXY
+DOMAIN-SUFFIX,yandex.it,PROXY
 DOMAIN-SUFFIX,yandex.jobs,PROXY
 DOMAIN-SUFFIX,yandex.kg,PROXY
 DOMAIN-SUFFIX,yandex.kz,PROXY
