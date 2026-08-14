@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-13 08:03:20 (北京时间)
-#!rule_count = 29001
+#!update = 2026-08-14 08:02:25 (北京时间)
+#!rule_count = 29004
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -21551,6 +21551,7 @@ DOMAIN-SUFFIX,rsc.org,PROXY
 DOMAIN-SUFFIX,rsdlmonitor.com,PROXY
 DOMAIN-SUFFIX,rsf-chinese.org,PROXY
 DOMAIN-SUFFIX,rsf.org,PROXY
+DOMAIN-SUFFIX,rsg.ms,PROXY
 DOMAIN-SUFFIX,rsg.sc,PROXY
 DOMAIN-SUFFIX,rsgamen.org,PROXY
 DOMAIN-SUFFIX,rshb.ru,PROXY
@@ -21906,6 +21907,8 @@ DOMAIN-SUFFIX,sbti.unun.dev,PROXY
 DOMAIN-SUFFIX,sbux.com.my,PROXY
 DOMAIN-SUFFIX,sbuxcard.com,PROXY
 DOMAIN-SUFFIX,sc-cdn.net,PROXY
+DOMAIN-SUFFIX,sc-gw.com,PROXY
+DOMAIN-SUFFIX,sc-static.net,PROXY
 DOMAIN-SUFFIX,sc.com,PROXY
 DOMAIN-SUFFIX,sca-tolo.info,PROXY
 DOMAIN-SUFFIX,scala-lang.org,PROXY
