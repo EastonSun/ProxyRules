@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-16 08:03:13 (北京时间)
-#!rule_count = 139581
+#!update = 2026-08-16 15:27:39 (北京时间)
+#!rule_count = 139575
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -12270,11 +12270,7 @@ DOMAIN-SUFFIX,amonxu.com,DIRECT
 DOMAIN-SUFFIX,amoydxmed.com,DIRECT
 DOMAIN-SUFFIX,amp-api-edge-lb-cn.itunes-apple.com.akadns.net,DIRECT
 DOMAIN-SUFFIX,amp-api-edge-lb.itunes-apple.com.akadns.net,DIRECT
-DOMAIN-SUFFIX,amp-api-edge.apps.apple.com,DIRECT
 DOMAIN-SUFFIX,amp-api-edge.music.apple.com,DIRECT
-DOMAIN-SUFFIX,amp-api-search-edge.apps.apple.com,DIRECT
-DOMAIN-SUFFIX,amp-api-updates.apps.apple.com,DIRECT
-DOMAIN-SUFFIX,amp-api.apps.apple.com,DIRECT
 DOMAIN-SUFFIX,amp-api.media.apple.com,DIRECT
 DOMAIN-SUFFIX,amp-api.music.apple.com,DIRECT
 DOMAIN-SUFFIX,amp-api.podcasts.apple.com,DIRECT
@@ -12956,7 +12952,6 @@ DOMAIN-SUFFIX,api-ar.euwe1.uds.lenovo.com,DIRECT
 DOMAIN-SUFFIX,api-ar.naea1.uds.lenovo.com,DIRECT
 DOMAIN-SUFFIX,api-building.fun,DIRECT
 DOMAIN-SUFFIX,api-cn-t.lenovo.com,DIRECT
-DOMAIN-SUFFIX,api-edge.apps.apple.com,DIRECT
 DOMAIN-SUFFIX,api-expo.com,DIRECT
 DOMAIN-SUFFIX,api-forwards.com,DIRECT
 DOMAIN-SUFFIX,api-m.com,DIRECT
@@ -13168,7 +13163,6 @@ DOMAIN-SUFFIX,appollochina.com,DIRECT
 DOMAIN-SUFFIX,appotronics.com,DIRECT
 DOMAIN-SUFFIX,appqv.com,DIRECT
 DOMAIN-SUFFIX,approvebook.com,DIRECT
-DOMAIN-SUFFIX,apps.apple.com,DIRECT
 DOMAIN-SUFFIX,apps.mzstatic.com,DIRECT
 DOMAIN-SUFFIX,apps121.com,DIRECT
 DOMAIN-SUFFIX,apps5.oingo.com,DIRECT
