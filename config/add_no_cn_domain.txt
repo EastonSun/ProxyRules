@@ -4,3 +4,5 @@
 # 例如:
 # +.openai.com
 # +.claude.ai
+
++.apps.apple.com

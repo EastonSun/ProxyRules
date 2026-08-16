@@ -11,3 +11,6 @@
 
 hotmail.com
 office365.com
+apps.apple.com
+*.apps.apple.com
++.apps.apple.com
