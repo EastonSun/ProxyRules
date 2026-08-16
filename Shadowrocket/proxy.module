@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-15 08:03:08 (北京时间)
-#!rule_count = 29004
+#!update = 2026-08-16 08:03:13 (北京时间)
+#!rule_count = 29005
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -21682,6 +21682,7 @@ DOMAIN-SUFFIX,rutracker.me,PROXY
 DOMAIN-SUFFIX,rutracker.net,PROXY
 DOMAIN-SUFFIX,rutracker.nl,PROXY
 DOMAIN-SUFFIX,rutracker.org,PROXY
+DOMAIN-SUFFIX,rutracker.wiki,PROXY
 DOMAIN-SUFFIX,rutrk.org,PROXY
 DOMAIN-SUFFIX,rutube.ru,PROXY
 DOMAIN-SUFFIX,rutube.sport,PROXY
