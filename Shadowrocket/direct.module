@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-16 15:27:39 (北京时间)
-#!rule_count = 139575
+#!update = 2026-08-17 08:03:10 (北京时间)
+#!rule_count = 139578
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -29479,6 +29479,7 @@ DOMAIN-SUFFIX,decohome.cc,DIRECT
 DOMAIN-SUFFIX,decorcn.com,DIRECT
 DOMAIN-SUFFIX,decwhy.com,DIRECT
 DOMAIN-SUFFIX,deczh.com,DIRECT
+DOMAIN-SUFFIX,dedao.cn,DIRECT
 DOMAIN-SUFFIX,dede-zj.com,DIRECT
 DOMAIN-SUFFIX,dede168.com,DIRECT
 DOMAIN-SUFFIX,dedeadmin.com,DIRECT
@@ -63221,6 +63222,7 @@ DOMAIN-SUFFIX,lets-study.com,DIRECT
 DOMAIN-SUFFIX,letschuhai.com,DIRECT
 DOMAIN-SUFFIX,letsfilm.org,DIRECT
 DOMAIN-SUFFIX,letsgaga.com,DIRECT
+DOMAIN-SUFFIX,letsign.com,DIRECT
 DOMAIN-SUFFIX,letsinno.com,DIRECT
 DOMAIN-SUFFIX,letssepub.com,DIRECT
 DOMAIN-SUFFIX,letsvisa.com,DIRECT
@@ -77879,6 +77881,7 @@ DOMAIN-SUFFIX,qianwa.com,DIRECT
 DOMAIN-SUFFIX,qianwanku.com,DIRECT
 DOMAIN-SUFFIX,qianwen.aliyun.com,DIRECT
 DOMAIN-SUFFIX,qianwen.com,DIRECT
+DOMAIN-SUFFIX,qianwenai.com,DIRECT
 DOMAIN-SUFFIX,qianxiangbank.com,DIRECT
 DOMAIN-SUFFIX,qianxibj.net,DIRECT
 DOMAIN-SUFFIX,qianximiye.com,DIRECT
