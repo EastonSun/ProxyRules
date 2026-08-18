@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-17 08:03:10 (北京时间)
-#!rule_count = 29006
+#!update = 2026-08-18 08:03:13 (北京时间)
+#!rule_count = 29007
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -15463,6 +15463,7 @@ DOMAIN-SUFFIX,livestation.com,PROXY
 DOMAIN-SUFFIX,livestream.com,PROXY
 DOMAIN-SUFFIX,livevideo.com,PROXY
 DOMAIN-SUFFIX,livexxx.me,PROXY
+DOMAIN-SUFFIX,livingatlas.arcgis.com,PROXY
 DOMAIN-SUFFIX,livingonline.us,PROXY
 DOMAIN-SUFFIX,livingstream.com,PROXY
 DOMAIN-SUFFIX,livingyourambition.com,PROXY
