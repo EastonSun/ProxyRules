@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-18 08:03:13 (北京时间)
-#!rule_count = 29007
+#!update = 2026-08-19 08:03:08 (北京时间)
+#!rule_count = 29009
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -18446,6 +18446,7 @@ DOMAIN-SUFFIX,noodlemagazine.com,PROXY
 DOMAIN-SUFFIX,noodlevpn.com,PROXY
 DOMAIN-SUFFIX,noosferabank.ru,PROXY
 DOMAIN-SUFFIX,norbulingka.org,PROXY
+DOMAIN-SUFFIX,nordcdn.com,PROXY
 DOMAIN-SUFFIX,nordstrom.com,PROXY
 DOMAIN-SUFFIX,nordstromimage.com,PROXY
 DOMAIN-SUFFIX,nordstrommedia.com,PROXY
@@ -21720,6 +21721,7 @@ DOMAIN-SUFFIX,s1s1s1.com,PROXY
 DOMAIN-SUFFIX,s2csntp.miz.nao.ac.jp,PROXY
 DOMAIN-SUFFIX,s2stagehance.com,PROXY
 DOMAIN-SUFFIX,s3-ap-northeast-1.amazonaws.com,PROXY
+DOMAIN-SUFFIX,s3.dualstack.us-west-2.amazonaws.com,PROXY
 DOMAIN-SUFFIX,s4miniarchive.com,PROXY
 DOMAIN-SUFFIX,s81c.com,PROXY
 DOMAIN-SUFFIX,s8ds5gfm.xyz,PROXY
