@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-19 08:03:08 (北京时间)
-#!rule_count = 29009
+#!update = 2026-08-20 08:02:30 (北京时间)
+#!rule_count = 29020
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -478,6 +478,7 @@ DOMAIN-SUFFIX,59mvmv.com,PROXY
 DOMAIN-SUFFIX,5aimiku.com,PROXY
 DOMAIN-SUFFIX,5axis-machining.com,PROXY
 DOMAIN-SUFFIX,5beatsbydre.com,PROXY
+DOMAIN-SUFFIX,5ch.io,PROXY
 DOMAIN-SUFFIX,5ch.net,PROXY
 DOMAIN-SUFFIX,5fang.cc,PROXY
 DOMAIN-SUFFIX,5i01.com,PROXY
@@ -1742,6 +1743,7 @@ DOMAIN-SUFFIX,amazontrust.com,PROXY
 DOMAIN-SUFFIX,amazonvideo.cc,PROXY
 DOMAIN-SUFFIX,amazonvideo.com,PROXY
 DOMAIN-SUFFIX,amazonvideodirect.com,PROXY
+DOMAIN-SUFFIX,amazonwebservices.com,PROXY
 DOMAIN-SUFFIX,amazonworkdocs.com,PROXY
 DOMAIN-SUFFIX,amc.com,PROXY
 DOMAIN-SUFFIX,amcn.com,PROXY
@@ -6278,7 +6280,6 @@ DOMAIN-SUFFIX,commentshk.com,PROXY
 DOMAIN-SUFFIX,commerceos.com,PROXY
 DOMAIN-SUFFIX,commerzbank.ru,PROXY
 DOMAIN-SUFFIX,communistcrimes.org,PROXY
-DOMAIN-SUFFIX,community.windy.com,PROXY
 DOMAIN-SUFFIX,communitychoicecu.com,PROXY
 DOMAIN-SUFFIX,como-hackearfacebook.com,PROXY
 DOMAIN-SUFFIX,comodo.com,PROXY
@@ -7719,6 +7720,7 @@ DOMAIN-SUFFIX,drdreprobeatssale.com,PROXY
 DOMAIN-SUFFIX,dreamamateurs.com,PROXY
 DOMAIN-SUFFIX,dreambmw.ca,PROXY
 DOMAIN-SUFFIX,dreamforce.com,PROXY
+DOMAIN-SUFFIX,dreamgen.com,PROXY
 DOMAIN-SUFFIX,dreammovies.com,PROXY
 DOMAIN-SUFFIX,dreamorder.com,PROXY
 DOMAIN-SUFFIX,dreamteamfc.com,PROXY
@@ -9241,6 +9243,7 @@ DOMAIN-SUFFIX,fans-here.com,PROXY
 DOMAIN-SUFFIX,fans17.com,PROXY
 DOMAIN-SUFFIX,fans66.tw,PROXY
 DOMAIN-SUFFIX,fansking.tw,PROXY
+DOMAIN-SUFFIX,fansly.com,PROXY
 DOMAIN-SUFFIX,fansnudes.com,PROXY
 DOMAIN-SUFFIX,fansone.co,PROXY
 DOMAIN-SUFFIX,fanspot.jp,PROXY
@@ -14874,6 +14877,7 @@ DOMAIN-SUFFIX,killercb.ru,PROXY
 DOMAIN-SUFFIX,killwall.com,PROXY
 DOMAIN-SUFFIX,kilmeadeandfriends.com,PROXY
 DOMAIN-SUFFIX,kimchi.tv,PROXY
+DOMAIN-SUFFIX,kimi.ai,PROXY
 DOMAIN-SUFFIX,kimogirl.cc,PROXY
 DOMAIN-SUFFIX,kimosex.com,PROXY
 DOMAIN-SUFFIX,kindgirls.com,PROXY
@@ -17178,6 +17182,7 @@ DOMAIN-SUFFIX,moon.fm,PROXY
 DOMAIN-SUFFIX,moonbbs.com,PROXY
 DOMAIN-SUFFIX,moonbbs.info,PROXY
 DOMAIN-SUFFIX,moonbingo.com,PROXY
+DOMAIN-SUFFIX,moonshot.ai,PROXY
 DOMAIN-SUFFIX,mooo.com,PROXY
 DOMAIN-SUFFIX,moov.hk,PROXY
 DOMAIN-SUFFIX,moozporn.com,PROXY
@@ -18154,6 +18159,8 @@ DOMAIN-SUFFIX,nichepornsites.com,PROXY
 DOMAIN-SUFFIX,nichost.ru,PROXY
 DOMAIN-SUFFIX,nickscipio.com,PROXY
 DOMAIN-SUFFIX,nicky.xxx,PROXY
+DOMAIN-SUFFIX,nico.ms,PROXY
+DOMAIN-SUFFIX,nicochannel.jp,PROXY
 DOMAIN-SUFFIX,nicodic.jp,PROXY
 DOMAIN-SUFFIX,nicolepeters.com,PROXY
 DOMAIN-SUFFIX,nicomanga.jp,PROXY
@@ -18455,6 +18462,7 @@ DOMAIN-SUFFIX,nordvpn.com,PROXY
 DOMAIN-SUFFIX,norsk.mobi,PROXY
 DOMAIN-SUFFIX,norton.com,PROXY
 DOMAIN-SUFFIX,nos.nl,PROXY
+DOMAIN-SUFFIX,notegpt.io,PROXY
 DOMAIN-SUFFIX,notepad-plus-plus.org,PROXY
 DOMAIN-SUFFIX,noticias-rt.com,PROXY
 DOMAIN-SUFFIX,notimundo.press,PROXY
@@ -18467,6 +18475,7 @@ DOMAIN-SUFFIX,notion.so,PROXY
 DOMAIN-SUFFIX,notionusercontent.com,PROXY
 DOMAIN-SUFFIX,nottinghampost.com,PROXY
 DOMAIN-SUFFIX,novafile.com,PROXY
+DOMAIN-SUFFIX,novelai.net,PROXY
 DOMAIN-SUFFIX,novelasia.com,PROXY
 DOMAIN-SUFFIX,noveltrove.com,PROXY
 DOMAIN-SUFFIX,novids.com,PROXY
@@ -18901,6 +18910,7 @@ DOMAIN-SUFFIX,older-women-porn.com,PROXY
 DOMAIN-SUFFIX,older.tube,PROXY
 DOMAIN-SUFFIX,oldhornymilfs.com,PROXY
 DOMAIN-SUFFIX,oldje.com,PROXY
+DOMAIN-SUFFIX,oldmapsonline.org,PROXY
 DOMAIN-SUFFIX,olehd.com,PROXY
 DOMAIN-SUFFIX,olehdtv.com,PROXY
 DOMAIN-SUFFIX,olelive.com,PROXY
@@ -23911,6 +23921,7 @@ DOMAIN-SUFFIX,talantix.ru,PROXY
 DOMAIN-SUFFIX,talentlens.com,PROXY
 DOMAIN-SUFFIX,taleofthenight.com,PROXY
 DOMAIN-SUFFIX,talk853.com,PROXY
+DOMAIN-SUFFIX,talkai.info,PROXY
 DOMAIN-SUFFIX,talkatone.com,PROXY
 DOMAIN-SUFFIX,talkboxapp.com,PROXY
 DOMAIN-SUFFIX,talkcc.com,PROXY
