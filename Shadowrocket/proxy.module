@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-21 08:02:54 (北京时间)
-#!rule_count = 29020
+#!update = 2026-08-22 08:03:05 (北京时间)
+#!rule_count = 29021
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -4790,6 +4790,7 @@ DOMAIN-SUFFIX,brew.sh,PROXY
 DOMAIN-SUFFIX,brewmp.com,PROXY
 DOMAIN-SUFFIX,briantreepayments.net,PROXY
 DOMAIN-SUFFIX,briantreepayments.tv,PROXY
+DOMAIN-SUFFIX,briarproject.org,PROXY
 DOMAIN-SUFFIX,bridge-studio.co.uk,PROXY
 DOMAIN-SUFFIX,bridgebim.com,PROXY
 DOMAIN-SUFFIX,bridgestone-asiapacific.com,PROXY
