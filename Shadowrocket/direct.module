@@ -2,7 +2,7 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-22 08:03:05 (北京时间)
+#!update = 2026-08-23 08:03:02 (北京时间)
 #!rule_count = 139559
 
 [Rule]
