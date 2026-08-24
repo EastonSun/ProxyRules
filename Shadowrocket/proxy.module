@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-23 08:03:02 (北京时间)
-#!rule_count = 29024
+#!update = 2026-08-24 08:03:07 (北京时间)
+#!rule_count = 29026
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1991,6 +1991,7 @@ DOMAIN-SUFFIX,api.palworldgame.com,PROXY
 DOMAIN-SUFFIX,api.proxlet.com,PROXY
 DOMAIN-SUFFIX,api.pureapk.com,PROXY
 DOMAIN-SUFFIX,api.recaptcha.net,PROXY
+DOMAIN-SUFFIX,api.shuaiapi.com,PROXY
 DOMAIN-SUFFIX,api.steampowered.com,PROXY
 DOMAIN-SUFFIX,api.termius.com,PROXY
 DOMAIN-SUFFIX,api.waqi.info,PROXY
@@ -27500,6 +27501,7 @@ DOMAIN-SUFFIX,x365x.com,PROXY
 DOMAIN-SUFFIX,x3guide.com,PROXY
 DOMAIN-SUFFIX,x3vid.com,PROXY
 DOMAIN-SUFFIX,x6av.com,PROXY
+DOMAIN-SUFFIX,x86.fr,PROXY
 DOMAIN-SUFFIX,x99av.com,PROXY
 DOMAIN-SUFFIX,xamarin.com,PROXY
 DOMAIN-SUFFIX,xandr.com,PROXY
