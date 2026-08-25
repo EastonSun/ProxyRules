@@ -2,7 +2,7 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-24 08:03:07 (北京时间)
+#!update = 2026-08-25 08:02:24 (北京时间)
 #!rule_count = 29026
 
 [Rule]
