@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-25 08:02:24 (北京时间)
-#!rule_count = 29026
+#!update = 2026-08-26 08:03:10 (北京时间)
+#!rule_count = 29029
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -869,6 +869,7 @@ DOMAIN-SUFFIX,adguard.info,PROXY
 DOMAIN-SUFFIX,adguard.io,PROXY
 DOMAIN-SUFFIX,adguard.org,PROXY
 DOMAIN-SUFFIX,adguardaccount.com,PROXY
+DOMAIN-SUFFIX,adguardaccount.net,PROXY
 DOMAIN-SUFFIX,adguardcdn.com,PROXY
 DOMAIN-SUFFIX,adguardvpn.com,PROXY
 DOMAIN-SUFFIX,adhelpnews.com,PROXY
@@ -19228,6 +19229,7 @@ DOMAIN-SUFFIX,oursogo.com,PROXY
 DOMAIN-SUFFIX,oursteps.com.au,PROXY
 DOMAIN-SUFFIX,oursweb.net,PROXY
 DOMAIN-SUFFIX,ourtv.hk,PROXY
+DOMAIN-SUFFIX,ouryahoo.com,PROXY
 DOMAIN-SUFFIX,out-app-purchase.com,PROXY
 DOMAIN-SUFFIX,outbound.io,PROXY
 DOMAIN-SUFFIX,outdoorpublicsex.com,PROXY
@@ -28282,6 +28284,7 @@ DOMAIN-SUFFIX,yahooapis.com,PROXY
 DOMAIN-SUFFIX,yahoodns.net,PROXY
 DOMAIN-SUFFIX,yahoofinance.com,PROXY
 DOMAIN-SUFFIX,yahoohealth.com,PROXY
+DOMAIN-SUFFIX,yahooinc.com,PROXY
 DOMAIN-SUFFIX,yahoomusic.com,PROXY
 DOMAIN-SUFFIX,yahoosandbox.com,PROXY
 DOMAIN-SUFFIX,yahoosportsbook.com,PROXY
