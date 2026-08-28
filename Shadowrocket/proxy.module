@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-27 08:02:37 (北京时间)
-#!rule_count = 29029
+#!update = 2026-08-28 08:02:24 (北京时间)
+#!rule_count = 29031
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -11613,6 +11613,7 @@ DOMAIN-SUFFIX,h-webtoon.com,PROXY
 DOMAIN-SUFFIX,h0930.com,PROXY
 DOMAIN-SUFFIX,h18ani1.vip,PROXY
 DOMAIN-SUFFIX,h1n1china.org,PROXY
+DOMAIN-SUFFIX,h264.io,PROXY
 DOMAIN-SUFFIX,h2o.ai,PROXY
 DOMAIN-SUFFIX,h2porn.com,PROXY
 DOMAIN-SUFFIX,h528.com,PROXY
@@ -18125,6 +18126,7 @@ DOMAIN-SUFFIX,nftstatic.com,PROXY
 DOMAIN-SUFFIX,nftstorage.link,PROXY
 DOMAIN-SUFFIX,ngensis.com,PROXY
 DOMAIN-SUFFIX,ngeo.com,PROXY
+DOMAIN-SUFFIX,ngfiles.com,PROXY
 DOMAIN-SUFFIX,nginx.com,PROXY
 DOMAIN-SUFFIX,nginx.org,PROXY
 DOMAIN-SUFFIX,nginxconfig.io,PROXY
