@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-28 08:02:24 (北京时间)
-#!rule_count = 29031
+#!update = 2026-08-29 08:03:40 (北京时间)
+#!rule_count = 29033
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -21334,6 +21334,7 @@ DOMAIN-SUFFIX,releaseinternational.org,PROXY
 DOMAIN-SUFFIX,religionnews.com,PROXY
 DOMAIN-SUFFIX,religioustolerance.org,PROXY
 DOMAIN-SUFFIX,remirepo.net,PROXY
+DOMAIN-SUFFIX,remna.st,PROXY
 DOMAIN-SUFFIX,rencapbank.ru,PROXY
 DOMAIN-SUFFIX,renchead.com,PROXY
 DOMAIN-SUFFIX,rencredit.ru,PROXY
@@ -27368,6 +27369,7 @@ DOMAIN-SUFFIX,wr.pvp.net,PROXY
 DOMAIN-SUFFIX,wrchina.org,PROXY
 DOMAIN-SUFFIX,wrenchead.com,PROXY
 DOMAIN-SUFFIX,wretch.cc,PROXY
+DOMAIN-SUFFIX,write.as,PROXY
 DOMAIN-SUFFIX,writesonic.com,PROXY
 DOMAIN-SUFFIX,ws-blau.com,PROXY
 DOMAIN-SUFFIX,ws-tcg.com,PROXY
