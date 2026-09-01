@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-08-31 08:03:07 (北京时间)
-#!rule_count = 29033
+#!update = 2026-09-01 08:02:50 (北京时间)
+#!rule_count = 29034
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -10690,6 +10690,7 @@ DOMAIN-SUFFIX,getjetso.com,PROXY
 DOMAIN-SUFFIX,getlantern.org,PROXY
 DOMAIN-SUFFIX,getmalus.com,PROXY
 DOMAIN-SUFFIX,getmdl.io,PROXY
+DOMAIN-SUFFIX,getmonero.org,PROXY
 DOMAIN-SUFFIX,getnews.jp,PROXY
 DOMAIN-SUFFIX,getoutline.org,PROXY
 DOMAIN-SUFFIX,getpaint.net,PROXY
