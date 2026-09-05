@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-04 08:02:53 (北京时间)
-#!rule_count = 29041
+#!update = 2026-09-05 08:02:45 (北京时间)
+#!rule_count = 29042
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -15411,6 +15411,7 @@ DOMAIN-SUFFIX,linseysworld.com,PROXY
 DOMAIN-SUFFIX,linux.do,PROXY
 DOMAIN-SUFFIX,linux.org,PROXY
 DOMAIN-SUFFIX,linux.org.hk,PROXY
+DOMAIN-SUFFIX,linux.sb,PROXY
 DOMAIN-SUFFIX,linuxfoundation.org,PROXY
 DOMAIN-SUFFIX,linuxfromscratch.org,PROXY
 DOMAIN-SUFFIX,linuxmint.com,PROXY
