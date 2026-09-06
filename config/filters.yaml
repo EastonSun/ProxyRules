@@ -171,6 +171,30 @@ categories:
       - "$popup"
 
   # ==========================================================
+  # reject_domain_ios — iOS 专属广告/追踪/统计/HttpDNS 拦截
+  # ==========================================================
+  reject_domain_ios:
+    description: iOS 专属轻量广告、追踪、统计、挖矿域名黑名单
+    # --- 保留前缀 ---
+    extract_prefixes:
+      - "DOMAIN-SUFFIX,"
+      - "DOMAIN,"
+      - "DOMAIN-KEYWORD,"
+      - "host-suffix,"
+      - "host-keyword,"
+      - "."
+      - "+."
+    # AdGuard 格式
+    adguard_strippers:
+      - "||"
+      - "^"
+      - "$important"
+      - "$badfilter"
+      - "$all"
+      - "$document"
+      - "$popup"
+
+  # ==========================================================
   # reject_ip — 广告/追踪/HttpDNS 拦截 IP-CIDR 黑名单
   # ==========================================================
   reject_ip:
@@ -315,6 +339,13 @@ post_processing:
     reject_domain: |
       # ProxyRules — Reject Domain
       # 广告/追踪/统计域名/HttpDNS 拦截黑名单
+      # 更新时间: {timestamp}
+      # 总条数: {count}
+      # 上游来源: {sources}
+      # 仓库: https://github.com/EastonSun/ProxyRules
+    reject_domain_ios: |
+      # ProxyRules — Reject Domain iOS (精简版)
+      # iOS 专属轻量广告/追踪/统计域名/HttpDNS 拦截黑名单 (防 Network Extension 爆内存)
       # 更新时间: {timestamp}
       # 总条数: {count}
       # 上游来源: {sources}

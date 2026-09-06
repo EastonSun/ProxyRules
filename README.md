@@ -13,6 +13,7 @@
 | `mihomo/private_domain.mrs` | 直连分流 | 局域网专用域名 | MRS 二进制 |
 | `mihomo/private_ip.mrs` | 直连分流 | 局域网/私有/保留 IP 段 | MRS 二进制 |
 | `mihomo/reject_domain.mrs` | 拦截分流 | 广告/追踪/统计/HttpDNS 拦截域名 | MRS 二进制 |
+| `mihomo/reject_domain_ios.mrs` | 拦截分流 | iOS 专属轻量广告/追踪/统计/HttpDNS 拦截域名 (防 OOM) | MRS 二进制 |
 | `mihomo/reject_ip.mrs` | 拦截分流 | 广告/追踪/HttpDNS 拦截 IP-CIDR | MRS 二进制 |
 | `mihomo/no_cn_domain.mrs` | 代理分流 | 非中国大陆域名/需要代理访问的国外域名 | MRS 二进制 |
 | `sing-box/direct_domain.srs` | 直连分流 | 中国大陆直连域名与大厂 CDN | SRS 二进制 |
@@ -20,10 +21,12 @@
 | `sing-box/private_domain.srs` | 直连分流 | 局域网专用域名 | SRS 二进制 |
 | `sing-box/private_ip.srs` | 直连分流 | 局域网/私有/保留 IP 段 | SRS 二进制 |
 | `sing-box/reject_domain.srs` | 拦截分流 | 广告/追踪/统计/HttpDNS 拦截域名 | SRS 二进制 |
+| `sing-box/reject_domain_ios.srs` | 拦截分流 | iOS 专属轻量广告/追踪/统计/HttpDNS 拦截域名 (防 OOM) | SRS 二进制 |
 | `sing-box/reject_ip.srs` | 拦截分流 | 广告/追踪/HttpDNS 拦截 IP-CIDR | SRS 二进制 |
 | `sing-box/no_cn_domain.srs` | 代理分流 | 非中国大陆域名/需要代理访问的国外域名 | SRS 二进制 |
 | `Shadowrocket/direct.module` | 直连分流 | Shadowrocket 大陆域名 + IP 直连模块 | Surge 模块 |
 | `Shadowrocket/reject.module` | 拦截分流 | Shadowrocket 广告/追踪拦截模块 | Surge 模块 |
+| `Shadowrocket/reject_ios.module` | 拦截分流 | iOS 专属轻量广告/追踪拦截模块 (防 OOM) | Surge 模块 |
 | `Shadowrocket/proxy.module` | 代理分流 | Shadowrocket 代理域名与国外服务模块 | Surge 模块 |
 
 - 最后更新时间：2026-09-06 08:01:45
@@ -46,6 +49,7 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/direct_ip.
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/private_domain.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/private_ip.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/reject_domain.mrs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/reject_domain_ios.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/reject_ip.mrs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/mihomo/no_cn_domain.mrs
 ```
@@ -57,6 +61,7 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/direct_i
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/private_domain.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/private_ip.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/reject_domain.srs
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/reject_domain_ios.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/reject_ip.srs
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/no_cn_domain.srs
 ```
@@ -65,6 +70,7 @@ https://raw.githubusercontent.com/EastonSun/ProxyRules/release/sing-box/no_cn_do
 ```text
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/direct.module
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject.module
+https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/reject_ios.module
 https://raw.githubusercontent.com/EastonSun/ProxyRules/release/Shadowrocket/proxy.module
 ```
 

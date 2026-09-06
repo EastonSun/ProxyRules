@@ -32,7 +32,7 @@ sources:
         category: direct_ip
       - path: reject.txt
         format: clash-rule-set
-        category: reject_domain
+        category: [reject_domain, reject_domain_ios]
       - path: lancidr.txt
         format: ip-cidr
         category: private_ip
@@ -58,7 +58,7 @@ sources:
         category: direct_domain
       - path: reject-list.txt
         format: bare-domain
-        category: reject_domain
+        category: [reject_domain, reject_domain_ios]
       - path: proxy-list.txt
         format: bare-domain
         category: no_cn_domain
@@ -76,7 +76,7 @@ sources:
         category: direct_domain
       - path: text-plus/reject.txt
         format: surge-list
-        category: reject_domain
+        category: [reject_domain, reject_domain_ios]
 
   # ──────────────────────────────────────────────────────────
   # 4. ACL4SSR/ACL4SSR — 经典分流规则
@@ -139,10 +139,10 @@ sources:
         category: reject_domain
       - path: rule/Clash/Privacy/Privacy.list
         format: domain-list
-        category: reject_domain
+        category: [reject_domain, reject_domain_ios]
       - path: rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml
         format: domain-list
-        category: reject_domain
+        category: [reject_domain, reject_domain_ios]
       - path: rule/Clash/China/China.list
         format: domain-list
         category: direct_domain

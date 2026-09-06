@@ -60,6 +60,7 @@ COMPILE_TASKS = [
     ("private_ip.txt",     "ipcidr", "private_ip"),
     ("private_domain.txt", "domain", "private_domain"),
     ("reject_domain.txt",  "domain", "reject_domain"),
+    ("reject_domain_ios.txt", "domain", "reject_domain_ios"),
     ("reject_ip.txt",      "ipcidr", "reject_ip"),
     ("no_cn_domain.txt",   "domain", "no_cn_domain"),
 ]

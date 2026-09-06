@@ -55,6 +55,16 @@ MODULE_DEFS = [
         ],
     },
     {
+        "name": "ProxyRules - Reject iOS",
+        "filename": "reject_ios.module",
+        "desc": "iOS 专属轻量广告、追踪、统计域名与IP拦截规则 (防 OOM)",
+        "policy": "REJECT",
+        "inputs": [
+            {"file": "reject_domain_ios.txt", "type": "domain"},
+            {"file": "reject_ip.txt",     "type": "ip"},
+        ],
+    },
+    {
         "name": "ProxyRules - Proxy",
         "filename": "proxy.module",
         "desc": "非中国大陆/需要代理访问的域名与服务规则",

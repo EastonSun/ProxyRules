@@ -47,7 +47,7 @@ REMOVE_REJECT_IP  = CONFIG_DIR / "remove_reject_ip.txt"
 ADD_NO_CN_DOMAIN  = CONFIG_DIR / "add_no_cn_domain.txt"
 REMOVE_NO_CN_DOMAIN = CONFIG_DIR / "remove_no_cn_domain.txt"
 
-CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject_domain", "reject_ip", "no_cn_domain"]
+CATEGORIES = ["direct_domain", "direct_ip", "private_ip", "private_domain", "reject_domain", "reject_domain_ios", "reject_ip", "no_cn_domain"]
 
 # 北京时区
 TZ_BEIJING = timezone(timedelta(hours=8))
@@ -770,6 +770,10 @@ def main():
             "add": load_txt_lines(ADD_REJECT_DOMAIN),
             "remove": load_txt_lines(REMOVE_REJECT_DOMAIN),
         },
+        "reject_domain_ios": {
+            "add": load_txt_lines(ADD_REJECT_DOMAIN),
+            "remove": load_txt_lines(REMOVE_REJECT_DOMAIN),
+        },
         "reject_ip": {
             "add": load_txt_lines(ADD_REJECT_IP),
             "remove": load_txt_lines(REMOVE_REJECT_IP),
@@ -813,10 +817,14 @@ def main():
     for i, task in enumerate(fetch_tasks, 1):
         url      = task["url"]
         fmt      = task["format"]
-        cat      = task["category"]
+        cats_val = task["category"]
         src_name = task["source"]
 
-        print(f"  [{i}/{len(fetch_tasks)}] {src_name} → {cat}")
+        # 统一处理为 category 列表
+        cats = [cats_val] if isinstance(cats_val, str) else list(cats_val)
+        cat_for_cfg = cats[0]
+
+        print(f"  [{i}/{len(fetch_tasks)}] {src_name} → {', '.join(cats)}")
         text = fetch_url(session, url, fetch_timeout)
 
         if text is None:
@@ -825,7 +833,7 @@ def main():
 
         # 按格式解析
         parser = FormatParser()
-        cat_cfg = cat_configs.get(cat, {})
+        cat_cfg = cat_configs.get(cat_for_cfg, {})
         prefixes = cat_cfg.get("extract_prefixes", ["DOMAIN-SUFFIX,", "DOMAIN,", "+.", "."])
 
         try:
@@ -848,14 +856,15 @@ def main():
             elif fmt == "v2fly-dsl":
                 result = parser.parse_v2fly_dsl(url, session, fetch_timeout)
 
-            raw_buckets[cat] |= result
+            for cat in cats:
+                raw_buckets[cat] |= result
             success_count += 1
             print(f"    → 解析到 {len(result)} 条")
 
-            # 双重提取：reject_domain 源可能同时包含 IP-CIDR 规则
+            # 双重提取：reject_domain 或 reject_domain_ios 源可能同时包含 IP-CIDR 规则
             # (如 zqzess AdBlock.list 有 429 条 IP-CIDR, BlockHttpDNS.yaml 有 43 条)
-            # 对每个 reject_domain 源额外跑 parse_ip_cidr() 提取 IP-CIDR 到 reject_ip
-            if cat == "reject_domain":
+            # 对每个 reject_domain/reject_domain_ios 源额外跑 parse_ip_cidr() 提取 IP-CIDR 到 reject_ip
+            if any(c in ("reject_domain", "reject_domain_ios") for c in cats):
                 ip_result = parser.parse_ip_cidr(text)
                 if ip_result:
                     raw_buckets["reject_ip"] |= ip_result
