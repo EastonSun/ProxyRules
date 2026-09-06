@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-05 08:02:45 (北京时间)
-#!rule_count = 29042
+#!update = 2026-09-06 08:02:14 (北京时间)
+#!rule_count = 29048
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -47,6 +47,8 @@ DOMAIN-SUFFIX,114bank.co.jp,PROXY
 DOMAIN-SUFFIX,119474.xyz,PROXY
 DOMAIN-SUFFIX,11jav.com,PROXY
 DOMAIN-SUFFIX,123-hp.com,PROXY
+DOMAIN-SUFFIX,123av.com,PROXY
+DOMAIN-SUFFIX,123av.me,PROXY
 DOMAIN-SUFFIX,123bin.cc,PROXY
 DOMAIN-SUFFIX,123dapp.com,PROXY
 DOMAIN-SUFFIX,123dappipad.com,PROXY
@@ -21508,6 +21510,7 @@ DOMAIN-SUFFIX,roboform.com,PROXY
 DOMAIN-SUFFIX,roborecall.com,PROXY
 DOMAIN-SUFFIX,robotoffice.com,PROXY
 DOMAIN-SUFFIX,robustnessiskey.com,PROXY
+DOMAIN-SUFFIX,roc-taiwan.org,PROXY
 DOMAIN-SUFFIX,rocket-inc.net,PROXY
 DOMAIN-SUFFIX,rocket.chat,PROXY
 DOMAIN-SUFFIX,rocketbbs.com,PROXY
@@ -21558,6 +21561,7 @@ DOMAIN-SUFFIX,roudao6.buzz,PROXY
 DOMAIN-SUFFIX,roudaosp.cc,PROXY
 DOMAIN-SUFFIX,roughebonysex.com,PROXY
 DOMAIN-SUFFIX,roughman.net,PROXY
+DOMAIN-SUFFIX,roushuwo.com,PROXY
 DOMAIN-SUFFIX,routerboard.com,PROXY
 DOMAIN-SUFFIX,routledgehandbooks.com,PROXY
 DOMAIN-SUFFIX,rowblocks.com,PROXY
@@ -23914,6 +23918,7 @@ DOMAIN-SUFFIX,taiwanbible.com,PROXY
 DOMAIN-SUFFIX,taiwancon.com,PROXY
 DOMAIN-SUFFIX,taiwandaily.net,PROXY
 DOMAIN-SUFFIX,taiwandc.org,PROXY
+DOMAIN-SUFFIX,taiwanembassy.org,PROXY
 DOMAIN-SUFFIX,taiwanhot.net,PROXY
 DOMAIN-SUFFIX,taiwanjustice.com,PROXY
 DOMAIN-SUFFIX,taiwanjustice.net,PROXY
@@ -27393,6 +27398,7 @@ DOMAIN-SUFFIX,wsjplus.com,PROXY
 DOMAIN-SUFFIX,wsjshop.com,PROXY
 DOMAIN-SUFFIX,wsjwine.com,PROXY
 DOMAIN-SUFFIX,wtbn.org,PROXY
+DOMAIN-SUFFIX,wtfpass.com,PROXY
 DOMAIN-SUFFIX,wtfpeople.com,PROXY
 DOMAIN-SUFFIX,wtmobile.com,PROXY
 DOMAIN-SUFFIX,wto.org,PROXY
