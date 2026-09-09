@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-08 08:02:22 (北京时间)
-#!rule_count = 29048
+#!update = 2026-09-09 08:02:47 (北京时间)
+#!rule_count = 29049
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -18450,6 +18450,7 @@ DOMAIN-SUFFIX,nodejs.org,PROXY
 DOMAIN-SUFFIX,nodequality.com,PROXY
 DOMAIN-SUFFIX,nodereal.io,PROXY
 DOMAIN-SUFFIX,nodeseek.com,PROXY
+DOMAIN-SUFFIX,nodeseek.org,PROXY
 DOMAIN-SUFFIX,nodesource.com,PROXY
 DOMAIN-SUFFIX,nofile.io,PROXY
 DOMAIN-SUFFIX,noisullifb.com,PROXY

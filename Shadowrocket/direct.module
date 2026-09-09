@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-08 08:02:22 (北京时间)
-#!rule_count = 139890
+#!update = 2026-09-09 08:02:47 (北京时间)
+#!rule_count = 139891
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -109820,6 +109820,7 @@ DOMAIN-SUFFIX,yuanpanguoji.com,DIRECT
 DOMAIN-SUFFIX,yuanqi.tencent.com,DIRECT
 DOMAIN-SUFFIX,yuanqiao.net,DIRECT
 DOMAIN-SUFFIX,yuanqiao.pw,DIRECT
+DOMAIN-SUFFIX,yuanqidesk.com,DIRECT
 DOMAIN-SUFFIX,yuanqilt.com,DIRECT
 DOMAIN-SUFFIX,yuanqingsh.com,DIRECT
 DOMAIN-SUFFIX,yuanqisenlin.com,DIRECT
