@@ -14,3 +14,6 @@ office365.com
 apps.apple.com
 *.apps.apple.com
 +.apps.apple.com
+assrt.net
++.assrt.net
+*.assrt.net

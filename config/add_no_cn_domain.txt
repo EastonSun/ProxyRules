@@ -6,3 +6,4 @@
 # +.claude.ai
 
 +.apps.apple.com
++.assrt.net
