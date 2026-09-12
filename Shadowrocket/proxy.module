@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-11 08:02:55 (北京时间)
-#!rule_count = 29049
+#!update = 2026-09-12 08:02:43 (北京时间)
+#!rule_count = 29050
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -20920,6 +20920,7 @@ DOMAIN-SUFFIX,qtcard.futunn.com,PROXY
 DOMAIN-SUFFIX,qtcardfthk.futufin.com,PROXY
 DOMAIN-SUFFIX,qtrac.eu,PROXY
 DOMAIN-SUFFIX,qtweeter.com,PROXY
+DOMAIN-SUFFIX,quakemachinex.com,PROXY
 DOMAIN-SUFFIX,qualcomm-email.com,PROXY
 DOMAIN-SUFFIX,qualcomm-inc.com,PROXY
 DOMAIN-SUFFIX,qualcomm.co.id,PROXY
