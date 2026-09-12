@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-12 08:02:43 (北京时间)
-#!rule_count = 29050
+#!update = 2026-09-12 22:42:15 (北京时间)
+#!rule_count = 29034
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1980,13 +1980,10 @@ DOMAIN-SUFFIX,apetube.com,PROXY
 DOMAIN-SUFFIX,apexlegends.com,PROXY
 DOMAIN-SUFFIX,apexprint.com.hk,PROXY
 DOMAIN-SUFFIX,api-extractor.com,PROXY
-DOMAIN-SUFFIX,api-gl.lbkrs.com,PROXY
 DOMAIN-SUFFIX,api-secure.recaptcha.net,PROXY
 DOMAIN-SUFFIX,api-verify.recaptcha.net,PROXY
 DOMAIN-SUFFIX,api.ai,PROXY
 DOMAIN-SUFFIX,api.amplitude.com,PROXY
-DOMAIN-SUFFIX,api.futunn.com,PROXY
-DOMAIN-SUFFIX,api.lbkrs.com,PROXY
 DOMAIN-SUFFIX,api.mixpanel.com,PROXY
 DOMAIN-SUFFIX,api.moomoobull.com,PROXY
 DOMAIN-SUFFIX,api.news,PROXY
@@ -1998,7 +1995,6 @@ DOMAIN-SUFFIX,api.shuaiapi.com,PROXY
 DOMAIN-SUFFIX,api.steampowered.com,PROXY
 DOMAIN-SUFFIX,api.termius.com,PROXY
 DOMAIN-SUFFIX,api.waqi.info,PROXY
-DOMAIN-SUFFIX,api5.futunn.com,PROXY
 DOMAIN-SUFFIX,apiary.io,PROXY
 DOMAIN-SUFFIX,apiauto.ru,PROXY
 DOMAIN-SUFFIX,apibay.org,PROXY
@@ -2580,6 +2576,7 @@ DOMAIN-SUFFIX,assimp.org,PROXY
 DOMAIN-SUFFIX,assistirhentai.com,PROXY
 DOMAIN-SUFFIX,assoass.com,PROXY
 DOMAIN-SUFFIX,associates-amazon.com,PROXY
+DOMAIN-SUFFIX,assrt.net,PROXY
 DOMAIN-SUFFIX,assylum.com,PROXY
 DOMAIN-SUFFIX,astm.org,PROXY
 DOMAIN-SUFFIX,asto.re,PROXY
@@ -5481,7 +5478,6 @@ DOMAIN-SUFFIX,cdn-vk.net,PROXY
 DOMAIN-SUFFIX,cdn-vk.ru,PROXY
 DOMAIN-SUFFIX,cdn.angruo.com,PROXY
 DOMAIN-SUFFIX,cdn.arstechnica.net,PROXY
-DOMAIN-SUFFIX,cdn.futustatic.com,PROXY
 DOMAIN-SUFFIX,cdn.jwplayer.com,PROXY
 DOMAIN-SUFFIX,cdn.printfriendly.com,PROXY
 DOMAIN-SUFFIX,cdn.seatguru.com,PROXY
@@ -6138,7 +6134,6 @@ DOMAIN-SUFFIX,cn.fmnnow.com,PROXY
 DOMAIN-SUFFIX,cn.sandscotaicentral.com,PROXY
 DOMAIN-SUFFIX,cn.shafaqna.com,PROXY
 DOMAIN-SUFFIX,cn.theaustralian.com.au,PROXY
-DOMAIN-SUFFIX,cn.uptodown.com,PROXY
 DOMAIN-SUFFIX,cn6.eu,PROXY
 DOMAIN-SUFFIX,cna.com.tw,PROXY
 DOMAIN-SUFFIX,cnabc.com,PROXY
@@ -7684,7 +7679,6 @@ DOMAIN-SUFFIX,dowjones.io,PROXY
 DOMAIN-SUFFIX,dowjoneson.com,PROXY
 DOMAIN-SUFFIX,download.com,PROXY
 DOMAIN-SUFFIX,download.dappcdn.com,PROXY
-DOMAIN-SUFFIX,download.futunn.com,PROXY
 DOMAIN-SUFFIX,downloadpass.com,PROXY
 DOMAIN-SUFFIX,downloadsforipod.com,PROXY
 DOMAIN-SUFFIX,dphk.org,PROXY
@@ -15722,7 +15716,6 @@ DOMAIN-SUFFIX,lzjscript.com,PROXY
 DOMAIN-SUFFIX,lzmtnews.org,PROXY
 DOMAIN-SUFFIX,m-power.com,PROXY
 DOMAIN-SUFFIX,m-sport.co.uk,PROXY
-DOMAIN-SUFFIX,m.hkgalden.com,PROXY
 DOMAIN-SUFFIX,m.me,PROXY
 DOMAIN-SUFFIX,m.moegirl.org,PROXY
 DOMAIN-SUFFIX,m.plixi.com,PROXY
@@ -19086,12 +19079,8 @@ DOMAIN-SUFFIX,openai.com,PROXY
 DOMAIN-SUFFIX,openallweb.com,PROXY
 DOMAIN-SUFFIX,openamt.com,PROXY
 DOMAIN-SUFFIX,openapi-quote.longbridge.cn,PROXY
-DOMAIN-SUFFIX,openapi-quote.longbridge.com,PROXY
 DOMAIN-SUFFIX,openapi-trade.longbridge.cn,PROXY
-DOMAIN-SUFFIX,openapi-trade.longbridge.com,PROXY
-DOMAIN-SUFFIX,openapi.futunn.com,PROXY
 DOMAIN-SUFFIX,openapi.longbridge.cn,PROXY
-DOMAIN-SUFFIX,openapi.longbridge.com,PROXY
 DOMAIN-SUFFIX,openapiplatform.com,PROXY
 DOMAIN-SUFFIX,openapiservice.com,PROXY
 DOMAIN-SUFFIX,openart.ai,PROXY
@@ -20916,8 +20905,6 @@ DOMAIN-SUFFIX,qr.ae,PROXY
 DOMAIN-SUFFIX,qstatus.com,PROXY
 DOMAIN-SUFFIX,qt-project.org,PROXY
 DOMAIN-SUFFIX,qt.io,PROXY
-DOMAIN-SUFFIX,qtcard.futunn.com,PROXY
-DOMAIN-SUFFIX,qtcardfthk.futufin.com,PROXY
 DOMAIN-SUFFIX,qtrac.eu,PROXY
 DOMAIN-SUFFIX,qtweeter.com,PROXY
 DOMAIN-SUFFIX,quakemachinex.com,PROXY
@@ -23709,7 +23696,6 @@ DOMAIN-SUFFIX,supjav.com,PROXY
 DOMAIN-SUFFIX,suppig.net,PROXY
 DOMAIN-SUFFIX,supplybestjerseys.com,PROXY
 DOMAIN-SUFFIX,support-uber.com,PROXY
-DOMAIN-SUFFIX,support.futunn.com,PROXY
 DOMAIN-SUFFIX,supportfacebook.com,PROXY
 DOMAIN-SUFFIX,supr.cl,PROXY
 DOMAIN-SUFFIX,supremacy.com,PROXY
@@ -24873,8 +24859,6 @@ DOMAIN-SUFFIX,tracfone.com,PROXY
 DOMAIN-SUFFIX,tracker.gg,PROXY
 DOMAIN-SUFFIX,tracker.network,PROXY
 DOMAIN-SUFFIX,tracking-location.com,PROXY
-DOMAIN-SUFFIX,trade.futunn.com,PROXY
-DOMAIN-SUFFIX,trade.longportapp.com,PROXY
 DOMAIN-SUFFIX,tradeup.com,PROXY
 DOMAIN-SUFFIX,tradevip1.com,PROXY
 DOMAIN-SUFFIX,tradingview.com,PROXY
