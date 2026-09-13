@@ -29,12 +29,12 @@
 | `Shadowrocket/reject_ios.module` | 拦截分流 | iOS 专属轻量广告/追踪拦截模块 (防 OOM) | Surge 模块 |
 | `Shadowrocket/proxy.module` | 代理分流 | Shadowrocket 代理域名与国外服务模块 | Surge 模块 |
 
-- 最后更新时间：2026-09-12 22:41:40
-- DIRECT_DOMAIN 规则数：116093，update -1
-- DIRECT_IP 规则数：23917，update +91
-- REJECT_DOMAIN 规则数：666170，update +307
+- 最后更新时间：2026-09-13 08:02:48
+- DIRECT_DOMAIN 规则数：116093，update +0
+- DIRECT_IP 规则数：23917，update +0
+- REJECT_DOMAIN 规则数：666309，update +139
 - REJECT_IP 规则数：512，update +0
-- NO_CN_DOMAIN 规则数：29034，update -16
+- NO_CN_DOMAIN 规则数：29034，update +0
 
 ---
 
