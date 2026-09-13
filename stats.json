@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-09-12 22:41:40",
+  "timestamp": "2026-09-13 08:02:48",
   "direct_domain": 116093,
   "direct_ip": 23917,
   "no_cn_domain": 29034,
   "private_domain": 133,
   "private_ip": 19,
-  "reject_domain": 666170,
-  "reject_domain_ios": 203423,
+  "reject_domain": 666309,
+  "reject_domain_ios": 203644,
   "reject_ip": 512
 }
