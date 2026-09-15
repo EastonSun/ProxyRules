@@ -4,3 +4,28 @@
 # 
 # 例如:
 # +.apple.com
+
+paypal.com
+*.paypal.com
++.paypal.com
+paypalobjects.com
+*.paypalobjects.com
++.paypalobjects.com
+paypal.ca
+*.paypal.ca
++.paypal.ca
+paypal.jp
+*.paypal.jp
++.paypal.jp
+paypal.me
+*.paypal.me
++.paypal.me
+paypal.hk
+*.paypal.hk
++.paypal.hk
+paypal.com.hk
+*.paypal.com.hk
++.paypal.com.hk
+paypal.com.sg
+*.paypal.com.sg
++.paypal.com.sg
