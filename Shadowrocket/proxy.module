@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-15 13:29:44 (北京时间)
-#!rule_count = 29026
+#!update = 2026-09-15 20:09:04 (北京时间)
+#!rule_count = 29037
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -19554,7 +19554,14 @@ DOMAIN-SUFFIX,paypal-survey.com,PROXY
 DOMAIN-SUFFIX,paypal-survey.org,PROXY
 DOMAIN-SUFFIX,paypal-team.com,PROXY
 DOMAIN-SUFFIX,paypal-viewpoints.net,PROXY
+DOMAIN-SUFFIX,paypal.ca,PROXY
+DOMAIN-SUFFIX,paypal.com,PROXY
+DOMAIN-SUFFIX,paypal.com.hk,PROXY
+DOMAIN-SUFFIX,paypal.com.sg,PROXY
+DOMAIN-SUFFIX,paypal.hk,PROXY
 DOMAIN-SUFFIX,paypal.info,PROXY
+DOMAIN-SUFFIX,paypal.jp,PROXY
+DOMAIN-SUFFIX,paypal.me,PROXY
 DOMAIN-SUFFIX,paypal.so,PROXY
 DOMAIN-SUFFIX,paypal.us,PROXY
 DOMAIN-SUFFIX,paypalbeacon.com,PROXY
@@ -19584,6 +19591,7 @@ DOMAIN-SUFFIX,paypalnet.org,PROXY
 DOMAIN-SUFFIX,paypalnetwork.info,PROXY
 DOMAIN-SUFFIX,paypalnetwork.net,PROXY
 DOMAIN-SUFFIX,paypalnetwork.org,PROXY
+DOMAIN-SUFFIX,paypalobjects.com,PROXY
 DOMAIN-SUFFIX,paypalonline.net,PROXY
 DOMAIN-SUFFIX,paypalonline.org,PROXY
 DOMAIN-SUFFIX,paypalprepagata.com,PROXY
@@ -23580,6 +23588,9 @@ DOMAIN-SUFFIX,stripcamfun.com,PROXY
 DOMAIN-SUFFIX,stripchat.com,PROXY
 DOMAIN-SUFFIX,stripe-terminal-local-reader.net,PROXY
 DOMAIN-SUFFIX,stripe.com,PROXY
+DOMAIN-SUFFIX,stripe.dev,PROXY
+DOMAIN-SUFFIX,stripe.events,PROXY
+DOMAIN-SUFFIX,stripe.global,PROXY
 DOMAIN-SUFFIX,stripe.network,PROXY
 DOMAIN-SUFFIX,stripecdn.com,PROXY
 DOMAIN-SUFFIX,stripparadise.com,PROXY
