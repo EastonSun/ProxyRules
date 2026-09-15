@@ -7,3 +7,11 @@
 
 +.apps.apple.com
 +.assrt.net
++.paypal.com
++.paypalobjects.com
++.paypal.me
++.paypal.ca
++.paypal.jp
++.paypal.hk
++.paypal.com.hk
++.paypal.com.sg

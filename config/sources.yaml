@@ -32,7 +32,7 @@ sources:
         category: direct_ip
       - path: reject.txt
         format: clash-rule-set
-        category: [reject_domain, reject_domain_ios]
+        category: reject_domain
       - path: lancidr.txt
         format: ip-cidr
         category: private_ip
@@ -58,7 +58,7 @@ sources:
         category: direct_domain
       - path: reject-list.txt
         format: bare-domain
-        category: [reject_domain, reject_domain_ios]
+        category: reject_domain
       - path: proxy-list.txt
         format: bare-domain
         category: no_cn_domain
@@ -76,7 +76,7 @@ sources:
         category: direct_domain
       - path: text-plus/reject.txt
         format: surge-list
-        category: [reject_domain, reject_domain_ios]
+        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 4. ACL4SSR/ACL4SSR — 经典分流规则
@@ -90,39 +90,29 @@ sources:
       - path: Clash/ChinaDomain.list
         format: domain-list
         category: direct_domain
-      - path: Clash/BanAD.list
-        format: domain-list
-        category: reject_domain
-      - path: Clash/BanProgramAD.list
-        format: domain-list
-        category: reject_domain
-      - path: Clash/BanEasyListChina.list
-        format: domain-list
-        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
-  # 5. Cats-Team/AdRules — 中国区域广告规则合集
+  # 5. AdGuard Mobile Filter — 移动端专属过滤器
   # ──────────────────────────────────────────────────────────
-  - name: Cats-Team/AdRules
-    description: 中国区域广告屏蔽规则合集
+  - name: AdGuard Mobile Filter
+    description: AdGuard 官方移动端极简广告/追踪/弹窗拦截器
     enabled: true
-    base_url: https://raw.githubusercontent.com/Cats-Team/AdRules/main
+    base_url: https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_11_Mobile
     files:
-      - path: mod/rules/adblock-rules.txt
+      - path: filter.txt
         format: adguard-list
         category: reject_domain
 
   # ──────────────────────────────────────────────────────────
-  # 6. zqzess/rule_for_quantumultX
-  #    格式: YAML payload: (clash-rule-set), 但更新停滞 (2024-01)
+  # 6. AWAvenue Adblock Rule — 针对国内主流本土 App 广告/追踪拦截
   # ──────────────────────────────────────────────────────────
-  - name: zqzess/rule_for_quantumultX
-    description: QuantumultX/Clash 广告过滤规则
+  - name: AWAvenue Adblock Rule
+    description: 针对国内本土 App 的极简广告、追踪统计、弹窗黑名单
     enabled: true
-    base_url: https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/master
+    base_url: https://raw.githubusercontent.com/AWAvenue/AWAvenue-Adblock-Rule/main
     files:
-      - path: Clash/filter/AdBlock.list
-        format: clash-rule-set
+      - path: AWAvenue-Adblock-Rule-hosts.txt
+        format: hosts-list
         category: reject_domain
 
   # ──────────────────────────────────────────────────────────
@@ -134,15 +124,12 @@ sources:
     enabled: true
     base_url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master
     files:
-      - path: rule/Clash/Advertising/Advertising.list
-        format: domain-list
-        category: reject_domain
       - path: rule/Clash/Privacy/Privacy.list
         format: domain-list
-        category: [reject_domain, reject_domain_ios]
+        category: reject_domain
       - path: rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml
         format: domain-list
-        category: [reject_domain, reject_domain_ios]
+        category: reject_domain
       - path: rule/Clash/China/China.list
         format: domain-list
         category: direct_domain
@@ -851,26 +838,7 @@ sources:
       - path: geo/geosite/private.list
         format: bare-domain
         category: private_domain
-      # 广告/追踪 (category-ads 包含海量广告域名)
-      - path: geo/geosite/category-ads.list
-        format: bare-domain
-        category: reject_domain
-      - path: geo/geosite/category-ads-all.list
-        format: bare-domain
-        category: reject_domain
-
-  # ──────────────────────────────────────────────────────────
-  # 13. REIJI007/AdBlock_Rule_For_Clash — 海量广告拦截域名
-  #     格式: Clash 经典 rule-provider YAML (clash-rule-set)
-  # ──────────────────────────────────────────────────────────
-  - name: REIJI007/AdBlock_Rule_For_Clash
-    description: Clash 广告域名拦截规则集
-    enabled: true
-    base_url: https://raw.githubusercontent.com/REIJI007/AdBlock_Rule_For_Clash/main
-    files:
-      - path: adblock_reject.txt
-        format: clash-rule-set
-        category: reject_domain
+      # 广告/追踪已移除 (精简体积)
 
   # ──────────────────────────────────────────────────────────
   # 14. v2fly/domain-list-community — V2Fly 社区域名列表
@@ -885,19 +853,6 @@ sources:
       - path: cn
         format: v2fly-dsl
         category: direct_domain
-
-  # ──────────────────────────────────────────────────────────
-  # 15. privacy-protection-tools/anti-AD — 广告过滤列表
-  #     格式: Clash YAML payload: (clash-rule-set)，~98000 条
-  # ──────────────────────────────────────────────────────────
-  - name: privacy-protection-tools/anti-AD
-    description: 中文区广告过滤列表 — ~98000 条广告/追踪域名
-    enabled: true
-    base_url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master
-    files:
-      - path: anti-ad-clash.yaml
-        format: clash-rule-set
-        category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 16. 17mon/china_ip_list — 中国 IP 段 (ipip.net 数据)
