@@ -340,6 +340,12 @@ class FormatParser:
             if cls._is_comment(line, ["#", "!"]):
                 continue
             stripped = line.strip()
+            # 忽略放行规则 (白名单)
+            if stripped.startswith("@@"):
+                continue
+            # 忽略带有限定/高级修饰符的规则 (防止降级误杀)
+            if "$" in stripped:
+                continue
             # 格式: ||example.com^
             # 格式: 0.0.0.0 example.com
             # 格式: 127.0.0.1 example.com
@@ -609,8 +615,8 @@ def clean_domain_set(items: set) -> set:
         # 排除纯 IP/CIDR
         if ip_re.match(body):
             continue
-        # 排除明显不是域名的内容（含空格/括号等）
-        if any(c in body for c in (' ', ',', '(', ')', '{', '}', '[', ']', '<', '>', ';', '"', "'")):
+        # 排除明显不是域名的内容（含空格/括号/斜杠/问号等）
+        if any(c in body for c in (' ', ',', '(', ')', '{', '}', '[', ']', '<', '>', ';', '"', "'", '/', '?', '=', '%')):
             continue
         # --- 域名结构校验 ---
         # 1. 非通配符条目须至少有一个点号（至少两段标签）
