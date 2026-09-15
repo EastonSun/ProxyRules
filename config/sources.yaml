@@ -109,9 +109,9 @@ sources:
   - name: AWAvenue Adblock Rule
     description: 针对国内本土 App 的极简广告、追踪统计、弹窗黑名单
     enabled: true
-    base_url: https://raw.githubusercontent.com/AWAvenue/AWAvenue-Adblock-Rule/main
+    base_url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main
     files:
-      - path: AWAvenue-Adblock-Rule-hosts.txt
+      - path: AWAvenue-Ads-Rule.txt
         format: hosts-list
         category: reject_domain
 
@@ -228,9 +228,6 @@ sources:
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/amazon@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/amd@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/amp@cn.list
@@ -779,16 +776,10 @@ sources:
       - path: geo/geosite/ubiquiti@cn.list
         format: bare-domain
         category: direct_domain
-      - path: geo/geosite/ubisoft@cn.list
-        format: bare-domain
-        category: direct_domain
       - path: geo/geosite/vanish@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/veet@cn.list
-        format: bare-domain
-        category: direct_domain
-      - path: geo/geosite/verizon@cn.list
         format: bare-domain
         category: direct_domain
       - path: geo/geosite/visa@cn.list
