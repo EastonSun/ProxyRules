@@ -2,7 +2,7 @@
 #!desc = iOS 专属轻量广告、追踪、统计域名与IP拦截规则 (防 OOM)
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-15 08:02:45 (北京时间)
+#!update = 2026-09-15 13:29:44 (北京时间)
 #!rule_count = 204833
 
 [Rule]
