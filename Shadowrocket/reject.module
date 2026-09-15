@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-15 22:17:03 (北京时间)
-#!rule_count = 207294
+#!update = 2026-09-15 23:24:32 (北京时间)
+#!rule_count = 207295
 
 [Rule]
 DOMAIN-SUFFIX,0.avmarket.rs,REJECT
@@ -109460,6 +109460,7 @@ DOMAIN-SUFFIX,money88.mobi,REJECT
 DOMAIN-SUFFIX,moneybot.net,REJECT
 DOMAIN-SUFFIX,moneycat.vn,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.admobile_mrkt,REJECT
+DOMAIN-SUFFIX,moneycontrol.com##.ads-320-250,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.ads-320-50,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.advslotsgrayboxs,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.mid-arti-ad,REJECT
