@@ -914,6 +914,57 @@ def main():
 
         final_buckets[cat_name] = filtered
 
+    # ---- 跨分类排他冲突检测与去重 ----
+    print("\n[5.5/6] 跨分类排他冲突检测与去重...")
+    rejects = final_buckets.get("reject_domain", set())
+    proxies = final_buckets.get("no_cn_domain", set())
+    privates = final_buckets.get("private_domain", set())
+
+    # 1. 代理排除拦截 (PROXY 排除 REJECT)
+    if proxies and rejects:
+        before_proxies = len(proxies)
+        exclude_bodies = {pat[2:] if pat.startswith("+.") else pat for pat in rejects}
+        filtered_proxies = set()
+        for d in proxies:
+            body = d[2:] if d.startswith("+.") else d
+            parts = body.split(".")
+            is_excluded = False
+            for j in range(len(parts)):
+                parent = ".".join(parts[j:])
+                if parent in exclude_bodies:
+                    is_excluded = True
+                    break
+            if not is_excluded:
+                filtered_proxies.add(d)
+        final_buckets["no_cn_domain"] = filtered_proxies
+        if len(filtered_proxies) != before_proxies:
+            print(f"  * 代理分流 (no_cn_domain) 压缩: {before_proxies} → {len(filtered_proxies)} (移除了已被拦截的 {before_proxies - len(filtered_proxies)} 个冲突域名)")
+
+    # 2. 直连排除拦截/代理/局域网 (DIRECT 排除 REJECT, PROXY, PRIVATE)
+    directs = final_buckets.get("direct_domain", set())
+    if directs:
+        before_directs = len(directs)
+        exclude_bodies = set()
+        for pat in (rejects | proxies | privates):
+            body = pat[2:] if pat.startswith("+.") else pat
+            exclude_bodies.add(body)
+            
+        filtered_directs = set()
+        for d in directs:
+            body = d[2:] if d.startswith("+.") else d
+            parts = body.split(".")
+            is_excluded = False
+            for j in range(len(parts)):
+                parent = ".".join(parts[j:])
+                if parent in exclude_bodies:
+                    is_excluded = True
+                    break
+            if not is_excluded:
+                filtered_directs.add(d)
+        final_buckets["direct_domain"] = filtered_directs
+        if len(filtered_directs) != before_directs:
+            print(f"  * 直连分流 (direct_domain) 极限压缩: {before_directs} → {len(filtered_directs)} (移除了在拦截/代理/局域网中已覆盖的 {before_directs - len(filtered_directs)} 个冲突域名)")
+
     # ---- 生成报告 ----
     source_list = ", ".join(
         src["name"] for src in sources_cfg.get("sources", []) if src.get("enabled", True)
