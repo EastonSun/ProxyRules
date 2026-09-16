@@ -111,7 +111,7 @@ sources:
     enabled: true
     base_url: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main
     files:
-      - path: AWAvenue-Ads-Rule.txt
+      - path: Filters/AWAvenue-Ads-Rule-hosts.txt
         format: hosts-list
         category: reject_domain
 
@@ -165,7 +165,7 @@ sources:
   #     中国域名白名单，dnsmasq 格式
   # ──────────────────────────────────────────────────────────
   - name: felixonmars/dnsmasq-china-list
-    description: 中国域名白名单（dnsmasq 格式）
+    description: 中国域名白名单(dnsmasq 格式）
     enabled: true
     base_url: https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master
     files:
