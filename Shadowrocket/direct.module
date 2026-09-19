@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-18 08:02:22 (北京时间)
-#!rule_count = 138578
+#!update = 2026-09-19 08:02:49 (北京时间)
+#!rule_count = 138580
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -124255,6 +124255,8 @@ IP-CIDR,148.70.0.0/16,DIRECT
 IP-CIDR,149.11.64.232/29,DIRECT
 IP-CIDR,149.14.156.96/29,DIRECT
 IP-CIDR,149.41.0.0/16,DIRECT
+IP-CIDR,149.41.192.0/18,DIRECT
+IP-CIDR,149.41.64.0/18,DIRECT
 IP-CIDR,149.6.36.20/32,DIRECT
 IP-CIDR,149.6.37.13/32,DIRECT
 IP-CIDR,15.230.141.0/24,DIRECT
