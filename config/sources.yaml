@@ -30,9 +30,9 @@ sources:
       - path: cncidr.txt
         format: ip-cidr
         category: direct_ip
-      - path: reject.txt
-        format: clash-rule-set
-        category: reject_domain
+      # - path: reject.txt
+      #   format: clash-rule-set
+      #   category: reject_domain
       - path: lancidr.txt
         format: ip-cidr
         category: private_ip
@@ -56,9 +56,9 @@ sources:
       - path: direct-list.txt
         format: bare-domain
         category: direct_domain
-      - path: reject-list.txt
-        format: bare-domain
-        category: reject_domain
+      # - path: reject-list.txt
+      #   format: bare-domain
+      #   category: reject_domain
       - path: proxy-list.txt
         format: bare-domain
         category: no_cn_domain
@@ -66,17 +66,17 @@ sources:
   # ──────────────────────────────────────────────────────────
   # 3. xkww3n/Rules — Surge 风格 (+.domain)
   # ──────────────────────────────────────────────────────────
-  - name: xkww3n/Rules
-    description: Surge/Clash 文本规则集 — 中日广告 + 国内域名
-    enabled: true
-    base_url: https://rules.xkww3n.cyou
-    files:
-      - path: text-plus/domestic.txt
-        format: surge-list
-        category: direct_domain
-      - path: text-plus/reject.txt
-        format: surge-list
-        category: reject_domain
+  # - name: xkww3n/Rules
+  #   description: Surge/Clash 文本规则集 — 中日广告 + 国内域名
+  #   enabled: true
+  #   base_url: https://rules.xkww3n.cyou
+  #   files:
+  #     - path: text-plus/domestic.txt
+  #       format: surge-list
+  #       category: direct_domain
+  #     - path: text-plus/reject.txt
+  #       format: surge-list
+  #       category: reject_domain
 
   # ──────────────────────────────────────────────────────────
   # 4. ACL4SSR/ACL4SSR — 经典分流规则
