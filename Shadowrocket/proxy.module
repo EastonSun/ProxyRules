@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-20 10:47:44 (北京时间)
-#!rule_count = 29017
+#!update = 2026-09-21 08:03:19 (北京时间)
+#!rule_count = 29022
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -6186,6 +6186,7 @@ DOMAIN-SUFFIX,code.org,PROXY
 DOMAIN-SUFFIX,code1984.com,PROXY
 DOMAIN-SUFFIX,codeberg.org,PROXY
 DOMAIN-SUFFIX,codeberg.page,PROXY
+DOMAIN-SUFFIX,codebuff.com,PROXY
 DOMAIN-SUFFIX,codecademy.com,PROXY
 DOMAIN-SUFFIX,codeforaliving.io,PROXY
 DOMAIN-SUFFIX,codeforces.com,PROXY
@@ -9595,10 +9596,12 @@ DOMAIN-SUFFIX,fiotolia.com,PROXY
 DOMAIN-SUFFIX,fire-emblem-heroes.com,PROXY
 DOMAIN-SUFFIX,firearmsworld.net,PROXY
 DOMAIN-SUFFIX,firebase.com,PROXY
+DOMAIN-SUFFIX,firebase.dev,PROXY
 DOMAIN-SUFFIX,firebase.io,PROXY
 DOMAIN-SUFFIX,firebaseapp.com,PROXY
 DOMAIN-SUFFIX,firebaseio.com,PROXY
 DOMAIN-SUFFIX,fireemblemawakening.com,PROXY
+DOMAIN-SUFFIX,firefox-portal-detection.com,PROXY
 DOMAIN-SUFFIX,firefox.com,PROXY
 DOMAIN-SUFFIX,firefox.hu,PROXY
 DOMAIN-SUFFIX,firefoxtweetmachine.com,PROXY
@@ -10048,6 +10051,7 @@ DOMAIN-SUFFIX,freebigmovies.com,PROXY
 DOMAIN-SUFFIX,freebrowser.org,PROXY
 DOMAIN-SUFFIX,freebs.com,PROXY
 DOMAIN-SUFFIX,freebsd.org,PROXY
+DOMAIN-SUFFIX,freebuff.com,PROXY
 DOMAIN-SUFFIX,freecamsfan.com,PROXY
 DOMAIN-SUFFIX,freecartoons.biz,PROXY
 DOMAIN-SUFFIX,freechal.com,PROXY
@@ -24185,6 +24189,7 @@ DOMAIN-SUFFIX,textnow.com,PROXY
 DOMAIN-SUFFIX,textnow.me,PROXY
 DOMAIN-SUFFIX,texttobuy.org,PROXY
 DOMAIN-SUFFIX,texture.com,PROXY
+DOMAIN-SUFFIX,tfbnw.net,PROXY
 DOMAIN-SUFFIX,tfc-taiwan.org.tw,PROXY
 DOMAIN-SUFFIX,tferwq.com,PROXY
 DOMAIN-SUFFIX,tfhub.dev,PROXY
