@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-21 08:03:19 (北京时间)
-#!rule_count = 44318
+#!update = 2026-09-22 08:02:36 (北京时间)
+#!rule_count = 44324
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -8110,6 +8110,7 @@ DOMAIN-SUFFIX,beneficios.davivienda.hn,REJECT
 DOMAIN-SUFFIX,beneficios.davivienda.sv,REJECT
 DOMAIN-SUFFIX,benefits.aon.com,REJECT
 DOMAIN-SUFFIX,benelux2.secureforms.mcafee.com,REJECT
+DOMAIN-SUFFIX,benesse.ne.jp##.ad-empty,REJECT
 DOMAIN-SUFFIX,bengo4.com##.recruitebnr,REJECT
 DOMAIN-SUFFIX,bento.agoda.com,REJECT
 DOMAIN-SUFFIX,beoecomapim.bang-olufsen.com,REJECT
@@ -12616,6 +12617,7 @@ DOMAIN-SUFFIX,elink.altru.org,REJECT
 DOMAIN-SUFFIX,elink.rushcopley.com,REJECT
 DOMAIN-SUFFIX,elinks.dice.com,REJECT
 DOMAIN-SUFFIX,eliteclng.ericksonbuilt.com,REJECT
+DOMAIN-SUFFIX,elle.com###gpt-ad-tmu,REJECT
 DOMAIN-SUFFIX,ellypsio.net.jumia.com.ng,REJECT
 DOMAIN-SUFFIX,elobservador.com.uy###topzocalo,REJECT
 DOMAIN-SUFFIX,elogic-learning.actonservice.com,REJECT
@@ -18389,6 +18391,7 @@ DOMAIN-SUFFIX,jifjai.instamotion.com,REJECT
 DOMAIN-SUFFIX,jiguang.cn,REJECT
 DOMAIN-SUFFIX,jiji.com###sp-overlay,REJECT
 DOMAIN-SUFFIX,jiji.com##.rectanglead,REJECT
+DOMAIN-SUFFIX,jikayosha.jp##.photo-ad__fv,REJECT
 DOMAIN-SUFFIX,jiktq0fr9hv6.meleton.ru,REJECT
 DOMAIN-SUFFIX,jinair.nsc.jinair.com,REJECT
 DOMAIN-SUFFIX,jinair.sc.jinair.com,REJECT
@@ -26821,6 +26824,8 @@ DOMAIN-SUFFIX,pi.ispot.tv,REJECT
 DOMAIN-SUFFIX,pi.technik3d.com,REJECT
 DOMAIN-SUFFIX,pibhjs.dongsuhfurniture.co.kr,REJECT
 DOMAIN-SUFFIX,pic-stash.com,REJECT
+DOMAIN-SUFFIX,pica-a-display.diwodiwo.xyz,REJECT
+DOMAIN-SUFFIX,pica-ad-api.diwodiwo.xyz,REJECT
 DOMAIN-SUFFIX,picarro.actonservice.com,REJECT
 DOMAIN-SUFFIX,picis.optum.com,REJECT
 DOMAIN-SUFFIX,piddme.buyma.com,REJECT
@@ -37528,6 +37533,7 @@ DOMAIN-SUFFIX,telugu.hindustantimes.com##.minheightmobileadd,REJECT
 DOMAIN-SUFFIX,telugu360.com##.homemobile_ads,REJECT
 DOMAIN-SUFFIX,teluguone.com##.rgtlinks,REJECT
 DOMAIN-SUFFIX,teluguone.com##.tmdb-home-header-middle-two,REJECT
+DOMAIN-SUFFIX,telugutimes.net##.tt-sticky-footer-ad,REJECT
 DOMAIN-SUFFIX,telulr.golfgalaxy.com,REJECT
 DOMAIN-SUFFIX,temails.productnotice.thomsonreuters.com,REJECT
 DOMAIN-SUFFIX,temp.twicomi.com,REJECT
