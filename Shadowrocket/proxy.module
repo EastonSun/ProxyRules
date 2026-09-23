@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-22 08:02:36 (北京时间)
-#!rule_count = 29022
+#!update = 2026-09-23 08:02:19 (北京时间)
+#!rule_count = 29024
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -5802,6 +5802,7 @@ DOMAIN-SUFFIX,chinesegay.org,PROXY
 DOMAIN-SUFFIX,chinesen.de,PROXY
 DOMAIN-SUFFIX,chinesenews.net.au,PROXY
 DOMAIN-SUFFIX,chinesepen.org,PROXY
+DOMAIN-SUFFIX,chineseposters.net,PROXY
 DOMAIN-SUFFIX,chineseradioseattle.com,PROXY
 DOMAIN-SUFFIX,chinesespanking.com,PROXY
 DOMAIN-SUFFIX,chinesetalks.net,PROXY
@@ -18462,6 +18463,7 @@ DOMAIN-SUFFIX,nordvpn.com,PROXY
 DOMAIN-SUFFIX,norsk.mobi,PROXY
 DOMAIN-SUFFIX,norton.com,PROXY
 DOMAIN-SUFFIX,nos.nl,PROXY
+DOMAIN-SUFFIX,note.com,PROXY
 DOMAIN-SUFFIX,notegpt.io,PROXY
 DOMAIN-SUFFIX,notepad-plus-plus.org,PROXY
 DOMAIN-SUFFIX,noticias-rt.com,PROXY
