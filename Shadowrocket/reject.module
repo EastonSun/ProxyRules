@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-24 08:02:45 (北京时间)
-#!rule_count = 44327
+#!update = 2026-09-25 08:02:27 (北京时间)
+#!rule_count = 44329
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -18295,6 +18295,7 @@ DOMAIN-SUFFIX,janzoz.1001pneus.fr,REJECT
 DOMAIN-SUFFIX,jaomlf.giftmall.co.jp,REJECT
 DOMAIN-SUFFIX,japan-whores.com##.header_link_mobile,REJECT
 DOMAIN-SUFFIX,japan.secureforms.partnermcafee.com,REJECT
+DOMAIN-SUFFIX,japanmetal.com##.sp-kohwa-banner,REJECT
 DOMAIN-SUFFIX,jas.indeednps.com,REJECT
 DOMAIN-SUFFIX,jateng.inews.id###fragmentx,REJECT
 DOMAIN-SUFFIX,jatflh.pharmamarket.be,REJECT
@@ -19036,6 +19037,7 @@ DOMAIN-SUFFIX,labs.verticurl.com,REJECT
 DOMAIN-SUFFIX,lacinfo.motorolasolutions.com,REJECT
 DOMAIN-SUFFIX,lacuerda.net##.ban320cont,REJECT
 DOMAIN-SUFFIX,lacunads.com,REJECT
+DOMAIN-SUFFIX,ladepeche.fr###pub_dfp_footer_sticky-mobile,REJECT
 DOMAIN-SUFFIX,ladghy.jcb.co.jp,REJECT
 DOMAIN-SUFFIX,ladsp.com,REJECT
 DOMAIN-SUFFIX,ladxxr.sonovente.com,REJECT
