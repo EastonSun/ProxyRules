@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-25 08:02:27 (北京时间)
-#!rule_count = 44329
+#!update = 2026-09-26 08:02:17 (北京时间)
+#!rule_count = 44331
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -6481,6 +6481,7 @@ DOMAIN-SUFFIX,app.bushnell.org,REJECT
 DOMAIN-SUFFIX,app.business.westernunion.com,REJECT
 DOMAIN-SUFFIX,app.butterflymx.com,REJECT
 DOMAIN-SUFFIX,app.bws.com.au,REJECT
+DOMAIN-SUFFIX,app.bxapi.de,REJECT
 DOMAIN-SUFFIX,app.byjus.com,REJECT
 DOMAIN-SUFFIX,app.byutickets.com,REJECT
 DOMAIN-SUFFIX,app.caden.io,REJECT
@@ -26626,6 +26627,7 @@ DOMAIN-SUFFIX,pairin.actonservice.com,REJECT
 DOMAIN-SUFFIX,pakdru.altrarunning.com,REJECT
 DOMAIN-SUFFIX,pal-v.actonservice.com,REJECT
 DOMAIN-SUFFIX,paladion.actonservice.com,REJECT
+DOMAIN-SUFFIX,palateonce.com,REJECT
 DOMAIN-SUFFIX,palramamericas.actonservice.com,REJECT
 DOMAIN-SUFFIX,pampopholf.com,REJECT
 DOMAIN-SUFFIX,panda.kasika.io,REJECT
