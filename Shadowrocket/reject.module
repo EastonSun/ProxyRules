@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-26 08:02:17 (北京时间)
-#!rule_count = 44331
+#!update = 2026-09-27 08:02:16 (北京时间)
+#!rule_count = 44332
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -28728,6 +28728,7 @@ DOMAIN-SUFFIX,s.repguard.uk,REJECT
 DOMAIN-SUFFIX,s.resemom.jp##.aside-box.aside-box-ad,REJECT
 DOMAIN-SUFFIX,s.response.jp###ad20,REJECT
 DOMAIN-SUFFIX,s.response.jp##.aside-box-ifad,REJECT
+DOMAIN-SUFFIX,s.response.jp##.sp-ifad,REJECT
 DOMAIN-SUFFIX,s.rosettastone.co.uk,REJECT
 DOMAIN-SUFFIX,s.rosettastone.com,REJECT
 DOMAIN-SUFFIX,s.rosettastone.de,REJECT
