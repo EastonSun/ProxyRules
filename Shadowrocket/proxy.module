@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-27 08:02:16 (北京时间)
-#!rule_count = 29024
+#!update = 2026-09-28 08:02:25 (北京时间)
+#!rule_count = 29026
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -5091,6 +5091,7 @@ DOMAIN-SUFFIX,c-msedge.net,PROXY
 DOMAIN-SUFFIX,c-span.org,PROXY
 DOMAIN-SUFFIX,c-spanvideo.org,PROXY
 DOMAIN-SUFFIX,c.gle,PROXY
+DOMAIN-SUFFIX,c.go-mpulse.net,PROXY
 DOMAIN-SUFFIX,c.mi.com,PROXY
 DOMAIN-SUFFIX,c0930.com,PROXY
 DOMAIN-SUFFIX,c100tibet.org,PROXY
@@ -25749,6 +25750,7 @@ DOMAIN-SUFFIX,vaultify.com,PROXY
 DOMAIN-SUFFIX,vaultify.info,PROXY
 DOMAIN-SUFFIX,vaultify.net,PROXY
 DOMAIN-SUFFIX,vaultproject.io,PROXY
+DOMAIN-SUFFIX,vava8.com,PROXY
 DOMAIN-SUFFIX,vbcdn.com,PROXY
 DOMAIN-SUFFIX,vbcdn.net,PROXY
 DOMAIN-SUFFIX,vbejeyv.shop,PROXY
