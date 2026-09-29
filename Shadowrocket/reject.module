@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-28 08:02:25 (北京时间)
-#!rule_count = 44332
+#!update = 2026-09-29 08:02:27 (北京时间)
+#!rule_count = 44333
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -37450,6 +37450,7 @@ DOMAIN-SUFFIX,techcrunch.com##.wp-block-group--ads-footer,REJECT
 DOMAIN-SUFFIX,techgifts.tradeshow.globalsources.com,REJECT
 DOMAIN-SUFFIX,techinsight.jp##.aside-pr-article-media-link,REJECT
 DOMAIN-SUFFIX,techlusive.in###footernav-add,REJECT
+DOMAIN-SUFFIX,technical.city##.mobile-only,REJECT
 DOMAIN-SUFFIX,technical.kyzen.com,REJECT
 DOMAIN-SUFFIX,technology.informaengage.com,REJECT
 DOMAIN-SUFFIX,technology1.informaengage.com,REJECT
