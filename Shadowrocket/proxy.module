@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-29 08:02:27 (北京时间)
-#!rule_count = 29026
+#!update = 2026-09-30 08:02:33 (北京时间)
+#!rule_count = 29030
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -12710,6 +12710,7 @@ DOMAIN-SUFFIX,huaren.us,PROXY
 DOMAIN-SUFFIX,huaren4us.com,PROXY
 DOMAIN-SUFFIX,huarenav.com,PROXY
 DOMAIN-SUFFIX,huarenporn.com,PROXY
+DOMAIN-SUFFIX,huarun.win,PROXY
 DOMAIN-SUFFIX,huashangnews.com,PROXY
 DOMAIN-SUFFIX,huashundg.com,PROXY
 DOMAIN-SUFFIX,huasing.org,PROXY
@@ -16368,6 +16369,7 @@ DOMAIN-SUFFIX,messytube.com,PROXY
 DOMAIN-SUFFIX,met-nude.com,PROXY
 DOMAIN-SUFFIX,meta.ai,PROXY
 DOMAIN-SUFFIX,meta.com,PROXY
+DOMAIN-SUFFIX,metaaivm.com,PROXY
 DOMAIN-SUFFIX,metabora.io,PROXY
 DOMAIN-SUFFIX,metabrainz.org,PROXY
 DOMAIN-SUFFIX,metacafe.com,PROXY
@@ -17440,6 +17442,7 @@ DOMAIN-SUFFIX,musashinobank.co.jp,PROXY
 DOMAIN-SUFFIX,muscache.com,PROXY
 DOMAIN-SUFFIX,muscdn.com,PROXY
 DOMAIN-SUFFIX,musclegirlflix.com,PROXY
+DOMAIN-SUFFIX,muse.ai,PROXY
 DOMAIN-SUFFIX,mushroomtrack.com,PROXY
 DOMAIN-SUFFIX,mushymush.tv,PROXY
 DOMAIN-SUFFIX,music.amazon.com,PROXY
@@ -19081,6 +19084,7 @@ DOMAIN-SUFFIX,openbase.com,PROXY
 DOMAIN-SUFFIX,openbook.org.tw,PROXY
 DOMAIN-SUFFIX,opencas.io,PROXY
 DOMAIN-SUFFIX,openclaw.ai,PROXY
+DOMAIN-SUFFIX,opencode.ai,PROXY
 DOMAIN-SUFFIX,opencollective.com,PROXY
 DOMAIN-SUFFIX,opencreate.org,PROXY
 DOMAIN-SUFFIX,opencritic.com,PROXY

@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-29 08:02:27 (北京时间)
-#!rule_count = 44333
+#!update = 2026-09-30 08:02:33 (北京时间)
+#!rule_count = 44338
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -15529,6 +15529,7 @@ DOMAIN-SUFFIX,gofeminin.de##.story-ad-mobile,REJECT
 DOMAIN-SUFFIX,gogaej.momastore.jp,REJECT
 DOMAIN-SUFFIX,gogofunding.actonservice.com,REJECT
 DOMAIN-SUFFIX,gogovapps.actonservice.com,REJECT
+DOMAIN-SUFFIX,goguynet.jp###to-lifullbottom,REJECT
 DOMAIN-SUFFIX,goguynet.jp##.mobileadbox,REJECT
 DOMAIN-SUFFIX,goi08150kh.com,REJECT
 DOMAIN-SUFFIX,goldencomm.actonservice.com,REJECT
@@ -20424,6 +20425,7 @@ DOMAIN-SUFFIX,los40.com##.envoltorio_publi,REJECT
 DOMAIN-SUFFIX,losreplicantes.com##.pub-box-text,REJECT
 DOMAIN-SUFFIX,lotte.myomee.com,REJECT
 DOMAIN-SUFFIX,love.vidora.su,REJECT
+DOMAIN-SUFFIX,love4porn.com##.sponsorsmall,REJECT
 DOMAIN-SUFFIX,loveeveryday.brighterkind.com,REJECT
 DOMAIN-SUFFIX,lovehotel.yapy.jp##.ad_display_top,REJECT
 DOMAIN-SUFFIX,lowermybills.actonsoftware.com,REJECT
@@ -21126,6 +21128,8 @@ DOMAIN-SUFFIX,mallioras.openapp.link,REJECT
 DOMAIN-SUFFIX,mamagirl.jp###sp_all_instream,REJECT
 DOMAIN-SUFFIX,mamari.jp##.advertise-banner-header-above,REJECT
 DOMAIN-SUFFIX,mamari.jp##.p-article-fixed-bottom,REJECT
+DOMAIN-SUFFIX,mamaslatinas.com##.dappier-ads-bottom,REJECT
+DOMAIN-SUFFIX,mamaslatinas.com##.wp-block-group-is-layout-constrained,REJECT
 DOMAIN-SUFFIX,mamastar.jp###square,REJECT
 DOMAIN-SUFFIX,mamastar.jp##.microad-container,REJECT
 DOMAIN-SUFFIX,mamastar.jp##.mstarmb_s_comp,REJECT
@@ -42320,6 +42324,7 @@ DOMAIN-SUFFIX,wealthcarecapital.actonservice.com,REJECT
 DOMAIN-SUFFIX,weare.ballymoregroup.com,REJECT
 DOMAIN-SUFFIX,weather-analytics-events.apple.com,REJECT
 DOMAIN-SUFFIX,weather-community-drcn.weather.dbankcloud.cn,REJECT
+DOMAIN-SUFFIX,weather.com##.z-adoverlay,REJECT
 DOMAIN-SUFFIX,weathernews.jp###yahoo_ad,REJECT
 DOMAIN-SUFFIX,web-beacon.starii-rover.com,REJECT
 DOMAIN-SUFFIX,web-perf.booking.com,REJECT
