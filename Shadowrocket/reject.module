@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-09-30 08:02:33 (北京时间)
-#!rule_count = 44338
+#!update = 2026-10-01 08:02:04 (北京时间)
+#!rule_count = 44339
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -14395,7 +14395,6 @@ DOMAIN-SUFFIX,fukutubu.jp##.td-header-sp-recs,REJECT
 DOMAIN-SUFFIX,full-count.jp###c2_click_jera_award_sp_article_end,REJECT
 DOMAIN-SUFFIX,full-porn.com##.mobile-rek-height,REJECT
 DOMAIN-SUFFIX,fullerton-app.hotdoc.com.au,REJECT
-DOMAIN-SUFFIX,fullvideos.tv##.u-ad-mobile-top-banner,REJECT
 DOMAIN-SUFFIX,fulmar.net.anwalt.de,REJECT
 DOMAIN-SUFFIX,fundraising.centuryresources.com,REJECT
 DOMAIN-SUFFIX,funnelbox.actonservice.com,REJECT
@@ -28456,6 +28455,8 @@ DOMAIN-SUFFIX,rottentomatoes.com##.sticky-footer-link,REJECT
 DOMAIN-SUFFIX,roulette.abzorbagames.com,REJECT
 DOMAIN-SUFFIX,router28.net.anwalt.de,REJECT
 DOMAIN-SUFFIX,routes.navibration.com,REJECT
+DOMAIN-SUFFIX,routinehub.co##.rh-ad-slot,REJECT
+DOMAIN-SUFFIX,routinehub.co##.rh-anchor__close,REJECT
 DOMAIN-SUFFIX,rowsrm.atasunoptik.com.tr,REJECT
 DOMAIN-SUFFIX,roxtec.actonservice.com,REJECT
 DOMAIN-SUFFIX,royzgi.giftishow.com,REJECT
