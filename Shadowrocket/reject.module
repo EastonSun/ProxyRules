@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-01 08:02:04 (北京时间)
-#!rule_count = 44339
+#!update = 2026-10-02 08:02:30 (北京时间)
+#!rule_count = 44340
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -21128,6 +21128,7 @@ DOMAIN-SUFFIX,mamagirl.jp###sp_all_instream,REJECT
 DOMAIN-SUFFIX,mamari.jp##.advertise-banner-header-above,REJECT
 DOMAIN-SUFFIX,mamari.jp##.p-article-fixed-bottom,REJECT
 DOMAIN-SUFFIX,mamaslatinas.com##.dappier-ads-bottom,REJECT
+DOMAIN-SUFFIX,mamaslatinas.com##.gam-injector__ad-footer-wrapper,REJECT
 DOMAIN-SUFFIX,mamaslatinas.com##.wp-block-group-is-layout-constrained,REJECT
 DOMAIN-SUFFIX,mamastar.jp###square,REJECT
 DOMAIN-SUFFIX,mamastar.jp##.microad-container,REJECT
