@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-02 08:02:30 (北京时间)
-#!rule_count = 44340
+#!update = 2026-10-03 08:02:26 (北京时间)
+#!rule_count = 44342
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -24845,6 +24845,7 @@ DOMAIN-SUFFIX,moneycontrol.com##.ads-320-250,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.ads-320-50,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.advslotsgrayboxs,REJECT
 DOMAIN-SUFFIX,moneycontrol.com##.mid-arti-ad,REJECT
+DOMAIN-SUFFIX,moneydj.com##div.mdjcom-mdjadloader,REJECT
 DOMAIN-SUFFIX,monicaatron.com,REJECT
 DOMAIN-SUFFIX,monitor-ads-test.huan.tv,REJECT
 DOMAIN-SUFFIX,monitor-api.blackcrow.ai,REJECT
@@ -43679,6 +43680,7 @@ DOMAIN-SUFFIX,xdvdrg.globalindustrial.com,REJECT
 DOMAIN-SUFFIX,xejpzk.fram.fr,REJECT
 DOMAIN-SUFFIX,xekjzy.rinascente.it,REJECT
 DOMAIN-SUFFIX,xewihp.bayut.com,REJECT
+DOMAIN-SUFFIX,xfastest.com###xfmtop385,REJECT
 DOMAIN-SUFFIX,xfobuc.serenaandlily.com,REJECT
 DOMAIN-SUFFIX,xfree.com##.mobile-wall-prbn,REJECT
 DOMAIN-SUFFIX,xfzcds.netprint.ru,REJECT
