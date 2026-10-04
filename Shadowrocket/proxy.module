@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-03 08:02:26 (北京时间)
-#!rule_count = 29033
+#!update = 2026-10-04 08:02:31 (北京时间)
+#!rule_count = 29035
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -27104,6 +27104,7 @@ DOMAIN-SUFFIX,wikibooks.org,PROXY
 DOMAIN-SUFFIX,wikidata.org,PROXY
 DOMAIN-SUFFIX,wikidot.com,PROXY
 DOMAIN-SUFFIX,wikifeet.com,PROXY
+DOMAIN-SUFFIX,wikifunctions.org,PROXY
 DOMAIN-SUFFIX,wikihow.com,PROXY
 DOMAIN-SUFFIX,wikileaks-forum.com,PROXY
 DOMAIN-SUFFIX,wikileaks.ch,PROXY
@@ -27128,6 +27129,7 @@ DOMAIN-SUFFIX,wikiquote.org,PROXY
 DOMAIN-SUFFIX,wikis.tw,PROXY
 DOMAIN-SUFFIX,wikisexguide.com,PROXY
 DOMAIN-SUFFIX,wikisource.org,PROXY
+DOMAIN-SUFFIX,wikispecies.org,PROXY
 DOMAIN-SUFFIX,wikiunblocked.org,PROXY
 DOMAIN-SUFFIX,wikiversity.org,PROXY
 DOMAIN-SUFFIX,wikivoyage.org,PROXY

@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-03 08:02:26 (北京时间)
-#!rule_count = 44342
+#!update = 2026-10-04 08:02:31 (北京时间)
+#!rule_count = 44343
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -25122,6 +25122,7 @@ DOMAIN-SUFFIX,myhome.usg.com,REJECT
 DOMAIN-SUFFIX,myhotelbook.pegs.com,REJECT
 DOMAIN-SUFFIX,myinfo.borland.com,REJECT
 DOMAIN-SUFFIX,myinfo.eaton.com,REJECT
+DOMAIN-SUFFIX,myinstants.com##.large-rectangle-ad-mobile-only,REJECT
 DOMAIN-SUFFIX,mylomza.pl##.kampeki,REJECT
 DOMAIN-SUFFIX,mymix.mixdevelopment.com,REJECT
 DOMAIN-SUFFIX,mymix.mixtel.com,REJECT
