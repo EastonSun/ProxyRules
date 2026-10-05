@@ -2,7 +2,7 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-04 08:02:31 (北京时间)
+#!update = 2026-10-05 08:02:16 (北京时间)
 #!rule_count = 44343
 
 [Rule]

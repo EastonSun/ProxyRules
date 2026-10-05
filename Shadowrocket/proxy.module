@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-04 08:02:31 (北京时间)
-#!rule_count = 29035
+#!update = 2026-10-05 08:02:16 (北京时间)
+#!rule_count = 29036
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -11348,6 +11348,7 @@ DOMAIN-SUFFIX,googleoptimize.com,PROXY
 DOMAIN-SUFFIX,googlepagecreator.com,PROXY
 DOMAIN-SUFFIX,googlephotos.com,PROXY
 DOMAIN-SUFFIX,googleplay.com,PROXY
+DOMAIN-SUFFIX,googleplaycensorship.com,PROXY
 DOMAIN-SUFFIX,googleplus.com,PROXY
 DOMAIN-SUFFIX,googlescholar.com,PROXY
 DOMAIN-SUFFIX,googlesource.com,PROXY
