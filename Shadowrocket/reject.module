@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-07 08:02:10 (北京时间)
-#!rule_count = 44347
+#!update = 2026-10-08 08:02:09 (北京时间)
+#!rule_count = 44349
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -4323,6 +4323,7 @@ DOMAIN-SUFFIX,accuweather.com##.adhesion-ad-frame,REJECT
 DOMAIN-SUFFIX,accuweather.com##.adhesion-header,REJECT
 DOMAIN-SUFFIX,accuzip.actonservice.com,REJECT
 DOMAIN-SUFFIX,accwww9.53kf.com,REJECT
+DOMAIN-SUFFIX,acdn.newshuntads.com,REJECT
 DOMAIN-SUFFIX,acelogger.heraldcorp.com,REJECT
 DOMAIN-SUFFIX,acemetrics.aaa.com,REJECT
 DOMAIN-SUFFIX,acemetrix.actonservice.com,REJECT
@@ -15536,6 +15537,7 @@ DOMAIN-SUFFIX,goguynet.jp##.mobileadbox,REJECT
 DOMAIN-SUFFIX,goi08150kh.com,REJECT
 DOMAIN-SUFFIX,goldencomm.actonservice.com,REJECT
 DOMAIN-SUFFIX,goldenhelix.actonservice.com,REJECT
+DOMAIN-SUFFIX,goldennews.blog.jp##.smp-normal-wrapper,REJECT
 DOMAIN-SUFFIX,goldenpaints.actonservice.com,REJECT
 DOMAIN-SUFFIX,golfdigest-minna.jp##.sp_header_ads,REJECT
 DOMAIN-SUFFIX,gomerchant.groupon.com,REJECT

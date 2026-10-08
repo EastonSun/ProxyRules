@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-07 08:02:10 (北京时间)
-#!rule_count = 29063
+#!update = 2026-10-08 08:02:09 (北京时间)
+#!rule_count = 29067
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -16306,6 +16306,7 @@ DOMAIN-SUFFIX,mefound.com,PROXY
 DOMAIN-SUFFIX,mega.co.nz,PROXY
 DOMAIN-SUFFIX,mega.io,PROXY
 DOMAIN-SUFFIX,mega.nz,PROXY
+DOMAIN-SUFFIX,megaad.nz,PROXY
 DOMAIN-SUFFIX,megacamz.com,PROXY
 DOMAIN-SUFFIX,megaeth.com,PROXY
 DOMAIN-SUFFIX,megafilmporno.com,PROXY
@@ -16316,12 +16317,14 @@ DOMAIN-SUFFIX,megalodon.jp,PROXY
 DOMAIN-SUFFIX,megamarket.ru,PROXY
 DOMAIN-SUFFIX,megamarket.tech,PROXY
 DOMAIN-SUFFIX,megamon.co.kr,PROXY
+DOMAIN-SUFFIX,megapay.nz,PROXY
 DOMAIN-SUFFIX,megaphone.fm,PROXY
 DOMAIN-SUFFIX,megapornfreehd.com,PROXY
 DOMAIN-SUFFIX,megaporno.com.br,PROXY
 DOMAIN-SUFFIX,megapornpics.com,PROXY
 DOMAIN-SUFFIX,megaproxy.com,PROXY
 DOMAIN-SUFFIX,megarotic.com,PROXY
+DOMAIN-SUFFIX,megas4.com,PROXY
 DOMAIN-SUFFIX,megasrv.de,PROXY
 DOMAIN-SUFFIX,megatitsminka.com,PROXY
 DOMAIN-SUFFIX,megaupload.com,PROXY
@@ -24896,6 +24899,7 @@ DOMAIN-SUFFIX,trans500.com,PROXY
 DOMAIN-SUFFIX,transangels.com,PROXY
 DOMAIN-SUFFIX,transarmuito.com,PROXY
 DOMAIN-SUFFIX,transcamslive.com,PROXY
+DOMAIN-SUFFIX,transfer.it,PROXY
 DOMAIN-SUFFIX,transferwise.com,PROXY
 DOMAIN-SUFFIX,translate.goog,PROXY
 DOMAIN-SUFFIX,translatetheweb.com,PROXY
