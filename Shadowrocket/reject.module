@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-08 08:02:09 (北京时间)
-#!rule_count = 44349
+#!update = 2026-10-09 08:02:15 (北京时间)
+#!rule_count = 44351
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -12597,7 +12597,7 @@ DOMAIN-SUFFIX,ejrbgi.tous.com,REJECT
 DOMAIN-SUFFIX,ek-tracker.ekitan.com,REJECT
 DOMAIN-SUFFIX,ek8.voyage-prive.com,REJECT
 DOMAIN-SUFFIX,ekfwof.finnishdesignshop.fi,REJECT
-DOMAIN-SUFFIX,ekitan.com##.popup-info-bg,REJECT
+DOMAIN-SUFFIX,ekitan.com##.ek-forward-display-c_bottom_2,REJECT
 DOMAIN-SUFFIX,eklexu.kibuba.com,REJECT
 DOMAIN-SUFFIX,ekphpa.perfectlypriscilla.com,REJECT
 DOMAIN-SUFFIX,el.quizlet.com,REJECT
@@ -14598,6 +14598,8 @@ DOMAIN-SUFFIX,gateway.foresee.com,REJECT
 DOMAIN-SUFFIX,gateway.ttpsdk.info,REJECT
 DOMAIN-SUFFIX,gawayez.e-postserv.com,REJECT
 DOMAIN-SUFFIX,gay-hotvideo.net,REJECT
+DOMAIN-SUFFIX,gayporntube.com##.after_header,REJECT
+DOMAIN-SUFFIX,gayporntube.com##.btn-bar,REJECT
 DOMAIN-SUFFIX,gaytail.com##.happy-before-list,REJECT
 DOMAIN-SUFFIX,gaytail.com##.happy-before-video,REJECT
 DOMAIN-SUFFIX,gazeta.ru###in-read,REJECT
