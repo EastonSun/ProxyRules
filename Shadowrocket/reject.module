@@ -2,7 +2,7 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-13 08:02:29 (北京时间)
+#!update = 2026-10-14 08:01:53 (北京时间)
 #!rule_count = 44353
 
 [Rule]
@@ -20925,8 +20925,6 @@ DOMAIN-SUFFIX,m.sports.ru##.g-banner-context-wrap,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.geo-banner,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.navigation-left-banner,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.x5-header__icon-container,REJECT
-DOMAIN-SUFFIX,m.sporx.com###haberici_300x250div,REJECT
-DOMAIN-SUFFIX,m.sporx.com###pad_close,REJECT
 DOMAIN-SUFFIX,m.stv.jp##.ainfopanel,REJECT
 DOMAIN-SUFFIX,m.suda.io,REJECT
 DOMAIN-SUFFIX,m.techfocus.cz##.foot.scrolled,REJECT
@@ -25438,6 +25436,8 @@ DOMAIN-SUFFIX,newsweekjapan.jp###ad_nw_under_title_insert_mobile,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp###induction-box,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp###titletextad,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp##.special_bnr_area,REJECT
+DOMAIN-SUFFIX,newtalk.tw##.ad-half,REJECT
+DOMAIN-SUFFIX,newtalk.tw##.extend_ad,REJECT
 DOMAIN-SUFFIX,newtest.wunderman-email.cjm.adobe.com,REJECT
 DOMAIN-SUFFIX,newvoice.chiq5.smart-tv.cn,REJECT
 DOMAIN-SUFFIX,nex.163.com,REJECT
