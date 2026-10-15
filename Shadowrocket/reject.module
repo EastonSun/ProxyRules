@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-14 08:01:53 (北京时间)
-#!rule_count = 44353
+#!update = 2026-10-15 08:02:30 (北京时间)
+#!rule_count = 44355
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -37085,6 +37085,7 @@ DOMAIN-SUFFIX,tanoshiiosake.jp##.globalfooter_banner,REJECT
 DOMAIN-SUFFIX,tao.barstoolsports.com,REJECT
 DOMAIN-SUFFIX,tap-nexus.appspot.com,REJECT
 DOMAIN-SUFFIX,tap.carling.com,REJECT
+DOMAIN-SUFFIX,tap4porn.cc##.vp-mobile-ad,REJECT
 DOMAIN-SUFFIX,tapad.com,REJECT
 DOMAIN-SUFFIX,tapatalk.com###tapatalkfootermobileads,REJECT
 DOMAIN-SUFFIX,tapdaq-adverts.global.ssl.fastly.net,REJECT
@@ -37727,6 +37728,7 @@ DOMAIN-SUFFIX,thenewsminute.com##.view-ads,REJECT
 DOMAIN-SUFFIX,thenewsminute.com##amp-iframe#prebid-user-sync,REJECT
 DOMAIN-SUFFIX,theobjective.com##.tno-sticky,REJECT
 DOMAIN-SUFFIX,thepage.ua##.adv-320x90,REJECT
+DOMAIN-SUFFIX,thepage.ua##.header-placeholder,REJECT
 DOMAIN-SUFFIX,thepixelpioneer.com,REJECT
 DOMAIN-SUFFIX,thepopverse.com###ad_bottom-banner,REJECT
 DOMAIN-SUFFIX,thepostmillennial.com##.ads-floating-mobile,REJECT
