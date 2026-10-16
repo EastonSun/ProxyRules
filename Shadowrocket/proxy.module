@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-15 08:02:30 (北京时间)
-#!rule_count = 29153
+#!update = 2026-10-16 08:02:06 (北京时间)
+#!rule_count = 29157
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -22020,6 +22020,7 @@ DOMAIN-SUFFIX,scatvids.club,PROXY
 DOMAIN-SUFFIX,scatville.com,PROXY
 DOMAIN-SUFFIX,scb.ru,PROXY
 DOMAIN-SUFFIX,scdn.co,PROXY
+DOMAIN-SUFFIX,scea.com,PROXY
 DOMAIN-SUFFIX,scene7.com,PROXY
 DOMAIN-SUFFIX,scenesource.me,PROXY
 DOMAIN-SUFFIX,scharferporno.com,PROXY
@@ -23099,6 +23100,7 @@ DOMAIN-SUFFIX,sony.com.ni,PROXY
 DOMAIN-SUFFIX,sony.com.pa,PROXY
 DOMAIN-SUFFIX,sony.com.pe,PROXY
 DOMAIN-SUFFIX,sony.com.ph,PROXY
+DOMAIN-SUFFIX,sony.com.py,PROXY
 DOMAIN-SUFFIX,sony.com.sg,PROXY
 DOMAIN-SUFFIX,sony.com.sv,PROXY
 DOMAIN-SUFFIX,sony.com.tr,PROXY
@@ -23142,8 +23144,10 @@ DOMAIN-SUFFIX,sonydesign.com,PROXY
 DOMAIN-SUFFIX,sonydna.com,PROXY
 DOMAIN-SUFFIX,sonyentertainmentnetwork.com,PROXY
 DOMAIN-SUFFIX,sonyglobalsolutions.jp,PROXY
+DOMAIN-SUFFIX,sonyinteractive.com,PROXY
 DOMAIN-SUFFIX,sonykigyo.jp,PROXY
 DOMAIN-SUFFIX,sonylatvija.com,PROXY
+DOMAIN-SUFFIX,sonymusic.com.hk,PROXY
 DOMAIN-SUFFIX,sonynetwork.co.jp,PROXY
 DOMAIN-SUFFIX,sonypcl.jp,PROXY
 DOMAIN-SUFFIX,sonypictures.com,PROXY

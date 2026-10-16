@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-15 08:02:30 (北京时间)
-#!rule_count = 44355
+#!update = 2026-10-16 08:02:06 (北京时间)
+#!rule_count = 44359
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -4913,6 +4913,7 @@ DOMAIN-SUFFIX,ads-jp.tiktok.com,REJECT
 DOMAIN-SUFFIX,ads-leaseweb.appsgeyser.com,REJECT
 DOMAIN-SUFFIX,ads-m.rustore.ru,REJECT
 DOMAIN-SUFFIX,ads-marketing-vivofs.vivo.com.cn,REJECT
+DOMAIN-SUFFIX,ads-proxy-aka.prod.bo.canal.canalplustech.pro,REJECT
 DOMAIN-SUFFIX,ads-resources.waze.com,REJECT
 DOMAIN-SUFFIX,ads-router-noneu.truecaller.com,REJECT
 DOMAIN-SUFFIX,ads-sdk-api.ranfenghd.com,REJECT
@@ -37664,6 +37665,7 @@ DOMAIN-SUFFIX,testlink.urban.com.au,REJECT
 DOMAIN-SUFFIX,testlink.victoriatheapp.com,REJECT
 DOMAIN-SUFFIX,testlinks.ottplay.com,REJECT
 DOMAIN-SUFFIX,testlinks.sliceit.com,REJECT
+DOMAIN-SUFFIX,testomania.app###pub-sticky-ad-slot,REJECT
 DOMAIN-SUFFIX,testreferral.upay.lk,REJECT
 DOMAIN-SUFFIX,testsocial.eduthrill.com,REJECT
 DOMAIN-SUFFIX,testtarget.jeep.com,REJECT
@@ -37793,6 +37795,8 @@ DOMAIN-SUFFIX,timesnownews.com##.atf_ad,REJECT
 DOMAIN-SUFFIX,timesnownews.com##.atfad,REJECT
 DOMAIN-SUFFIX,timesnownews.com##.ea04q,REJECT
 DOMAIN-SUFFIX,timesnownews.com##.fly_carpet_wrapper,REJECT
+DOMAIN-SUFFIX,timesofindia.indiatimes.com##.adplaceholderwrap,REJECT
+DOMAIN-SUFFIX,timesofindia.indiatimes.com##.phshimmerfbn,REJECT
 DOMAIN-SUFFIX,timesofindia.indiatimes.com##.taboola_ad_mid,REJECT
 DOMAIN-SUFFIX,timesofisrael.com##.b320x50,REJECT
 DOMAIN-SUFFIX,timesofisrael.com##.stickybanner__parent,REJECT
