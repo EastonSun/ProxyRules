@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-16 08:02:06 (北京时间)
-#!rule_count = 29157
+#!update = 2026-10-17 08:02:30 (北京时间)
+#!rule_count = 29158
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -561,6 +561,7 @@ DOMAIN-SUFFIX,7mmtv.tv,PROXY
 DOMAIN-SUFFIX,7tb.cc,PROXY
 DOMAIN-SUFFIX,7tv.app,PROXY
 DOMAIN-SUFFIX,7tv.io,PROXY
+DOMAIN-SUFFIX,7x24hrs.com,PROXY
 DOMAIN-SUFFIX,8-d.com,PROXY
 DOMAIN-SUFFIX,8008206616.com,PROXY
 DOMAIN-SUFFIX,8111y.top,PROXY

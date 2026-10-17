@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-16 08:02:06 (北京时间)
-#!rule_count = 44359
+#!update = 2026-10-17 08:02:30 (北京时间)
+#!rule_count = 44361
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -18264,6 +18264,7 @@ DOMAIN-SUFFIX,ixa9ill0f7bg.grundbuch.zentraler-antragsservice.com,REJECT
 DOMAIN-SUFFIX,ixav-cse.avlyun.com,REJECT
 DOMAIN-SUFFIX,ixbt.com##.br-mobile-pic,REJECT
 DOMAIN-SUFFIX,ixbt.com##.br-mobile-pic-bg,REJECT
+DOMAIN-SUFFIX,ixbt.com##.br-mobile-pic-link,REJECT
 DOMAIN-SUFFIX,ixbt.com##.branding__mobile-spacer,REJECT
 DOMAIN-SUFFIX,ixbt.com##.mobc,REJECT
 DOMAIN-SUFFIX,ixia-elq.keysight.com,REJECT
@@ -20926,6 +20927,7 @@ DOMAIN-SUFFIX,m.sports.ru##.g-banner-context-wrap,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.geo-banner,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.navigation-left-banner,REJECT
 DOMAIN-SUFFIX,m.sports.ru##.x5-header__icon-container,REJECT
+DOMAIN-SUFFIX,m.sporx.com###haberici_300x250div,REJECT
 DOMAIN-SUFFIX,m.stv.jp##.ainfopanel,REJECT
 DOMAIN-SUFFIX,m.suda.io,REJECT
 DOMAIN-SUFFIX,m.techfocus.cz##.foot.scrolled,REJECT
