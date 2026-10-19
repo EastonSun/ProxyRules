@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-18 08:02:29 (北京时间)
-#!rule_count = 29164
+#!update = 2026-10-19 08:02:13 (北京时间)
+#!rule_count = 29174
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -2558,7 +2558,6 @@ DOMAIN-SUFFIX,asminternational.org,PROXY
 DOMAIN-SUFFIX,asmr.gay,PROXY
 DOMAIN-SUFFIX,asmrbuluo.com,PROXY
 DOMAIN-SUFFIX,asn-online.org,PROXY
-DOMAIN-SUFFIX,asobostudio.com,PROXY
 DOMAIN-SUFFIX,asp-cc.com,PROXY
 DOMAIN-SUFFIX,asp.net,PROXY
 DOMAIN-SUFFIX,aspbjournals.org,PROXY
@@ -3593,8 +3592,15 @@ DOMAIN-SUFFIX,beevpn.com,PROXY
 DOMAIN-SUFFIX,beforeigners.com,PROXY
 DOMAIN-SUFFIX,befuck.com,PROXY
 DOMAIN-SUFFIX,befuck.net,PROXY
+DOMAIN-SUFFIX,beget.app,PROXY
+DOMAIN-SUFFIX,beget.cloud,PROXY
 DOMAIN-SUFFIX,beget.com,PROXY
+DOMAIN-SUFFIX,beget.de,PROXY
+DOMAIN-SUFFIX,beget.hosting,PROXY
+DOMAIN-SUFFIX,beget.pro,PROXY
 DOMAIN-SUFFIX,beget.ru,PROXY
+DOMAIN-SUFFIX,beget.tech,PROXY
+DOMAIN-SUFFIX,begetcdn.cloud,PROXY
 DOMAIN-SUFFIX,begin-trade.com,PROXY
 DOMAIN-SUFFIX,behance.net,PROXY
 DOMAIN-SUFFIX,behindkink.com,PROXY
@@ -3632,6 +3638,7 @@ DOMAIN-SUFFIX,berlinerbericht.de,PROXY
 DOMAIN-SUFFIX,berlintwitterwall.com,PROXY
 DOMAIN-SUFFIX,berm.co.nz,PROXY
 DOMAIN-SUFFIX,beru.ru,PROXY
+DOMAIN-SUFFIX,beserver.ru,PROXY
 DOMAIN-SUFFIX,best-sex-games.com,PROXY
 DOMAIN-SUFFIX,best2pay.net,PROXY
 DOMAIN-SUFFIX,best4bim.com,PROXY
@@ -3747,6 +3754,7 @@ DOMAIN-SUFFIX,bfads.net,PROXY
 DOMAIN-SUFFIX,bffshd.com,PROXY
 DOMAIN-SUFFIX,bfnn.org,PROXY
 DOMAIN-SUFFIX,bfsh.hk,PROXY
+DOMAIN-SUFFIX,bget.ru,PROXY
 DOMAIN-SUFFIX,bgicdn.com,PROXY
 DOMAIN-SUFFIX,bgm.tv,PROXY
 DOMAIN-SUFFIX,bgme.me,PROXY
@@ -9730,7 +9738,6 @@ DOMAIN-SUFFIX,flickr.com,PROXY
 DOMAIN-SUFFIX,flickr.net,PROXY
 DOMAIN-SUFFIX,flickrhivemind.net,PROXY
 DOMAIN-SUFFIX,flickriver.com,PROXY
-DOMAIN-SUFFIX,flightsimulator.com,PROXY
 DOMAIN-SUFFIX,fling.com,PROXY
 DOMAIN-SUFFIX,flipboard.com,PROXY
 DOMAIN-SUFFIX,flipfap.com,PROXY
@@ -20891,6 +20898,7 @@ DOMAIN-SUFFIX,putinho.net,PROXY
 DOMAIN-SUFFIX,putlocker.com,PROXY
 DOMAIN-SUFFIX,putty.org,PROXY
 DOMAIN-SUFFIX,puuko.com,PROXY
+DOMAIN-SUFFIX,pv-cdn.net,PROXY
 DOMAIN-SUFFIX,pvp.net,PROXY
 DOMAIN-SUFFIX,pvp.tv,PROXY
 DOMAIN-SUFFIX,pvt.sexy,PROXY
@@ -23322,6 +23330,7 @@ DOMAIN-SUFFIX,sprinklesapp.com,PROXY
 DOMAIN-SUFFIX,sprite.org,PROXY
 DOMAIN-SUFFIX,sproutcore.com,PROXY
 DOMAIN-SUFFIX,sproxy.info,PROXY
+DOMAIN-SUFFIX,sprut.io,PROXY
 DOMAIN-SUFFIX,sptvbroadcast.com,PROXY
 DOMAIN-SUFFIX,sputnikglobe.com,PROXY
 DOMAIN-SUFFIX,sputnikimages.com,PROXY
@@ -27860,6 +27869,7 @@ DOMAIN-SUFFIX,xn--8uq428d76d.tokyo,PROXY
 DOMAIN-SUFFIX,xn--90ab.com,PROXY
 DOMAIN-SUFFIX,xn--90ab2c.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--90absjljw3g.xn--p1ai,PROXY
+DOMAIN-SUFFIX,xn--90aefb9d.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--90aifd0az.shop,PROXY
 DOMAIN-SUFFIX,xn--90aifd0azb.xn--p1acf,PROXY
 DOMAIN-SUFFIX,xn--90wwvt03e.com,PROXY
