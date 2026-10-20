@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-19 08:02:13 (北京时间)
-#!rule_count = 29174
+#!update = 2026-10-20 08:02:06 (北京时间)
+#!rule_count = 29177
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -15881,6 +15881,7 @@ DOMAIN-SUFFIX,magestic.com,PROXY
 DOMAIN-SUFFIX,magic-net.info,PROXY
 DOMAIN-SUFFIX,magicalmirai.com,PROXY
 DOMAIN-SUFFIX,magicmovies.com,PROXY
+DOMAIN-SUFFIX,magnific.com,PROXY
 DOMAIN-SUFFIX,mahabodhi.org,PROXY
 DOMAIN-SUFFIX,mahajantech.com,PROXY
 DOMAIN-SUFFIX,mahjongsoul.com,PROXY
@@ -17466,6 +17467,7 @@ DOMAIN-SUFFIX,mt.lv,PROXY
 DOMAIN-SUFFIX,mt0011.site,PROXY
 DOMAIN-SUFFIX,mtao.fun,PROXY
 DOMAIN-SUFFIX,mthruf.com,PROXY
+DOMAIN-SUFFIX,mts-link.ru,PROXY
 DOMAIN-SUFFIX,mts-ws.net,PROXY
 DOMAIN-SUFFIX,mts.ru,PROXY
 DOMAIN-SUFFIX,mtsbank.ru,PROXY
@@ -20591,6 +20593,7 @@ DOMAIN-SUFFIX,postimages.org,PROXY
 DOMAIN-SUFFIX,postimg.cc,PROXY
 DOMAIN-SUFFIX,postimg.org,PROXY
 DOMAIN-SUFFIX,postini.com,PROXY
+DOMAIN-SUFFIX,postman.com,PROXY
 DOMAIN-SUFFIX,posts.careerengine.us,PROXY
 DOMAIN-SUFFIX,posty.kr,PROXY
 DOMAIN-SUFFIX,postyourgirls.ws,PROXY
