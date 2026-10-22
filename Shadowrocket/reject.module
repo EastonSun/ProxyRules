@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-21 08:02:10 (北京时间)
-#!rule_count = 44362
+#!update = 2026-10-22 08:02:31 (北京时间)
+#!rule_count = 44360
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -18861,6 +18861,7 @@ DOMAIN-SUFFIX,ks.ferlytc.com,REJECT
 DOMAIN-SUFFIX,ks.pull.yximgs.com,REJECT
 DOMAIN-SUFFIX,ksamarketing.sedgwick.com,REJECT
 DOMAIN-SUFFIX,kspotson.de,REJECT
+DOMAIN-SUFFIX,ksta.de##.fixed.bottom-0,REJECT
 DOMAIN-SUFFIX,kstyle.com##.mdsp20bnr,REJECT
 DOMAIN-SUFFIX,kszpsc.waschbaer.ch,REJECT
 DOMAIN-SUFFIX,kszuxn.snidel.com,REJECT
@@ -24901,9 +24902,6 @@ DOMAIN-SUFFIX,moskvichmag.ru##.article__inline-banner-divider,REJECT
 DOMAIN-SUFFIX,moskvichmag.ru##.article__sidebar-sticky,REJECT
 DOMAIN-SUFFIX,mossru.com,REJECT
 DOMAIN-SUFFIX,mosvnx.livup.com.br,REJECT
-DOMAIN-SUFFIX,motherless.com###advertisement-above-footer,REJECT
-DOMAIN-SUFFIX,motherless.com###advertisement-below-menu,REJECT
-DOMAIN-SUFFIX,motherless.com###mobile_in_content_view,REJECT
 DOMAIN-SUFFIX,motion.kollmorgen.com,REJECT
 DOMAIN-SUFFIX,motista.actonservice.com,REJECT
 DOMAIN-SUFFIX,motm.adp.ca,REJECT

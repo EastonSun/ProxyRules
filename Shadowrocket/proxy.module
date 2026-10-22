@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-21 08:02:10 (北京时间)
-#!rule_count = 29179
+#!update = 2026-10-22 08:02:31 (北京时间)
+#!rule_count = 29200
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1924,6 +1924,7 @@ DOMAIN-SUFFIX,anpopo.com,PROXY
 DOMAIN-SUFFIX,ansarbank.com,PROXY
 DOMAIN-SUFFIX,ansin.erodayo.com,PROXY
 DOMAIN-SUFFIX,answering-islam.org,PROXY
+DOMAIN-SUFFIX,ant.dev,PROXY
 DOMAIN-SUFFIX,antarvasnaclips.com,PROXY
 DOMAIN-SUFFIX,antarvasnax.com,PROXY
 DOMAIN-SUFFIX,antd.org,PROXY
@@ -1932,12 +1933,14 @@ DOMAIN-SUFFIX,anthemgame.com,PROXY
 DOMAIN-SUFFIX,anthemthegame.com,PROXY
 DOMAIN-SUFFIX,anthonycalzadilla.com,PROXY
 DOMAIN-SUFFIX,anthropic.com,PROXY
+DOMAIN-SUFFIX,anthropic.team,PROXY
 DOMAIN-SUFFIX,anti1984.com,PROXY
 DOMAIN-SUFFIX,antichristendom.com,PROXY
 DOMAIN-SUFFIX,antiphishing.nl,PROXY
 DOMAIN-SUFFIX,antiphishing.ru,PROXY
 DOMAIN-SUFFIX,antiwave.net,PROXY
 DOMAIN-SUFFIX,antpool.com,PROXY
+DOMAIN-SUFFIX,antspace.dev,PROXY
 DOMAIN-SUFFIX,anudetube.com,PROXY
 DOMAIN-SUFFIX,anuneko.com,PROXY
 DOMAIN-SUFFIX,anxiangxing.com,PROXY
@@ -5640,6 +5643,7 @@ DOMAIN-SUFFIX,chat.com,PROXY
 DOMAIN-SUFFIX,chat.lmsys.org,PROXY
 DOMAIN-SUFFIX,chat.openai.com,PROXY
 DOMAIN-SUFFIX,chatango.com,PROXY
+DOMAIN-SUFFIX,chatbotclaude.com,PROXY
 DOMAIN-SUFFIX,chatgpt.com,PROXY
 DOMAIN-SUFFIX,chatgpt.livekit.cloud,PROXY
 DOMAIN-SUFFIX,chatgpt.site,PROXY
@@ -6019,10 +6023,16 @@ DOMAIN-SUFFIX,classicnike.com,PROXY
 DOMAIN-SUFFIX,classymomsex.com,PROXY
 DOMAIN-SUFFIX,clau.de,PROXY
 DOMAIN-SUFFIX,claude.ai,PROXY
+DOMAIN-SUFFIX,claude.app,PROXY
 DOMAIN-SUFFIX,claude.com,PROXY
 DOMAIN-SUFFIX,claude.dev,PROXY
+DOMAIN-SUFFIX,claude.new,PROXY
+DOMAIN-SUFFIX,claude.site,PROXY
+DOMAIN-SUFFIX,claudeacademy.com,PROXY
 DOMAIN-SUFFIX,claudemcpclient.com,PROXY
 DOMAIN-SUFFIX,claudemcpcontent.com,PROXY
+DOMAIN-SUFFIX,claudepages.dev,PROXY
+DOMAIN-SUFFIX,claudestudio.com,PROXY
 DOMAIN-SUFFIX,claudeusercontent.com,PROXY
 DOMAIN-SUFFIX,clawhub.ai,PROXY
 DOMAIN-SUFFIX,clb.org.hk,PROXY
@@ -9771,6 +9781,17 @@ DOMAIN-SUFFIX,fluidfxapp.com,PROXY
 DOMAIN-SUFFIX,fluidpreview.com,PROXY
 DOMAIN-SUFFIX,flutter.dev,PROXY
 DOMAIN-SUFFIX,flutterapp.com,PROXY
+DOMAIN-SUFFIX,fluxer.app,PROXY
+DOMAIN-SUFFIX,fluxer.com,PROXY
+DOMAIN-SUFFIX,fluxer.dev,PROXY
+DOMAIN-SUFFIX,fluxer.gg,PROXY
+DOMAIN-SUFFIX,fluxer.gift,PROXY
+DOMAIN-SUFFIX,fluxer.media,PROXY
+DOMAIN-SUFFIX,fluxer.tools,PROXY
+DOMAIN-SUFFIX,fluxerapp.com,PROXY
+DOMAIN-SUFFIX,fluxerstatic.com,PROXY
+DOMAIN-SUFFIX,fluxerstatus.com,PROXY
+DOMAIN-SUFFIX,fluxerusercontent.com,PROXY
 DOMAIN-SUFFIX,fly.dev,PROXY
 DOMAIN-SUFFIX,fly.io,PROXY
 DOMAIN-SUFFIX,flyflv.com,PROXY
