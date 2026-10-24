@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-23 08:01:57 (北京时间)
-#!rule_count = 29225
+#!update = 2026-10-24 08:02:29 (北京时间)
+#!rule_count = 29227
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -6373,6 +6373,7 @@ DOMAIN-SUFFIX,conscrypt.com,PROXY
 DOMAIN-SUFFIX,conscrypt.org,PROXY
 DOMAIN-SUFFIX,consentmanager.net,PROXY
 DOMAIN-SUFFIX,consentpro.com,PROXY
+DOMAIN-SUFFIX,console.typesafe.ai,PROXY
 DOMAIN-SUFFIX,constitutionalism.solutions,PROXY
 DOMAIN-SUFFIX,constructware.com,PROXY
 DOMAIN-SUFFIX,consul.io,PROXY
@@ -10482,6 +10483,7 @@ DOMAIN-SUFFIX,g.page,PROXY
 DOMAIN-SUFFIX,g0v.social,PROXY
 DOMAIN-SUFFIX,g1.com.br,PROXY
 DOMAIN-SUFFIX,g6hentai.com,PROXY
+DOMAIN-SUFFIX,ga.jspm.io,PROXY
 DOMAIN-SUFFIX,gab.com,PROXY
 DOMAIN-SUFFIX,gabia.net,PROXY
 DOMAIN-SUFFIX,gabocorp.com,PROXY
