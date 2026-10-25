@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-24 08:02:29 (北京时间)
-#!rule_count = 29227
+#!update = 2026-10-25 08:02:20 (北京时间)
+#!rule_count = 29232
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -49,6 +49,7 @@ DOMAIN-SUFFIX,11jav.com,PROXY
 DOMAIN-SUFFIX,123-hp.com,PROXY
 DOMAIN-SUFFIX,123av.com,PROXY
 DOMAIN-SUFFIX,123av.me,PROXY
+DOMAIN-SUFFIX,123av.org,PROXY
 DOMAIN-SUFFIX,123bin.cc,PROXY
 DOMAIN-SUFFIX,123dapp.com,PROXY
 DOMAIN-SUFFIX,123dappipad.com,PROXY
@@ -206,6 +207,7 @@ DOMAIN-SUFFIX,1password.ca,PROXY
 DOMAIN-SUFFIX,1password.co,PROXY
 DOMAIN-SUFFIX,1password.com,PROXY
 DOMAIN-SUFFIX,1password.community,PROXY
+DOMAIN-SUFFIX,1password.dev,PROXY
 DOMAIN-SUFFIX,1password.eu,PROXY
 DOMAIN-SUFFIX,1password.io,PROXY
 DOMAIN-SUFFIX,1passwordservices.com,PROXY
@@ -5542,6 +5544,10 @@ DOMAIN-SUFFIX,cdp1998.org,PROXY
 DOMAIN-SUFFIX,cdp2006.org,PROXY
 DOMAIN-SUFFIX,cdpa.url.tw,PROXY
 DOMAIN-SUFFIX,cdpeu.org,PROXY
+DOMAIN-SUFFIX,cdpred.services,PROXY
+DOMAIN-SUFFIX,cdprojekt.com,PROXY
+DOMAIN-SUFFIX,cdprojekt.red,PROXY
+DOMAIN-SUFFIX,cdprojektred.com,PROXY
 DOMAIN-SUFFIX,cdpuk.co.uk,PROXY
 DOMAIN-SUFFIX,cdpusa.org,PROXY
 DOMAIN-SUFFIX,cdpweb.org,PROXY
@@ -6691,6 +6697,7 @@ DOMAIN-SUFFIX,cybercrimecon.com,PROXY
 DOMAIN-SUFFIX,cyberctm.com,PROXY
 DOMAIN-SUFFIX,cyberghostvpn.com,PROXY
 DOMAIN-SUFFIX,cybermondaybeats4sale.com,PROXY
+DOMAIN-SUFFIX,cyberpunk.net,PROXY
 DOMAIN-SUFFIX,cybersport.ru,PROXY
 DOMAIN-SUFFIX,cybertrust.co.jp,PROXY
 DOMAIN-SUFFIX,cybertrust.ne.jp,PROXY
@@ -14971,6 +14978,7 @@ DOMAIN-SUFFIX,kilmeadeandfriends.com,PROXY
 DOMAIN-SUFFIX,kimchi.tv,PROXY
 DOMAIN-SUFFIX,kimi.ai,PROXY
 DOMAIN-SUFFIX,kimogirl.cc,PROXY
+DOMAIN-SUFFIX,kimootoko.net,PROXY
 DOMAIN-SUFFIX,kimosex.com,PROXY
 DOMAIN-SUFFIX,kindgirls.com,PROXY
 DOMAIN-SUFFIX,kindindianporn.com,PROXY
@@ -16998,6 +17006,7 @@ DOMAIN-SUFFIX,miniwidget.ca,PROXY
 DOMAIN-SUFFIX,miniwindsor.com,PROXY
 DOMAIN-SUFFIX,miniworkshop.com,PROXY
 DOMAIN-SUFFIX,miniyaletown.ca,PROXY
+DOMAIN-SUFFIX,minkch.com,PROXY
 DOMAIN-SUFFIX,minnano-av.com,PROXY
 DOMAIN-SUFFIX,minne.com,PROXY
 DOMAIN-SUFFIX,minneapolisbmw.com,PROXY
@@ -17377,6 +17386,7 @@ DOMAIN-SUFFIX,movidius.com,PROXY
 DOMAIN-SUFFIX,movidius.net,PROXY
 DOMAIN-SUFFIX,movidius.org,PROXY
 DOMAIN-SUFFIX,movie-erog.com,PROXY
+DOMAIN-SUFFIX,movie.eroterest.net,PROXY
 DOMAIN-SUFFIX,movie1000.xyz,PROXY
 DOMAIN-SUFFIX,moviefap.com,PROXY
 DOMAIN-SUFFIX,moviepost.com,PROXY
@@ -18531,6 +18541,7 @@ DOMAIN-SUFFIX,nixos.wiki,PROXY
 DOMAIN-SUFFIX,nixpkgs.org,PROXY
 DOMAIN-SUFFIX,niziero.info,PROXY
 DOMAIN-SUFFIX,njactb.org,PROXY
+DOMAIN-SUFFIX,njav.com,PROXY
 DOMAIN-SUFFIX,njav.tv,PROXY
 DOMAIN-SUFFIX,njavtv.com,PROXY
 DOMAIN-SUFFIX,njpw.co.jp,PROXY
@@ -20137,6 +20148,7 @@ DOMAIN-SUFFIX,playfab.com,PROXY
 DOMAIN-SUFFIX,playfabapi.com,PROXY
 DOMAIN-SUFFIX,playfamily.ru,PROXY
 DOMAIN-SUFFIX,playforceone.com,PROXY
+DOMAIN-SUFFIX,playgwent.com,PROXY
 DOMAIN-SUFFIX,playhearthstone.com,PROXY
 DOMAIN-SUFFIX,playmation.com,PROXY
 DOMAIN-SUFFIX,playmeow.com,PROXY
@@ -20191,6 +20203,7 @@ DOMAIN-SUFFIX,pmates.com,PROXY
 DOMAIN-SUFFIX,pmem.org,PROXY
 DOMAIN-SUFFIX,pmem.us,PROXY
 DOMAIN-SUFFIX,pnas.org,PROXY
+DOMAIN-SUFFIX,po-kaki-to.com,PROXY
 DOMAIN-SUFFIX,po2b.com,PROXY
 DOMAIN-SUFFIX,pobeda.page,PROXY
 DOMAIN-SUFFIX,pobieramy.top,PROXY
@@ -24550,6 +24563,7 @@ DOMAIN-SUFFIX,theweek.com,PROXY
 DOMAIN-SUFFIX,theweek.in,PROXY
 DOMAIN-SUFFIX,thewgo.org,PROXY
 DOMAIN-SUFFIX,thewirechina.com,PROXY
+DOMAIN-SUFFIX,thewitcher.com,PROXY
 DOMAIN-SUFFIX,thewonderful101.com,PROXY
 DOMAIN-SUFFIX,theync.com,PROXY
 DOMAIN-SUFFIX,theyxxx.com,PROXY
@@ -27939,14 +27953,14 @@ DOMAIN-SUFFIX,xn--d1acpjx3f.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--d4ty0ojsqzfd.com,PROXY
 DOMAIN-SUFFIX,xn--e1adjldbbpv.xn--90ais,PROXY
 DOMAIN-SUFFIX,xn--e1aigb.xn--p1ai,PROXY
-DOMAIN-SUFFIX,xn--fiqs8s1bxp3anr7a.hk,PROXY
-DOMAIN-SUFFIX,xn--fiqs8s1bxp3anr7a.xn--j6w193g,PROXY
-DOMAIN-SUFFIX,xn--fiqs8s1byzqyvl.hk,PROXY
-DOMAIN-SUFFIX,xn--fiqs8s1byzqyvl.xn--j6w193g,PROXY
+DOMAIN-SUFFIX,xn--fiq80y.hk,PROXY
+DOMAIN-SUFFIX,xn--fiq80y.xn--j6w193g,PROXY
+DOMAIN-SUFFIX,xn--fiq80y3xbiwr.hk,PROXY
+DOMAIN-SUFFIX,xn--fiq80y3xbiwr.xn--j6w193g,PROXY
+DOMAIN-SUFFIX,xn--fiq80y3xbiwrs0kiu9d.hk,PROXY
+DOMAIN-SUFFIX,xn--fiq80y3xbiwrs0kiu9d.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--fiqs8sxootzz.xn--hxt814e,PROXY
 DOMAIN-SUFFIX,xn--flw351e.com,PROXY
-DOMAIN-SUFFIX,xn--gdt08a.hk,PROXY
-DOMAIN-SUFFIX,xn--gdt08a.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--ggle-55da.com,PROXY
 DOMAIN-SUFFIX,xn--gmq348bujlxrb.com,PROXY
 DOMAIN-SUFFIX,xn--gmq92kd2rm1kx34a.com,PROXY
@@ -27965,8 +27979,6 @@ DOMAIN-SUFFIX,xn--kcrv3utim32hx9f6qe.com,PROXY
 DOMAIN-SUFFIX,xn--kput3imi374g.xn--hxt814e,PROXY
 DOMAIN-SUFFIX,xn--mts47c3w9b1qr.net,PROXY
 DOMAIN-SUFFIX,xn--mtswd61ejxq.com,PROXY
-DOMAIN-SUFFIX,xn--mxtq18a.hk,PROXY
-DOMAIN-SUFFIX,xn--mxtq18a.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PROXY
 DOMAIN-SUFFIX,xn--noss43i.com,PROXY
 DOMAIN-SUFFIX,xn--oiq.cc,PROXY
@@ -27974,14 +27986,10 @@ DOMAIN-SUFFIX,xn--p8j9a0d9c9a.xn--q9jyb4c,PROXY
 DOMAIN-SUFFIX,xn--pearsonenespaol-brb.com,PROXY
 DOMAIN-SUFFIX,xn--pssu7ci2j23mp9ny48b.hk,PROXY
 DOMAIN-SUFFIX,xn--pssu7ci2j23mp9ny48b.xn--j6w193g,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61af1tcs59bnvd.hk,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61af1tcs59bnvd.xn--j6w193g,PROXY
+DOMAIN-SUFFIX,xn--pssu7ci3q5oge0ai91q.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--pssu7cv61af44b.hk,PROXY
 DOMAIN-SUFFIX,xn--pssu7cv61af44b.xn--j6w193g,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61ahw8aq79bztd.hk,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61ahw8aq79bztd.xn--j6w193g,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61ahwcb1p2yk.hk,PROXY
-DOMAIN-SUFFIX,xn--pssu7cv61ahwcb1p2yk.xn--j6w193g,PROXY
+DOMAIN-SUFFIX,xn--pssu7cz8nr8ibkx1e8a.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--q41am8x.com,PROXY
 DOMAIN-SUFFIX,xn--qoq462m.com,PROXY
 DOMAIN-SUFFIX,xn--r8jwklh769h2mc880dk1o431a.com,PROXY
@@ -27996,11 +28004,7 @@ DOMAIN-SUFFIX,xn--uis17aj9kmuf.com,PROXY
 DOMAIN-SUFFIX,xn--uis44a.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--urs05q.jp,PROXY
 DOMAIN-SUFFIX,xn--vuqv2cf7wzyig79c.com,PROXY
-DOMAIN-SUFFIX,xn--wcv22d.hk,PROXY
-DOMAIN-SUFFIX,xn--wcv22d.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--wcvs22d.xn--j6w193g,PROXY
-DOMAIN-SUFFIX,xn--wcvs22d1m.hk,PROXY
-DOMAIN-SUFFIX,xn--wcvs22d1m.xn--j6w193g,PROXY
 DOMAIN-SUFFIX,xn--x-qeu1ji09tzlg.biz,PROXY
 DOMAIN-SUFFIX,xn--x-qeu1ji09tzlg.net,PROXY
 DOMAIN-SUFFIX,xn--xsq421m.com,PROXY
@@ -29183,6 +29187,7 @@ DOMAIN-SUFFIX,zorglist.com,PROXY
 DOMAIN-SUFFIX,zorrovpn.com,PROXY
 DOMAIN-SUFFIX,zotero.org,PROXY
 DOMAIN-SUFFIX,zozotown.com,PROXY
+DOMAIN-SUFFIX,zozovideo.com,PROXY
 DOMAIN-SUFFIX,zpagov.net,PROXY
 DOMAIN-SUFFIX,zpath.com,PROXY
 DOMAIN-SUFFIX,zpn.im,PROXY
