@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-25 08:02:20 (北京时间)
-#!rule_count = 44378
+#!update = 2026-10-26 08:01:49 (北京时间)
+#!rule_count = 44377
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -41308,7 +41308,6 @@ DOMAIN-SUFFIX,uqckxr.chilli.se,REJECT
 DOMAIN-SUFFIX,uqd.io,REJECT
 DOMAIN-SUFFIX,uqhpej.wiberrentacar.com,REJECT
 DOMAIN-SUFFIX,ur.b.inhaabit.com,REJECT
-DOMAIN-SUFFIX,uraaka-joshi.com##.grid-cell-non-hover,REJECT
 DOMAIN-SUFFIX,uranai.d-square.co.jp##.advheader,REJECT
 DOMAIN-SUFFIX,uranai.d-square.co.jp##.advmain,REJECT
 DOMAIN-SUFFIX,uranus.jd.com,REJECT

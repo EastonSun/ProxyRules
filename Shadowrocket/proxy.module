@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-25 08:02:20 (北京时间)
-#!rule_count = 29232
+#!update = 2026-10-26 08:01:49 (北京时间)
+#!rule_count = 29237
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -3786,6 +3786,7 @@ DOMAIN-SUFFIX,bibox.com,PROXY
 DOMAIN-SUFFIX,bic2011.org,PROXY
 DOMAIN-SUFFIX,bidbay.com,PROXY
 DOMAIN-SUFFIX,bidi.net.uk,PROXY
+DOMAIN-SUFFIX,bidobido.xyz,PROXY
 DOMAIN-SUFFIX,bidong25.com,PROXY
 DOMAIN-SUFFIX,bidong9.com,PROXY
 DOMAIN-SUFFIX,bidorbuyindia.com,PROXY
@@ -3842,6 +3843,7 @@ DOMAIN-SUFFIX,bijukujo.club,PROXY
 DOMAIN-SUFFIX,bikaa.xyz,PROXY
 DOMAIN-SUFFIX,bikac.xyz,PROXY
 DOMAIN-SUFFIX,bikaios.xyz,PROXY
+DOMAIN-SUFFIX,bikawebapp.com,PROXY
 DOMAIN-SUFFIX,bild.de,PROXY
 DOMAIN-SUFFIX,bili2.cc,PROXY
 DOMAIN-SUFFIX,bili888.com,PROXY
@@ -12805,6 +12807,7 @@ DOMAIN-SUFFIX,hua-yue.net,PROXY
 DOMAIN-SUFFIX,huabansp.com,PROXY
 DOMAIN-SUFFIX,huabansp7.club,PROXY
 DOMAIN-SUFFIX,huaglad.com,PROXY
+DOMAIN-SUFFIX,huakacomic.com,PROXY
 DOMAIN-SUFFIX,huanghuagang.org,PROXY
 DOMAIN-SUFFIX,huangse.love,PROXY
 DOMAIN-SUFFIX,huangyiyu.com,PROXY
@@ -19947,6 +19950,7 @@ DOMAIN-SUFFIX,piaotia.com,PROXY
 DOMAIN-SUFFIX,piaotian.net,PROXY
 DOMAIN-SUFFIX,piapp.com.tw,PROXY
 DOMAIN-SUFFIX,piapro.net,PROXY
+DOMAIN-SUFFIX,pica-id.com,PROXY
 DOMAIN-SUFFIX,picacg2022.com,PROXY
 DOMAIN-SUFFIX,picacgp.com,PROXY
 DOMAIN-SUFFIX,picacgy.com,PROXY
@@ -24829,6 +24833,7 @@ DOMAIN-SUFFIX,tinypic.com,PROXY
 DOMAIN-SUFFIX,tinyurl.com,PROXY
 DOMAIN-SUFFIX,tiohentai.com,PROXY
 DOMAIN-SUFFIX,tipas.net,PROXY
+DOMAIN-SUFFIX,tipatipa.xyz,PROXY
 DOMAIN-SUFFIX,tire-cadcam.com,PROXY
 DOMAIN-SUFFIX,tiresplus.com,PROXY
 DOMAIN-SUFFIX,tistory.com,PROXY
