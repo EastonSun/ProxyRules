@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-26 08:01:49 (北京时间)
-#!rule_count = 44377
+#!update = 2026-10-27 08:02:18 (北京时间)
+#!rule_count = 44378
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -28609,6 +28609,7 @@ DOMAIN-SUFFIX,runnersworld.de##.commercial,REJECT
 DOMAIN-SUFFIX,rup5.destinia.ru,REJECT
 DOMAIN-SUFFIX,russian.rt.com##.yandex_ad-wrap,REJECT
 DOMAIN-SUFFIX,russian7.ru###bottomline-banner,REJECT
+DOMAIN-SUFFIX,russiatoday.ru##.sparrow-banner,REJECT
 DOMAIN-SUFFIX,russkoe-porno.me##.player-bn,REJECT
 DOMAIN-SUFFIX,ruuaqkw.com,REJECT
 DOMAIN-SUFFIX,ruvdkw.turk.net,REJECT
