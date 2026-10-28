@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-27 08:02:18 (北京时间)
-#!rule_count = 44378
+#!update = 2026-10-28 08:02:02 (北京时间)
+#!rule_count = 44377
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -9084,6 +9084,7 @@ DOMAIN-SUFFIX,cdn-ketchapp.akamaized.net,REJECT
 DOMAIN-SUFFIX,cdn-plugin-sync-upgrade-juui.hismarttv.com,REJECT
 DOMAIN-SUFFIX,cdn-rtb.sape.ru,REJECT
 DOMAIN-SUFFIX,cdn-rum.ngenix.net,REJECT
+DOMAIN-SUFFIX,cdn-settings.af-sdk.com,REJECT
 DOMAIN-SUFFIX,cdn.aiclk.com,REJECT
 DOMAIN-SUFFIX,cdn.ampproject.org##.ad-control-left,REJECT
 DOMAIN-SUFFIX,cdn.appnext.com,REJECT
@@ -17096,6 +17097,7 @@ DOMAIN-SUFFIX,in.brilliant.org,REJECT
 DOMAIN-SUFFIX,in.invitd.us,REJECT
 DOMAIN-SUFFIX,in.treasuredata.com,REJECT
 DOMAIN-SUFFIX,in.upipr.co,REJECT
+DOMAIN-SUFFIX,inapps.af-sdk.com,REJECT
 DOMAIN-SUFFIX,inbound-analytics.pixlee.co,REJECT
 DOMAIN-SUFFIX,incisive.actonservice.com,REJECT
 DOMAIN-SUFFIX,incs.get-go.com,REJECT
@@ -20980,12 +20982,6 @@ DOMAIN-SUFFIX,m.varagesale.com,REJECT
 DOMAIN-SUFFIX,m.veporn.net#@##topads,REJECT
 DOMAIN-SUFFIX,m.veporn.net#@#.advertisment,REJECT
 DOMAIN-SUFFIX,m.vesty.co.il##.sticky-adunit,REJECT
-DOMAIN-SUFFIX,m.viptube.*###mobile-footer-1,REJECT
-DOMAIN-SUFFIX,m.viptube.*###mobile-header-1,REJECT
-DOMAIN-SUFFIX,m.viptube.*###mobile-middle-1,REJECT
-DOMAIN-SUFFIX,m.viptube.*##.lcb,REJECT
-DOMAIN-SUFFIX,m.viptube.*##.livecams_main,REJECT
-DOMAIN-SUFFIX,m.viptube.*##.player_premium_bar,REJECT
 DOMAIN-SUFFIX,m.vistaresourcegroup.com,REJECT
 DOMAIN-SUFFIX,m.vpc.ca,REJECT
 DOMAIN-SUFFIX,m.weathercn.com##.gg-swiper-wrapper,REJECT
@@ -27943,6 +27939,7 @@ DOMAIN-SUFFIX,raf.postnl.nl,REJECT
 DOMAIN-SUFFIX,rainmaker.production-public.tubi.io,REJECT
 DOMAIN-SUFFIX,rainmaker4.production-public.tubi.io,REJECT
 DOMAIN-SUFFIX,rake.11st.co.kr,REJECT
+DOMAIN-SUFFIX,rakkokeyword.com##.rakko-sp-wrapper,REJECT
 DOMAIN-SUFFIX,rakumachi.jp###linktoadclicklog,REJECT
 DOMAIN-SUFFIX,rakumachi.jp##.toppageheaderbanner,REJECT
 DOMAIN-SUFFIX,rakuten-sec.co.jp##.pr_bnr,REJECT
@@ -27975,6 +27972,8 @@ DOMAIN-SUFFIX,rbc.ru##.banners__mobile-freeze,REJECT
 DOMAIN-SUFFIX,rbc.ru##.fox-fallback,REJECT
 DOMAIN-SUFFIX,rbc.ru##.fox-main-mobile-banner,REJECT
 DOMAIN-SUFFIX,rbc.ru##.g-banner__main,REJECT
+DOMAIN-SUFFIX,rbc.ru##.indicators-bar-branding,REJECT
+DOMAIN-SUFFIX,rbc.ru##.ui-branding-logo,REJECT
 DOMAIN-SUFFIX,rbc.ua##.adsens-wrap,REJECT
 DOMAIN-SUFFIX,rbcore-wlc-3.net.jumia.co.ke,REJECT
 DOMAIN-SUFFIX,rbdata.boostymark.com,REJECT
