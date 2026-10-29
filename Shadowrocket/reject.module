@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-29 08:02:10 (北京时间)
-#!rule_count = 44380
+#!update = 2026-10-29 14:06:33 (北京时间)
+#!rule_count = 44381
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -44338,6 +44338,7 @@ IP-CIDR,103.224.222.208/32,REJECT
 IP-CIDR,109.123.233.251/32,REJECT
 IP-CIDR,112.64.218.119/32,REJECT
 IP-CIDR,112.65.200.117/32,REJECT
+IP-CIDR,114.114.114.114/32,REJECT
 IP-CIDR,114.116.215.110/32,REJECT
 IP-CIDR,115.236.121.195/32,REJECT
 IP-CIDR,115.236.121.51/32,REJECT
