@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-28 08:02:02 (北京时间)
-#!rule_count = 44377
+#!update = 2026-10-29 08:02:10 (北京时间)
+#!rule_count = 44380
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -16366,6 +16366,7 @@ DOMAIN-SUFFIX,icg-in.com,REJECT
 DOMAIN-SUFFIX,icg-in.info,REJECT
 DOMAIN-SUFFIX,ichannel.isnssdk.com,REJECT
 DOMAIN-SUFFIX,icharts.actonservice.com,REJECT
+DOMAIN-SUFFIX,ichioshi.allabout.co.jp###ma_ad_container,REJECT
 DOMAIN-SUFFIX,ichip.ru##.banner-info,REJECT
 DOMAIN-SUFFIX,icmakp.united-arrows.tw,REJECT
 DOMAIN-SUFFIX,icoktb.onygo.com,REJECT
@@ -24544,6 +24545,7 @@ DOMAIN-SUFFIX,mfd.myfirstdressing.com,REJECT
 DOMAIN-SUFFIX,mff.messefrankfurt.com,REJECT
 DOMAIN-SUFFIX,mfmkkv.sorgenia.it,REJECT
 DOMAIN-SUFFIX,mfrmls.actonservice.com,REJECT
+DOMAIN-SUFFIX,mfuns.net##.m-adwork,REJECT
 DOMAIN-SUFFIX,mfxtlm.mobiup.ro,REJECT
 DOMAIN-SUFFIX,mg.mistrasgroup.com,REJECT
 DOMAIN-SUFFIX,mgage.com,REJECT
@@ -40974,6 +40976,7 @@ DOMAIN-SUFFIX,tvkfms.nta.co.jp,REJECT
 DOMAIN-SUFFIX,tvpixel.com,REJECT
 DOMAIN-SUFFIX,tvppa.actonservice.com,REJECT
 DOMAIN-SUFFIX,tvspielfilm.de##.livetv-ad-bottom,REJECT
+DOMAIN-SUFFIX,tvtoday.de##mobile-sticky-ad,REJECT
 DOMAIN-SUFFIX,tvtonight.com.au###mobile-anchor-container,REJECT
 DOMAIN-SUFFIX,tvtropes.org##.proper-ad-unit,REJECT
 DOMAIN-SUFFIX,tvuaeb.taqi.com.br,REJECT

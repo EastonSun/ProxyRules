@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-28 08:02:02 (北京时间)
-#!rule_count = 29229
+#!update = 2026-10-29 08:02:10 (北京时间)
+#!rule_count = 29230
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -14225,6 +14225,7 @@ DOMAIN-SUFFIX,iutunes.com,PROXY
 DOMAIN-SUFFIX,ivacy.com,PROXY
 DOMAIN-SUFFIX,iverycd.com,PROXY
 DOMAIN-SUFFIX,ivi.ru,PROXY
+DOMAIN-SUFFIX,ivi.tv,PROXY
 DOMAIN-SUFFIX,ivicdn.tv,PROXY
 DOMAIN-SUFFIX,ivintageporn.com,PROXY
 DOMAIN-SUFFIX,ivonblog.com,PROXY
