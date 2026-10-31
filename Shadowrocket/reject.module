@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-30 08:02:24 (北京时间)
-#!rule_count = 44381
+#!update = 2026-10-31 08:02:22 (北京时间)
+#!rule_count = 44383
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -15526,6 +15526,8 @@ DOMAIN-SUFFIX,goa.dngn.kr,REJECT
 DOMAIN-SUFFIX,goaccredited.actonservice.com,REJECT
 DOMAIN-SUFFIX,goads2023.com,REJECT
 DOMAIN-SUFFIX,goal.com##.fco-fc-video-player,REJECT
+DOMAIN-SUFFIX,goal.com##.fco-gameday-with-ad-container__ads,REJECT
+DOMAIN-SUFFIX,goal.com##.fco-sticky-wrapper__space-placeholder,REJECT
 DOMAIN-SUFFIX,goat.hepicgamerz.com,REJECT
 DOMAIN-SUFFIX,goat.nhimmeo.cf,REJECT
 DOMAIN-SUFFIX,goat.skeetstats.xyz,REJECT

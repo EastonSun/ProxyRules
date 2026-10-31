@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-30 08:02:24 (北京时间)
-#!rule_count = 29230
+#!update = 2026-10-31 08:02:22 (北京时间)
+#!rule_count = 29239
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -137,6 +137,7 @@ DOMAIN-SUFFIX,18comic-god.club,PROXY
 DOMAIN-SUFFIX,18comic-god.xyz,PROXY
 DOMAIN-SUFFIX,18comic.cc,PROXY
 DOMAIN-SUFFIX,18comic.company,PROXY
+DOMAIN-SUFFIX,18comic.ink,PROXY
 DOMAIN-SUFFIX,18comic.org,PROXY
 DOMAIN-SUFFIX,18comic.vip,PROXY
 DOMAIN-SUFFIX,18commic.com,PROXY
@@ -1936,6 +1937,7 @@ DOMAIN-SUFFIX,antenna.co.kr,PROXY
 DOMAIN-SUFFIX,anthemgame.com,PROXY
 DOMAIN-SUFFIX,anthemthegame.com,PROXY
 DOMAIN-SUFFIX,anthonycalzadilla.com,PROXY
+DOMAIN-SUFFIX,anthropic.auth0.com,PROXY
 DOMAIN-SUFFIX,anthropic.com,PROXY
 DOMAIN-SUFFIX,anthropic.team,PROXY
 DOMAIN-SUFFIX,anti1984.com,PROXY
@@ -3919,6 +3921,7 @@ DOMAIN-SUFFIX,bingapistatistics.com,PROXY
 DOMAIN-SUFFIX,bingoporno.com,PROXY
 DOMAIN-SUFFIX,bingparachute.com,PROXY
 DOMAIN-SUFFIX,bingsandbox.com,PROXY
+DOMAIN-SUFFIX,bingstatic.com,PROXY
 DOMAIN-SUFFIX,bingvisualsearch.com,PROXY
 DOMAIN-SUFFIX,bingworld.com,PROXY
 DOMAIN-SUFFIX,bingx.com,PROXY
@@ -4922,6 +4925,7 @@ DOMAIN-SUFFIX,bsappapi.com,PROXY
 DOMAIN-SUFFIX,bscdnweb.com,PROXY
 DOMAIN-SUFFIX,bsi.ir,PROXY
 DOMAIN-SUFFIX,bsky.app,PROXY
+DOMAIN-SUFFIX,bsky.chat,PROXY
 DOMAIN-SUFFIX,bsky.network,PROXY
 DOMAIN-SUFFIX,bsky.social,PROXY
 DOMAIN-SUFFIX,bspb.ru,PROXY
@@ -10967,6 +10971,7 @@ DOMAIN-SUFFIX,githubapp.com,PROXY
 DOMAIN-SUFFIX,githubassets.com,PROXY
 DOMAIN-SUFFIX,githubcopilot.com,PROXY
 DOMAIN-SUFFIX,githubhackathon.com,PROXY
+DOMAIN-SUFFIX,githubhelp.com,PROXY
 DOMAIN-SUFFIX,githubnext.com,PROXY
 DOMAIN-SUFFIX,githubpreview.dev,PROXY
 DOMAIN-SUFFIX,githubstatus.com,PROXY
@@ -17499,6 +17504,7 @@ DOMAIN-SUFFIX,msftconnecttest.com,PROXY
 DOMAIN-SUFFIX,msfteducation.ca,PROXY
 DOMAIN-SUFFIX,msftncsi.com,PROXY
 DOMAIN-SUFFIX,msftnet.org,PROXY
+DOMAIN-SUFFIX,msftstatic.com,PROXY
 DOMAIN-SUFFIX,msgamesresearch.com,PROXY
 DOMAIN-SUFFIX,msgamestudios.com,PROXY
 DOMAIN-SUFFIX,msguancha.com,PROXY
@@ -24763,9 +24769,12 @@ DOMAIN-SUFFIX,tiktokeu-cdn.com,PROXY
 DOMAIN-SUFFIX,tiktokglobalshopv.com,PROXY
 DOMAIN-SUFFIX,tiktokminis.us,PROXY
 DOMAIN-SUFFIX,tiktokrow-cdn.com,PROXY
+DOMAIN-SUFFIX,tiktokshop.com,PROXY
+DOMAIN-SUFFIX,tiktokstaticb.com,PROXY
 DOMAIN-SUFFIX,tiktokv.com,PROXY
 DOMAIN-SUFFIX,tiktokv.eu,PROXY
 DOMAIN-SUFFIX,tiktokv.us,PROXY
+DOMAIN-SUFFIX,tiktokvapp.com,PROXY
 DOMAIN-SUFFIX,tiktokw.eu,PROXY
 DOMAIN-SUFFIX,tiktokw.us,PROXY
 DOMAIN-SUFFIX,tilda.cc,PROXY
