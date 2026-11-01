@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-10-31 08:02:22 (北京时间)
-#!rule_count = 44383
+#!update = 2026-11-01 08:01:46 (北京时间)
+#!rule_count = 44384
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -29635,6 +29635,7 @@ DOMAIN-SUFFIX,search.anonymous.ads.brave.com,REJECT
 DOMAIN-SUFFIX,search.ixigua.com,REJECT
 DOMAIN-SUFFIX,search.yahoo.co.jp##.adcontainer__expandbutton,REJECT
 DOMAIN-SUFFIX,search.yahoo.co.jp##.adcontainer__header,REJECT
+DOMAIN-SUFFIX,search.yahoo.co.jp##.infeedads,REJECT
 DOMAIN-SUFFIX,search.yahoo.co.jp##.tsg_ad,REJECT
 DOMAIN-SUFFIX,search3-search.ixigua.com,REJECT
 DOMAIN-SUFFIX,search5-search-hl.ixigua.com,REJECT
