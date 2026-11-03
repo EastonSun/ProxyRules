@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-02 08:02:15 (北京时间)
-#!rule_count = 44384
+#!update = 2026-11-03 08:02:44 (北京时间)
+#!rule_count = 44385
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,10298198.info.sofi.org,REJECT
 DOMAIN-SUFFIX,10298198.m.sofi.org,REJECT
 DOMAIN-SUFFIX,10298198.o.sofi.org,REJECT
 DOMAIN-SUFFIX,102d.pandasuite.io,REJECT
+DOMAIN-SUFFIX,109cinemas.net##.ad-banner-sp,REJECT
 DOMAIN-SUFFIX,10stepswp.advancedtech.com,REJECT
 DOMAIN-SUFFIX,114117.com##.bn_top_vernis,REJECT
 DOMAIN-SUFFIX,11880.com###responsive-bhvr--resultlist-supraregionalslider-container-xs,REJECT
