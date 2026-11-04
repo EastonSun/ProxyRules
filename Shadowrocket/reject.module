@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-03 08:02:44 (北京时间)
-#!rule_count = 44385
+#!update = 2026-11-04 08:02:13 (北京时间)
+#!rule_count = 44390
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -7521,6 +7521,7 @@ DOMAIN-SUFFIX,astro.com##.goadtop,REJECT
 DOMAIN-SUFFIX,astromed.actonservice.com,REJECT
 DOMAIN-SUFFIX,astrsk.net,REJECT
 DOMAIN-SUFFIX,asttcp.vatera.hu,REJECT
+DOMAIN-SUFFIX,asttoxa.ru,REJECT
 DOMAIN-SUFFIX,asumi.shinobi.jp,REJECT
 DOMAIN-SUFFIX,aswpsdkus.com,REJECT
 DOMAIN-SUFFIX,asxxlo.interflora.es,REJECT
@@ -18296,6 +18297,7 @@ DOMAIN-SUFFIX,izremx.dentalplans.com,REJECT
 DOMAIN-SUFFIX,izwgxw.acordocerto.com.br,REJECT
 DOMAIN-SUFFIX,j-antenna.net##._x_article_space_,REJECT
 DOMAIN-SUFFIX,j-cast.com###sp_j-cast_overlay_mov,REJECT
+DOMAIN-SUFFIX,j-town.net##.video_ad_area,REJECT
 DOMAIN-SUFFIX,j1.ax.xrea.com,REJECT
 DOMAIN-SUFFIX,j198.registercitizen.com,REJECT
 DOMAIN-SUFFIX,j2i0.mathon.fr,REJECT
@@ -19121,6 +19123,7 @@ DOMAIN-SUFFIX,laplink.actonservice.com,REJECT
 DOMAIN-SUFFIX,lapwkd.feelgood-shop.com,REJECT
 DOMAIN-SUFFIX,laserconcepts.actonservice.com,REJECT
 DOMAIN-SUFFIX,lastampa.it###editorial-top,REJECT
+DOMAIN-SUFFIX,lastwordonsports.com##.ar82zl-partner-container,REJECT
 DOMAIN-SUFFIX,latam.thomsonreuters.com,REJECT
 DOMAIN-SUFFIX,launch-analytics-plugin.launchpotato.com,REJECT
 DOMAIN-SUFFIX,launch.aella.app,REJECT
@@ -25835,6 +25838,7 @@ DOMAIN-SUFFIX,offerwall-adnative.com,REJECT
 DOMAIN-SUFFIX,offerwall.yandex.net,REJECT
 DOMAIN-SUFFIX,officelife.media##.custom-banner,REJECT
 DOMAIN-SUFFIX,officelife.media##.side-section__mobile-banner,REJECT
+DOMAIN-SUFFIX,official.ameba.jp##.bxud9w_slot,REJECT
 DOMAIN-SUFFIX,ofgreencolumn.com,REJECT
 DOMAIN-SUFFIX,ofkqiy.knowfashionstyle.com,REJECT
 DOMAIN-SUFFIX,ofqkbk.proclipusa.com,REJECT
@@ -27846,6 +27850,7 @@ DOMAIN-SUFFIX,quiz-facts.com##.content-network-space,REJECT
 DOMAIN-SUFFIX,quk9.destinia.com.ar,REJECT
 DOMAIN-SUFFIX,qumaef.conects.com,REJECT
 DOMAIN-SUFFIX,qumulo.actonservice.com,REJECT
+DOMAIN-SUFFIX,quoka.de##.mobile-anz-container,REJECT
 DOMAIN-SUFFIX,qutsgp.calif.cc,REJECT
 DOMAIN-SUFFIX,quyerj.northstyle.com,REJECT
 DOMAIN-SUFFIX,qvbxza.stoneberry.com,REJECT
