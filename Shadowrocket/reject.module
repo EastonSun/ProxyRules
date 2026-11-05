@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-04 08:02:13 (北京时间)
-#!rule_count = 44390
+#!update = 2026-11-05 08:02:44 (北京时间)
+#!rule_count = 44389
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -25838,7 +25838,6 @@ DOMAIN-SUFFIX,offerwall-adnative.com,REJECT
 DOMAIN-SUFFIX,offerwall.yandex.net,REJECT
 DOMAIN-SUFFIX,officelife.media##.custom-banner,REJECT
 DOMAIN-SUFFIX,officelife.media##.side-section__mobile-banner,REJECT
-DOMAIN-SUFFIX,official.ameba.jp##.bxud9w_slot,REJECT
 DOMAIN-SUFFIX,ofgreencolumn.com,REJECT
 DOMAIN-SUFFIX,ofkqiy.knowfashionstyle.com,REJECT
 DOMAIN-SUFFIX,ofqkbk.proclipusa.com,REJECT

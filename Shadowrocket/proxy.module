@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-04 08:02:13 (北京时间)
-#!rule_count = 29253
+#!update = 2026-11-05 08:02:44 (北京时间)
+#!rule_count = 29258
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -15485,6 +15485,9 @@ DOMAIN-SUFFIX,lilaoshibushinilaoshi.com,PROXY
 DOMAIN-SUFFIX,lilhumpers.com,PROXY
 DOMAIN-SUFFIX,liliav.com,PROXY
 DOMAIN-SUFFIX,lilith-soft.com,PROXY
+DOMAIN-SUFFIX,limbuscompany.global,PROXY
+DOMAIN-SUFFIX,limbuscompanyapi.com,PROXY
+DOMAIN-SUFFIX,limbuscompanycdn.org,PROXY
 DOMAIN-SUFFIX,limedia.tw,PROXY
 DOMAIN-SUFFIX,limelight.com,PROXY
 DOMAIN-SUFFIX,limer.tw,PROXY
@@ -20841,6 +20844,7 @@ DOMAIN-SUFFIX,projectbaseline.com,PROXY
 DOMAIN-SUFFIX,projectcircuitbreaker.com,PROXY
 DOMAIN-SUFFIX,projecteuclid.org,PROXY
 DOMAIN-SUFFIX,projectjav.com,PROXY
+DOMAIN-SUFFIX,projectmoon.studio,PROXY
 DOMAIN-SUFFIX,projectmurphy.net,PROXY
 DOMAIN-SUFFIX,projectpoint.com,PROXY
 DOMAIN-SUFFIX,projectpoint.net,PROXY
@@ -22914,6 +22918,7 @@ DOMAIN-SUFFIX,skills.sh,PROXY
 DOMAIN-SUFFIX,skillshare.com,PROXY
 DOMAIN-SUFFIX,skimtube.com,PROXY
 DOMAIN-SUFFIX,skinstrip.net,PROXY
+DOMAIN-SUFFIX,skinswap.com,PROXY
 DOMAIN-SUFFIX,skk.moe,PROXY
 DOMAIN-SUFFIX,skokka.com,PROXY
 DOMAIN-SUFFIX,sksarab.top,PROXY
