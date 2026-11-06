@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-05 08:02:44 (北京时间)
-#!rule_count = 44389
+#!update = 2026-11-06 08:02:31 (北京时间)
+#!rule_count = 44391
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -18775,6 +18775,8 @@ DOMAIN-SUFFIX,kissmetrics.com,REJECT
 DOMAIN-SUFFIX,kistacity.viessmann.se,REJECT
 DOMAIN-SUFFIX,kit22.com,REJECT
 DOMAIN-SUFFIX,kitchen.juicer.cc,REJECT
+DOMAIN-SUFFIX,kitco.com###in-content-1,REJECT
+DOMAIN-SUFFIX,kitco.com###in-content-2,REJECT
 DOMAIN-SUFFIX,kiwi.mdldb.net,REJECT
 DOMAIN-SUFFIX,kjdfho.eidaihouse.com,REJECT
 DOMAIN-SUFFIX,kjjuuy.icaniwill.fi,REJECT
