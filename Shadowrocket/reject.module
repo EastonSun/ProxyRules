@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-06 08:02:31 (北京时间)
-#!rule_count = 44391
+#!update = 2026-11-07 08:01:52 (北京时间)
+#!rule_count = 44394
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -27236,6 +27236,8 @@ DOMAIN-SUFFIX,pnovfl.karaca.com,REJECT
 DOMAIN-SUFFIX,pntbrs.reflectwindow.com,REJECT
 DOMAIN-SUFFIX,pnvnpy.scullyandscully.com,REJECT
 DOMAIN-SUFFIX,pny.net.penny.de,REJECT
+DOMAIN-SUFFIX,po-kaki-to.com###supplementary,REJECT
+DOMAIN-SUFFIX,po-kaki-to.com###tertiary,REJECT
 DOMAIN-SUFFIX,po.ponant.com,REJECT
 DOMAIN-SUFFIX,pob-mob2.websearchbrowser.com,REJECT
 DOMAIN-SUFFIX,poczta.carte-gr.total.fr,REJECT
@@ -42736,6 +42738,7 @@ DOMAIN-SUFFIX,willyoupressthebutton.com##.midincnt,REJECT
 DOMAIN-SUFFIX,win.gdt.qq.com,REJECT
 DOMAIN-SUFFIX,win.staticstuff.net,REJECT
 DOMAIN-SUFFIX,wineverygame.com##.weg-mobile-campaign,REJECT
+DOMAIN-SUFFIX,winfuture.de###ab_google_336x280_35_35,REJECT
 DOMAIN-SUFFIX,winfuture.de###div-divrecund,REJECT
 DOMAIN-SUFFIX,winfuture.de###g_content_recommendation,REJECT
 DOMAIN-SUFFIX,winfuture.de###ob_mb1,REJECT

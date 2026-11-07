@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-06 08:02:31 (北京时间)
-#!rule_count = 29258
+#!update = 2026-11-07 08:01:52 (北京时间)
+#!rule_count = 29257
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -16284,7 +16284,6 @@ DOMAIN-SUFFIX,maturetube.com,PROXY
 DOMAIN-SUFFIX,maturewifeporn.cc,PROXY
 DOMAIN-SUFFIX,maturewomenanal.com,PROXY
 DOMAIN-SUFFIX,maturexxxvideos.cc,PROXY
-DOMAIN-SUFFIX,maven.neoforged.net,PROXY
 DOMAIN-SUFFIX,maven.org,PROXY
 DOMAIN-SUFFIX,max-tcs.ru,PROXY
 DOMAIN-SUFFIX,max.com,PROXY
