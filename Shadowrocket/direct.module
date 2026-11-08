@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-07 08:01:52 (北京时间)
-#!rule_count = 134998
+#!update = 2026-11-08 08:01:45 (北京时间)
+#!rule_count = 134997
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -46613,7 +46613,6 @@ DOMAIN-SUFFIX,hitevision-solutions.com,DIRECT
 DOMAIN-SUFFIX,hitevision.com,DIRECT
 DOMAIN-SUFFIX,hitgk.com,DIRECT
 DOMAIN-SUFFIX,hitnology.com,DIRECT
-DOMAIN-SUFFIX,hitokoto.cn,DIRECT
 DOMAIN-SUFFIX,hitoor.com,DIRECT
 DOMAIN-SUFFIX,hitouch.com,DIRECT
 DOMAIN-SUFFIX,hitoupiao.com,DIRECT

@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-07 08:01:52 (北京时间)
-#!rule_count = 29257
+#!update = 2026-11-08 08:01:45 (北京时间)
+#!rule_count = 29258
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -11617,6 +11617,7 @@ DOMAIN-SUFFIX,greginhollywood.com,PROXY
 DOMAIN-SUFFIX,gridaware.app,PROXY
 DOMAIN-SUFFIX,grindr.com,PROXY
 DOMAIN-SUFFIX,grok.com,PROXY
+DOMAIN-SUFFIX,grokbot.com,PROXY
 DOMAIN-SUFFIX,grokipedia.com,PROXY
 DOMAIN-SUFFIX,grooby.com,PROXY
 DOMAIN-SUFFIX,groq.com,PROXY
