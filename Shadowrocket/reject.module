@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-10 08:02:14 (北京时间)
-#!rule_count = 44395
+#!update = 2026-11-11 08:02:30 (北京时间)
+#!rule_count = 44398
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -12002,6 +12002,7 @@ DOMAIN-SUFFIX,doppler-beacon.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,doppler-client-events.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,doppler-reporting.cbsivideo.com,REJECT
 DOMAIN-SUFFIX,dosgamesarchive.com###banner_mobile,REJECT
+DOMAIN-SUFFIX,dot.asahi.com##.article-inarticle-guide,REJECT
 DOMAIN-SUFFIX,dotomi.com,REJECT
 DOMAIN-SUFFIX,dotvox.actonservice.com,REJECT
 DOMAIN-SUFFIX,doubleclick-cn.net,REJECT
@@ -14006,6 +14007,7 @@ DOMAIN-SUFFIX,filmibeat.com##.oiadv,REJECT
 DOMAIN-SUFFIX,filmnudes.com##.header-links,REJECT
 DOMAIN-SUFFIX,filmoljupci.com,REJECT
 DOMAIN-SUFFIX,filmstarts.de##.sticky-ad-holder,REJECT
+DOMAIN-SUFFIX,filmymeet.cc###mobileadblockmodal,REJECT
 DOMAIN-SUFFIX,fimyxg.bloomberght.com,REJECT
 DOMAIN-SUFFIX,fimyxg.haberturk.com,REJECT
 DOMAIN-SUFFIX,finance.rambler.ru##.read-also__lentainform,REJECT
@@ -20179,6 +20181,7 @@ DOMAIN-SUFFIX,linkto.driver.codes,REJECT
 DOMAIN-SUFFIX,linktrace.diningcity.cn,REJECT
 DOMAIN-SUFFIX,linkus.buddybet.com,REJECT
 DOMAIN-SUFFIX,linkvertise.com##.yahoo-wrapper,REJECT
+DOMAIN-SUFFIX,linkvertise.com##lv-ad-sense,REJECT
 DOMAIN-SUFFIX,linkvet.insights.md,REJECT
 DOMAIN-SUFFIX,linkvetdev.insights.md,REJECT
 DOMAIN-SUFFIX,lio8.destinia.com.pa,REJECT

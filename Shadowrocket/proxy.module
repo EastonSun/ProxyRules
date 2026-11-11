@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-10 08:02:14 (北京时间)
-#!rule_count = 29258
+#!update = 2026-11-11 08:02:30 (北京时间)
+#!rule_count = 29262
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -11549,6 +11549,8 @@ DOMAIN-SUFFIX,grabhentai.com,PROXY
 DOMAIN-SUFFIX,grabpussy.com,PROXY
 DOMAIN-SUFFIX,gradconnection.com,PROXY
 DOMAIN-SUFFIX,gradeuptube.com,PROXY
+DOMAIN-SUFFIX,grafana.com,PROXY
+DOMAIN-SUFFIX,grafana.net,PROXY
 DOMAIN-SUFFIX,grafolio.com,PROXY
 DOMAIN-SUFFIX,graias.com,PROXY
 DOMAIN-SUFFIX,graiasmovies.com,PROXY
@@ -21117,6 +21119,7 @@ DOMAIN-SUFFIX,quantumbooter.net,PROXY
 DOMAIN-SUFFIX,quatrowireless.com,PROXY
 DOMAIN-SUFFIX,quatrum.com.br,PROXY
 DOMAIN-SUFFIX,quay.io,PROXY
+DOMAIN-SUFFIX,questionablequesting.com,PROXY
 DOMAIN-SUFFIX,questvisual.com,PROXY
 DOMAIN-SUFFIX,quicinc.com,PROXY
 DOMAIN-SUFFIX,quickbook.com.br,PROXY
@@ -23322,6 +23325,7 @@ DOMAIN-SUFFIX,soyjak.st,PROXY
 DOMAIN-SUFFIX,soylent.com,PROXY
 DOMAIN-SUFFIX,soylentnews.org,PROXY
 DOMAIN-SUFFIX,sp.cool,PROXY
+DOMAIN-SUFFIX,spacebattles.com,PROXY
 DOMAIN-SUFFIX,spaceexplored.com,PROXY
 DOMAIN-SUFFIX,spacely.com.au,PROXY
 DOMAIN-SUFFIX,spacemail.com,PROXY
