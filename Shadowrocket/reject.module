@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-11 08:02:30 (北京时间)
-#!rule_count = 44398
+#!update = 2026-11-12 08:02:38 (北京时间)
+#!rule_count = 44402
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -5138,6 +5138,7 @@ DOMAIN-SUFFIX,advertise.com,REJECT
 DOMAIN-SUFFIX,advertising-api-eu.amazon.com,REJECT
 DOMAIN-SUFFIX,advertising-api-fe.amazon.com,REJECT
 DOMAIN-SUFFIX,advertising-api.amazon.com,REJECT
+DOMAIN-SUFFIX,advertising.amazon.dev,REJECT
 DOMAIN-SUFFIX,advertising.apple.com,REJECT
 DOMAIN-SUFFIX,advertising.com,REJECT
 DOMAIN-SUFFIX,advertising.yahoo.com,REJECT
@@ -12626,6 +12627,7 @@ DOMAIN-SUFFIX,electronics.tradeshow.globalsources.com,REJECT
 DOMAIN-SUFFIX,elespanol.com###homemobileadvertising2,REJECT
 DOMAIN-SUFFIX,elespanol.com###sticky_container,REJECT
 DOMAIN-SUFFIX,elgas.actonservice.com,REJECT
+DOMAIN-SUFFIX,elgranonan.com##.tnv-sticky,REJECT
 DOMAIN-SUFFIX,elgreco.openapp.link,REJECT
 DOMAIN-SUFFIX,elia.thermofisher.com,REJECT
 DOMAIN-SUFFIX,elijah.tantawy.app,REJECT
@@ -14407,8 +14409,10 @@ DOMAIN-SUFFIX,fufbgj.pazzo.com.tw,REJECT
 DOMAIN-SUFFIX,fufoir.aif.ru,REJECT
 DOMAIN-SUFFIX,fuicmy.hana-mail.jp,REJECT
 DOMAIN-SUFFIX,fujifilmdb.fujifilmdiosynth.com,REJECT
+DOMAIN-SUFFIX,fujinkoron.jp##.ad-instream-google,REJECT
 DOMAIN-SUFFIX,fukutubu.jp##.td-header-sp-recs,REJECT
 DOMAIN-SUFFIX,full-count.jp###c2_click_jera_award_sp_article_end,REJECT
+DOMAIN-SUFFIX,full-porn.com##.come-gauge-gent,REJECT
 DOMAIN-SUFFIX,full-porn.com##.mobile-rek-height,REJECT
 DOMAIN-SUFFIX,fullerton-app.hotdoc.com.au,REJECT
 DOMAIN-SUFFIX,fulmar.net.anwalt.de,REJECT
