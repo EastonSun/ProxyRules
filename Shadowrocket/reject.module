@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-14 08:01:43 (北京时间)
-#!rule_count = 44402
+#!update = 2026-11-15 08:02:03 (北京时间)
+#!rule_count = 44397
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -4897,7 +4897,6 @@ DOMAIN-SUFFIX,ads-*-nfl.yinzcam.com,REJECT
 DOMAIN-SUFFIX,ads-ap-venues.yinzcam.com,REJECT
 DOMAIN-SUFFIX,ads-api-o.api.leiniao.com,REJECT
 DOMAIN-SUFFIX,ads-api.kidsnote.com,REJECT
-DOMAIN-SUFFIX,ads-api.tiktok.com,REJECT
 DOMAIN-SUFFIX,ads-api.twitter.com,REJECT
 DOMAIN-SUFFIX,ads-bidder-api.twitter.com,REJECT
 DOMAIN-SUFFIX,ads-bridge.pixocial.com,REJECT
@@ -4911,9 +4910,9 @@ DOMAIN-SUFFIX,ads-delivery.gunosy.com,REJECT
 DOMAIN-SUFFIX,ads-game-configuration-master.ads.prd.ie.internal.unity3d.com,REJECT
 DOMAIN-SUFFIX,ads-gdl.imovideo.ru,REJECT
 DOMAIN-SUFFIX,ads-img-al.xhscdn.com,REJECT
+DOMAIN-SUFFIX,ads-img-bak.xhscdn.com,REJECT
 DOMAIN-SUFFIX,ads-img-qc.xhscdn.com,REJECT
 DOMAIN-SUFFIX,ads-interfaces.sc-cdn.net,REJECT
-DOMAIN-SUFFIX,ads-jp.tiktok.com,REJECT
 DOMAIN-SUFFIX,ads-leaseweb.appsgeyser.com,REJECT
 DOMAIN-SUFFIX,ads-m.rustore.ru,REJECT
 DOMAIN-SUFFIX,ads-marketing-vivofs.vivo.com.cn,REJECT
@@ -4925,7 +4924,6 @@ DOMAIN-SUFFIX,ads-sdk.mattel163.com,REJECT
 DOMAIN-SUFFIX,ads-sdk.nianticlabs.com,REJECT
 DOMAIN-SUFFIX,ads-segment-profile-noneu.truecaller.com,REJECT
 DOMAIN-SUFFIX,ads-server.mxplay.com,REJECT
-DOMAIN-SUFFIX,ads-sg.tiktok.com,REJECT
 DOMAIN-SUFFIX,ads-shopping.shouqianba.com,REJECT
 DOMAIN-SUFFIX,ads-static.phonepe.com,REJECT
 DOMAIN-SUFFIX,ads-tracking.beop.io,REJECT
@@ -4933,6 +4931,7 @@ DOMAIN-SUFFIX,ads-tracking.collectiveaudience.co,REJECT
 DOMAIN-SUFFIX,ads-trk.vidible.tv,REJECT
 DOMAIN-SUFFIX,ads-video-al.xhscdn.com,REJECT
 DOMAIN-SUFFIX,ads-video-qc.xhscdn.com,REJECT
+DOMAIN-SUFFIX,ads-vp5.xhscdn.com,REJECT
 DOMAIN-SUFFIX,ads.95516.com,REJECT
 DOMAIN-SUFFIX,ads.ad2iction.com,REJECT
 DOMAIN-SUFFIX,ads.adadapted.com,REJECT
@@ -4978,7 +4977,6 @@ DOMAIN-SUFFIX,ads.service.kugou.com,REJECT
 DOMAIN-SUFFIX,ads.smrtbid.com,REJECT
 DOMAIN-SUFFIX,ads.taptapnetworks.com,REJECT
 DOMAIN-SUFFIX,ads.tikpage.com,REJECT
-DOMAIN-SUFFIX,ads.tiktok.com,REJECT
 DOMAIN-SUFFIX,ads.v3mh.com,REJECT
 DOMAIN-SUFFIX,ads.viber.com,REJECT
 DOMAIN-SUFFIX,ads.xlxtra.com,REJECT
@@ -5042,7 +5040,6 @@ DOMAIN-SUFFIX,adsmrapi.imbc.com,REJECT
 DOMAIN-SUFFIX,adsnid.wagyushop.com,REJECT
 DOMAIN-SUFFIX,adsniper.ru,REJECT
 DOMAIN-SUFFIX,adsp.xunlei.com,REJECT
-DOMAIN-SUFFIX,adspecs.yahoo.com,REJECT
 DOMAIN-SUFFIX,adspot.tfgapps.com,REJECT
 DOMAIN-SUFFIX,adspsp.com,REJECT
 DOMAIN-SUFFIX,adsrvr.io,REJECT
@@ -5055,7 +5052,6 @@ DOMAIN-SUFFIX,adstore-1252524079.file.myqcloud.com,REJECT
 DOMAIN-SUFFIX,adstore-index-1252524079.file.myqcloud.com,REJECT
 DOMAIN-SUFFIX,adstrategy.biz.weibo.com,REJECT
 DOMAIN-SUFFIX,adstudio-assets.scdn.co,REJECT
-DOMAIN-SUFFIX,adstudio.spotify.com,REJECT
 DOMAIN-SUFFIX,adtago.s3.amazonaws.com,REJECT
 DOMAIN-SUFFIX,adtarget.barcainnovationhub.com,REJECT
 DOMAIN-SUFFIX,adtarget.fcbarcelona.cat,REJECT
@@ -5098,7 +5094,6 @@ DOMAIN-SUFFIX,adtd.parfumdreams.pt,REJECT
 DOMAIN-SUFFIX,adtd.parfumdreams.se,REJECT
 DOMAIN-SUFFIX,adtech-events.bookmyshow.com,REJECT
 DOMAIN-SUFFIX,adtech.de,REJECT
-DOMAIN-SUFFIX,adtech.yahooinc.com,REJECT
 DOMAIN-SUFFIX,adtilt.com,REJECT
 DOMAIN-SUFFIX,adtimaserver.vn,REJECT
 DOMAIN-SUFFIX,adtmonetize.com,REJECT
@@ -5135,14 +5130,8 @@ DOMAIN-SUFFIX,advantages.americanexpress.com,REJECT
 DOMAIN-SUFFIX,adversal.com,REJECT
 DOMAIN-SUFFIX,adverticum.net,REJECT
 DOMAIN-SUFFIX,advertise.com,REJECT
-DOMAIN-SUFFIX,advertising-api-eu.amazon.com,REJECT
-DOMAIN-SUFFIX,advertising-api-fe.amazon.com,REJECT
-DOMAIN-SUFFIX,advertising-api.amazon.com,REJECT
 DOMAIN-SUFFIX,advertising.amazon.dev,REJECT
-DOMAIN-SUFFIX,advertising.apple.com,REJECT
 DOMAIN-SUFFIX,advertising.com,REJECT
-DOMAIN-SUFFIX,advertising.yahoo.com,REJECT
-DOMAIN-SUFFIX,advertising.yandex.ru,REJECT
 DOMAIN-SUFFIX,advertur.ru,REJECT
 DOMAIN-SUFFIX,advice-ads.s3.amazonaws.com,REJECT
 DOMAIN-SUFFIX,adview.cn,REJECT
@@ -6372,6 +6361,7 @@ DOMAIN-SUFFIX,apkmoddone.com###sn-anchorad,REJECT
 DOMAIN-SUFFIX,apllogistics.actonservice.com,REJECT
 DOMAIN-SUFFIX,aplobv.xexymix.com,REJECT
 DOMAIN-SUFFIX,apm.tnet.nl,REJECT
+DOMAIN-SUFFIX,apmplus.volces.com,REJECT
 DOMAIN-SUFFIX,apnews.com###mobile-entitlements,REJECT
 DOMAIN-SUFFIX,apnews.com##.leaderboardad-mobile,REJECT
 DOMAIN-SUFFIX,app-ads-services.com,REJECT
@@ -8219,7 +8209,6 @@ DOMAIN-SUFFIX,bilahh.feuvert.fr,REJECT
 DOMAIN-SUFFIX,bilder11.markt.de,REJECT
 DOMAIN-SUFFIX,biletix.com##.mobile_head_banner,REJECT
 DOMAIN-SUFFIX,biminibliss.rwbimini.com,REJECT
-DOMAIN-SUFFIX,bingads.microsoft.com,REJECT
 DOMAIN-SUFFIX,binocule21c.merriam-webster.com,REJECT
 DOMAIN-SUFFIX,bint.openapp.link,REJECT
 DOMAIN-SUFFIX,bio.chups.co,REJECT
@@ -9414,6 +9403,7 @@ DOMAIN-SUFFIX,client-log.box.com,REJECT
 DOMAIN-SUFFIX,client-logger.beta.salemove.com,REJECT
 DOMAIN-SUFFIX,client-logger.salemove.com,REJECT
 DOMAIN-SUFFIX,client-metrics.chess.com,REJECT
+DOMAIN-SUFFIX,client-upload.cn-shanghai.log.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,client.midosoo.com,REJECT
 DOMAIN-SUFFIX,client.perimeterx.net,REJECT
 DOMAIN-SUFFIX,client.trustaff.com,REJECT
@@ -10351,7 +10341,6 @@ DOMAIN-SUFFIX,csfd.cz##.box-banner-mobile,REJECT
 DOMAIN-SUFFIX,csghyg.reginaclinic.jp,REJECT
 DOMAIN-SUFFIX,csgostash.com##.adv-top-header-mobile,REJECT
 DOMAIN-SUFFIX,csi.gstatic.com,REJECT
-DOMAIN-SUFFIX,csjplatform.com,REJECT
 DOMAIN-SUFFIX,csm.magnetintell.com,REJECT
 DOMAIN-SUFFIX,csmetrics.wilton.com,REJECT
 DOMAIN-SUFFIX,csp-collector.appspot.com,REJECT
@@ -12114,6 +12103,7 @@ DOMAIN-SUFFIX,dtqcpx.eskor.se,REJECT
 DOMAIN-SUFFIX,dtr-onsite-feed.datarize.ai,REJECT
 DOMAIN-SUFFIX,dttrk.com,REJECT
 DOMAIN-SUFFIX,dtzrrz.green-japan.com,REJECT
+DOMAIN-SUFFIX,du-app.cn-hangzhou.log.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,dualstack-logs.amap.com,REJECT
 DOMAIN-SUFFIX,dujgiq.trendhim.pl,REJECT
 DOMAIN-SUFFIX,dumedia.ru,REJECT
@@ -13378,6 +13368,7 @@ DOMAIN-SUFFIX,eromoji.com##.fam_sp_rec,REJECT
 DOMAIN-SUFFIX,eroterest.net##.adnativemgs,REJECT
 DOMAIN-SUFFIX,erp.qwic.nl,REJECT
 DOMAIN-SUFFIX,err.ifengcloud.ifeng.com,REJECT
+DOMAIN-SUFFIX,errnewlog.umeng.com,REJECT
 DOMAIN-SUFFIX,error-analytics-production.shopifysvc.com,REJECT
 DOMAIN-SUFFIX,error-analytics-sessions-production.shopifysvc.com,REJECT
 DOMAIN-SUFFIX,error-collector.ted.com,REJECT
@@ -14228,6 +14219,7 @@ DOMAIN-SUFFIX,fourtimessmelly.com,REJECT
 DOMAIN-SUFFIX,fow.lol##.m_top_ad,REJECT
 DOMAIN-SUFFIX,foxt.actonservice.com,REJECT
 DOMAIN-SUFFIX,foxtinfo.foxt.com,REJECT
+DOMAIN-SUFFIX,fp-it.fengkongcloud.com,REJECT
 DOMAIN-SUFFIX,fp-upload.dun.163.com,REJECT
 DOMAIN-SUFFIX,fp.bizjournals.com,REJECT
 DOMAIN-SUFFIX,fp.kakaku.com,REJECT
@@ -19265,6 +19257,7 @@ DOMAIN-SUFFIX,lexvek.gap.ae,REJECT
 DOMAIN-SUFFIX,leynqj.newport.se,REJECT
 DOMAIN-SUFFIX,lezntf.heydudeshoesusa.com,REJECT
 DOMAIN-SUFFIX,lezzet.com.tr##.db-ads,REJECT
+DOMAIN-SUFFIX,lf-event-manager.oceanengine.com,REJECT
 DOMAIN-SUFFIX,lf-static.tiktokpangle-cdn-us.com,REJECT
 DOMAIN-SUFFIX,lf3-ad-union-sdk.pglstatp-toutiao.com,REJECT
 DOMAIN-SUFFIX,lf6-ad-union-sdk.pglstatp-toutiao.com,REJECT
@@ -20298,6 +20291,7 @@ DOMAIN-SUFFIX,log-api.cli.im,REJECT
 DOMAIN-SUFFIX,log-api.huxiu.com,REJECT
 DOMAIN-SUFFIX,log-api.pangolin-sdk-toutiao-b.com,REJECT
 DOMAIN-SUFFIX,log-api.pangolin-sdk-toutiao.com,REJECT
+DOMAIN-SUFFIX,log-auth.zztfly.com,REJECT
 DOMAIN-SUFFIX,log-gateway.zoom.us,REJECT
 DOMAIN-SUFFIX,log-lb.skyperfectv.co.jp,REJECT
 DOMAIN-SUFFIX,log-pq.shopfully.cloud,REJECT
@@ -30536,6 +30530,8 @@ DOMAIN-SUFFIX,sherlock-events-sampler.ebay.com,REJECT
 DOMAIN-SUFFIX,shgcdn3.com,REJECT
 DOMAIN-SUFFIX,shhoix0fuonj0hz6.net.fidor.de,REJECT
 DOMAIN-SUFFIX,shiftdelete.net##.above-header,REJECT
+DOMAIN-SUFFIX,shihuo-new.log.shihuocdn.cn,REJECT
+DOMAIN-SUFFIX,shihuo.log.shihuocdn.cn,REJECT
 DOMAIN-SUFFIX,shipsmarter.idrivelogistics.com,REJECT
 DOMAIN-SUFFIX,shiyifacaisalzc.com,REJECT
 DOMAIN-SUFFIX,shjwhv.falsepeti.com,REJECT
@@ -41273,8 +41269,6 @@ DOMAIN-SUFFIX,unifiedwfo.verintsystemsinc.com,REJECT
 DOMAIN-SUFFIX,unifilabs.actonservice.com,REJECT
 DOMAIN-SUFFIX,union-mlog.bigda.com,REJECT
 DOMAIN-SUFFIX,union-record.oss-cn-zhangjiakou.aliyuncs.com,REJECT
-DOMAIN-SUFFIX,union.baidu.cn,REJECT
-DOMAIN-SUFFIX,union.baidu.com,REJECT
 DOMAIN-SUFFIX,unitedautocredit.actonservice.com,REJECT
 DOMAIN-SUFFIX,units.knotch.it,REJECT
 DOMAIN-SUFFIX,unitusccu.actonservice.com,REJECT
@@ -41302,6 +41296,7 @@ DOMAIN-SUFFIX,uol.com.br##.jupiter-navbar-ads,REJECT
 DOMAIN-SUFFIX,uolwbz.heine.de,REJECT
 DOMAIN-SUFFIX,uoqxdh.tendapro.it,REJECT
 DOMAIN-SUFFIX,up.ousabq.tech,REJECT
+DOMAIN-SUFFIX,upc.zztfly.com,REJECT
 DOMAIN-SUFFIX,update.avlyun.sec.miui.com,REJECT
 DOMAIN-SUFFIX,update.lejiao.tv,REJECT
 DOMAIN-SUFFIX,update.purina.com,REJECT
