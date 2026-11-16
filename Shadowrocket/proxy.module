@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-15 08:02:03 (北京时间)
-#!rule_count = 29263
+#!update = 2026-11-16 08:01:49 (北京时间)
+#!rule_count = 29265
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -6946,6 +6946,7 @@ DOMAIN-SUFFIX,dealtree.org,PROXY
 DOMAIN-SUFFIX,deasians.com,PROXY
 DOMAIN-SUFFIX,debank.com,PROXY
 DOMAIN-SUFFIX,debian.org,PROXY
+DOMAIN-SUFFIX,debot.ai,PROXY
 DOMAIN-SUFFIX,debug.com,PROXY
 DOMAIN-SUFFIX,debugproject.com,PROXY
 DOMAIN-SUFFIX,decentr.net,PROXY
@@ -21518,6 +21519,7 @@ DOMAIN-SUFFIX,releaseinternational.org,PROXY
 DOMAIN-SUFFIX,religionnews.com,PROXY
 DOMAIN-SUFFIX,religioustolerance.org,PROXY
 DOMAIN-SUFFIX,remirepo.net,PROXY
+DOMAIN-SUFFIX,remna.dev,PROXY
 DOMAIN-SUFFIX,remna.st,PROXY
 DOMAIN-SUFFIX,rencapbank.ru,PROXY
 DOMAIN-SUFFIX,renchead.com,PROXY
