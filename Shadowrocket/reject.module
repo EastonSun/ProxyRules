@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-16 08:01:49 (北京时间)
-#!rule_count = 44397
+#!update = 2026-11-17 08:01:56 (北京时间)
+#!rule_count = 44410
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -5168,6 +5168,7 @@ DOMAIN-SUFFIX,adx-tk.rayjump.com,REJECT
 DOMAIN-SUFFIX,adx.ads.heytapmobi.com,REJECT
 DOMAIN-SUFFIX,adx.ads.oppomobile.com,REJECT
 DOMAIN-SUFFIX,adx.adwangmai.com,REJECT
+DOMAIN-SUFFIX,adx.anythinktech.com,REJECT
 DOMAIN-SUFFIX,adx.appsdk.com.cn,REJECT
 DOMAIN-SUFFIX,adx.sogaha.cn,REJECT
 DOMAIN-SUFFIX,adx.tuia.cn,REJECT
@@ -5404,6 +5405,7 @@ DOMAIN-SUFFIX,alltbcsp2p.baidu.com,REJECT
 DOMAIN-SUFFIX,allvideometrika.com,REJECT
 DOMAIN-SUFFIX,almalasers.actonservice.com,REJECT
 DOMAIN-SUFFIX,alog.umeng.com,REJECT
+DOMAIN-SUFFIX,alogsus.umeng.com,REJECT
 DOMAIN-SUFFIX,alogus.umeng.com,REJECT
 DOMAIN-SUFFIX,alp1.drimki.fr,REJECT
 DOMAIN-SUFFIX,alpha.go.levelbank.com,REJECT
@@ -6169,6 +6171,7 @@ DOMAIN-SUFFIX,ananweb.jp##.sprectangle,REJECT
 DOMAIN-SUFFIX,anapp.adobe.com,REJECT
 DOMAIN-SUFFIX,andhrajyothy.com##.onlymobileads,REJECT
 DOMAIN-SUFFIX,andlache.com,REJECT
+DOMAIN-SUFFIX,android.bugly.qq.com,REJECT
 DOMAIN-SUFFIX,android.txtsmarter.com,REJECT
 DOMAIN-SUFFIX,andrqd.play.aiseet.atianqi.com,REJECT
 DOMAIN-SUFFIX,anesthesiaos.actonservice.com,REJECT
@@ -8192,6 +8195,7 @@ DOMAIN-SUFFIX,bianxian.com,REJECT
 DOMAIN-SUFFIX,biberukalap.com,REJECT
 DOMAIN-SUFFIX,bibglj.timberland.fr,REJECT
 DOMAIN-SUFFIX,bicp-analytics.postscript.io,REJECT
+DOMAIN-SUFFIX,bid.shanghailingye.cn,REJECT
 DOMAIN-SUFFIX,bidder.a11.vega.aurion11.io,REJECT
 DOMAIN-SUFFIX,bidder.mediams.mb.softbank.jp,REJECT
 DOMAIN-SUFFIX,bidgx.com,REJECT
@@ -9509,8 +9513,11 @@ DOMAIN-SUFFIX,cmshow.gtimg.cn,REJECT
 DOMAIN-SUFFIX,cmtmwn.ditano.com,REJECT
 DOMAIN-SUFFIX,cmttvv.bonprix.se,REJECT
 DOMAIN-SUFFIX,cmzaly.gebrueder-goetz.de,REJECT
+DOMAIN-SUFFIX,cn-api-sec.anythinktech.com,REJECT
 DOMAIN-SUFFIX,cn-api.anythinktech.com,REJECT
+DOMAIN-SUFFIX,cn-da.anythinktech.com,REJECT
 DOMAIN-SUFFIX,cn-go.experian.com,REJECT
+DOMAIN-SUFFIX,cn-tk.anythinktech.com,REJECT
 DOMAIN-SUFFIX,cn.adpinfo.com,REJECT
 DOMAIN-SUFFIX,cn.mywd.com,REJECT
 DOMAIN-SUFFIX,cn1.stadiumgoods.com,REJECT
@@ -10648,6 +10655,7 @@ DOMAIN-SUFFIX,da.hornbach.sk,REJECT
 DOMAIN-SUFFIX,da.maif.fr,REJECT
 DOMAIN-SUFFIX,da.netease.com,REJECT
 DOMAIN-SUFFIX,da.rabobank.nl,REJECT
+DOMAIN-SUFFIX,da.statisticslinks.com,REJECT
 DOMAIN-SUFFIX,da29e6b8-f018-490f-b25f-39a887fc95e7.xyz,REJECT
 DOMAIN-SUFFIX,dabu.askmediagroup.com,REJECT
 DOMAIN-SUFFIX,dacocorp.actonservice.com,REJECT
@@ -13368,7 +13376,10 @@ DOMAIN-SUFFIX,eromoji.com##.fam_sp_rec,REJECT
 DOMAIN-SUFFIX,eroterest.net##.adnativemgs,REJECT
 DOMAIN-SUFFIX,erp.qwic.nl,REJECT
 DOMAIN-SUFFIX,err.ifengcloud.ifeng.com,REJECT
+DOMAIN-SUFFIX,errlog.umeng.com,REJECT
+DOMAIN-SUFFIX,errlogos.umeng.com,REJECT
 DOMAIN-SUFFIX,errnewlog.umeng.com,REJECT
+DOMAIN-SUFFIX,errnewlogos.umeng.com,REJECT
 DOMAIN-SUFFIX,error-analytics-production.shopifysvc.com,REJECT
 DOMAIN-SUFFIX,error-analytics-sessions-production.shopifysvc.com,REJECT
 DOMAIN-SUFFIX,error-collector.ted.com,REJECT
@@ -33765,7 +33776,6 @@ DOMAIN-SUFFIX,sms.realmadrid1.test.cjmadobe.com,REJECT
 DOMAIN-SUFFIX,sms.riteaid.com,REJECT
 DOMAIN-SUFFIX,sms.uphabit.com,REJECT
 DOMAIN-SUFFIX,smsulx.kijijiautos.ca,REJECT
-DOMAIN-SUFFIX,smt.docomo.ne.jp###wrpad,REJECT
 DOMAIN-SUFFIX,smtc.qantas.com,REJECT
 DOMAIN-SUFFIX,smtc.qantas.com.au,REJECT
 DOMAIN-SUFFIX,smtccv.loveholidays.com,REJECT
@@ -34447,6 +34457,7 @@ DOMAIN-SUFFIX,ssa.oprah.com,REJECT
 DOMAIN-SUFFIX,ssa.stepstone.com,REJECT
 DOMAIN-SUFFIX,ssa.tlc.com,REJECT
 DOMAIN-SUFFIX,ssac.suning.com,REJECT
+DOMAIN-SUFFIX,ssapi.anythinktech.com,REJECT
 DOMAIN-SUFFIX,ssc.alhurra.com,REJECT
 DOMAIN-SUFFIX,ssc.amerikaninsesi.org,REJECT
 DOMAIN-SUFFIX,ssc.amerikaovozi.com,REJECT
@@ -38003,6 +38014,7 @@ DOMAIN-SUFFIX,tk.santevet.de,REJECT
 DOMAIN-SUFFIX,tk.santevet.es,REJECT
 DOMAIN-SUFFIX,tk.santevet.it,REJECT
 DOMAIN-SUFFIX,tk.speedway.fr,REJECT
+DOMAIN-SUFFIX,tk.statisticslinks.com,REJECT
 DOMAIN-SUFFIX,tk.svsound.com,REJECT
 DOMAIN-SUFFIX,tk.teleshopping.fr,REJECT
 DOMAIN-SUFFIX,tk.tikamoon.at,REJECT
@@ -38124,6 +38136,7 @@ DOMAIN-SUFFIX,to.quit.guru,REJECT
 DOMAIN-SUFFIX,to.skooldio.com,REJECT
 DOMAIN-SUFFIX,to.stynt.com,REJECT
 DOMAIN-SUFFIX,to.uptime.app,REJECT
+DOMAIN-SUFFIX,tobapplog.ctobsnssdk.com,REJECT
 DOMAIN-SUFFIX,toblog.ctobsnssdk.com,REJECT
 DOMAIN-SUFFIX,tock.weg.plus,REJECT
 DOMAIN-SUFFIX,todayintheword.moodybible.org,REJECT

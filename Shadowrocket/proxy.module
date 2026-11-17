@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-16 08:01:49 (北京时间)
-#!rule_count = 29265
+#!update = 2026-11-17 08:01:56 (北京时间)
+#!rule_count = 29267
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -6721,6 +6721,7 @@ DOMAIN-SUFFIX,cybertrust.co.jp,PROXY
 DOMAIN-SUFFIX,cybertrust.ne.jp,PROXY
 DOMAIN-SUFFIX,cyberx.com,PROXY
 DOMAIN-SUFFIX,cygames.co.jp,PROXY
+DOMAIN-SUFFIX,cygames.com,PROXY
 DOMAIN-SUFFIX,cygames.jp,PROXY
 DOMAIN-SUFFIX,cygwin.com,PROXY
 DOMAIN-SUFFIX,cylink.pro,PROXY
@@ -28613,6 +28614,7 @@ DOMAIN-SUFFIX,yaya.cyou,PROXY
 DOMAIN-SUFFIX,yayabay.com,PROXY
 DOMAIN-SUFFIX,yayadizhi.xyz,PROXY
 DOMAIN-SUFFIX,yazhouse8.com,PROXY
+DOMAIN-SUFFIX,yb-payment.ru,PROXY
 DOMAIN-SUFFIX,yccdn.ru,PROXY
 DOMAIN-SUFFIX,yclients.com,PROXY
 DOMAIN-SUFFIX,ycombinator.com,PROXY
