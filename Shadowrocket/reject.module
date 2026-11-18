@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-17 08:01:56 (北京时间)
-#!rule_count = 44410
+#!update = 2026-11-18 08:02:04 (北京时间)
+#!rule_count = 44412
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -25462,6 +25462,7 @@ DOMAIN-SUFFIX,newsletter.ticketac.com,REJECT
 DOMAIN-SUFFIX,newsletter.visitnc.com,REJECT
 DOMAIN-SUFFIX,newsletters.bancsabadell.com,REJECT
 DOMAIN-SUFFIX,newsnet.in.ua,REJECT
+DOMAIN-SUFFIX,newsru.co.il##.m_hp_content,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp###ad_nw_under_title_insert_mobile,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp###induction-box,REJECT
 DOMAIN-SUFFIX,newsweekjapan.jp###titletextad,REJECT
@@ -42850,6 +42851,7 @@ DOMAIN-SUFFIX,worldle.teuteuf.fr###stacontainer,REJECT
 DOMAIN-SUFFIX,worldle.teuteuf.fr###toggleadcontainer,REJECT
 DOMAIN-SUFFIX,worldmtcs.nhk.jp,REJECT
 DOMAIN-SUFFIX,worldnetpr.actonservice.com,REJECT
+DOMAIN-SUFFIX,worldsoccertalk.com##.sticky-container-app,REJECT
 DOMAIN-SUFFIX,wotasia2.login.wargaming.net.iberostar.com,REJECT
 DOMAIN-SUFFIX,wotasia3.login.wargaming.net.iberostar.com,REJECT
 DOMAIN-SUFFIX,wowanalytics.co.uk,REJECT
