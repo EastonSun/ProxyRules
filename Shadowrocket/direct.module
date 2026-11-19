@@ -2,8 +2,8 @@
 #!desc = 中国大陆域名、CDN与IP直连规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-18 08:02:04 (北京时间)
-#!rule_count = 135154
+#!update = 2026-11-19 08:02:45 (北京时间)
+#!rule_count = 135163
 
 [Rule]
 DOMAIN-SUFFIX,0.zone,DIRECT
@@ -6304,6 +6304,7 @@ DOMAIN-SUFFIX,58v5.cn,DIRECT
 DOMAIN-SUFFIX,58wan.com,DIRECT
 DOMAIN-SUFFIX,58wangwei.com,DIRECT
 DOMAIN-SUFFIX,58wanwan.com,DIRECT
+DOMAIN-SUFFIX,58wos.com.cn,DIRECT
 DOMAIN-SUFFIX,58wuji.com,DIRECT
 DOMAIN-SUFFIX,58xinghuo.cn,DIRECT
 DOMAIN-SUFFIX,58xinghuo.com,DIRECT
@@ -14195,6 +14196,7 @@ DOMAIN-SUFFIX,baishan-cloud.com,DIRECT
 DOMAIN-SUFFIX,baishan-cloud.net,DIRECT
 DOMAIN-SUFFIX,baishan-gateway.com,DIRECT
 DOMAIN-SUFFIX,baishan.com,DIRECT
+DOMAIN-SUFFIX,baishancdnx.cn,DIRECT
 DOMAIN-SUFFIX,baishancdnx.com,DIRECT
 DOMAIN-SUFFIX,baishancdnx.net,DIRECT
 DOMAIN-SUFFIX,baishancdnx.top,DIRECT
@@ -61769,6 +61771,7 @@ DOMAIN-SUFFIX,lefang365.com,DIRECT
 DOMAIN-SUFFIX,lefanglj.com,DIRECT
 DOMAIN-SUFFIX,lefeng.com,DIRECT
 DOMAIN-SUFFIX,leffercode.com,DIRECT
+DOMAIN-SUFFIX,lefile.cn,DIRECT
 DOMAIN-SUFFIX,leftfm.com,DIRECT
 DOMAIN-SUFFIX,leftlady.com,DIRECT
 DOMAIN-SUFFIX,leftshadow.com,DIRECT
@@ -61936,6 +61939,8 @@ DOMAIN-SUFFIX,lenovoconnect.com,DIRECT
 DOMAIN-SUFFIX,lenovocust.cn,DIRECT
 DOMAIN-SUFFIX,lenovoeservice.com,DIRECT
 DOMAIN-SUFFIX,lenovofile.com,DIRECT
+DOMAIN-SUFFIX,lenovofoundation.cn,DIRECT
+DOMAIN-SUFFIX,lenovofuturecenter.com,DIRECT
 DOMAIN-SUFFIX,lenovogame.com,DIRECT
 DOMAIN-SUFFIX,lenovohci.com,DIRECT
 DOMAIN-SUFFIX,lenovohuishang.com,DIRECT
@@ -73113,6 +73118,7 @@ DOMAIN-SUFFIX,oss-cn-shanghai.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-cn-shenzhen.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-cn-wulanchabu.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-cn-zhangjiakou.aliyuncs.com,DIRECT
+DOMAIN-SUFFIX,oss-enet.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-eu-central-1.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-eu-west-1.aliyuncs.com,DIRECT
 DOMAIN-SUFFIX,oss-me-east-1.aliyuncs.com,DIRECT
@@ -77322,6 +77328,7 @@ DOMAIN-SUFFIX,qpjylm.com,DIRECT
 DOMAIN-SUFFIX,qpkaifa.com,DIRECT
 DOMAIN-SUFFIX,qplus.com,DIRECT
 DOMAIN-SUFFIX,qplusstatic.com,DIRECT
+DOMAIN-SUFFIX,qpmcn.com,DIRECT
 DOMAIN-SUFFIX,qpmwg68cre9pci.com,DIRECT
 DOMAIN-SUFFIX,qpoc.com,DIRECT
 DOMAIN-SUFFIX,qpstar.com,DIRECT
@@ -110979,6 +110986,7 @@ DOMAIN-SUFFIX,zhaoketang.com,DIRECT
 DOMAIN-SUFFIX,zhaokuaizhao.com,DIRECT
 DOMAIN-SUFFIX,zhaolaobanla.com,DIRECT
 DOMAIN-SUFFIX,zhaoliangji.com,DIRECT
+DOMAIN-SUFFIX,zhaoliangjipc.com,DIRECT
 DOMAIN-SUFFIX,zhaoliming.net,DIRECT
 DOMAIN-SUFFIX,zhaomi.cn,DIRECT
 DOMAIN-SUFFIX,zhaoming.biz,DIRECT
@@ -122377,6 +122385,7 @@ IP-CIDR,150.242.96.0/22,DIRECT
 IP-CIDR,150.248.0.0/16,DIRECT
 IP-CIDR,150.255.0.0/16,DIRECT
 IP-CIDR,151.158.122.0/23,DIRECT
+IP-CIDR,151.158.123.0/24,DIRECT
 IP-CIDR,151.158.14.0/23,DIRECT
 IP-CIDR,151.158.78.0/23,DIRECT
 IP-CIDR,151.158.80.0/23,DIRECT

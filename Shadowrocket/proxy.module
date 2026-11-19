@@ -2,7 +2,7 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-18 08:02:04 (北京时间)
+#!update = 2026-11-19 08:02:45 (北京时间)
 #!rule_count = 29267
 
 [Rule]
@@ -8470,6 +8470,7 @@ DOMAIN-SUFFIX,elephanttube.com,PROXY
 DOMAIN-SUFFIX,elephanttubenew.com,PROXY
 DOMAIN-SUFFIX,elevenlabs.com,PROXY
 DOMAIN-SUFFIX,elevenlabs.io,PROXY
+DOMAIN-SUFFIX,elevenlabsusercontent.com,PROXY
 DOMAIN-SUFFIX,elgaronline.com,PROXY
 DOMAIN-SUFFIX,elgoog.im,PROXY
 DOMAIN-SUFFIX,elifesciences.org,PROXY
@@ -28576,7 +28577,6 @@ DOMAIN-SUFFIX,yandexdataschool.ru,PROXY
 DOMAIN-SUFFIX,yandexgo.com,PROXY
 DOMAIN-SUFFIX,yandexlyceum.ru,PROXY
 DOMAIN-SUFFIX,yandexwebcache.net,PROXY
-DOMAIN-SUFFIX,yandexwebcache.org,PROXY
 DOMAIN-SUFFIX,yanghengjun.com,PROXY
 DOMAIN-SUFFIX,yangjianli.com,PROXY
 DOMAIN-SUFFIX,yango-b2b.com,PROXY

@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-18 08:02:04 (北京时间)
-#!rule_count = 44412
+#!update = 2026-11-19 08:02:45 (北京时间)
+#!rule_count = 44414
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -9214,6 +9214,8 @@ DOMAIN-SUFFIX,choose.nu.edu,REJECT
 DOMAIN-SUFFIX,chordu.com###in_chord_sheet_ad,REJECT
 DOMAIN-SUFFIX,chordu.com##.chordu_above_similar,REJECT
 DOMAIN-SUFFIX,chosunonline.com##.wrap_ad_inner,REJECT
+DOMAIN-SUFFIX,chouseisan.com##.ad-header-div,REJECT
+DOMAIN-SUFFIX,chouseisan.com##.chousei-ad-div,REJECT
 DOMAIN-SUFFIX,choymp.pooldawg.com,REJECT
 DOMAIN-SUFFIX,chpspb.bubbleroom.fi,REJECT
 DOMAIN-SUFFIX,chrczt.vite-envogue.de,REJECT
