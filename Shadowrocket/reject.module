@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-20 08:02:05 (北京时间)
-#!rule_count = 44414
+#!update = 2026-11-21 08:01:55 (北京时间)
+#!rule_count = 44416
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -25269,6 +25269,8 @@ DOMAIN-SUFFIX,nbizzi.store.ferrari.com,REJECT
 DOMAIN-SUFFIX,nbohze.thenorthface.ru,REJECT
 DOMAIN-SUFFIX,nbrngg.rinkaiseminar.co.jp,REJECT
 DOMAIN-SUFFIX,nbyggk.jocee.jp,REJECT
+DOMAIN-SUFFIX,ncaa.com##.footer-ad,REJECT
+DOMAIN-SUFFIX,ncaa.com##.mobile-persistent-bottom,REJECT
 DOMAIN-SUFFIX,ncbabz.hometogo.co.uk,REJECT
 DOMAIN-SUFFIX,ncc.nip-col.jp,REJECT
 DOMAIN-SUFFIX,nccaf.ncc-mens.com,REJECT
