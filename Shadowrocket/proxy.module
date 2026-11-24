@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-23 08:01:40 (北京时间)
-#!rule_count = 29178
+#!update = 2026-11-24 08:02:35 (北京时间)
+#!rule_count = 29179
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -10703,6 +10703,7 @@ DOMAIN-SUFFIX,gelbooru.wjcodes.com,PROXY
 DOMAIN-SUFFIX,gemfire.net,PROXY
 DOMAIN-SUFFIX,gemfury.com,PROXY
 DOMAIN-SUFFIX,gemini.com,PROXY
+DOMAIN-SUFFIX,gemma.ai,PROXY
 DOMAIN-SUFFIX,gen.lib.rus.ec,PROXY
 DOMAIN-SUFFIX,genbank.ru,PROXY
 DOMAIN-SUFFIX,gencraft.com,PROXY
