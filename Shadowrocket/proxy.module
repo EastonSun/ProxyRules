@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-25 08:02:41 (北京时间)
-#!rule_count = 29183
+#!update = 2026-11-26 08:01:45 (北京时间)
+#!rule_count = 29194
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -16386,12 +16386,14 @@ DOMAIN-SUFFIX,megaad.nz,PROXY
 DOMAIN-SUFFIX,megacamz.com,PROXY
 DOMAIN-SUFFIX,megaeth.com,PROXY
 DOMAIN-SUFFIX,megafilmporno.com,PROXY
+DOMAIN-SUFFIX,megafon.cloud,PROXY
 DOMAIN-SUFFIX,megafon.com,PROXY
 DOMAIN-SUFFIX,megafon.ru,PROXY
 DOMAIN-SUFFIX,megafonpro.ru,PROXY
 DOMAIN-SUFFIX,megalodon.jp,PROXY
 DOMAIN-SUFFIX,megamon.co.kr,PROXY
 DOMAIN-SUFFIX,megapay.nz,PROXY
+DOMAIN-SUFFIX,megapbx.ru,PROXY
 DOMAIN-SUFFIX,megaphone.fm,PROXY
 DOMAIN-SUFFIX,megapornfreehd.com,PROXY
 DOMAIN-SUFFIX,megaporno.com.br,PROXY
@@ -16400,6 +16402,7 @@ DOMAIN-SUFFIX,megaproxy.com,PROXY
 DOMAIN-SUFFIX,megarotic.com,PROXY
 DOMAIN-SUFFIX,megas4.com,PROXY
 DOMAIN-SUFFIX,megasrv.de,PROXY
+DOMAIN-SUFFIX,megatech-it.ru,PROXY
 DOMAIN-SUFFIX,megatitsminka.com,PROXY
 DOMAIN-SUFFIX,megaupload.com,PROXY
 DOMAIN-SUFFIX,megavideo.com,PROXY
@@ -16510,6 +16513,7 @@ DOMAIN-SUFFIX,mgo-images.com,PROXY
 DOMAIN-SUFFIX,mgo.com,PROXY
 DOMAIN-SUFFIX,mgoon.com,PROXY
 DOMAIN-SUFFIX,mgstage.com,PROXY
+DOMAIN-SUFFIX,mgts.ru,PROXY
 DOMAIN-SUFFIX,mh4u.org,PROXY
 DOMAIN-SUFFIX,mhcb.ru,PROXY
 DOMAIN-SUFFIX,mhcbr.ru,PROXY
@@ -17105,6 +17109,7 @@ DOMAIN-SUFFIX,mobile.de,PROXY
 DOMAIN-SUFFIX,mobile01.com,PROXY
 DOMAIN-SUFFIX,mobilefacebook.com,PROXY
 DOMAIN-SUFFIX,mobileicq.com,PROXY
+DOMAIN-SUFFIX,mobileid.ru,PROXY
 DOMAIN-SUFFIX,mobileinternational.com,PROXY
 DOMAIN-SUFFIX,mobilemarketo.com,PROXY
 DOMAIN-SUFFIX,mobileme.dk,PROXY
@@ -17532,6 +17537,7 @@ DOMAIN-SUFFIX,mulheresafoder.com,PROXY
 DOMAIN-SUFFIX,mullvad.net,PROXY
 DOMAIN-SUFFIX,mult34.com,PROXY
 DOMAIN-SUFFIX,multicurrencycashpassport.com,PROXY
+DOMAIN-SUFFIX,multifon.ru,PROXY
 DOMAIN-SUFFIX,multiply.com,PROXY
 DOMAIN-SUFFIX,multiplydiversity.com,PROXY
 DOMAIN-SUFFIX,multiproxy.org,PROXY
@@ -18899,6 +18905,7 @@ DOMAIN-SUFFIX,o365weve.com,PROXY
 DOMAIN-SUFFIX,o3o.ca,PROXY
 DOMAIN-SUFFIX,o3t.ru,PROXY
 DOMAIN-SUFFIX,o3team.ru,PROXY
+DOMAIN-SUFFIX,o7.com,PROXY
 DOMAIN-SUFFIX,oaistatic.com,PROXY
 DOMAIN-SUFFIX,oaistatsig.com,PROXY
 DOMAIN-SUFFIX,oaiusercontent.com,PROXY
@@ -19125,6 +19132,7 @@ DOMAIN-SUFFIX,onion.city,PROXY
 DOMAIN-SUFFIX,onion.ly,PROXY
 DOMAIN-SUFFIX,onionshare.org,PROXY
 DOMAIN-SUFFIX,onkakao.net,PROXY
+DOMAIN-SUFFIX,onlime.ru,PROXY
 DOMAIN-SUFFIX,online-deals.net,PROXY
 DOMAIN-SUFFIX,online-instagram.com,PROXY
 DOMAIN-SUFFIX,online.recoveryversion.org,PROXY
@@ -21664,6 +21672,7 @@ DOMAIN-SUFFIX,rosemarydoll.com,PROXY
 DOMAIN-SUFFIX,roshy.tv,PROXY
 DOMAIN-SUFFIX,rossiyasegodnya.com,PROXY
 DOMAIN-SUFFIX,rostaxi.org,PROXY
+DOMAIN-SUFFIX,rostelecom-rb.ru,PROXY
 DOMAIN-SUFFIX,rostelecom.ru,PROXY
 DOMAIN-SUFFIX,rotten.com,PROXY
 DOMAIN-SUFFIX,rou.video,PROXY
@@ -23276,6 +23285,7 @@ DOMAIN-SUFFIX,spatial.io,PROXY
 DOMAIN-SUFFIX,spb.com,PROXY
 DOMAIN-SUFFIX,spbexchange.ru,PROXY
 DOMAIN-SUFFIX,spcc-sp.com,PROXY
+DOMAIN-SUFFIX,spd-mgts.ru,PROXY
 DOMAIN-SUFFIX,speakerdeck.com,PROXY
 DOMAIN-SUFFIX,spearhead.kr,PROXY
 DOMAIN-SUFFIX,spectraltube.com,PROXY
@@ -27900,6 +27910,7 @@ DOMAIN-SUFFIX,xn--czq75pvv1aj5c.org,PROXY
 DOMAIN-SUFFIX,xn--d1abkf4ap.fun,PROXY
 DOMAIN-SUFFIX,xn--d1acpjx3f.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--d4ty0ojsqzfd.com,PROXY
+DOMAIN-SUFFIX,xn--e1aapchhekkk.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--e1adjldbbpv.xn--90ais,PROXY
 DOMAIN-SUFFIX,xn--e1aigb.xn--p1ai,PROXY
 DOMAIN-SUFFIX,xn--fiq80y.hk,PROXY

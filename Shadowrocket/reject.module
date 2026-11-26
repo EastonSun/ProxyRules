@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-25 08:02:41 (北京时间)
-#!rule_count = 44416
+#!update = 2026-11-26 08:01:45 (北京时间)
+#!rule_count = 44417
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -35071,6 +35071,7 @@ DOMAIN-SUFFIX,start.ramp.com,REJECT
 DOMAIN-SUFFIX,start.sharpclinical.com,REJECT
 DOMAIN-SUFFIX,start.spark-thinking.com,REJECT
 DOMAIN-SUFFIX,startappservice.com,REJECT
+DOMAIN-SUFFIX,startitup.sk##.siu-taboola-anchor,REJECT
 DOMAIN-SUFFIX,startrekk.flaconi.at,REJECT
 DOMAIN-SUFFIX,startrekk.flaconi.ch,REJECT
 DOMAIN-SUFFIX,startrekk.flaconi.de,REJECT
