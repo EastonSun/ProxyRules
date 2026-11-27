@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-26 08:01:45 (北京时间)
-#!rule_count = 44417
+#!update = 2026-11-27 08:01:55 (北京时间)
+#!rule_count = 44418
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -12610,6 +12610,7 @@ DOMAIN-SUFFIX,ek-tracker.ekitan.com,REJECT
 DOMAIN-SUFFIX,ek8.voyage-prive.com,REJECT
 DOMAIN-SUFFIX,ekfwof.finnishdesignshop.fi,REJECT
 DOMAIN-SUFFIX,ekitan.com##.ek-forward-display-c_bottom_2,REJECT
+DOMAIN-SUFFIX,ekitan.com##.member-pass-ad,REJECT
 DOMAIN-SUFFIX,eklexu.kibuba.com,REJECT
 DOMAIN-SUFFIX,ekphpa.perfectlypriscilla.com,REJECT
 DOMAIN-SUFFIX,el.quizlet.com,REJECT
