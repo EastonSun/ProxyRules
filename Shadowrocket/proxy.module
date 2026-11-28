@@ -2,8 +2,8 @@
 #!desc = 非中国大陆/需要代理访问的域名与服务规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-27 08:01:55 (北京时间)
-#!rule_count = 29194
+#!update = 2026-11-28 08:01:55 (北京时间)
+#!rule_count = 29198
 
 [Rule]
 DOMAIN-SUFFIX,000webhost.com,PROXY
@@ -1167,6 +1167,7 @@ DOMAIN-SUFFIX,ai7995.site,PROXY
 DOMAIN-SUFFIX,ai91porn.cc,PROXY
 DOMAIN-SUFFIX,aiaa.org,PROXY
 DOMAIN-SUFFIX,aiasahi.jp,PROXY
+DOMAIN-SUFFIX,aicu.cc,PROXY
 DOMAIN-SUFFIX,aidc.com.tw,PROXY
 DOMAIN-SUFFIX,aihub.top,PROXY
 DOMAIN-SUFFIX,aimei133.com,PROXY
@@ -6793,6 +6794,7 @@ DOMAIN-SUFFIX,dandanplay.net,PROXY
 DOMAIN-SUFFIX,dandanzan.cc,PROXY
 DOMAIN-SUFFIX,danilo.to,PROXY
 DOMAIN-SUFFIX,danke4china.net,PROXY
+DOMAIN-SUFFIX,danmakus.com,PROXY
 DOMAIN-SUFFIX,danmarkbeatsbydrdre.com,PROXY
 DOMAIN-SUFFIX,danskpornofilm.com,PROXY
 DOMAIN-SUFFIX,dansmovies.com,PROXY
@@ -9457,6 +9459,7 @@ DOMAIN-SUFFIX,fc2ppv.tv,PROXY
 DOMAIN-SUFFIX,fc2web.com,PROXY
 DOMAIN-SUFFIX,fcacebook.com,PROXY
 DOMAIN-SUFFIX,fcaebook.com,PROXY
+DOMAIN-SUFFIX,fce.gg,PROXY
 DOMAIN-SUFFIX,fcebook.com,PROXY
 DOMAIN-SUFFIX,fcebookk.com,PROXY
 DOMAIN-SUFFIX,fcfacebook.com,PROXY
@@ -23258,6 +23261,7 @@ DOMAIN-SUFFIX,soylent.com,PROXY
 DOMAIN-SUFFIX,soylentnews.org,PROXY
 DOMAIN-SUFFIX,sp.cool,PROXY
 DOMAIN-SUFFIX,spacebattles.com,PROXY
+DOMAIN-SUFFIX,spacedesk.net,PROXY
 DOMAIN-SUFFIX,spaceexplored.com,PROXY
 DOMAIN-SUFFIX,spacely.com.au,PROXY
 DOMAIN-SUFFIX,spacemail.com,PROXY

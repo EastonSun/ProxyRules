@@ -2,8 +2,8 @@
 #!desc = 广告、追踪、统计域名与IP拦截规则
 #!author = ProxyRules
 #!homepage = https://github.com/EastonSun/ProxyRules
-#!update = 2026-11-27 08:01:55 (北京时间)
-#!rule_count = 44418
+#!update = 2026-11-28 08:01:55 (北京时间)
+#!rule_count = 44420
 
 [Rule]
 DOMAIN-SUFFIX,0.myikas.com,REJECT
@@ -44028,9 +44028,11 @@ DOMAIN-SUFFIX,youate.co,REJECT
 DOMAIN-SUFFIX,youborafds01.com,REJECT
 DOMAIN-SUFFIX,youboranqs01.com,REJECT
 DOMAIN-SUFFIX,youjizz.com###englishmobpr,REJECT
+DOMAIN-SUFFIX,youjizz.com###interstitial,REJECT
 DOMAIN-SUFFIX,youjizz.com###mobilerollad,REJECT
 DOMAIN-SUFFIX,youjizz.com###underplayerpr,REJECT
 DOMAIN-SUFFIX,youjizz.com##.bottom_pr,REJECT
+DOMAIN-SUFFIX,youjizz.com##.modal-backdrop,REJECT
 DOMAIN-SUFFIX,youmi.net,REJECT
 DOMAIN-SUFFIX,your.maas.ptvgroup.com,REJECT
 DOMAIN-SUFFIX,your.mapandguide.ptvgroup.com,REJECT
